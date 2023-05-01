@@ -338,26 +338,140 @@ console.log ((y5 > x5) ? 'true':'false')
 // : 'false' + ' Привет, инопланетянин!')
 
 
+// Подсчитать сумму всех чисел в заданном пользователем диапазоне.
+// let num1 = 1
+// let num2 = 14
+// let sum = 0;
+//        if (num1 < num2) {
+//     while (num1 <= num2) {
+//         sum += num1
+//         num1++
+//     }
+// } else if (num1 > num2) {
+//     while (num1 >= num2) {
+//         sum += num2
+//         num2++
+//     }
+// }   
+//     console.log(`Сумма всех чисел в указанном диапазоне ${sum}`)
+
+
+
+// let number1 = Number(prompt('Для нахождения НОД двух чисел введите первую цифру'));
+// let number2 = Number(prompt('Введите вторую цифру'));
+
+// while (number1 != 0 && number2 != 0) {
+//     if (number1 > number2) {
+//         number1 = number1 % number2;
+//     } else {
+//         number2 = number2 % number1;
+//     };
+// };
+// alert(` Наибольший общий делитель двух указанных чисел равен ${number1 + number2}`);
+
+// let number = Number(prompt(' Введите число'));
+// let divisor = [];
+// for (let i = 2; i < number; i++) {
+//     if (number % i == 0 && number !== 1 ) {
+//         console.log(i);
+//         divisor.push(i);
+//     };
+// };
+// alert(`Все делители числа ${number}:  ${divisor}`);
+
+console.log (Math.pow (2, 10))
+
+// let a = 3
+// let b = 7
+// let c = a + b
+// console.log(c)
+// a = 5
+// b = 9
+// c = a + b
+// console.log(c)
+// console.log
+
+// function sum(a, b) {
+  //   const c = a + b 
+  //   console.log(c)
+  // }
+  
+  // // console.dir(myFn)
+  // function cube (a) {
+    //   let c
+    //   c = a*a*a
+//   return c
+// }
+// console.log(cube(a))
+// console.log (cube(3) + `  ${'куб чего-нибудь'}`)
+
+
+// let a =4
+// let b = 5
+
+// function myFn(a, b){
+// let c 
+// a = a + 1
+// c = a + b
+// return c
+// }
+// console.log (myFn(10, 15))
+// console.log (a + b)
+
+
+// console.log(Math.abs(-10))
+// console.log(Math.pow(3, 10))
+
+// 1. Написать функцию, которая принимает 2 числа и 
+// возвращает меньшее из них
+
+let a = 7
+let b = 5
+function min(a, b) {
+  if (a < b) {
+    return a;
+  } else {
+    return b;
+  }
+}
+console.log(min(a, b))
+
+// 2. Написать функцию, которая возводит переданное число 
+// в указанную степень.
+
+function pow123(a,b) {
+  if (Math.pow(a,b))
+  return Math.pow(a,b)
+}
+console.log (pow123(a,b))
+
+// 3. Написать функцию, которая принимает 2 числа и знак 
+// (+ - * /), считает пример и возвращает результат.
+function myFunc(a,b)  {
+  let c
+  if (c = a * b) {
+    // return (c)
+  } else if (c = a / b) {
+    // return (c)
+  }  else if (c = a + b) {
+    // return (c)
+  } else if ( c = a - b) {
+    return (c)
+  }
+}
+console.log (myFunc(a,b))
 
 
 
 
 
+const calculator = (a, b, operation) => {
+  if (operation === '+') return a + b;
+  if (operation === '-') return a - b;
+  if (operation === '*') return a * b;
+  if (operation === '/') return b === 0 ? "Can't divide by 0!" : a / b;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(calculator(10, 10, "*"));
 
 
