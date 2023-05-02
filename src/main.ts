@@ -238,30 +238,32 @@ console.log ( Math.min(3, 5, -10, 0, 1) )
 // var c = Number((nmb - a - b * 10) / 100);
 // console.log('Перевертыш: ' + (a * 100 + b * 10 + c));
 
+
+
+
 // числа от 0 до 20, без чисел делящихся на 4
 
-// let y5
-// for (y5=0; y5<20; y5++){
-//   if (y5%4==0) continue
-//   console.log (Math.round(Math.random(y5)*20))
-// }
+console.log ('START')
+for (let y5=0; y5<10;){
+  let a = Math.round(Math.random(y5)*20)
+  if (a%4==0) continue
+  y5++
+  console.log (a)
+}
+console.log ('END')
 
-
-
-
-// ???????????????????????????????????
-// let deposit = +prompt ('Введите сумму')
-// let procent = +prompt ('Введите процент')
-// for (;x=0; x++) {
-//   if (deposit< deposit*2)
-// deposit+=deposit*procent
-//   x++
-// }
-// console.log ('у вас удвоится сумма через ' + x + ' лет')
-
-
-
-//  Запросить у пользователя число и определить,
+let deposit = prompt ('Введите сумму')
+let procent = prompt ('Введите процент')
+ let money=deposit
+ let x
+for (x=0;money<deposit*2;x++) {
+    money+=deposit*procent/100
+  }
+  console.log ('у вас удвоится сумма через ' + x + ' лет')
+  
+  
+  
+  //  Запросить у пользователя число и определить,
 //  оно полjжительное, отрицательное или ноль.
 
 // let x = +prompt ('введите число')
@@ -503,4 +505,4 @@ function createHeaders(N) {
   for (N=0; N<=5; N++)
   return 'asdasd'
 }
-document.write (createHeaders(N))
+// document.write (createHeaders(N))
