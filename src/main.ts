@@ -492,6 +492,7 @@ function showError(x3) {
 return 'good job'
 }
 console.log ('"Error ' + showError(x3) + ' occured!"')
+console.log ('"Error ' + showError(x3) + ' occured!"')
 
 
 // 3. Создайте функцию createHeaders(N), которая создаст на 
