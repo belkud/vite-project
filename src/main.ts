@@ -396,14 +396,17 @@ console.log (Math.pow (2, 10))
   //   console.log(c)
   // }
   
-  // // console.dir(myFn)
-  // function cube (a) {
-    //   let c
-    //   c = a*a*a
-//   return c
-// }
-// console.log(cube(a))
-// console.log (cube(3) + `  ${'куб чего-нибудь'}`)
+  // console.dir(myFn)
+  let v = 5 
+  function cube(v) {
+      // let c
+      // c = v*v*v
+  // return c
+  return v*v*v
+
+}
+console.log(cube(v))
+console.log (cube(3) + `  ${'куб чего-нибудь'}`)
 
 
 // let a =4
@@ -447,31 +450,56 @@ console.log (pow123(a,b))
 
 // 3. Написать функцию, которая принимает 2 числа и знак 
 // (+ - * /), считает пример и возвращает результат.
-function myFunc(a,b)  {
-  let c
-  if (c = a * b) {
-    // return (c)
-  } else if (c = a / b) {
-    // return (c)
-  }  else if (c = a + b) {
-    // return (c)
-  } else if ( c = a - b) {
-    return (c)
-  }
+let c
+const myFunc = (a,b,c) => {
+  if (c === '+') return a + b 
+  if (c === '-') return a - b 
+  if (c === '*') return a * b 
+  if (c === '/') return a / b 
 }
-console.log (myFunc(a,b))
+console.log (myFunc(a,b,'*'))
 
 
 
-
-
-const calculator = (a, b, operation) => {
-  if (operation === '+') return a + b;
-  if (operation === '-') return a - b;
-  if (operation === '*') return a * b;
-  if (operation === '/') return b === 0 ? "Can't divide by 0!" : a / b;
+let g = 9
+function Func(g) {
+  if (Math.round(g)%2==0) {
+    return Math.round (g)
+  } else if (g < Math.round(g)) {
+    return Math.round(g)-1
+  } else
+    return Math.round(g)+1
 }
+console.log (Func(g))
+console.log (Func(7.7))
+console.log (Func(9.5))
 
-console.log(calculator(10, 10, "*"));
+// . Создайте функцию sayError(), которая будет выводить (при помощи диалогового окна alert) сообщение 
+// с текстом «Some error occurred!».
+
+function sayError() {
+  return 'Some error occurred!'
+}
+console.log(sayError())
+
+// 2. Создайте функцию showError(x), которая будет выводить 
+// (при помощи диалогового окна alert) сообщение 
+// с текстом «Error X occurred!», где Х — текст из аргумента
+//  функции (например, вызов showError(‘Out of memory’) 
+// должен вывести сообщение «Error Out of memory occurred!»).
+let x3
+function showError(x3) {
+return 'good job'
+}
+console.log ('"Error ' + showError(x3) + ' occured!"')
 
 
+// 3. Создайте функцию createHeaders(N), которая создаст на 
+// странице N заголовков 
+// второго уровня (<h2>) с надписями Header1, Header2 … HeaderN
+
+function createHeaders(N) {
+  for (N=0; N<=5; N++)
+  return 'asdasd'
+}
+document.write (createHeaders(N))
