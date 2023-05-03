@@ -238,30 +238,32 @@ console.log ( Math.min(3, 5, -10, 0, 1) )
 // var c = Number((nmb - a - b * 10) / 100);
 // console.log('Перевертыш: ' + (a * 100 + b * 10 + c));
 
+
+
+
 // числа от 0 до 20, без чисел делящихся на 4
 
-// let y5
-// for (y5=0; y5<20; y5++){
-//   if (y5%4==0) continue
-//   console.log (Math.round(Math.random(y5)*20))
-// }
+console.log ('START')
+for (let y5=0; y5<10;){
+  let a = Math.round(Math.random(y5)*20)
+  if (a%4==0) continue
+  y5++
+  console.log (a)
+}
+console.log ('END')
 
-
-
-
-// ???????????????????????????????????
-// let deposit = +prompt ('Введите сумму')
-// let procent = +prompt ('Введите процент')
-// for (;x=0; x++) {
-//   if (deposit< deposit*2)
-// deposit+=deposit*procent
-//   x++
-// }
-// console.log ('у вас удвоится сумма через ' + x + ' лет')
-
-
-
-//  Запросить у пользователя число и определить,
+let deposit = prompt ('Введите сумму')
+let procent = prompt ('Введите процент')
+ let money=deposit
+ let x
+for (x=0;money<deposit*2;x++) {
+    money+=deposit*procent/100
+  }
+  console.log ('у вас удвоится сумма через ' + x + ' лет')
+  
+  
+  
+  //  Запросить у пользователя число и определить,
 //  оно полjжительное, отрицательное или ноль.
 
 // let x = +prompt ('введите число')
@@ -502,66 +504,4 @@ function createHeaders(N) {
   for (N=0; N<=5; N++)
   return 'asdasd'
 }
-// document.write (createHeaders(N))
-
-// 4. Создайте функцию checkPassword(x), которая вернет 
-// значение true, если в качестве аргумента в нее будет 
-// передан допустимый пароль (одно из значений «Step», 
-// «Web» или «JavaScript»). Иначе функция должна вернуть false.
-
-let password = 'web'
-function checkPassword(password) {
-  if (password=='step' || password=='web' || password=='javascript') {
-    return 'пароль верный'
-  } else {
-    return 'пароль неверный'
-  }
-}
-console.log(checkPassword(password))
-
-
-// 5. Создайте функцию определения знака числа sign(x), которая 
-// вернет значение –1, если аргумент «х» — отрицательное число, 
-// 1 — если положительное, 0 — если аргумент «х» равен нулю.
-
-let c1 = 5
-function sign(c1) {
-  if (c1 > 0) {
-  return 'число положительное' 
-} else if (c1 < 0) {
-  return 'число отрицательное'
-  } else if (c1==0) {
-  return 'число ноль'
-} else {
-  return 'введите корректное число'
-}
-} 
-console.log (sign(c1))
-
-
-// 6. Предложите имя (согласно правилам именования) и  создайте 
-// функцию, которая будет возвращать названия дней недели по их
-// номеру: 0-Sunday, 1-Monday, 2-Tuesday, 3-Wednesday, 4-Thursday, 
-// 5-Friday, 6-Saturday.
-
-let day = 5
-function week(day) {
-  if (day==0) {
-    return 'Sunday'
-  } else if (day==1) {
-    return 'Monday'
-  } else if (day==2) {
-    return 'Tuesday'
-  } else if (day==3) {
-    return 'Wednesday'
-  } else if (day==4) {
-    return 'Thursday'
-  } else if (day==5) {
-    return 'Friday'
-  } else if (day==6) {
-    return 'Saturday'
-  } else {
-    return 'Number is wrong'
-  }
-}
-console.log (week(day))
+document.write (createHeaders(N))
