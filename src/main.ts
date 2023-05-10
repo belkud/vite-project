@@ -241,27 +241,6 @@ console.log ( Math.min(3, 5, -10, 0, 1) )
 
 
 
-// числа от 0 до 20, без чисел делящихся на 4
-
-console.log ('START')
-for (let y5=0; y5<10;){
-  let a = Math.round(Math.random(y5)*20)
-  if (a%4==0) continue
-  y5++
-  console.log (a)
-}
-console.log ('END')
-
-let deposit = prompt ('Введите сумму')
-let procent = prompt ('Введите процент')
- let money=deposit
- let x
-for (x=0;money<deposit*2;x++) {
-    money+=deposit*procent/100
-  }
-  console.log ('у вас удвоится сумма через ' + x + ' лет')
-  
-  
   
   //  Запросить у пользователя число и определить,
 //  оно полjжительное, отрицательное или ноль.
@@ -528,8 +507,9 @@ console.log(checkPassword(password))
 
 let c1 = 5
 function sign(c1) {
+  console.log (c1)
   if (c1 > 0) {
-  return 'число положительное' 
+    return 'число положительное' 
 } else if (c1 < 0) {
   return 'число отрицательное'
   } else if (c1==0) {
@@ -538,8 +518,9 @@ function sign(c1) {
   return 'введите корректное число'
 }
 } 
-console.log (sign(c1))
-
+console.log(sign(c1))
+sign ('"дополнительна" функция')
+sign ('"дополнительна" функция')
 
 // 6. Предложите имя (согласно правилам именования) и  создайте 
 // функцию, которая будет возвращать названия дней недели по их
@@ -569,3 +550,379 @@ function week(day) {
   }
 }
 console.log (week(day))
+
+
+
+
+
+// числа от 0 до 20, без чисел делящихся на 4
+
+console.log ('START')
+
+for (let y5=0; y5<10;){
+  let a = Math.round(Math.random(y5)*20)
+  if (a%4==0) continue
+  y5++
+  console.log (a)
+}
+
+console.log ('END')
+
+// let deposit = prompt ('Введите сумму')
+// let procent = prompt ('Введите процент')
+//  let money=deposit
+//  let x6
+// for (x6=0;money<deposit*2;x6++) {
+//     money+=deposit*procent/100
+//   }
+//   console.log ('у вас удвоится сумма через ' + x6 + ' лет')
+  
+  
+// ВАЖНО ВАЖНО ВАЖНО!!!!! РАЗОБРАТЬ ПРЕДЫДУЩИЕ ДВЕ ЗАДАЧИ
+
+
+function myCity(name5) {
+  console.log(name5 + ' это мой город')
+}
+myCity ('Белгород')
+myCity ('Сочи ')
+
+function myFunc2 (name:string, name2:string) {
+  console.log ('My name is ' + name + ' My age is ' + name2)
+}
+myFunc2 ('Vladimir', 32)
+
+let a3 =7
+let b3 = 10
+function myFunc3(a3:number,b3:number) {
+  console.log (a3+b3)
+}
+myFunc3 (3,3)
+
+function myFunc4(a3:number,b3:number) {
+  return (a3+b3)
+}
+console.log (myFunc4(a3,b3))
+
+function multiplication (a,b) {
+  console.log (a*b)
+}
+multiplication (a,b)
+
+function multiplication2 (a,b) {
+  return (a*b)
+}
+console.log (multiplication2(a,b))
+multiplication2 (a,b)
+
+
+function addNumbers(a:number, b:number) {
+  return (a + b);
+}
+console.log (addNumbers(40, 2))
+
+function max (a,b) {
+  if (a>=b) {
+    return (a)
+  } else {
+    return (b)
+  }
+}
+console.log (max (a,b))
+
+let s5 = 10
+let d5 = 15
+function myFunc5(s5,d5) {
+  v = s5+d5
+  return (v)
+}
+console.log (myFunc5(s5,d5))
+
+s5 = 30
+d5 = 25
+myFunc5(s5,d5)
+
+function logArguments(){
+  for(i=0; i<arguments.length; i++)
+  console.log("argument"+(i+1)+" = "+arguments[i])
+ }
+
+//  let x = sumAll(1, 123, 500, 115, 44, 88);
+ 
+//  function sumAll() {
+//      var i;
+//      var sum = 0;
+//  // arguments.length — количество аргументов, переданных в функцию.
+//      for (i = 0; i < arguments.length; i++) {
+//          sum += arguments[i];
+//      }
+//      return sum;
+//  }
+//  console.log (x)
+
+
+//  1. Подсчитать сумму всех чисел в заданном пользователем 
+// диапазоне.
+
+// let num1 = Number(prompt('Для подсчета суммы чисел в заданном диапазоне введите начальную цифру диапазона'));
+// let num2 = Number(prompt('Введите конечную цифру'));
+// let sum = 0;
+
+// if (num1 < num2) {
+//     while (num1 <= num2) {
+//         sum += num1;
+//         num1++;
+//     };
+// } else if (num1 > num2) {
+//     while (num1 >= num2) {
+//         sum += num2;
+//         num2++;
+//     };
+// };
+// alert(`Сумма всех чисел в указанном диапазоне ${sum}`);
+
+
+// let x8 = Number(prompt ('Введите первое число'))
+// let y8 = Number(prompt ('Введите второе число'))
+// let sum = 0
+
+// if (x8<y8) { 
+//     while (x8<=y8) {
+//        sum+=x8
+//     x8++
+// }
+// } else if (x8>y8) { 
+//   while (x8>= y8) {
+//   sum += y8
+//  y8++
+// }
+// }
+// alert ('сумма всех чисел в указанном диапазоне ' + sum)
+
+
+//  1. Подсчитать сумму всех чисел в заданном пользователем 
+// диапазоне.
+// let x9 = Number(prompt('Первое число'))
+// let y9 = Number(prompt('Второе число'))
+// let sum = 0
+// if (x9 < y9){
+//   while (x9<=y9) {
+//     sum += x9
+//     x9++
+//   }
+// } else if (y9 > x9){
+//   while (y9>=x9) {
+//     sum+=x9
+//     x9++
+//   }
+// }
+// console.log ('общая сумма чисел в заданном диапазоне ' + sum)
+
+
+
+
+// Запросить 2 числа и найти только наибольший общий делитель.
+
+// let x = 50
+// let y = 6
+// while (x!=0 && y!=0) {
+// if (x > y) {
+//   x=x%y
+// } else if (x < y) {
+//   y=y%x
+// } 
+// }
+// console.log (`самый большой делитель ${x+y}`)
+
+
+
+// Запросить у пользователя число и вывести все делители этого числа.
+let number = 90
+let divisor = []
+for (let i = 1; i < number; i++) {
+    if (number % i == 0) {
+        console.log(i)
+        divisor.push(i)
+    }
+}
+console.log (`Все делители числа ${number}:  ${divisor}`)
+
+
+// Определить количество цифр в введенном числе.
+
+let userNumber = 25
+let count = 0
+for (let i=0; i < userNumber.length; i++) {
+  count +=1
+}
+console.log (count)
+
+// let userNumber = prompt(' Введите число'); 
+// let count = 0;
+
+// for (let i = 0; i < userNumber.length; i++) {
+//     count += 1;
+// };
+// alert(` Число состоит из ${count} цифр`);
+
+
+// Запросить у пользователя число и вывести все делители этого числа.
+// let x = 10
+// let sum
+// while (x!=0) {
+//   if (x == x%sum){
+//     x >=sum
+//     sum++
+//   }
+// }
+// console.log (sum)
+
+
+
+
+
+
+// Запросить у пользователя 10 чисел и подсчитать, сколько он 
+// ввел положительных, отрицательных и нулей. При этом также посчитать, 
+// сколько четных и нечетных. Вывести статистику на экран. Учтите, что 
+// достаточно одной переменной (не 10) для ввода чисел пользователем.
+
+
+    // let positive = 0;
+    // let negative = 0;
+    // let zero = 0;
+    // let even = 0;
+    // let odd = 0;
+
+    // for (let i = 1; i <= 10; i++ ) {
+    //     const num = prompt("Введите число");
+        
+    //     if (num > 0) {
+    //     positive++;
+    //     };
+    //     if (num < 0) {
+    //     negative++;
+    //     };
+    //     if (num == 0) {
+    //     zero++;
+    //     };
+    //     if (num % 2 == 0) {
+    //     even++;
+    //     };
+    //     if (num % 2 !== 0) {
+    //     odd++;
+    //     };
+    // };
+
+    // alert(` Из введенных цифр - положительных: ${positive}, отрицательных: ${negative}, нулей: ${zero}, четных: ${even}, нечетных: ${odd}.`)
+
+
+
+
+    // Зациклить калькулятор. Запросить у пользователя 2 числа и знак, решить 
+    // пример, вывести результат и спросить, хочет ли он решить еще один пример. 
+    // И так до тех пор, пока пользователь не откажется.
+
+let x = 10
+let y = 15
+if (x + y) {
+  console.log (x+y)
+}
+if (x - y) {
+  console.log (x-y)
+}
+
+
+// do {
+//   let firstNumber = prompt(' Введите первое число', 'zero + infinity');
+//   let secondNumber = prompt(' Введите второе число');
+//   let operator = prompt(' Введите математический оператор', '+, -, *, /')
+//   let answer = eval(`${firstNumber} ${operator} ${secondNumber}`);
+//   alert(`Ответ ${answer}`);
+  
+// } while (confirm(' Решить еще один пример?'));
+
+
+// let x11 = prompt ('как тебя зовут?')
+// console.log (`Вас зовут ${x11}`)
+
+// const year = prompt ('Введите год вашего рождения')
+// console.log (`Вам ${2023 - year} года`)
+
+// let lenth = prompt('Введите длину стороны квадрата')
+// console.log (`Перимерт квадрата = ${4*lenth}`)
+
+// let radius = prompt ('Радиус окружности = ')
+// console.log (`Площадь окружности = ${3.14 * radius *radius}`)
+
+// let distance = prompt('Введите растояние между городами')
+// let time = prompt('Ориентировочное время в пути')
+// console.log (`Ваша средняя скорость = ${distance / time} километров в час`)
+
+// let dollar = prompt ('Введите количество долларов')
+// let euro = 0.8 * dollar
+// console.log (`${euro} euro`)
+
+// let capacity = prompt('Введите объем флешки')
+// let sizeOfCard = 0.82
+// console.log(`Количество файлов = ${parseInt(capacity / sizeOfCard)}`)
+
+// let money = prompt ('Введите сумму в вашем кошельке')
+// let cost = prompt ('Введите стоимость шоколадки')
+// let amount = parseInt ( money / cost)
+// let changeOfCash = (money - cost * amount) 
+// console.log (amount + ' Количество шоколадок')
+// console.log ('Ваша сдача ' + changeOfCash + ' рублей')
+
+// let digital = prompt ('Введите число')
+// if (digital%2 == 0) {
+//   console.log ('Число четное')
+// } if (digital%2 == 1) {
+//   console.log ('Число нечетное')
+// } if (digital == 0) {
+//   console.log ('Ноль')
+// }
+
+// UAN или AZN, и получает в ответ соответствующую сумму
+// const summ = Number(prompt ('Введите количество долларов'))
+// let x7 = prompt ('Выберете валюту')
+
+// if (x7=='EUR') {
+//   console.log (`вы получили ${summ * 0.8} EUR`)
+// } else if (x7=='UAN'){
+//   console.log (`вы получили ${summ * 10} UAN`)
+// } else if (x7=='AZN'){
+//   console.log (`вы получили ${summ * 12} AZN`)
+// } else {
+//   console.log ('Такую валюту не обмениваем')
+// }
+
+// . Запросить у пользователя год и проверить, високосный он 
+// или нет. Високосный год либо кратен 400, либо кратен 4 и 
+// при этом не кратен 100.
+let year = prompt ('Введите год')
+if (year%400==0) {
+  console.log ('год високосный')
+} else if (year%100==0){
+  console.log ('год не високосный')
+} else if (year%4==0){
+  console.log ('год високосный')
+} else {
+  console.log ('Год не високосный')
+}
+
+// let year = prompt ('Введите год')
+// if (year%100==0) {
+//   console.log ('год не високосный')
+// } else if (year%400==0){
+//   console.log ('год високосный')
+// } else if (year%4==0){
+//   console.log ('год високосный')
+// } else {
+//   console.log ('Год не високосный')
+// }
+
+
+// Задания, в которых необходимо использовать DO WHILE.
+// 1. Предлагать пользователю решить пример 2 + 2 * 2 до тех 
+// пор, пока он не решит его правильно
