@@ -2,7 +2,7 @@ import './style.css'
 
 
 let x10 = 18
-console.log((x10>=18) ? 'you are adult' : 'you are young')
+console.log((x10 >= 18) ? 'you are adult' : 'you are young')
 
 // let i = 3
 // for (i=0, i>5, i++)
@@ -176,12 +176,12 @@ console.log((x10>=18) ? 'you are adult' : 'you are young')
 
 // console.log (9999999999999999 )
 
-console.log ((parseInt ('15.5px') - 6))
-console.log ( parseInt('100px'))
+console.log((parseInt('15.5px') - 6))
+console.log(parseInt('100px'))
 
-console.log( Math.max(3, 5, -10, 0, 1) ); // 5
-console.log( Math.min(1, 2) ); // 1
-console.log( Math.pow(2, 11) )
+console.log(Math.max(3, 5, -10, 0, 1)); // 5
+console.log(Math.min(1, 2)); // 1
+console.log(Math.pow(2, 11))
 
 // let month = 6
 // for (let i = 0; i < month; i++) {
@@ -189,14 +189,14 @@ console.log( Math.pow(2, 11) )
 //   }
 
 
-  
+
 //   console.log(`платеж за ${i+1} месяц`, '1000 р')
 // // console.log('платеж за ' + i + ' месяц', '1000 р')
 
 var arr0 = [];
 var arr1 = new Array();
 // создали массив с данными
-const array = [0,2,3,5,7,8,9]
+const array = [0, 2, 3, 5, 7, 8, 9]
 console.log(array)
 array.push(10)
 console.log(array)
@@ -214,16 +214,16 @@ function random(min, max) {
 // random(0-1)*(max - min) + min
 
 
-console.log (random(55,80))
+console.log(random(55, 80))
 
 
-console.log ( Math.max(3, 5, -10, 0, 1) )
-console.log ( Math.min(3, 5, -10, 0, 1) )
- 
+console.log(Math.max(3, 5, -10, 0, 1))
+console.log(Math.min(3, 5, -10, 0, 1))
+
 
 // let string = prompt("Введи что-то:")
 // for (let i = 0; i < string.length / 2; i++) {
-  // console.log ('полиндром' )
+// console.log ('полиндром' )
 // }
 
 // Получить сам символ можно string[i], как получить соответствующий с конца, подсчитаешь индекс самостоятельно.
@@ -241,8 +241,8 @@ console.log ( Math.min(3, 5, -10, 0, 1) )
 
 
 
-  
-  //  Запросить у пользователя число и определить,
+
+//  Запросить у пользователя число и определить,
 //  оно полjжительное, отрицательное или ноль.
 
 // let x = +prompt ('введите число')
@@ -300,9 +300,9 @@ console.log ( Math.min(3, 5, -10, 0, 1) )
 // }
 
 // 1. Запросить 2 числа и вывести большее из них
-let x5 = 5 
+let x5 = 5
 let y5 = 7
-console.log ((y5 > x5) ? 'true':'false')
+console.log((y5 > x5) ? 'true' : 'false')
 
 // 2. Запросить 1 число и проверить, оно кратно 5 или нет.
 // let x2 = 15
@@ -360,7 +360,7 @@ console.log ((y5 > x5) ? 'true':'false')
 // };
 // alert(`Все делители числа ${number}:  ${divisor}`);
 
-console.log (Math.pow (2, 10))
+console.log(Math.pow(2, 10))
 
 // let a = 3
 // let b = 7
@@ -373,21 +373,21 @@ console.log (Math.pow (2, 10))
 // console.log
 
 // function sum(a, b) {
-  //   const c = a + b 
-  //   console.log(c)
-  // }
-  
-  // console.dir(myFn)
-  let v = 5 
-  function cube(v) {
-      // let c
-      // c = v*v*v
+//   const c = a + b 
+//   console.log(c)
+// }
+
+// console.dir(myFn)
+let v = 5
+function cube(v) {
+  // let c
+  // c = v*v*v
   // return c
-  return v*v*v
+  return v * v * v
 
 }
 console.log(cube(v))
-console.log (cube(3) + `  ${'куб чего-нибудь'}`)
+console.log(cube(3) + `  ${'куб чего-нибудь'}`)
 
 
 // let a =4
@@ -423,37 +423,37 @@ console.log(min(a, b))
 // 2. Написать функцию, которая возводит переданное число 
 // в указанную степень.
 
-function pow123(a,b) {
-  if (Math.pow(a,b))
-  return Math.pow(a,b)
+function pow123(a, b) {
+  if (Math.pow(a, b))
+    return Math.pow(a, b)
 }
-console.log (pow123(a,b))
+console.log(pow123(a, b))
 
 // 3. Написать функцию, которая принимает 2 числа и знак 
 // (+ - * /), считает пример и возвращает результат.
 let c
-const myFunc = (a,b,c) => {
-  if (c === '+') return a + b 
-  if (c === '-') return a - b 
-  if (c === '*') return a * b 
-  if (c === '/') return a / b 
+const myFunc = (a, b, c) => {
+  if (c === '+') return a + b
+  if (c === '-') return a - b
+  if (c === '*') return a * b
+  if (c === '/') return a / b
 }
-console.log (myFunc(a,b,'*'))
+console.log(myFunc(a, b, '*'))
 
 
 
 let g = 9
 function Func(g) {
-  if (Math.round(g)%2==0) {
-    return Math.round (g)
+  if (Math.round(g) % 2 == 0) {
+    return Math.round(g)
   } else if (g < Math.round(g)) {
-    return Math.round(g)-1
+    return Math.round(g) - 1
   } else
-    return Math.round(g)+1
+    return Math.round(g) + 1
 }
-console.log (Func(g))
-console.log (Func(7.7))
-console.log (Func(9.5))
+console.log(Func(g))
+console.log(Func(7.7))
+console.log(Func(9.5))
 
 // . Создайте функцию sayError(), которая будет выводить (при помощи диалогового окна alert) сообщение 
 // с текстом «Some error occurred!».
@@ -470,9 +470,9 @@ console.log(sayError())
 // должен вывести сообщение «Error Out of memory occurred!»).
 let x3
 function showError(x3) {
-return 'good job'
+  return 'good job'
 }
-console.log ('"Error ' + showError(x3) + ' occured!"')
+console.log('"Error ' + showError(x3) + ' occured!"')
 
 
 // 3. Создайте функцию createHeaders(N), которая создаст на 
@@ -480,8 +480,8 @@ console.log ('"Error ' + showError(x3) + ' occured!"')
 // второго уровня (<h2>) с надписями Header1, Header2 … HeaderN
 
 function createHeaders(N) {
-  for (N=0; N<=5; N++)
-  return 'asdasd'
+  for (N = 0; N <= 5; N++)
+    return 'asdasd'
 }
 // document.write (createHeaders(N))
 
@@ -492,7 +492,7 @@ function createHeaders(N) {
 
 let password = 'web'
 function checkPassword(password) {
-  if (password=='step' || password=='web' || password=='javascript') {
+  if (password == 'step' || password == 'web' || password == 'javascript') {
     return 'пароль верный'
   } else {
     return 'пароль неверный'
@@ -507,49 +507,49 @@ console.log(checkPassword(password))
 
 let c1 = 5
 function sign(c1) {
-  console.log (c1)
+  console.log(c1)
   if (c1 > 0) {
-    return 'число положительное' 
-} else if (c1 < 0) {
-  return 'число отрицательное'
-  } else if (c1==0) {
-  return 'число ноль'
-} else {
-  return 'введите корректное число'
+    return 'число положительное'
+  } else if (c1 < 0) {
+    return 'число отрицательное'
+  } else if (c1 == 0) {
+    return 'число ноль'
+  } else {
+    return 'введите корректное число'
+  }
 }
-} 
 console.log(sign(c1))
-sign ('"дополнительна" функция')
-sign ('"дополнительна" функция')
+sign('"дополнительна" функция')
+sign('"дополнительна" функция')
 
 // 6. Предложите имя (согласно правилам именования) и  создайте 
 // функцию, которая будет возвращать названия дней недели по их
 // номеру: 0-Sunday, 1-Monday, 2-Tuesday, 3-Wednesday, 4-Thursday, 
 // 5-Friday, 6-Saturday.
- 
+
 
 
 let day = 5
 function week(day) {
-  if (day==0) {
+  if (day == 0) {
     return 'Sunday'
-  } else if (day==1) {
+  } else if (day == 1) {
     return 'Monday'
-  } else if (day==2) {
+  } else if (day == 2) {
     return 'Tuesday'
-  } else if (day==3) {
+  } else if (day == 3) {
     return 'Wednesday'
-  } else if (day==4) {
+  } else if (day == 4) {
     return 'Thursday'
-  } else if (day==5) {
+  } else if (day == 5) {
     return 'Friday'
-  } else if (day==6) {
+  } else if (day == 6) {
     return 'Saturday'
   } else {
     return 'Number is wrong'
   }
 }
-console.log (week(day))
+console.log(week(day))
 
 
 
@@ -557,16 +557,16 @@ console.log (week(day))
 
 // числа от 0 до 20, без чисел делящихся на 4
 
-console.log ('START')
+console.log('START')
 
-for (let y5=0; y5<10;){
-  let a = Math.round(Math.random(y5)*20)
-  if (a%4==0) continue
+for (let y5 = 0; y5 < 10;) {
+  let a = Math.round(Math.random(y5) * 20)
+  if (a % 4 == 0) continue
   y5++
-  console.log (a)
+  console.log(a)
 }
 
-console.log ('END')
+console.log('END')
 
 // let deposit = prompt ('Введите сумму')
 // let procent = prompt ('Введите процент')
@@ -576,79 +576,79 @@ console.log ('END')
 //     money+=deposit*procent/100
 //   }
 //   console.log ('у вас удвоится сумма через ' + x6 + ' лет')
-  
-  
+
+
 // ВАЖНО ВАЖНО ВАЖНО!!!!! РАЗОБРАТЬ ПРЕДЫДУЩИЕ ДВЕ ЗАДАЧИ
 
 
 function myCity(name5) {
   console.log(name5 + ' это мой город')
 }
-myCity ('Белгород')
-myCity ('Сочи ')
+myCity('Белгород')
+myCity('Сочи ')
 
-function myFunc2 (name:string, name2:string) {
-  console.log ('My name is ' + name + ' My age is ' + name2)
+function myFunc2(name: string, name2: string) {
+  console.log('My name is ' + name + ' My age is ' + name2)
 }
-myFunc2 ('Vladimir', 32)
+myFunc2('Vladimir', 32)
 
-let a3 =7
+let a3 = 7
 let b3 = 10
-function myFunc3(a3:number,b3:number) {
-  console.log (a3+b3)
+function myFunc3(a3: number, b3: number) {
+  console.log(a3 + b3)
 }
-myFunc3 (3,3)
+myFunc3(3, 3)
 
-function myFunc4(a3:number,b3:number) {
-  return (a3+b3)
+function myFunc4(a3: number, b3: number) {
+  return (a3 + b3)
 }
-console.log (myFunc4(a3,b3))
+console.log(myFunc4(a3, b3))
 
-function multiplication (a,b) {
-  console.log (a*b)
+function multiplication(a, b) {
+  console.log(a * b)
 }
-multiplication (a,b)
+multiplication(a, b)
 
-function multiplication2 (a,b) {
-  return (a*b)
+function multiplication2(a, b) {
+  return (a * b)
 }
-console.log (multiplication2(a,b))
-multiplication2 (a,b)
+console.log(multiplication2(a, b))
+multiplication2(a, b)
 
 
-function addNumbers(a:number, b:number) {
+function addNumbers(a: number, b: number) {
   return (a + b);
 }
-console.log (addNumbers(40, 2))
+console.log(addNumbers(40, 2))
 
-function max (a,b) {
-  if (a>=b) {
+function max(a, b) {
+  if (a >= b) {
     return (a)
   } else {
     return (b)
   }
 }
-console.log (max (a,b))
+console.log(max(a, b))
 
 let s5 = 10
 let d5 = 15
-function myFunc5(s5,d5) {
-  v = s5+d5
+function myFunc5(s5, d5) {
+  v = s5 + d5
   return (v)
 }
-console.log (myFunc5(s5,d5))
+console.log(myFunc5(s5, d5))
 
 s5 = 30
 d5 = 25
-myFunc5(s5,d5)
+myFunc5(s5, d5)
 
-function logArguments(){
-  for(i=0; i<arguments.length; i++)
-  console.log("argument"+(i+1)+" = "+arguments[i])
- }
+function logArguments() {
+  for (i = 0; i < arguments.length; i++)
+    console.log("argument" + (i + 1) + " = " + arguments[i])
+}
 
 //  let x = sumAll(1, 123, 500, 115, 44, 88);
- 
+
 //  function sumAll() {
 //      var i;
 //      var sum = 0;
@@ -741,10 +741,10 @@ function logArguments(){
 
 let userNumber = 25
 let count = 0
-for (let i=0; i < userNumber.length; i++) {
-  count +=1
+for (let i = 0; i < userNumber.length; i++) {
+  count += 1
 }
-console.log (count)
+console.log(count)
 
 // let userNumber = prompt(' Введите число'); 
 // let count = 0;
@@ -777,48 +777,48 @@ console.log (count)
 // достаточно одной переменной (не 10) для ввода чисел пользователем.
 
 
-    // let positive = 0;
-    // let negative = 0;
-    // let zero = 0;
-    // let even = 0;
-    // let odd = 0;
+// let positive = 0;
+// let negative = 0;
+// let zero = 0;
+// let even = 0;
+// let odd = 0;
 
-    // for (let i = 1; i <= 10; i++ ) {
-    //     const num = prompt("Введите число");
-        
-    //     if (num > 0) {
-    //     positive++;
-    //     };
-    //     if (num < 0) {
-    //     negative++;
-    //     };
-    //     if (num == 0) {
-    //     zero++;
-    //     };
-    //     if (num % 2 == 0) {
-    //     even++;
-    //     };
-    //     if (num % 2 !== 0) {
-    //     odd++;
-    //     };
-    // };
+// for (let i = 1; i <= 10; i++ ) {
+//     const num = prompt("Введите число");
 
-    // alert(` Из введенных цифр - положительных: ${positive}, отрицательных: ${negative}, нулей: ${zero}, четных: ${even}, нечетных: ${odd}.`)
+//     if (num > 0) {
+//     positive++;
+//     };
+//     if (num < 0) {
+//     negative++;
+//     };
+//     if (num == 0) {
+//     zero++;
+//     };
+//     if (num % 2 == 0) {
+//     even++;
+//     };
+//     if (num % 2 !== 0) {
+//     odd++;
+//     };
+// };
 
-
+// alert(` Из введенных цифр - положительных: ${positive}, отрицательных: ${negative}, нулей: ${zero}, четных: ${even}, нечетных: ${odd}.`)
 
 
-    // Зациклить калькулятор. Запросить у пользователя 2 числа и знак, решить 
-    // пример, вывести результат и спросить, хочет ли он решить еще один пример. 
-    // И так до тех пор, пока пользователь не откажется.
+
+
+// Зациклить калькулятор. Запросить у пользователя 2 числа и знак, решить 
+// пример, вывести результат и спросить, хочет ли он решить еще один пример. 
+// И так до тех пор, пока пользователь не откажется.
 
 let x = 10
 let y = 15
 if (x + y) {
-  console.log (x+y)
+  console.log(x + y)
 }
 if (x - y) {
-  console.log (x-y)
+  console.log(x - y)
 }
 
 
@@ -828,7 +828,7 @@ if (x - y) {
 //   let operator = prompt(' Введите математический оператор', '+, -, *, /')
 //   let answer = eval(`${firstNumber} ${operator} ${secondNumber}`);
 //   alert(`Ответ ${answer}`);
-  
+
 // } while (confirm(' Решить еще один пример?'));
 
 
@@ -903,63 +903,42 @@ if (x - y) {
 
 
 
-
-
 // do {
-  //   let firstNumber = prompt(' Введите первое число', 'zero + infinity');
-  //   let secondNumber = prompt(' Введите второе число');
-  //   let operator = prompt(' Введите математический оператор', '+, -, *, /')
-  //   let answer = eval(`${firstNumber} ${operator} ${secondNumber}`);
-  //   alert(`Ответ ${answer}`);
-  
-  // } while (confirm(' Решить еще один пример?'));
+//   let firstNumber = prompt(' Введите первое число', 'zero + infinity');
+//   let secondNumber = prompt(' Введите второе число');
+//   let operator = prompt(' Введите математический оператор', '+, -, *, /')
+//   let answer = eval(`${firstNumber} ${operator} ${secondNumber}`);
+//   alert(`Ответ ${answer}`);
 
-  
+// } while (confirm(' Решить еще один пример?'));
 
 
-  // Запросить у пользователя число и вывести все делители этого числа.
-  let number = 90
-  let divisor = []
-  for (let i = 1; i < number; i++) {
-    if (number % i == 0) {
-        // console.log(i)
-        divisor.push(i)
-    }
+
+
+// Запросить у пользователя число и вывести все делители этого числа.
+let number = 90
+let divisor = []
+for (let i = 1; i < number; i++) {
+  if (number % i == 0) {
+    // console.log(i)
+    divisor.push(i)
+  }
 }
-console.log (`Все делители числа ${number}:  ${divisor}`)
-  
+console.log(`Все делители числа ${number}:  ${divisor}`)
 
 
 
 
 
-  
-  // ??????????????      Задания, в которых необходимо использовать DO WHILE.
-  // Предлагать пользователю решить пример 2 + 2 * 2 до тех 
-  // пор, пока он не решит его правильно
-  
-  
-      // do {
-      //   let r = prompt ('Введите ответ')
-      //   if (Number(r==6)) {
-      //     console.log (`Решение верно ${r}`)
-      //   } else {
-      //     console.log('Решение не верно, попробуйте еще раз')
-      //   }
-      // } while (confirm ('Решить еще раз?'))
-  
 
 
 
-
-
-// ???????????????? const z = prompt (['one', 'two', 'three']) ????????????????
 
 
 const z = [10, 15, 25]
-console.log (z)
+console.log(z)
 const zReverse = z.reverse()
-console.log (zReverse)
+console.log(zReverse)
 
 
 
@@ -968,6 +947,8 @@ console.log (zReverse)
 // ??????????????? Запросить у пользователя год и проверить, високосный он 
 // или нет. Високосный год либо кратен 400, либо кратен 4 и 
 // при этом не кратен 100.
+
+
 // let year = prompt ('Введите год')
 // if (year%400==0) {
 //   console.log ('год високосный')
@@ -979,18 +960,18 @@ console.log (zReverse)
 //   console.log ('Год не високосный')
 // }
 
-// let year = prompt ('Введите год')
-// if (year%100==0) {
-//   console.log ('год не високосный')
-// } else if (year%400==0){
-//   console.log ('год високосный')
-// } else if (year%4==0){
+
+
+
+
+
+// let year = +(prompt ('Введите год') as string)
+  
+// if (year%400==0 || (year%4==0 && year%100)) {
 //   console.log ('год високосный')
 // } else {
-//   console.log ('Год не високосный')
+//   console.log ('год not високосный')
 // }
-
-
 
 
 
@@ -999,14 +980,37 @@ console.log (zReverse)
 
 let devider = 9
 let massive = []
-for (let i=1; i<100; i++) {
-  if (i%devider==0) {
+for (let i = 1; i < 100; i++) {
+  if (i % devider == 0) {
     // console.log  (i)
     massive.push(i)
+  }
 }
-}
-console.log (`Все делимые числа числа ${devider} в диапазоне от 0 до 100: 
+console.log(`Все делимые числа числа ${devider} в диапазоне от 0 до 100: 
 ${massive}`)
+
+
+
+
+// ??????????????      Задания, в которых необходимо использовать DO WHILE.
+// Предлагать пользователю решить пример 2 + 2 * 2 до тех 
+// пор, пока он не решит его правильно
+
+
+// let r
+// do {
+//   r = prompt ('2 + 2 * 2 = ?')
+//   if (Number(r=='6')) {
+//     console.log (`Решение верно ${r}`)
+//   } else {
+//     console.log('Решение не верно, попробуйте еще раз')
+//   }
+// } while (r!='6')
+
+
+
+
+
 
 // Вывести каждый 4-й элемент из указанного пользователем диапазона. Пользователь 
 // указывает минимальное и максимальное значения диапазона
@@ -1026,41 +1030,27 @@ ${massive}`)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Запросить число и проверить, простое ли оно. Простое 
 // число делится без остатка только на себя и на единицу.
 
 let number3 = 10
 let massive3 = []
-for (let i =1; i<=number3; i++){
-  if (i%number==0 || i%1==0) {
+for (let i = 1; i <= number3; i++) {
+  if (i % number == 0 && i % 1 == 0) {
     massive3.push(i)
-    console.log (massive3)
+    console.log(massive3)
   } else {
-    console.log ('число не простое')
+    console.log('число не простое')
   }
 }
+
+
+
+
+// Пользователь ввел число, а на экран вывелись все числа от введенного до 0.
+let num = 10
+let massive4 = []
+for (let i = 1; i<=num; i++) {
+  massive4.push(i)
+}
+console.log(`Все числа вашего массива: ${massive4}`)
