@@ -932,18 +932,6 @@ console.log(`Все делители числа ${number}:  ${divisor}`)
 
 
 
-
-
-
-const z = [10, 15, 25]
-console.log(z)
-const zReverse = z.reverse()
-console.log(zReverse)
-
-
-
-
-
 // ??????????????? Запросить у пользователя год и проверить, високосный он 
 // или нет. Високосный год либо кратен 400, либо кратен 4 и 
 // при этом не кратен 100.
@@ -1033,24 +1021,49 @@ ${massive}`)
 // Запросить число и проверить, простое ли оно. Простое 
 // число делится без остатка только на себя и на единицу.
 
-let number3 = 10
-let massive3 = []
-for (let i = 1; i <= number3; i++) {
-  if (i % number == 0 && i % 1 == 0) {
-    massive3.push(i)
-    console.log(massive3)
-  } else {
-    console.log('число не простое')
+const checkIsSimple = +(prompt('input a number') as string)
+let isSimple = true
+for (let i=2; i<checkIsSimple; i++) {
+  if (checkIsSimple%i==0) {
+    isSimple = false
+    break
   }
 }
+if (isSimple) {
+  alert('simple')
+} else {
+  alert('not simple')
+}
 
-
+// let number3 = 10
+// let massive3 = []
+// for (let i = 1; i <= number3; i++) {
+//   if (i % number == 0 && i % 1 == 0) {
+//     massive3.push(i)
+//     console.log(massive3)
+//   } else {
+//     console.log('число не простое')
+//   }
+// }
 
 
 // Пользователь ввел число, а на экран вывелись все числа от введенного до 0.
+
+
 let num = 10
 let massive4 = []
+let i
+let massiveR = num.reverse()
 for (let i = 1; i<=num; i++) {
   massive4.push(i)
 }
 console.log(`Все числа вашего массива: ${massive4}`)
+// console.log(num.reverse())
+
+
+
+// const z = [10, 15, 25]
+// console.log(z)
+// const zReverse = z.reverse()
+// console.log(zReverse)
+
