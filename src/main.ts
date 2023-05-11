@@ -736,17 +736,6 @@ function logArguments(){
 
 
 
-// Запросить у пользователя число и вывести все делители этого числа.
-let number = 90
-let divisor = []
-for (let i = 1; i < number; i++) {
-    if (number % i == 0) {
-        console.log(i)
-        divisor.push(i)
-    }
-}
-console.log (`Все делители числа ${number}:  ${divisor}`)
-
 
 // Определить количество цифр в введенном числе.
 
@@ -877,10 +866,24 @@ if (x - y) {
 // let digital = prompt ('Введите число')
 // if (digital%2 == 0) {
 //   console.log ('Число четное')
-// } if (digital%2 == 1) {
+// } else if (digital%2 == 1) {
 //   console.log ('Число нечетное')
-// } if (digital == 0) {
+// } else if (digital == 0) {
 //   console.log ('Ноль')
+// } else {
+//   console.log ('Это не число')
+// }
+
+
+// let x7 = +prompt ('введите число')
+// if (x7>0) {
+//   console.log ('число положительное')
+// } else if (x7<0) {
+//   console.log ('число отрицательное')
+// } else if (x7==0) {
+//   console.log ('число ноль')
+// } else {
+//   console.log ('это не число')
 // }
 
 // UAN или AZN, и получает в ответ соответствующую сумму
@@ -897,19 +900,84 @@ if (x - y) {
 //   console.log ('Такую валюту не обмениваем')
 // }
 
-// . Запросить у пользователя год и проверить, високосный он 
+
+
+
+
+
+// do {
+  //   let firstNumber = prompt(' Введите первое число', 'zero + infinity');
+  //   let secondNumber = prompt(' Введите второе число');
+  //   let operator = prompt(' Введите математический оператор', '+, -, *, /')
+  //   let answer = eval(`${firstNumber} ${operator} ${secondNumber}`);
+  //   alert(`Ответ ${answer}`);
+  
+  // } while (confirm(' Решить еще один пример?'));
+
+  
+
+
+  // Запросить у пользователя число и вывести все делители этого числа.
+  let number = 90
+  let divisor = []
+  for (let i = 1; i < number; i++) {
+    if (number % i == 0) {
+        // console.log(i)
+        divisor.push(i)
+    }
+}
+console.log (`Все делители числа ${number}:  ${divisor}`)
+  
+
+
+
+
+
+  
+  // ??????????????      Задания, в которых необходимо использовать DO WHILE.
+  // Предлагать пользователю решить пример 2 + 2 * 2 до тех 
+  // пор, пока он не решит его правильно
+  
+  
+      // do {
+      //   let r = prompt ('Введите ответ')
+      //   if (Number(r==6)) {
+      //     console.log (`Решение верно ${r}`)
+      //   } else {
+      //     console.log('Решение не верно, попробуйте еще раз')
+      //   }
+      // } while (confirm ('Решить еще раз?'))
+  
+
+
+
+
+
+// ???????????????? const z = prompt (['one', 'two', 'three']) ????????????????
+
+
+const z = [10, 15, 25]
+console.log (z)
+const zReverse = z.reverse()
+console.log (zReverse)
+
+
+
+
+
+// ??????????????? Запросить у пользователя год и проверить, високосный он 
 // или нет. Високосный год либо кратен 400, либо кратен 4 и 
 // при этом не кратен 100.
-let year = prompt ('Введите год')
-if (year%400==0) {
-  console.log ('год високосный')
-} else if (year%100==0){
-  console.log ('год не високосный')
-} else if (year%4==0){
-  console.log ('год високосный')
-} else {
-  console.log ('Год не високосный')
-}
+// let year = prompt ('Введите год')
+// if (year%400==0) {
+//   console.log ('год високосный')
+// } else if (year%100==0){
+//   console.log ('год не високосный')
+// } else if (year%4==0){
+//   console.log ('год високосный')
+// } else {
+//   console.log ('Год не високосный')
+// }
 
 // let year = prompt ('Введите год')
 // if (year%100==0) {
@@ -924,6 +992,75 @@ if (year%400==0) {
 
 
 
-// Задания, в которых необходимо использовать DO WHILE.
-// 1. Предлагать пользователю решить пример 2 + 2 * 2 до тех 
-// пор, пока он не решит его правильно
+
+
+// Вывести все числа от 1 до 100, которые кратные указанному 
+// пользователем числу
+
+let devider = 9
+let massive = []
+for (let i=1; i<100; i++) {
+  if (i%devider==0) {
+    // console.log  (i)
+    massive.push(i)
+}
+}
+console.log (`Все делимые числа числа ${devider} в диапазоне от 0 до 100: 
+${massive}`)
+
+// Вывести каждый 4-й элемент из указанного пользователем диапазона. Пользователь 
+// указывает минимальное и максимальное значения диапазона
+
+// let minDiapason = prompt ('Введите первое число')
+// let maxDiapason = prompt ('Введите второе число')
+// let massive2 = []
+// for (let i=minDiapason; i<maxDiapason; i++) {
+//   if (i%4==0)  {
+//     // continue
+//     massive2.push (i)
+//   }
+// }
+// console.log(`числа в вашем диапазоне от ${minDiapason} до ${maxDiapason}: ${massive2}`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Запросить число и проверить, простое ли оно. Простое 
+// число делится без остатка только на себя и на единицу.
+
+let number3 = 10
+let massive3 = []
+for (let i =1; i<=number3; i++){
+  if (i%number==0 || i%1==0) {
+    massive3.push(i)
+    console.log (massive3)
+  } else {
+    console.log ('число не простое')
+  }
+}
