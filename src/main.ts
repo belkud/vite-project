@@ -1021,19 +1021,19 @@ ${massive}`)
 // Запросить число и проверить, простое ли оно. Простое 
 // число делится без остатка только на себя и на единицу.
 
-const checkIsSimple = +(prompt('input a number') as string)
-let isSimple = true
-for (let i=2; i<checkIsSimple; i++) {
-  if (checkIsSimple%i==0) {
-    isSimple = false
-    break
-  }
-}
-if (isSimple) {
-  alert('simple')
-} else {
-  alert('not simple')
-}
+// const checkIsSimple = +(prompt('input a number') as string)
+// let isSimple = true
+// for (let i=2; i<checkIsSimple; i++) {
+//   if (checkIsSimple%i==0) {
+//     isSimple = false
+//     break
+//   }
+// }
+// if (isSimple) {
+//   alert('simple')
+// } else {
+//   alert('not simple')
+// }
 
 // let number3 = 10
 // let massive3 = []
@@ -1053,7 +1053,7 @@ if (isSimple) {
 let num = 10
 let massive4 = []
 let i
-let massiveR = num.reverse()
+// let massiveR = num.reverse()
 for (let i = 1; i<=num; i++) {
   massive4.push(i)
 }
@@ -1067,3 +1067,27 @@ console.log(`Все числа вашего массива: ${massive4}`)
 // const zReverse = z.reverse()
 // console.log(zReverse)
 
+
+
+
+//  Запросить 2 числа и найти все общие делители
+let numb1 = 30
+let numb2 = 20
+let div=[] as any
+let min1 = numb1<numb2?numb1:numb2
+
+// Решение первое
+
+// let i1 = 2
+// while (i1<min1) {
+//   if (numb1%i1==0 && numb2%i1==0) div.push(i1)
+//   i1++
+// }
+// console.log(div)
+
+// Решение второе
+for (let i1=2; i1<min1;) {
+  if (numb1%i1==0 && numb2%i1==0) div.push(i1)
+  i1++
+}
+console.log(div)
