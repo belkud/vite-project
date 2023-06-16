@@ -1506,8 +1506,9 @@ function makeUser(nam, ag) {
 
 let use = makeUser(30, 'john :)))');
 console.log(use); // John
+console.log(use); // John
 
-
+// sgsdfggfc
 console.log ('DOWN')
 console.log ('DOWN')
 console.log ('DOWN')
