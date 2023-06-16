@@ -257,15 +257,6 @@ console.log ( Math.min(3, 5, -10, 0, 1) )
 // }
 
 
-// 2. Запросить 2 числа и найти только наибольший общий 
-// делитель.
-// 3. Запросить у пользователя число и вывести все делители 
-// этого числа.
-
-
-
-// 1. Подсчитать сумму всех чисел в заданном пользователем 
-// диапазоне. 
 
 // . Запросить у пользователя число и вывести его модуль 
 // (|7| = 7, |-7| = 7).
@@ -661,26 +652,6 @@ function logArguments(){
 //  console.log (x)
 
 
-//  1. Подсчитать сумму всех чисел в заданном пользователем 
-// диапазоне.
-
-// let num1 = Number(prompt('Для подсчета суммы чисел в заданном диапазоне введите начальную цифру диапазона'));
-// let num2 = Number(prompt('Введите конечную цифру'));
-// let sum = 0;
-
-// if (num1 < num2) {
-//     while (num1 <= num2) {
-//         sum += num1;
-//         num1++;
-//     };
-// } else if (num1 > num2) {
-//     while (num1 >= num2) {
-//         sum += num2;
-//         num2++;
-//     };
-// };
-// alert(`Сумма всех чисел в указанном диапазоне ${sum}`);
-
 
 // let x8 = Number(prompt ('Введите первое число'))
 // let y8 = Number(prompt ('Введите второе число'))
@@ -700,39 +671,20 @@ function logArguments(){
 // alert ('сумма всех чисел в указанном диапазоне ' + sum)
 
 
-//  1. Подсчитать сумму всех чисел в заданном пользователем 
-// диапазоне.
-// let x9 = Number(prompt('Первое число'))
-// let y9 = Number(prompt('Второе число'))
-// let sum = 0
-// if (x9 < y9){
-//   while (x9<=y9) {
-//     sum += x9
-//     x9++
-//   }
-// } else if (y9 > x9){
-//   while (y9>=x9) {
-//     sum+=x9
-//     x9++
-//   }
-// }
-// console.log ('общая сумма чисел в заданном диапазоне ' + sum)
-
-
 
 
 // Запросить 2 числа и найти только наибольший общий делитель.
 
-// let x = 50
-// let y = 6
-// while (x!=0 && y!=0) {
-// if (x > y) {
-//   x=x%y
-// } else if (x < y) {
-//   y=y%x
-// } 
-// }
-// console.log (`самый большой делитель ${x+y}`)
+let x4 = 50
+let y4 = 6
+while (x4!=0 && y4!=0) {
+if (x4 > y4) {
+  x4=x4%y4
+} else if (x4 < y4) {
+  y4=y4%x4
+} 
+}
+console.log (`самый большой делитель ${x4+y4}`)
 
 
 
@@ -812,14 +764,14 @@ console.log (count)
     // пример, вывести результат и спросить, хочет ли он решить еще один пример. 
     // И так до тех пор, пока пользователь не откажется.
 
-let x = 10
-let y = 15
-if (x + y) {
-  console.log (x+y)
-}
-if (x - y) {
-  console.log (x-y)
-}
+// let x = 10
+// let y = 15
+// if (x + y) {
+//   console.log (x+y)
+// }
+// if (x - y) {
+//   console.log (x-y)
+// }
 
 
 // do {
@@ -948,7 +900,7 @@ console.log (`Все делители числа ${number}:  ${divisor}`)
       //   }
       // } while (confirm ('Решить еще раз?'))
   
-
+ 
 
 
 
@@ -965,19 +917,10 @@ console.log (zReverse)
 
 
 
-// ??????????????? Запросить у пользователя год и проверить, високосный он 
+
+// Запросить у пользователя год и проверить, високосный он 
 // или нет. Високосный год либо кратен 400, либо кратен 4 и 
 // при этом не кратен 100.
-// let year = prompt ('Введите год')
-// if (year%400==0) {
-//   console.log ('год високосный')
-// } else if (year%100==0){
-//   console.log ('год не високосный')
-// } else if (year%4==0){
-//   console.log ('год високосный')
-// } else {
-//   console.log ('Год не високосный')
-// }
 
 // let year = prompt ('Введите год')
 // if (year%100==0) {
@@ -997,16 +940,16 @@ console.log (zReverse)
 // Вывести все числа от 1 до 100, которые кратные указанному 
 // пользователем числу
 
-let devider = 9
-let massive = []
-for (let i=1; i<100; i++) {
-  if (i%devider==0) {
-    // console.log  (i)
-    massive.push(i)
-}
-}
-console.log (`Все делимые числа числа ${devider} в диапазоне от 0 до 100: 
-${massive}`)
+// let devider = 9
+// let massive = []
+// for (let i=1; i<100; i++) {
+//   if (i%devider==0) {
+//     // console.log  (i)
+//     massive.push(i)
+// }
+// }
+// console.log (`Все делимые числа числа ${devider} в диапазоне от 0 до 100: 
+// ${massive}`)
 
 // Вывести каждый 4-й элемент из указанного пользователем диапазона. Пользователь 
 // указывает минимальное и максимальное значения диапазона
@@ -1016,7 +959,6 @@ ${massive}`)
 // let massive2 = []
 // for (let i=minDiapason; i<maxDiapason; i++) {
 //   if (i%4==0)  {
-//     // continue
 //     massive2.push (i)
 //   }
 // }
@@ -1029,6 +971,79 @@ ${massive}`)
 
 
 
+// Запросить число и проверить, простое ли оно. Простое 
+// число делится без остатка только на себя и на единицу.
+
+let number3 = 5
+for (let i =1; i<=number3; i++){
+  if (number3/i!=1 || i!=1){
+    console.log ('число не простое')
+    } else {
+    console.log ('число простое')
+  }
+}
+
+// let num = +prompt('kk')
+// function isPrime(num) {
+//   for (var i = 2; i < num; i++)
+//     if (num % i === 0) return false;
+//   return num > 1;
+// };
+
+// function getMessage(num) {
+//       alert(isPrime(num) ? 'Число простое': 'Число непростое')
+// }
+// console.log(isPrime(num))
+
+
+// function isPrime(n) {
+//   if (n < 2) {
+//     return 'Число должно быть больше 1';
+//   } else if (n === 2) {
+//     return 'Простое число';
+//   }
+
+//   let i = 2;
+//   const limit = Math.sqrt(n);
+//   while (i <= limit) {
+//     if (n % i === 0) {
+//       return 'Составное число';
+//     }
+//     i +=1;
+//   }
+  
+//   return 'Простое число';
+// }
+
+
+// console.log(100, isPrime(100));
+// console.log(7, isPrime(7));
+// console.log(0, isPrime(0));
+// console.log(23, isPrime(23));
+// console.log(2, isPrime(2));
+
+
+
+let user = {
+  name: "John",
+  age: 30
+}
+console.log (user.name)
+console.log(user.age)
+
+
+
+console.log (user)
+
+// function checkAge(age:number) {
+//   return age>18||confirm('Родители разрешили?')
+  // return (age > 18) ? true : confirm('Родители разрешили?')
+  // if (age > 18) {
+  //   return true;
+  // } else {
+  //   return confirm('Родители разрешили?');
+  // }
+// }
 
 
 
@@ -1037,30 +1052,466 @@ ${massive}`)
 
 
 
+let value=10
+console.log(value)
+
+// При описании функции мы указываем параметры, которые ожидаем получить как аргументы при вызове
+const showMessage = function(n:number, a = ' Я значение по умолчанию аргумента "а"') {
+  let local = 6
+  let value = 7
+  console.log('локальная переменная вместо глобальной',value)
+  // console.log(n)
+  console.log(local)
+  n++
+  console.log('Всем привет!' + a + ' ' + local + ' ' + n)
+  return n
+}
+
+// При вызове функции в неё передаются аргументы
+showMessage(value,' Я аргумент "a"')
+console.log('Возвращаемое значение функции', showMessage(value))
+console.log(value)
+// showMessage()
+
+// Мы объявляем функции со списком параметров, затем вызываем их, передавая аргументы
+
+// Несколько вариантов возврата значения по условию
+function checkAge(age:number) {
+  // return age>18||confirm('Родители разрешили?')
+  // return (age > 18) ? true : confirm('Родители разрешили?')
+  if (age > 18) {
+    return true;
+    } else {
+    return confirm('Родители разрешили?');
+  }
+}
+
+console.log(checkAge)
+
+function ask(question: string, yes: Function, no: Function) {
+  if (confirm(question)) yes()
+  else no();
+}
+console.log(ask) 
+
+
+// Анонимные функции-колбэки
+// ask(
+//   "Вы согласны?",
+//   function () { alert("Вы согласились."); },
+//   function () { alert("Вы отменили выполнение."); }
+// )
+
+// ask(
+//   "Вы согласны?",
+//   () => alert('Вы согласились.') :
+  // () => alert("Вы отменили выполнение.")
+// )
+
+
+// Стрелочная функция
+// let func = (arg1, arg2, ...argN) => expression
+// let func = function (arg1, arg2, ...argN) {
+//   return expression
+// }
+ 
+// Отсутствие фигурных скобок после стрелки, НЕЯВНО (не пишем return) возвращает результат
+// let func1 = (a: number, b: number) => a+b;
+let func1 = (a: number, b: number) => { return a }
+
+let func2 = function (a: number, b: number) {
+  return a+b
+}
+// Стрелочная функция с логикой и явным возвратом
+let func3 = (a: number, b: number) => { 
+  const c = a + b
+  return c 
+}
+
+console.log('func1', func1(3,2))
+console.log('func2', func2(1,2))
+console.log('func3', func3(1,2))
+
+
+// ################### OBJECTS ######################
+// let user
+// user = new Object() // синтаксис "конструктор объекта"
+
+// type User = {
+//   age: number,
+//   name: string
+// }
+
+// user = {} as any // синтаксис "литерал объекта"
+// console.log({...user})
+// user.age = 18
+// console.log({...user})
+// user.name = 'Vasya'
+// console.log({...user})
+// user.height = 180
+
+
+// console.log(user.age)
+// console.log({...user})
+
+// const user1 = {
+//   age: 18,
+//   name: 'Vasya',
+//   height: 180,
+//   'master pass': '[admin}',
+// } as any
+
+// for (let key in user1) {
+//   console.log(key, user1[key])
+// }
+
+// user1.age = 20
+// console.log(user1['age'])
+// let key = 'master pass'
+// console.log(user1[key])
+// delete user1['master pass']
+// console.log(user1)
+
+// let name = '123'
+// let age = 20
+
+// const user3 = {
+//   name, 
+//   age,
+// }
+// console.log(user3)
+
+// оператор «in» позволяет проверить, существует ли ключ в объекте
+// console.log('age' in user3)
+// console.log('tall' in user3)
+
+let newUser = {
+  name: 'Ivan',
+  age:32,
+  'angry birds':'true'
+}
+console.log(newUser)
+console.log (newUser.name)
+console.log (newUser.age + ' years')
+
+let city = {
+  City: 'Sochi',
+  location: 'Russia',
+  'power of country' : 123
+}
+console.log (city)
+console.log (city['City'])
+console.log(city.City)
+console.log (city['power of country'])
+
+  
+  const name3 = {
+    name3: 'Sasha',
+    job3: 'Plumber',
+  }
+  console.log (name3.name3)
+  name3.name3 = 'Alex'
+  console.log (name3)
+  
+  
+  
+  
+  
+  
+  
+  let fruit = 'apple' 
+  let bag = {
+    [fruit + 'Computers']:5,
+  }
+  console.log (fruit)
+  console.log (bag)  
+
+
+  let user2
+user2 = new Object() // синтаксис "конструктор объекта"
+
+type User2 = {
+  age: number,
+  name: string
+}
+
+user = {} as any // синтаксис "литерал объекта"
+console.log({...user})
+user.age = 18
+console.log({...user})
+user.name = 'Vasya'
+console.log({...user})
+user.height = 180
+
+
+console.log(user.age)
+console.log({...user})
+
+// let aboutMe = prompt('Введите данные', 'age, name, city')
+let aboutMe = {
+  name: 'Vova',
+  age: 32,
+  city: 'Sochi',
+}
+console.log (aboutMe)
+console.log (aboutMe.name)
+console.log([aboutMe.name])
+let key = 'name'
+console.log (aboutMe[key])
+console.log ('name' in aboutMe)
+console.log (aboutMe.aaa===undefined)
+for (let key in aboutMe) {
+  console.log ([key])
+  console.log (aboutMe[key])
+}
+let user3 = {
+  name: 'Jhon' as any,
+  surname: 'Smith',
+  'birds birds': 123,
+}
+console.log (user3)
+
+user3.name = 'Peter'
+console.log (user3)
+
+delete user3.name
+console.log (user3)
+console.log (user3['birds birds'])
+
+
+
+// let number = 90
+// let divisor = []
+// for (let i = 1; i < number; i++) {
+//   if (number % i == 0) {
+//       // console.log(i)
+//       divisor.push(i)
+//   }
+// }
+// console.log (`Все делители числа ${number}:  ${divisor}`)
+
+let capitals = {
+Russia: 'Moscow',
+USA: 'Wasington',
+Spain: 'Madrid',
+}
+console.log(capitals)
+capitals.USA = 'Moscow'
+console.log (capitals)
+// alert (`${capitals.Russia}  ${capitals.USA}`)
+
+
+let fruct = 'apple'
+let r = {
+  [fruct]:5,
+}
+console.log(fruct)
+console.log(r)
+
+
+// . Запросить у пользователя число и вывести все делители 
+// этого числа.
+// let num = 96
+// let divider = []
+// for (let i=1; i<num; i++) {
+// if (num%i==0 && num!=1) {
+//   divider.push (i)
+//   console.log (i)
+// }
+// }
+// console.log (`Все делители числа ${num}: ${divider}`)
+
+
+
+// let num2 = 55
+// let summ = []
+// for (let i=1; i<num2; i++) {
+//   if (num2%i==0) {
+//     summ.push(i)
+//     // console.log (i)
+//   }
+// }
+// console.log (summ)
+
+
+// Пользователь ввел число, а на экран вывелись все числа 
+// от введенного до 0.
+
+// let numb = prompt ('Введите число')
+// for (let i=1; i<=numb; i++) {
+//   console.log (i)
+// }
+
+//  Запросить 2 числа и найти все общие делители
+let numb1 = 30
+let numb2 = 20
+let div=[]
+if (numb1>numb2){
+  while (numb1%numb2==0){
+    div++
+  }
+} else {
+  while (numb2%numb1==0) {
+    div++
+  }
+}
+console.log(div)
+
+
+
+// ОБЪЕКТЫ
+
+let car = {
+brand: 'Rio',
+color: 'white',
+speed: 85,
+engine: {
+  horsePower: 123
+}
+}
+
+console.log (car)
+console.log (car.engine)
+
+let massive3 = ([car])
+console.log (massive3)
+
+
+let city2 = 'Belgorod'
+let city3 = 'Sochi'
+
+let user5 = {
+city2,
+city3,
+  name: 'Nastya',
+age: 29,
+// 'like birds': true,
+extraInfo: {
+  knowledge: 'average',
+  height: '159 cm',
+  nativeCity: 'Ufa',
+},
+dopInfo: {
+  color: 'light'
+}
+}
+console.log(user5)
+console.log(user5.extraInfo.knowledge)
 
 
 
 
+// delete user5.extraInfo.knowledge
+console.log (user5)
 
+let x9 = user5.name
+console.log(x9)
+let x11 =user5['name']
+console.log(x11)
+user5.age = 30
 
+let key5 = "likes birds";
 
+// то же самое, что и user["likes birds"] = true;
+user5[key5] = true;
+console.log(user5[key5])
 
-
-
-
+let x = 'orange'
+let market = {
+  [x]:5,
+}
+console.log(market[x])
 
 
 
 // Запросить число и проверить, простое ли оно. Простое 
 // число делится без остатка только на себя и на единицу.
 
-let number3 = 10
-let massive3 = []
-for (let i =1; i<=number3; i++){
-  if (i%number==0 || i%1==0) {
-    massive3.push(i)
-    console.log (massive3)
-  } else {
-    console.log ('число не простое')
-  }
+// let number10 = 91
+// for (let i=2; i<number10; i++) {
+//   if (number10%i==0) {
+//     console.log ('число непростое')
+//     break;
+//   } else {
+//     console.log ('число простое')
+//     break;
+//   }
+// }
+
+// Пользователь ввел число, а на экран вывелись все числа 
+// от введенного до 0.
+// let numb = 15
+// let mass =[]
+// for (let i=0; i<numb; i++) {
+//   mass.push (i)
+// }
+// console.log(`все числа от введенного числа ${numb}: ${mass}`)
+
+
+// Вывести # столько раз, сколько указал пользователь.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Подсчитать сумму всех чисел в заданном пользователем диапазоне.
+let num1 = 1
+let num2 = 14
+let sum = 0;
+       if (num1 < num2) {
+    while (num1 <= num2) {
+        sum += num1
+        num1++  // зачем писать num1++ ?
+    }
+} else if (num1 > num2) {
+    while (num1 >= num2) {
+        sum += num2
+        num2++
+    }
+}   
+console.log(sum)
+
+
+// Определить количество цифр в введенном числе.
+
+let num = 12378;
+let str = String(num);
+console.log(str.length);
+
+let me =  {
+  name: 'vova',
+  age: 32,
+  'job is good ' : 'yes'
 }
+
+console.log (me['job is good '])
+
+function makeUser(nam, ag) {
+  return {
+    nam,
+    ag: ag
+    // ...другие свойства
+  };
+}
+
+let use = makeUser(30, 'john :)))');
+console.log(use); // John
+
+
+console.log ('DOWN')
+console.log ('DOWN')
+console.log ('DOWN')
+console.log ('DOWN')
+console.log ('DOWN')
+
+
