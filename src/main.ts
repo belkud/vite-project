@@ -1646,30 +1646,55 @@ function pow(a, b) {
 }
 console.log(pow(2,3))
 
+
 // 3. Написать функцию, которая принимает 2 числа и знак 
 // (+ - * /), считает пример и возвращает результат.
 
-function calculator (a,b) {
-  if (a+b) {
-    return (a+b)
-  }
-  else if (a-b) {
-    return (a-b)
-  }
-  else if (a*b) {
-    return (a*b)
-  }
-  if (a/b) {
-    return (a/b)
-  }
+// 'первое решение'
+// function calculator (a,b) {
+//   if ("a+b") {
+//     return (a+b)
+//   }
+//   else if (a-b) {
+//     return (a-b)
+//   }
+//   else if (a*b) {
+//     return (a*b)
+//   }
+//   if (a/b) {
+//     return (a/b)
+//   }
+// }
+// prompt (calculator + 'введите команду')
+// console.log (calculator(4,8))
+
+// 'второе решение'
+// let numFirst = prompt("Введите первое число")
+// let numSecond =prompt("Введите второе число")
+// let operator = prompt("Введите знак операции" + " +, -, *, / ")
+// let answer
+// function calcResult (numFirst, numSecond, operator) {
+//   eval(`${numFirst} ${operator} ${numSecond} `)
+// }
+
+// // answer = (eval(`${numFirst} ${operator} ${numSecond} `))
+// console.log (calcResult)
+
+// 4. Написать функцию, которая проверяет, является ли переданное
+//  ей число простым
+function simpleNumber (a) {
+  for (let i =1; i<=a; i++){
+    if (a/i!=1 || a!=1){
+      return ('число не простое')
+      } else {
+      return ('число простое')
+      }
 }
-
-console.log (calculator(4,8))
-
-
-
+}
+console.log (simpleNumber(4))
 
 
 console.log ('DOWN')
 console.log ('DOWN')
 console.log ('DOWN')
+
