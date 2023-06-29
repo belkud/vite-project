@@ -1799,9 +1799,19 @@ console.log (maxDigital())
 console.log (maxDigital(465465469874))
 
 
-
-
-
+// Написать функцию для вывода всех множителей переданного числа в 
+// возрастающем порядке. Например: число 18 – множители 2 * 3 * 3.
+function multiplier (a=18) {
+  let array = []
+  for (let i=1; i<a; i++) {
+    if (a%i==0) {
+      array.push(i)
+    }
+  }
+  return array
+}
+console.log(multiplier())
+console.log(multiplier(90))
 
 
 console.log('DOWN')
