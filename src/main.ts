@@ -1132,7 +1132,6 @@ console.log('func1', func1(3,2))
 console.log('func2', func2(1,2))
 console.log('func3', func3(1,2))
 
-
 // ################### OBJECTS ######################
 // let user
 // user = new Object() // синтаксис "конструктор объекта"
@@ -1491,29 +1490,186 @@ console.log(str.length);
 let me =  {
   name: 'vova',
   age: 32,
-  'job is good ' : 'yes'
+  'job is good ' : 'yes',
 }
 
 console.log (me['job is good '])
 
-function makeUser(nam, ag) {
-  return {
-    nam,
-    ag: ag
-    // ...другие свойства
-  };
+//проверка существования свойств объекта
+console.log(me.age===undefined)
+console.log(me.height===undefined)
+console.log(me.height)
+//вторая проверка (используется редко)
+console.log( 'age' in me)
+
+for (let key in me) {
+  console.log (key)
+  console.log (me[key])
 }
 
-let use = makeUser(30, 'john :)))');
-console.log(use); // John
-console.log(use); // John
-console.log(use); // John
-
-// sgsdfggfc
-console.log ('DOWN')
-console.log ('DOWN')
-console.log ('DOWN')
-console.log ('DOWN')
-console.log ('DOWN')
+let usr = {
+  name: "John",
+  age: 30,
+  isAdmin: true
+};
+usr.name = 'Lana'
+console.log(usr.name)
 
 
+for (let key in usr) {
+  // ключи
+  console.log( key );  // name, age, isAdmin
+  // значения ключей
+  console.log( usr[key] ); // John, 30, true
+1}
+// function makeUser(nam, ag) {
+//   return {
+//     nam,
+//     ag: ag
+//     // ...другие свойства
+//   };
+// }
+
+// let use = makeUser(30, 'john :)))');
+// console.log(use); // John
+
+
+
+let codes = {
+  "+49": "Германия",
+  "+41": "Швейцария",
+  "+44": "Великобритания",
+  // ..,
+  "+1": "США"
+}
+console.log (codes)
+for (let key in codes) {
+  console.log (key)
+  console.log (codes[key])
+}
+
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130
+}
+let summm = (salaries.John + salaries.Ann + salaries.Pete)
+console.log (summm)
+
+// function isEmpty(obj) {
+//   for (let key in obj) {
+//     // если тело цикла начнет выполняться - значит в объекте есть свойства
+//     return false;
+//   }
+//   return true;
+// }
+
+
+
+// function person (name, age, color) {
+//   this.name = name;
+//   this.age = age;
+//   this. favColor = color;
+// }
+
+// var p1 = new person('john', 43, 'green');
+// console.log (p1.age)
+
+// console.log (p1.person)
+
+let rr = {
+  name: 'aaa',
+}
+console.log(rr)
+
+rr.name ='bbb'
+console.log(rr)
+
+let likes_birds = true;
+console.log(likes_birds)
+
+
+
+
+
+
+
+
+
+
+let simba = {
+  animal: 'pig',
+  age:23,
+}
+console.log(simba)
+// document.write(simba)
+
+
+function abc () {
+  return
+  console.log ('  alphabet: cirilic')
+}
+console.log(abc)
+console.log ('  alphabet: cirilic')
+abc();
+abc();
+
+function hello (a, b)  {
+  let c
+  a = 15;
+  b = 3;
+  c = a + b
+  return c
+}
+// console.log (c);
+// console.log (hello)
+
+
+// 1. Написать функцию, которая принимает 2 числа и возвращает
+// меньшее из них.
+function compare(a, b) {
+  a = 10
+  b = 7
+if (a<b) {
+  return (a)
+}
+else {
+  return (b)
+}
+}
+console.log(compare(a,b))
+
+
+// 2. Написать функцию возведения числа в степень.
+function pow(a, b) {
+  return a**b;
+}
+console.log(pow(2,3))
+
+// 3. Написать функцию, которая принимает 2 числа и знак 
+// (+ - * /), считает пример и возвращает результат.
+
+function calculator (a,b) {
+  if (a+b) {
+    return (a+b)
+  }
+  else if (a-b) {
+    return (a-b)
+  }
+  else if (a*b) {
+    return (a*b)
+  }
+  if (a/b) {
+    return (a/b)
+  }
+}
+
+console.log (calculator(4,8))
+
+
+
+
+
+console.log ('DOWN')
+console.log ('DOWN')
+console.log ('DOWN')
