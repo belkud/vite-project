@@ -1626,6 +1626,9 @@ function hello(a, b) {
 // console.log (hello)
 
 
+
+// JS_PZ_Modul_1_Week_4_функции
+
 // 1. Написать функцию, которая принимает 2 числа и возвращает
 // меньшее из них.
 function compare(a: number = 7, b: number = 10) {
@@ -1644,9 +1647,7 @@ console.log(pow(2, 3))
 
 // 3. Написать функцию, которая принимает 2 числа и знак 
 // (+ - * /), считает пример и возвращает результат.
-// let numFirst = prompt("Введите первое число")
-// let numSecond =prompt("Введите второе число")
-// let operator = prompt("Введите знак операции" + " +, -, *, / ")
+
 function calculator(a, b, operator) {
   if (operator == "+") {
     return (a + b)
@@ -1739,15 +1740,23 @@ console.log (evenOdd())
 console.log (evenOdd(1,100,false))
 
 
-// 2. Написать функцию поиска наибольшего общего делителя
-function maxDiv (a=16, b=12) {
-  
-for (let i=1; ; i++)
-//  (a%b==1)
-return
-}
-console.log(maxDiv())
 
+// JS_DZ_Modul_1_Week_5_функции
+
+
+
+// 2. Написать функцию поиска наибольшего общего делителя
+function maxDiv (a = 24, b = 16) {
+  let array=[]
+  for (let i=1; i<a; i++) {
+      if (a%i==0 && b%i==0) {    
+        array.push(Math.max(i))
+      } 
+    }
+    return (array)
+  }
+  console.log(maxDiv())
+  
 // let number1 = Number(prompt('Для нахождения НОД двух чисел введите первую цифру'));
 // let number2 = Number(prompt('Введите вторую цифру'));
 
@@ -1762,29 +1771,11 @@ console.log(maxDiv())
 
 
 
-// 10. Написать функцию, которая принимает дату (день, месяц, 
-//   год) и возвращает дату следующего дня в виде строки 
-//   «дд.мм.гггг». Проверку на високосный год желательно 
-//   написать отдельной функцией.
 
-function date (day=20, mounth=6, year=2023) {
-//   year = prompt ('Введите год')
-// if (year%100==0) {
-//   console.log ('год не високосный')
-// } else if (year%400==0){
-//   console.log ('год високосный')
-// } else if (year%4==0){
-//   console.log ('год високосный')
-// } else {
-//   console.log ('Год не високосный')
-// }
-  // 21.06.2023
-}
-console.log (date())
-console.log (date(28))
 
 
 // 3. Написать функцию для поиска максимальной цифры в числе.
+
 function maxDigital (a=123) {
   let str = String(a)
   let max = 0
@@ -1799,11 +1790,15 @@ console.log (maxDigital())
 console.log (maxDigital(465465469874))
 
 
-// Написать функцию для вывода всех множителей переданного числа в 
+
+
+
+// ?????
+// 5. Написать функцию для вывода всех множителей переданного числа в 
 // возрастающем порядке. Например: число 18 – множители 2 * 3 * 3.
 function multiplier (a=18) {
   let array = []
-  for (let i=1; i<a; i++) {
+  for (let i=2; i<a/2; i++) {
     if (a%i==0) {
       array.push(i)
     }
@@ -1812,6 +1807,19 @@ function multiplier (a=18) {
 }
 console.log(multiplier())
 console.log(multiplier(90))
+
+
+// 6. Написать функцию, которая возвращает число Фибоначчи 
+// по переданному порядковому номеру. 
+// Числа Фибоначчи: 1, 1, 2, 3, 5, 8, 13… Ряд основывается на 
+// том, что каждое число равно сумме двух предыдущих чисел. 
+// Например: порядковый номер 3 – число 2, порядковый 
+// номер 6 – число 8
+
+function fibonachi (a,b) {
+  
+}
+
 
 
 console.log('DOWN')
