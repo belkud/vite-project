@@ -1824,7 +1824,7 @@ function fibonachi (n=0) {
   for (let i=1; i<=100;i++){
     if (n<=i) {
       n= (n-2)
-      return n
+      return (n-2)
     }
     console.log(n)
     array.push(i)
@@ -1839,7 +1839,7 @@ function fib(n) {
 }
 console.log(fib(19))
 console.log(fib(7))
-console.log(fib(28))
+console.log(fib(23))
 
 console.log('DOWN')
 console.log('DOWN')
