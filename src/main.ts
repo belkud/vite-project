@@ -1747,15 +1747,15 @@ console.log (evenOdd(1,100,false))
 
 // 2. Написать функцию поиска наибольшего общего делителя
 function maxDiv (a = 24, b = 16) {
-  let array=[]
-  for (let i=1; i<a; i++) {
+  let div=0
+  for (let i=1; i<=Math.min(a,b); i++) {
       if (a%i==0 && b%i==0) {    
-        array.push(Math.max(i))
+        div = i
       } 
     }
-    return (array)
+    return (div)
   }
-  console.log(maxDiv())
+  console.log('divider',maxDiv())
   
 // let number1 = Number(prompt('Для нахождения НОД двух чисел введите первую цифру'));
 // let number2 = Number(prompt('Введите вторую цифру'));
@@ -1798,10 +1798,13 @@ console.log (maxDigital(465465469874))
 // возрастающем порядке. Например: число 18 – множители 2 * 3 * 3.
 function multiplier (a=18) {
   let array = []
-  for (let i=2; i<a/2; i++) {
+  for (let i=2; i<=a; i++) {
     if (a%i==0) {
       array.push(i)
-    }
+      a=a/i
+      // console.log(i)
+      i--
+    } 
   }
   return array
 }
@@ -1816,11 +1819,27 @@ console.log(multiplier(90))
 // Например: порядковый номер 3 – число 2, порядковый 
 // номер 6 – число 8
 
-function fibonachi (a,b) {
-  
+function fibonachi (n=0) {
+  // let array =[]
+  for (let i=1; i<=100;i++){
+    if (n<=i) {
+      n= (n-2)
+      return n
+    }
+    console.log(n)
+    array.push(i)
+  }
 }
+console.log(fibonachi(15))
+console.log(`fibonachi 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 `)
 
-
+// ????? через рекурсивную функцию
+function fib(n) {
+  return n<=1 ? n : fib(n-1) + fib(n-2);
+}
+console.log(fib(19))
+console.log(fib(7))
+console.log(fib(28))
 
 console.log('DOWN')
 console.log('DOWN')
