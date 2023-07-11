@@ -1877,6 +1877,56 @@ console.log (summNumberRec(123))
 console.log (summNumberRec2(123))
 
 
+// 3. Написать функцию для поиска максимальной цифры в числе.
+
+// первый способ
+
+function maxNum (a:number) {
+  let str = String(a)
+  return Math.max(...str.split('').map(el=>+el))
+}
+console.log ( maxNum (123459))
+
+
+// второй способ
+
+// function maxDigital (a=123) {
+//   let str = String(a)
+//   let max = 0
+//   for (let num of str) {
+//     if (max<+num) {
+//       max = +num
+//     }
+//   }
+//   return max
+// }
+console.log (maxDigital())
+console.log (maxDigital(465465469874))
+
+
+console.log(Math.max(3, 5, -10, 0, 1))
+
+// 2. Написать функцию поиска наибольшего общего делителя.
+// Найти общие делители
+
+function maxDiv2 (a = 24, b = 16) {
+  let div = 0
+  let massive = []
+  for (let i=1; i<=Math.min(a,b); i++) {
+      if (a%i==0 && b%i==0) { 
+        div = i   
+        massive.push(i)
+      } 
+    }
+    return {div, massive}
+  }
+  
+console.log (`ANSWER`)
+console.log(maxDiv2())
+console.log (`ANSWER`)
+
+
+
 
 
 console.log('DOWN')
