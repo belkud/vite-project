@@ -1808,7 +1808,7 @@ function multiplier (a=18) {
   }
   return array
 }
-console.log(multiplier())
+console.log(multiplier(333))
 console.log(multiplier(90))
 
 
@@ -1818,28 +1818,66 @@ console.log(multiplier(90))
 // том, что каждое число равно сумме двух предыдущих чисел. 
 // Например: порядковый номер 3 – число 2, порядковый 
 // номер 6 – число 8
-
-function fibonachi (n=0) {
-  // let array =[]
-  for (let i=1; i<=100;i++){
-    if (n<=i) {
-      n= (n-2)
-      return (n-2)
-    }
-    console.log(n)
-    array.push(i)
+function fib(n) {
+  let a = 1;
+  let b = 1;
+  for (let i = 3; i <= n; i++) {
+    let c = a + b;
+    a = b;
+    b = c;
   }
+  return b;
 }
-console.log(fibonachi(15))
+console.log(fib(6))
 console.log(`fibonachi 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 `)
 
-// ????? через рекурсивную функцию
-function fib(n) {
-  return n<=1 ? n : fib(n-1) + fib(n-2);
-}
+// через рекурсивную функцию
+// function fib(n) {
+//   return n<=1 ? n : fib(n-1) + fib(n-2);
+// }
 console.log(fib(19))
 console.log(fib(7))
 console.log(fib(23))
+
+// 4. написать функцию, которая считает сумму цифр числа.
+// например: число 1357, сумма 1 + 3 + 5 + 7= 16
+
+// первый способ
+function summNumber (num = 1357) {
+  let str  = String(num)
+  let sum = 0
+  console.log (str.length)
+  console.log(+str.split('').reverse().join('')) //числа наоборот
+  str.split('').forEach((el)=>{
+    sum+= +el
+  })
+  return sum
+}
+
+// второй способ/ рекурсия
+function summNumberRec (num = 1357):number {
+  const str = String(num)
+  if (str.length == 1) {
+    return num
+  }
+  const currNum = Math.floor(num/(10**(str.length-1)))
+  return currNum + summNumberRec(num-currNum*10**(str.length-1))
+}
+
+// третий способ/ рекурсия
+function summNumberRec2 (num = 1357):number {
+  const str = String(num)
+  if (str.length == 1) {
+    return num
+  }
+  return +str[0] + summNumberRec(+str.slice(1))
+}
+console.log (summNumber())
+console.log (summNumberRec(123))
+console.log (summNumberRec2(123))
+
+
+
 
 console.log('DOWN')
 console.log('DOWN')
