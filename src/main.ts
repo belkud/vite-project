@@ -1968,20 +1968,20 @@ function firstLetter (hello, world) {
 
 // 6. Написать функцию, которая проверяет, является ли переданная 
 // строка палиндромом.
-function palindrom () {
-  let str
-  str = 'helleh'
+function palindrom (str) {
+  // let str
+  str = 'hellh'
   if (str==str.split('').reverse().join('')) {
     console.log ('является полиндромом')
     return 'polindrom'
   } else {
     console.log ('не является полиндромом')
-    return
+    return 'no polindrom'
   }
 }
 
 console.log (`ANSWER`)
-console.log(palindrom())
+console.log(palindrom(str))
 console.log (`ANSWER`)
 
 
