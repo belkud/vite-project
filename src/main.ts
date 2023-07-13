@@ -1956,16 +1956,6 @@ console.log (compare('55889892','jljlklf'))
 
 
 
-// 2. Написать функцию, которая переводит в верхний регистр 
-// первый символ переданной строки.
-
-function firstLetter (hello, world) {
-  let str
-  str = ('hello')
-  console.log(str.split('').reverse().join(''))
-
-}
-
 // 6. Написать функцию, которая проверяет, является ли переданная 
 // строка палиндромом.
 function palindrom (str) {
@@ -1980,8 +1970,27 @@ function palindrom (str) {
   }
 }
 
+
+// 2. Написать функцию, которая переводит в верхний регистр 
+// первый символ переданной строки.
+
+// для одного слова
+function firstLetter (a='hello') {
+  return a[0].toUpperCase() + a.slice(1)
+}
+console.log(firstLetter())
+
+//для нескольких слов
+function firstLetter2 (a='hello world') {
+  return a.slice()
+
+}
+
+
 console.log (`ANSWER`)
-console.log(palindrom(str))
+console.log (`\u25BD`)
+console.log(firstLetter2())
+console.log (`\u25B3`)
 console.log (`ANSWER`)
 
 
