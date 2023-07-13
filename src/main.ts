@@ -572,33 +572,33 @@ console.log('END')
 // ВАЖНО ВАЖНО ВАЖНО!!!!! РАЗОБРАТЬ ПРЕДЫДУЩИЕ ДВЕ ЗАДАЧИ
 
 
-function myCity(name5) {
-  console.log(name5 + ' это мой город')
-}
-myCity('Белгород')
-myCity('Сочи ')
+// function myCity(name5) {
+//   console.log(name5 + ' это мой город')
+// }
+// myCity('Белгород')
+// myCity('Сочи ')
 
-function myFunc2(name: string, name2: string) {
-  console.log('My name is ' + name + ' My age is ' + name2)
-}
-myFunc2('Vladimir', 32)
+// function myFunc2(name: string, name2: string) {
+//   console.log('My name is ' + name + ' My age is ' + name2)
+// }
+// myFunc2('Vladimir', 32)
 
-let a3 = 7
-let b3 = 10
-function myFunc3(a3: number, b3: number) {
-  console.log(a3 + b3)
-}
-myFunc3(3, 3)
+// let a3 = 7
+// let b3 = 10
+// function myFunc3(a3: number, b3: number) {
+//   console.log(a3 + b3)
+// }
+// myFunc3(3, 3)
 
-function myFunc4(a3: number, b3: number) {
-  return (a3 + b3)
-}
-console.log(myFunc4(a3, b3))
+// function myFunc4(a3: number, b3: number) {
+//   return (a3 + b3)
+// }
+// console.log(myFunc4(a3, b3))
 
-function multiplication(a, b) {
-  console.log(a * b)
-}
-multiplication(a, b)
+// function multiplication(a, b) {
+//   console.log(a * b)
+// }
+// multiplication(a, b)
 
 function multiplication2(a, b) {
   return (a * b)
@@ -1117,20 +1117,20 @@ console.log(ask)
 
 // Отсутствие фигурных скобок после стрелки, НЕЯВНО (не пишем return) возвращает результат
 // let func1 = (a: number, b: number) => a+b;
-let func1 = (a: number, b: number) => { return a }
+// let func1 = (a: number, b: number) => { return a }
 
-let func2 = function (a: number, b: number) {
-  return a + b
-}
+// let func2 = function (a: number, b: number) {
+//   return a + b
+// }
 // Стрелочная функция с логикой и явным возвратом
-let func3 = (a: number, b: number) => {
-  const c = a + b
-  return c
-}
+// let func3 = (a: number, b: number) => {
+//   const c = a + b
+//   return c
+// }
 
-console.log('func1', func1(3, 2))
-console.log('func2', func2(1, 2))
-console.log('func3', func3(1, 2))
+// console.log('func1', func1(3, 2))
+// console.log('func2', func2(1, 2))
+// console.log('func3', func3(1, 2))
 
 // ################### OBJECTS ######################
 // let user
@@ -1631,11 +1631,11 @@ function hello(a, b) {
 
 // 1. Написать функцию, которая принимает 2 числа и возвращает
 // меньшее из них.
-function compare(a: number = 7, b: number = 10) {
-  return a < b ? a : b
-}
-console.log(compare())
-console.log(compare(5, 8))
+// function compare(a: number = 7, b: number = 10) {
+//   return a < b ? a : b
+// }
+// console.log(compare())
+// console.log(compare(5, 8))
 
 
 // 2. Написать функцию возведения числа в степень.
@@ -1846,7 +1846,7 @@ console.log(fib(23))
 function summNumber (num = 1357) {
   let str  = String(num)
   let sum = 0
-  console.log (str.length)
+  console.log (str.length) // количество аргументов
   console.log(+str.split('').reverse().join('')) //числа наоборот
   str.split('').forEach((el)=>{
     sum+= +el
@@ -1920,10 +1920,77 @@ function maxDiv2 (a = 24, b = 16) {
     }
     return {div, massive}
   }
+  console.log(maxDiv2())
   
+
+// 3. Написать функцию, которая выводит переданное ей число 
+// задом наперед. Например: число 1234 вывести как 4321.
+
+function reverce (a=123457) {
+let str = String(a)  
+  // return (str.split('').reverse().join(''))
+  return Math.max(...str.split('').map(el=> +el))
+}  
+console.log (reverce())
+let arr = [1, 2, 3, 4, 5];
+
+arr.forEach(function(elem){ console.log(elem)})
+
+
+
+// 1. Написать функцию, которая принимает 2 строки и сравнивает их длину. Функция 
+// возвращает 1, если в первой строке больше символов, чем во второй; -1 – если 
+// во второй больше символов, чем в первой; или 0 – если строки одинаковой длины.
+
+function compare (str:string, str2:string) {
+  if (str.length>str2.length) {
+    return 1
+  }else if (str.length==str2.length) {
+    return 0
+  }else{
+    return -1
+  }
+}
+console.log (compare('ssdsdh', 'vghb'))
+console.log (compare('55889892','jljlklf'))
+
+
+
+// 2. Написать функцию, которая переводит в верхний регистр 
+// первый символ переданной строки.
+
+function firstLetter (hello, world) {
+  let str
+  str = ('hello')
+  console.log(str.split('').reverse().join(''))
+
+}
+
+// 6. Написать функцию, которая проверяет, является ли переданная 
+// строка палиндромом.
+function palindrom () {
+  let str
+  str = 'helleh'
+  if (str==str.split('').reverse().join('')) {
+    console.log ('является полиндромом')
+    return 'polindrom'
+  } else {
+    console.log ('не является полиндромом')
+    return
+  }
+}
+
 console.log (`ANSWER`)
-console.log(maxDiv2())
+console.log(palindrom())
 console.log (`ANSWER`)
+
+
+
+
+
+
+// 3. Написать функцию, которая считает количество гласных 
+// букв в переданной строке
 
 
 
