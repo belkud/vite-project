@@ -1982,10 +1982,13 @@ console.log(firstLetter())
 
 //для нескольких слов
 function firstLetter2 (a='hello world') {
-  return a.slice()
-
+  return a
+  .split(' ')
+  .map(function(a) {
+      return a[0].toUpperCase() + a.slice(1)
+  })
+  .join(' ');
 }
-
 
 console.log (`ANSWER`)
 console.log (`\u25BD`)
