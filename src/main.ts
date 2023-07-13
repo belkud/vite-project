@@ -1974,25 +1974,81 @@ function firstLetter2 (a='hello world') {
   .join(' ');
 }
 
+console.log(firstLetter2())
+
 
 
 // 6. Написать функцию, которая проверяет, является ли переданная 
 // строка палиндромом.
-function palindrom (str) {
-  // let str
-  str = 'hellh'
+function palindrom (str = 'hello') {
   if (str==str.split('').reverse().join('')) {
     console.log ('является полиндромом')
-    return 'polindrom'
+    return true
   } else {
     console.log ('не является полиндромом')
-    return 'no polindrom'
+    return false
   }
 }
-
-
 console.log(firstLetter())
+console.log(palindrom('1551'))
 
+
+
+// 3. Написать функцию, которая считает количество гласных 
+// букв в переданной строке
+
+function score(str='sdfgdfgeeaoirgtxxcvg') {
+  let count = 0
+  for (let i=0; i<str.length; i++) {
+    switch (str[i].toLowerCase()) {
+      case 'a':
+      case 'e':
+      case 'o':
+      case 'y':
+      case 'u':
+      case 'i':
+        count++
+    }
+  }
+  return count
+}
+
+function scoreLetters(str='sdfgdfgeeIAEaoirUUgtxxcvg') {
+  let count = {
+    a:0,
+    e:0,
+    o:0,
+    y:0,
+    u:0,
+    i:0,
+  }
+  for (let i=0; i<str.length; i++) {
+    switch (str[i].toLowerCase()) {
+      case 'a':
+        count.a++
+        break
+      case 'e':
+        count.e++
+        break
+      case 'o':
+        count.o++
+        break
+      case 'y':
+        count.y++
+        break
+      case 'u':
+        count.u++
+        break
+      case 'i':
+        count.i++
+        break
+    }
+  }
+  return count
+}
+
+console.log(score())
+console.log(scoreLetters())
 
 
 // 4. Написать функцию для проверки спама в переданной 
@@ -2000,7 +2056,38 @@ console.log(firstLetter())
 // спам. Спамом считать следующие слова: 100% бесплатно,
 // увеличение продаж, только сегодня, не удаляйте, ххх. 
 // Функция должна быть нечувствительна к регистру.
-// 5. Написать функцию сокращения строки. Функция принимает строку и ее максимальную длину. Если длина строки 
+
+function spamChecking(a:string) {
+  const b = a.toLowerCase()
+  if (b.includes('100% бесплатно') || b.includes('увеличение продаж')|| b.includes('только сегодня')
+  || b.includes('не удаляйте') || b.includes('xxx')) {
+    return true 
+  } else {
+    return false
+  }
+}
+console.log (spamChecking('vyvgvyt100% Бесплатно'))
+console.log (spamChecking('vXXyvgvyt10% Бесплатно'))
+
+
+// 7. Написать функцию, которая считает количество слов в предложении.
+function quantityWords (a:string ='dasd asdfdfg dghdg wrf') {
+  return a.split(' ').length
+}
+
+
+
+console.log (`ANSWER`)
+console.log (`\u25BD`)
+console.log (quantityWords())
+console.log (quantityWords('as sd sd'))
+console.log (`\u25B3`)
+console.log (`ANSWER`)
+
+
+
+// 5. Написать функцию сокращения строки. Функция принимает строку и ее 
+// максимальную длину. Если длина строки 
 // больше, чем максимальная, то необходимо отбросить 
 // лишние символы, добавив вместо них троеточие. 
 // Например: truncate(“Hello, world!”, 8) должна вернуть 
@@ -2017,11 +2104,8 @@ console.log(firstLetter())
 // и выводит индексы, по которым находится этот символ в 
 // строке. Также вывести, сколько всего раз встречается этот 
 // символ в строке. 
-console.log (`ANSWER`)
-console.log (`\u25BD`)
-console.log(firstLetter2())
-console.log (`\u25B3`)
-console.log (`ANSWER`)
+
+
 
 
 
