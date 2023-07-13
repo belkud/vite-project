@@ -1978,22 +1978,6 @@ console.log(firstLetter2())
 
 
 
-// 6. Написать функцию, которая проверяет, является ли переданная 
-// строка палиндромом.
-function palindrom (str = 'hello') {
-  if (str==str.split('').reverse().join('')) {
-    console.log ('является полиндромом')
-    return true
-  } else {
-    console.log ('не является полиндромом')
-    return false
-  }
-}
-console.log(firstLetter())
-console.log(palindrom('1551'))
-
-
-
 // 3. Написать функцию, которая считает количество гласных 
 // букв в переданной строке
 
@@ -2070,17 +2054,48 @@ console.log (spamChecking('vyvgvyt100% Бесплатно'))
 console.log (spamChecking('vXXyvgvyt10% Бесплатно'))
 
 
+// 6. Написать функцию, которая проверяет, является ли переданная 
+// строка палиндромом.
+function palindrom (str = 'hello') {
+  if (str==str.split('').reverse().join('')) {
+    console.log ('является полиндромом')
+    return true
+  } else {
+    console.log ('не является полиндромом')
+    return false
+  }
+}
+console.log(firstLetter())
+console.log(palindrom('1551'))
+
+
 // 7. Написать функцию, которая считает количество слов в предложении.
 function quantityWords (a:string ='dasd asdfdfg dghdg wrf') {
   return a.split(' ').length
 }
+console.log (quantityWords())
+console.log (quantityWords('as sd sd'))
 
+// 8. Написать функцию, которая возвращает самое длинное 
+// слово из предложения.
+function longestWord (str:string = 'asdfasd adf  dsfsdfsd sdfsdf') {
+  let arr = str.split(' ')
+  let max = 0
+  let i = 0
+  arr.forEach((el,index)=>{
+    if (max < el.length) {
+      max = el.length
+      i = index
+    }
+  })
+  return arr[i]
+}
 
 
 console.log (`ANSWER`)
 console.log (`\u25BD`)
-console.log (quantityWords())
-console.log (quantityWords('as sd sd'))
+console.log (longestWord())
+console.log (longestWord('asd gfg dfggdfg'))
 console.log (`\u25B3`)
 console.log (`ANSWER`)
 
@@ -2093,9 +2108,8 @@ console.log (`ANSWER`)
 // Например: truncate(“Hello, world!”, 8) должна вернуть 
 // “Hello...”.
 // 2
-// Практическое задание №3
-// 7. Написать функцию, которая считает количество слов в 
-// предложении.
+// 
+
 // 8. Написать функцию, которая возвращает самое длинное 
 // слово из предложения.
 // 9. Написать функцию, которая считает среднюю длину слова 
