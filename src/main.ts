@@ -193,21 +193,21 @@ console.log(Math.pow(2, 11))
 //   console.log(`платеж за ${i+1} месяц`, '1000 р')
 // // console.log('платеж за ' + i + ' месяц', '1000 р')
 
-var arr0 = [];
-var arr1 = new Array();
-// создали массив с данными
-const array = [0, 2, 3, 5, 7, 8, 9]
-console.log(array)
-array.push(10)
-console.log(array)
-array.pop()
-console.log(array)
+// var arr0 = [];
+// var arr1 = new Array();
+// // создали массив с данными
+// const array = [0, 2, 3, 5, 7, 8, 9]
+// console.log(array)
+// array.push(10)
+// console.log(array)
+// array.pop()
+// console.log(array)
 
 
 
 
 
-function random(min: number, max) {
+function random(min: number, max:number) {
   return Math.round(Math.random() * (max - min) + min);
 }
 // console.log(Math.round(Math.random()*(10-8)+8))
@@ -370,7 +370,7 @@ console.log(Math.pow(2, 10))
 
 // console.dir(myFn)
 let v = 5
-function cube(v) {
+function cube(v:number) {
   // let c
   // c = v*v*v
   // return c
@@ -402,7 +402,7 @@ console.log(cube(3) + `  ${'куб чего-нибудь'}`)
 
 let a = 7
 let b = 5
-function min(a, b) {
+function min(a:number, b:number) {
   if (a < b) {
     return a;
   } else {
@@ -414,7 +414,7 @@ console.log(min(a, b))
 // 2. Написать функцию, которая возводит переданное число 
 // в указанную степень.
 
-function pow123(a, b) {
+function pow123(a:number, b:number) {
   if (Math.pow(a, b))
     return Math.pow(a, b)
 }
@@ -422,8 +422,7 @@ console.log(pow123(a, b))
 
 // 3. Написать функцию, которая принимает 2 числа и знак 
 // (+ - * /), считает пример и возвращает результат.
-let c
-const myFunc = (a, b, c) => {
+const myFunc = (a:number, b:number, c:any) => {
   if (c === '+') return a + b
   if (c === '-') return a - b
   if (c === '*') return a * b
@@ -434,7 +433,7 @@ console.log(myFunc(a, b, '*'))
 
 
 let g = 9
-function Func(g) {
+function Func(g:number) {
   if (Math.round(g) % 2 == 0) {
     return Math.round(g)
   } else if (g < Math.round(g)) {
@@ -459,22 +458,22 @@ console.log(sayError())
 // с текстом «Error X occurred!», где Х — текст из аргумента
 //  функции (например, вызов showError(‘Out of memory’) 
 // должен вывести сообщение «Error Out of memory occurred!»).
-let x3
-function showError(x3) {
-  return 'good job'
-}
-console.log('"Error ' + showError(x3) + ' occured!"')
+// let x3
+// function showError(x3:any) {
+//   return 'good job'
+// }
+// console.log('"Error ' + showError(x3) + ' occured!"')
 
 
 // 3. Создайте функцию createHeaders(N), которая создаст на 
 // странице N заголовков 
 // второго уровня (<h2>) с надписями Header1, Header2 … HeaderN
 
-function createHeaders(N) {
-  for (N = 0; N <= 5; N++)
-    return 'asdasd'
-}
-// document.write (createHeaders(N))
+// function createHeaders(N:number) {
+//   for (let N = 0; N <= 5; N++)
+//     return 'asdasd'
+// }
+// document.write (createHeaders())
 
 // 4. Создайте функцию checkPassword(x), которая вернет 
 // значение true, если в качестве аргумента в нее будет 
@@ -482,7 +481,7 @@ function createHeaders(N) {
 // «Web» или «JavaScript»). Иначе функция должна вернуть false.
 
 let password = 'web'
-function checkPassword(password) {
+function checkPassword(password:any) {
   if (password == 'step' || password == 'web' || password == 'javascript') {
     return 'пароль верный'
   } else {
@@ -497,7 +496,7 @@ console.log(checkPassword(password))
 // 1 — если положительное, 0 — если аргумент «х» равен нулю.
 
 let c1 = 5
-function sign(c1) {
+function sign(c1:any) {
   console.log(c1)
   if (c1 > 0) {
     return 'число положительное'
@@ -521,7 +520,7 @@ sign('"дополнительна" функция')
 
 
 let day = 5
-function week(day) {
+function week(day:any) {
   if (day == 0) {
     return 'Sunday'
   } else if (day == 1) {
@@ -550,12 +549,12 @@ console.log(week(day))
 
 console.log('START')
 
-for (let y5 = 0; y5 < 10;) {
-  let a = Math.round(Math.random(y5) * 20)
-  if (a % 4 == 0) continue
-  y5++
-  console.log(a)
-}
+// for (let y5 = 0; y5 < 10;) {
+//   let a = Math.round(Math.random(y5) * 20)
+//   if (a % 4 == 0) continue
+//   y5++
+//   console.log(a)
+// }
 
 console.log('END')
 
@@ -600,7 +599,7 @@ console.log('END')
 // }
 // multiplication(a, b)
 
-function multiplication2(a, b) {
+function multiplication2(a:number, b:number) {
   return (a * b)
 }
 console.log(multiplication2(a, b))
@@ -612,7 +611,7 @@ function addNumbers(a: number, b: number) {
 }
 console.log(addNumbers(40, 2))
 
-function max(a, b) {
+function max(a:number, b:number) {
   if (a >= b) {
     return (a)
   } else {
@@ -621,22 +620,19 @@ function max(a, b) {
 }
 console.log(max(a, b))
 
-let s5 = 10
-let d5 = 15
-function myFunc5(s5, d5) {
+
+function myFunc5(s5 = 10, d5 = 15) {
   v = s5 + d5
   return (v)
 }
-console.log(myFunc5(s5, d5))
+console.log(myFunc5(v))
 
-s5 = 30
-d5 = 25
-myFunc5(s5, d5)
 
 function logArguments() {
-  for (i = 0; i < arguments.length; i++)
-    console.log("argument" + (i + 1) + " = " + arguments[i])
+  for (let i = 0; i < arguments.length; i++)
+  console.log("argument" + (i + 1) + " = " + arguments[i])
 }
+console.log(logArguments())
 
 //  let x = sumAll(1, 123, 500, 115, 44, 88);
 
@@ -691,12 +687,12 @@ console.log(`самый большой делитель ${x4 + y4}`)
 
 // Определить количество цифр в введенном числе.
 
-let userNumber = 25
-let count = 0
-for (let i = 0; i < userNumber.length; i++) {
-  count += 1
-}
-console.log(count)
+// let userNumber = 25
+// let count = 0
+// for (let i = 0; i < userNumber.lenght; i++) {
+//   count += 1
+// }
+// console.log(count)
 
 // let userNumber = prompt(' Введите число'); 
 // let count = 0;
@@ -1226,21 +1222,21 @@ console.log(fruit)
 console.log(bag)
 
 
-let user2
-user2 = new Object() // синтаксис "конструктор объекта"
+// let user2
+// user2 = new Object() // синтаксис "конструктор объекта"
 
-type User2 = {
-  age: number,
-  name: string
-}
+// type User2 = {
+//   age: number,
+//   name: string
+// }
 
-user = {} as any // синтаксис "литерал объекта"
-console.log({ ...user })
-user.age = 18
-console.log({ ...user })
-user.name = 'Vasya'
-console.log({ ...user })
-user.height = 180
+// user = {} as any // синтаксис "литерал объекта"
+// console.log({ ...user })
+// user.age = 18
+// console.log({ ...user })
+// user.name = 'Vasya'
+// console.log({ ...user })
+// user.height = 180
 
 
 console.log(user.age)
@@ -1256,13 +1252,13 @@ console.log(aboutMe)
 console.log(aboutMe.name)
 console.log([aboutMe.name])
 let key = 'name'
-console.log(aboutMe[key])
-console.log('name' in aboutMe)
-console.log(aboutMe.aaa === undefined)
-for (let key in aboutMe) {
+// console.log(aboutMe[key])
+// console.log('name' in aboutMe)
+// console.log(aboutMe.aaa === undefined)
+// for (let key in aboutMe) {
   console.log([key])
-  console.log(aboutMe[key])
-}
+//   console.log(aboutMe[key])
+// }
 let user3 = {
   name: 'Jhon' as any,
   surname: 'Smith',
@@ -1344,7 +1340,7 @@ console.log(r)
 //  Запросить 2 числа и найти все общие делители
 let numb1 = 30
 let numb2 = 20
-let div = []
+let div:any = []
 if (numb1 > numb2) {
   while (numb1 % numb2 == 0) {
     div++
@@ -1409,17 +1405,16 @@ let x11 = user5['name']
 console.log(x11)
 user5.age = 30
 
-let key5 = "likes birds";
+// let key5 = "likes birds";
+// // то же самое, что и user["likes birds"] = true;
+// user5[key5] = true;
+// console.log(user5[key5])
 
-// то же самое, что и user["likes birds"] = true;
-user5[key5] = true;
-console.log(user5[key5])
-
-let x = 'orange'
-let market = {
-  [x]: 5,
-}
-console.log(market[x])
+// let x = 'orange'
+// let market = {
+//   [x]: 5,
+// }
+// console.log(market[x])
 
 
 
@@ -1495,34 +1490,34 @@ let me = {
 
 console.log(me['job is good '])
 
-//проверка существования свойств объекта
-console.log(me.age === undefined)
-console.log(me.height === undefined)
-console.log(me.height)
-//вторая проверка (используется редко)
-console.log('age' in me)
+// //проверка существования свойств объекта
+// console.log(me.age === undefined)
+// console.log(me.height === undefined)
+// console.log(me.height)
+// //вторая проверка (используется редко)
+// console.log('age' in me)
 
-for (let key in me) {
-  console.log(key)
-  console.log(me[key])
-}
+// for (let key in me) {
+//   console.log(key)
+//   console.log(me[key])
+// }
 
-let usr = {
-  name: "John",
-  age: 30,
-  isAdmin: true
-};
-usr.name = 'Lana'
-console.log(usr.name)
+// let usr = {
+//   name: "John",
+//   age: 30,
+//   isAdmin: true
+// };
+// usr.name = 'Lana'
+// console.log(usr.name)
 
 
-for (let key in usr) {
-  // ключи
-  console.log(key);  // name, age, isAdmin
-  // значения ключей
-  console.log(usr[key]); // John, 30, true
-  1
-}
+// for (let key in usr) {
+//   // ключи
+//   console.log(key);  // name, age, isAdmin
+//   // значения ключей
+//   console.log(usr[key]); // John, 30, true
+//   1
+// }
 // function makeUser(nam, ag) {
 //   return {
 //     nam,
@@ -1536,18 +1531,18 @@ for (let key in usr) {
 
 
 
-let codes = {
-  "+49": "Германия",
-  "+41": "Швейцария",
-  "+44": "Великобритания",
-  // ..,
-  "+1": "США"
-}
-console.log(codes)
-for (let key in codes) {
-  console.log(key)
-  console.log(codes[key])
-}
+// let codes = {
+//   "+49": "Германия",
+//   "+41": "Швейцария",
+//   "+44": "Великобритания",
+//   // ..,
+//   "+1": "США"
+// }
+// console.log(codes)
+// for (let key in codes) {
+//   console.log(key)
+//   console.log(codes[key])
+// }
 
 let salaries = {
   John: 100,
@@ -1607,15 +1602,15 @@ console.log(simba)
 
 
 function abc() {
-  return
   console.log('  alphabet: cirilic')
+  return
 }
 console.log(abc)
 console.log('  alphabet: cirilic')
 abc();
 abc();
 
-function hello(a, b) {
+function hello(a:number, b:number) {
   let c
   a = 15;
   b = 3;
@@ -1623,7 +1618,7 @@ function hello(a, b) {
   return c
 }
 // console.log (c);
-// console.log (hello)
+console.log (hello)
 
 
 
@@ -1639,7 +1634,7 @@ function hello(a, b) {
 
 
 // 2. Написать функцию возведения числа в степень.
-function pow(a, b) {
+function pow(a:number, b:number) {
   return a ** b;
 }
 console.log(pow(2, 3))
@@ -1648,7 +1643,7 @@ console.log(pow(2, 3))
 // 3. Написать функцию, которая принимает 2 числа и знак 
 // (+ - * /), считает пример и возвращает результат.
 
-function calculator(a, b, operator) {
+function calculator(a:any, b:any, operator:any) {
   if (operator == "+") {
     return (a + b)
   }
@@ -1687,37 +1682,37 @@ console.log(simpleNumber(9))
 function operator(firstNum: number = 7, secondNum: number = 5) {
   let count = 0
   let accum = firstNum
-  while(accum>=secondNum) {
-    accum-=secondNum
+  while (accum >= secondNum) {
+    accum -= secondNum
     count++
   }
-  return firstNum - secondNum*count
+  return firstNum - secondNum * count
 }
 console.log(operator())
-console.log('1%5',1%5)
-console.log(operator(1,5))
-console.log(112%8,operator(112,8))
-console.log(112%11,operator(112,11))
+console.log('1%5', 1 % 5)
+console.log(operator(1, 5))
+console.log(112 % 8, operator(112, 8))
+console.log(112 % 11, operator(112, 11))
 
 
 // 7. Написать функцию, которая принимает от 1 до 5 чисел и 
 // возвращает их сумму.
 
-function summ(a=0, b=0, c=0, d=0, e=0) {
+function summ(a = 0, b = 0, c = 0, d = 0, e = 0) {
   let answer = (a + b + c + d + e)
   return answer
 }
 console.log(summ(1))
-console.log(summ(1,2))
-console.log(summ(1,2,3))
-console.log(summ(1,2,3,4))
-console.log(summ(1,2,3,4,5))
+console.log(summ(1, 2))
+console.log(summ(1, 2, 3))
+console.log(summ(1, 2, 3, 4))
+console.log(summ(1, 2, 3, 4, 5))
 
 // 8. Написать функцию, которая принимает от 1 до 5 чисел и 
 // возвращает большее из них
 
-function biggestNumber (a=7, b=5, c=12, d=9, e=8) {
-   return Math.max(a, b, c, d, e)
+function biggestNumber(a = 7, b = 5, c = 12, d = 9, e = 8) {
+  return Math.max(a, b, c, d, e)
 }
 console.log(biggestNumber())
 
@@ -1725,19 +1720,19 @@ console.log(biggestNumber())
 // указанном пользователем диапазоне.Какие числа выводить, определяется 
 // третьим параметром типа bool(true – четные, false – нечетные).
 
-function evenOdd (min = 5, max = 15, type=true) {
+function evenOdd(min = 5, max = 15, type = true) {
   let arr = []
-  for (;min<=max; min++) {
-  if (type && min%2==0) {
-    arr.push(min)
-  } else if (!type && min%2!=0) {
-     arr.push(min)
-   } 
+  for (; min <= max; min++) {
+    if (type && min % 2 == 0) {
+      arr.push(min)
+    } else if (!type && min % 2 != 0) {
+      arr.push(min)
+    }
   }
   return arr
 }
-console.log (evenOdd())
-console.log (evenOdd(1,100,false))
+console.log(evenOdd())
+console.log(evenOdd(1, 100, false))
 
 
 
@@ -1746,17 +1741,17 @@ console.log (evenOdd(1,100,false))
 
 
 // 2. Написать функцию поиска наибольшего общего делителя
-function maxDiv (a = 24, b = 16) {
-  let div=0
-  for (let i=1; i<=Math.min(a,b); i++) {
-      if (a%i==0 && b%i==0) {    
-        div = i
-      } 
+function maxDiv(a = 24, b = 16) {
+  let div = 0
+  for (let i = 1; i <= Math.min(a, b); i++) {
+    if (a % i == 0 && b % i == 0) {
+      div = i
     }
-    return (div)
   }
-  console.log('divider',maxDiv())
-  
+  return (div)
+}
+console.log('divider', maxDiv())
+
 // let number1 = Number(prompt('Для нахождения НОД двух чисел введите первую цифру'));
 // let number2 = Number(prompt('Введите вторую цифру'));
 
@@ -1776,18 +1771,18 @@ function maxDiv (a = 24, b = 16) {
 
 // 3. Написать функцию для поиска максимальной цифры в числе.
 
-function maxDigital (a=123) {
+function maxDigital(a = 123) {
   let str = String(a)
   let max = 0
   for (let num of str) {
-    if (max<+num) {
+    if (max < +num) {
       max = +num
     }
   }
   return max
 }
-console.log (maxDigital())
-console.log (maxDigital(465465469874))
+console.log(maxDigital())
+console.log(maxDigital(465465469874))
 
 
 
@@ -1796,15 +1791,15 @@ console.log (maxDigital(465465469874))
 // ?????
 // 5. Написать функцию для вывода всех множителей переданного числа в 
 // возрастающем порядке. Например: число 18 – множители 2 * 3 * 3.
-function multiplier (a=18) {
+function multiplier(a = 18) {
   let array = []
-  for (let i=2; i<=a; i++) {
-    if (a%i==0) {
+  for (let i = 2; i <= a; i++) {
+    if (a % i == 0) {
       array.push(i)
-      a=a/i
+      a = a / i
       // console.log(i)
       i--
-    } 
+    }
   }
   return array
 }
@@ -1818,7 +1813,7 @@ console.log(multiplier(90))
 // том, что каждое число равно сумме двух предыдущих чисел. 
 // Например: порядковый номер 3 – число 2, порядковый 
 // номер 6 – число 8
-function fib(n) {
+function fib(n:number) {
   let a = 1;
   let b = 1;
   for (let i = 3; i <= n; i++) {
@@ -1843,49 +1838,49 @@ console.log(fib(23))
 // например: число 1357, сумма 1 + 3 + 5 + 7= 16
 
 // первый способ
-function summNumber (num = 1357) {
-  let str  = String(num)
+function summNumber(num = 1357) {
+  let str = String(num)
   let sum = 0
-  console.log (str.length) // количество аргументов
+  console.log(str.length) // количество аргументов
   console.log(+str.split('').reverse().join('')) //числа наоборот
-  str.split('').forEach((el)=>{
-    sum+= +el
+  str.split('').forEach((el) => {
+    sum += +el
   })
   return sum
 }
 
 // второй способ/ рекурсия
-function summNumberRec (num = 1357):number {
+function summNumberRec(num = 1357): number {
   const str = String(num)
   if (str.length == 1) {
     return num
   }
-  const currNum = Math.floor(num/(10**(str.length-1)))
-  return currNum + summNumberRec(num-currNum*10**(str.length-1))
+  const currNum = Math.floor(num / (10 ** (str.length - 1)))
+  return currNum + summNumberRec(num - currNum * 10 ** (str.length - 1))
 }
 
 // третий способ/ рекурсия
-function summNumberRec2 (num = 1357):number {
+function summNumberRec2(num = 1357): number {
   const str = String(num)
   if (str.length == 1) {
     return num
   }
   return +str[0] + summNumberRec(+str.slice(1))
 }
-console.log (summNumber())
-console.log (summNumberRec(123))
-console.log (summNumberRec2(123))
+console.log(summNumber())
+console.log(summNumberRec(123))
+console.log(summNumberRec2(123))
 
 
 // 3. Написать функцию для поиска максимальной цифры в числе.
 
 // первый способ
 
-function maxNum (a:number) {
+function maxNum(a: number) {
   let str = String(a)
-  return Math.max(...str.split('').map(el=>+el))
+  return Math.max(...str.split('').map(el => +el))
 }
-console.log ( maxNum (123459))
+console.log(maxNum(123459))
 
 
 // второй способ
@@ -1900,8 +1895,8 @@ console.log ( maxNum (123459))
 //   }
 //   return max
 // }
-console.log (maxDigital())
-console.log (maxDigital(465465469874))
+console.log(maxDigital())
+console.log(maxDigital(465465469874))
 
 
 console.log(Math.max(3, 5, -10, 0, 1))
@@ -1909,32 +1904,32 @@ console.log(Math.max(3, 5, -10, 0, 1))
 // 2. Написать функцию поиска наибольшего общего делителя.
 // Найти общие делители
 
-function maxDiv2 (a = 24, b = 16) {
+function maxDiv2(a = 24, b = 16) {
   let div = 0
   let massive = []
-  for (let i=1; i<=Math.min(a,b); i++) {
-      if (a%i==0 && b%i==0) { 
-        div = i   
-        massive.push(i)
-      } 
+  for (let i = 1; i <= Math.min(a, b); i++) {
+    if (a % i == 0 && b % i == 0) {
+      div = i
+      massive.push(i)
     }
-    return {div, massive}
   }
-  console.log(maxDiv2())
-  
+  return { div, massive }
+}
+console.log(maxDiv2())
+
 
 // 3. Написать функцию, которая выводит переданное ей число 
 // задом наперед. Например: число 1234 вывести как 4321.
 
-function reverce (a=123457) {
-let str = String(a)  
-  // return (str.split('').reverse().join(''))
-  return Math.max(...str.split('').map(el=> +el))
-}  
-console.log (reverce())
-let arr = [1, 2, 3, 4, 5];
+// function reverce(a = 123457) {
+//   let str = String(a)
+//   // return (str.split('').reverse().join(''))
+//   return Math.max(...str.split('').map(el => +el))
+// }
+// console.log(reverce())
+// let arr = [1, 2, 3, 4, 5];
 
-arr.forEach(function(elem){ console.log(elem)})
+// arr.forEach(function (elem) { console.log(elem) })
 
 
 
@@ -1942,17 +1937,17 @@ arr.forEach(function(elem){ console.log(elem)})
 // возвращает 1, если в первой строке больше символов, чем во второй; -1 – если 
 // во второй больше символов, чем в первой; или 0 – если строки одинаковой длины.
 
-function compare (str:string, str2:string) {
-  if (str.length>str2.length) {
+function compare(str: string, str2: string) {
+  if (str.length > str2.length) {
     return 1
-  }else if (str.length==str2.length) {
+  } else if (str.length == str2.length) {
     return 0
-  }else{
+  } else {
     return -1
   }
 }
-console.log (compare('ssdsdh', 'vghb'))
-console.log (compare('55889892','jljlklf'))
+console.log(compare('ssdsdh', 'vghb'))
+console.log(compare('55889892', 'jljlklf'))
 
 
 
@@ -1960,18 +1955,18 @@ console.log (compare('55889892','jljlklf'))
 // первый символ переданной строки.
 
 // для одного слова
-function firstLetter (a='hello') {
+function firstLetter(a = 'hello') {
   return a[0].toUpperCase() + a.slice(1)
 }
 
 //для нескольких слов
-function firstLetter2 (a='hello world') {
+function firstLetter2(a = 'hello world') {
   return a
-  .split(' ')
-  .map(function(a) {
-    return a[0].toUpperCase() + a.slice(1)
-  })
-  .join(' ');
+    .split(' ')
+    .map(function (a) {
+      return a[0].toUpperCase() + a.slice(1)
+    })
+    .join(' ');
 }
 
 console.log(firstLetter2())
@@ -1981,9 +1976,9 @@ console.log(firstLetter2())
 // 3. Написать функцию, которая считает количество гласных 
 // букв в переданной строке
 
-function score(str='sdfgdfgeeaoirgtxxcvg') {
+function score(str = 'sdfgdfgeeaoirgtxxcvg') {
   let count = 0
-  for (let i=0; i<str.length; i++) {
+  for (let i = 0; i < str.length; i++) {
     switch (str[i].toLowerCase()) {
       case 'a':
       case 'e':
@@ -1997,16 +1992,16 @@ function score(str='sdfgdfgeeaoirgtxxcvg') {
   return count
 }
 
-function scoreLetters(str='sdfgdfgeeIAEaoirUUgtxxcvg') {
+function scoreLetters(str = 'sdfgdfgeeIAEaoirUUgtxxcvg') {
   let count = {
-    a:0,
-    e:0,
-    o:0,
-    y:0,
-    u:0,
-    i:0,
+    a: 0,
+    e: 0,
+    o: 0,
+    y: 0,
+    u: 0,
+    i: 0,
   }
-  for (let i=0; i<str.length; i++) {
+  for (let i = 0; i < str.length; i++) {
     switch (str[i].toLowerCase()) {
       case 'a':
         count.a++
@@ -2041,27 +2036,27 @@ console.log(scoreLetters())
 // увеличение продаж, только сегодня, не удаляйте, ххх. 
 // Функция должна быть нечувствительна к регистру.
 
-function spamChecking(a:string) {
+function spamChecking(a: string) {
   const b = a.toLowerCase()
-  if (b.includes('100% бесплатно') || b.includes('увеличение продаж')|| b.includes('только сегодня')
-  || b.includes('не удаляйте') || b.includes('xxx')) {
-    return true 
+  if (b.includes('100% бесплатно') || b.includes('увеличение продаж') || b.includes('только сегодня')
+    || b.includes('не удаляйте') || b.includes('xxx')) {
+    return true
   } else {
     return false
   }
 }
-console.log (spamChecking('vyvgvyt100% Бесплатно'))
-console.log (spamChecking('vXXyvgvyt10% Бесплатно'))
+console.log(spamChecking('vyvgvyt100% Бесплатно'))
+console.log(spamChecking('vXXyvgvyt10% Бесплатно'))
 
 
 // 6. Написать функцию, которая проверяет, является ли переданная 
 // строка палиндромом.
-function palindrom (str = 'hello') {
-  if (str==str.split('').reverse().join('')) {
-    console.log ('является полиндромом')
+function palindrom(str = 'hello') {
+  if (str == str.split('').reverse().join('')) {
+    console.log('является полиндромом')
     return true
   } else {
-    console.log ('не является полиндромом')
+    console.log('не является полиндромом')
     return false
   }
 }
@@ -2070,34 +2065,30 @@ console.log(palindrom('1551'))
 
 
 // 7. Написать функцию, которая считает количество слов в предложении.
-function quantityWords (a:string ='dasd asdfdfg dghdg wrf') {
+function quantityWords(a: string = 'dasd asdfdfg dghdg wrf') {
   return a.split(' ').length
 }
-console.log (quantityWords())
-console.log (quantityWords('as sd sd'))
+console.log(quantityWords())
+console.log(quantityWords('as sd sd'))
 
 // 8. Написать функцию, которая возвращает самое длинное 
 // слово из предложения.
-function longestWord (str:string = 'asdfasd adf  dsfsdfsd sdfsdf') {
+function longestWord(str: string = 'asdfasd adf  dsfsdfsd sdfsdf') {
   let arr = str.split(' ')
   let max = 0
   let i = 0
-  arr.forEach((el,index)=>{
+  arr.forEach((el, index) => {
     if (max < el.length) {
       max = el.length
       i = index
     }
   })
   return arr[i]
+  console.log(longestWord())
+  console.log(longestWord('asd gfg dfggdfg'))
 }
 
 
-console.log (`ANSWER`)
-console.log (`\u25BD`)
-console.log (longestWord())
-console.log (longestWord('asd gfg dfggdfg'))
-console.log (`\u25B3`)
-console.log (`ANSWER`)
 
 
 
@@ -2125,8 +2116,54 @@ console.log (`ANSWER`)
 
 
 
-// 3. Написать функцию, которая считает количество гласных 
-// букв в переданной строке
+
+//SPLICE
+// let arr  = ['I', 'love', 'JS', 'perfect', 'language']
+// console.log(arr) 
+
+// arr.splice (2, 2, 'to learn', 'english')
+// console.log(arr) 
+
+// arr.splice (4,0, 'and', 'JS')
+// console.log(arr) 
+
+
+//SLICE копирует часть массива (или весь массив) БЕЗ добавления данных и 
+//'меняет его в одной консоле'
+//console.log(arr.slice(2, 5)) 
+
+
+
+//CONCUT копирует массив и добавляет к нему свои данные и тоже
+//'меняет его в одной консоле'
+
+let arr = [1,2]
+console.log (arr)
+
+console.log (arr.concat ([3, 4])) // БЕЗ консоли метод не работает
+
+console.log (arr.concat ([3, 4], [5, 6]))
+console.log(arr) 
+
+
+
+// 2. Написать функцию, которая выводит все числа из заданного
+// пользователем диапазона в прямом порядке. И еще одну
+// функцию – для вывода в обратном порядке.
+function numbers (a='123') {
+  console.log(a)
+  return a.split('').reverse().join('')
+}
+
+
+
+
+console.log(`ANSWER`)
+console.log(`\u25BD`)
+console.log (numbers())
+console.log(`\u25B3`)
+console.log(`ANSWER`)
+
 
 
 
@@ -2135,4 +2172,3 @@ console.log (`ANSWER`)
 console.log('DOWN')
 console.log('DOWN')
 console.log('DOWN')
-
