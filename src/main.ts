@@ -2150,17 +2150,41 @@ console.log(arr)
 // 2. Написать функцию, которая выводит все числа из заданного
 // пользователем диапазона в прямом порядке. И еще одну
 // функцию – для вывода в обратном порядке.
-function numbers (a='123') {
-  console.log(a)
-  return a.split('').reverse().join('')
+
+function printNumbersRange (from=1, to=10) {
+  const arr = []
+  for (let i=from; i<=to; i++) {
+    arr.push(i)
+  }
+  console.log(arr.toString())
+}
+function printNumbersRangeReverse (from=10, to=1) {
+  const arr = []
+  for (let i=from; i>=to; i--) {
+    arr.push(i)
+  }
+  console.log(arr.toString( ))
 }
 
+// return +a.toString().split('').reverse().join('')
+
+var animal = {
+  eats: true
+} as any
+var rabbit = {
+  jumps: true
+}as any
+
+rabbit.__proto__ = animal
+console.log (rabbit.jumps)
+console.log (rabbit.eats)
 
 
 
 console.log(`ANSWER`)
 console.log(`\u25BD`)
-console.log (numbers())
+printNumbersRange()
+printNumbersRangeReverse()
 console.log(`\u25B3`)
 console.log(`ANSWER`)
 
