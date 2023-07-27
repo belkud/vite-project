@@ -2180,18 +2180,122 @@ console.log (rabbit.jumps)
 console.log (rabbit.eats)
 
 
+// 5. Написать функцию, которая принимает число и выводит 
+// соответствующее количество вложенных пар круглых скобок. 
+// Например: число 4 – (((()))).
+function brackets (a = 5) {
+  for (let i=0; i<=a; i++) {
+    // i = ()
+  }
+
+}
+
+
+
+let people = [
+  {name : 'Kate', age: 17},
+  {name : 'Sveta', age: 27},
+  {name : 'Dasha', age: 29},
+]
+// for (let i = 0; i<people.length; i++) {
+//   console.log(people[i])
+
+// }
+
+people.forEach(person => console.log (person))
+let adults = people.filter(person => (person.age>=18))
+console.log (adults)
+
+
+printNumbersRange()
+printNumbersRangeReverse()
+
+// console.log(people[1])
+
+
+// Метод arr.forEach позволяет запускать функцию для каждого элемента массива.
+// нужна точка с запятой, т.к. строка начинает с литерала массива
+arr = ["Бильбо", "Гэндальф", "Назгул"].forEach(function(item, index, array) {
+  console.log(`У ${item} индекс ${index} в ${array}`)
+})
+
 
 console.log(`ANSWER`)
 console.log(`\u25BD`)
-printNumbersRange()
-printNumbersRangeReverse()
+
+
+
+
+// ?????????????
+
+// let array = [1, 3, 5]
+// let str2 = Number (array)
+// let maxNumber = []
+// for (let i=0; i<=str2; i++) {
+//   maxNumber.push(i)
+// }
+// console.log(maxNumber(i))
+
+
+
+
+
+let mass = [1, 3, 5]
+console.log(mass)
+
+mass.push ('hello' as any)
+console.log(mass)
+
+mass.push (95)
+console.log(mass)
+
+let ba = mass.pop()
+console.log(ba)
+
+
+console.log(mass)
+
+mass.shift()
+console.log(mass)
+
+mass.unshift ('world' as any)
+console.log(mass)
+console.log(mass.length)
+
+
+let mass2 = [ 'hello world']
+let str2 = String(mass2)
+
+// str2.split('')
+console.log(str2.split(' ').reverse().join(' '))
+
+let f = 'Hi my name is Vladimir'
+console.log(f)
+let e = f.split(' ').reverse().join('-')
+if (e==f) {
+  console.log ('полиндром')
+} else {
+  console.log('не полиндром')
+}
+
+console.log(e)
+
 console.log(`\u25B3`)
-console.log(`ANSWER`)
+console.log(`ANSWER`) 
 
 
+// let people2 = [
+// {name: 'Kate', age: 17},
+// {name: 'Sveta', age: 27},
+// {name: 'Dasha', age: 29},
+// ]
+// .filter(person2 => person2.age>=18)
+// .map(person => person.age>=18)
+// .reduce((total, age)=>total + person2.age, 0)
 
-
-
+// console.log(people2)
+// console.log(person)
+// console.log(person2)
 
 console.log('DOWN')
 console.log('DOWN')
