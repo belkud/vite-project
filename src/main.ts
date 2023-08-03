@@ -207,7 +207,7 @@ console.log(Math.pow(2, 11))
 
 
 
-function random(min: number, max:number) {
+function random(min: number, max: number) {
   return Math.round(Math.random() * (max - min) + min);
 }
 // console.log(Math.round(Math.random()*(10-8)+8))
@@ -370,7 +370,7 @@ console.log(Math.pow(2, 10))
 
 // console.dir(myFn)
 let v = 5
-function cube(v:number) {
+function cube(v: number) {
   // let c
   // c = v*v*v
   // return c
@@ -402,7 +402,7 @@ console.log(cube(3) + `  ${'куб чего-нибудь'}`)
 
 let a = 7
 let b = 5
-function min(a:number, b:number) {
+function min(a: number, b: number) {
   if (a < b) {
     return a;
   } else {
@@ -414,7 +414,7 @@ console.log(min(a, b))
 // 2. Написать функцию, которая возводит переданное число 
 // в указанную степень.
 
-function pow123(a:number, b:number) {
+function pow123(a: number, b: number) {
   if (Math.pow(a, b))
     return Math.pow(a, b)
 }
@@ -422,7 +422,7 @@ console.log(pow123(a, b))
 
 // 3. Написать функцию, которая принимает 2 числа и знак 
 // (+ - * /), считает пример и возвращает результат.
-const myFunc = (a:number, b:number, c:any) => {
+const myFunc = (a: number, b: number, c: any) => {
   if (c === '+') return a + b
   if (c === '-') return a - b
   if (c === '*') return a * b
@@ -433,7 +433,7 @@ console.log(myFunc(a, b, '*'))
 
 
 let g = 9
-function Func(g:number) {
+function Func(g: number) {
   if (Math.round(g) % 2 == 0) {
     return Math.round(g)
   } else if (g < Math.round(g)) {
@@ -481,7 +481,7 @@ console.log(sayError())
 // «Web» или «JavaScript»). Иначе функция должна вернуть false.
 
 let password = 'web'
-function checkPassword(password:any) {
+function checkPassword(password: any) {
   if (password == 'step' || password == 'web' || password == 'javascript') {
     return 'пароль верный'
   } else {
@@ -496,7 +496,7 @@ console.log(checkPassword(password))
 // 1 — если положительное, 0 — если аргумент «х» равен нулю.
 
 let c1 = 5
-function sign(c1:any) {
+function sign(c1: any) {
   console.log(c1)
   if (c1 > 0) {
     return 'число положительное'
@@ -520,7 +520,7 @@ sign('"дополнительна" функция')
 
 
 let day = 5
-function week(day:any) {
+function week(day: any) {
   if (day == 0) {
     return 'Sunday'
   } else if (day == 1) {
@@ -599,7 +599,7 @@ console.log('END')
 // }
 // multiplication(a, b)
 
-function multiplication2(a:number, b:number) {
+function multiplication2(a: number, b: number) {
   return (a * b)
 }
 console.log(multiplication2(a, b))
@@ -611,7 +611,7 @@ function addNumbers(a: number, b: number) {
 }
 console.log(addNumbers(40, 2))
 
-function max(a:number, b:number) {
+function max(a: number, b: number) {
   if (a >= b) {
     return (a)
   } else {
@@ -630,7 +630,7 @@ console.log(myFunc5(v))
 
 function logArguments() {
   for (let i = 0; i < arguments.length; i++)
-  console.log("argument" + (i + 1) + " = " + arguments[i])
+    console.log("argument" + (i + 1) + " = " + arguments[i])
 }
 console.log(logArguments())
 
@@ -1256,7 +1256,7 @@ let key = 'name'
 // console.log('name' in aboutMe)
 // console.log(aboutMe.aaa === undefined)
 // for (let key in aboutMe) {
-  console.log([key])
+console.log([key])
 //   console.log(aboutMe[key])
 // }
 let user3 = {
@@ -1340,7 +1340,7 @@ console.log(r)
 //  Запросить 2 числа и найти все общие делители
 let numb1 = 30
 let numb2 = 20
-let div:any = []
+let div: any = []
 if (numb1 > numb2) {
   while (numb1 % numb2 == 0) {
     div++
@@ -1610,7 +1610,7 @@ console.log('  alphabet: cirilic')
 abc();
 abc();
 
-function hello(a:number, b:number) {
+function hello(a: number, b: number) {
   let c
   a = 15;
   b = 3;
@@ -1618,7 +1618,7 @@ function hello(a:number, b:number) {
   return c
 }
 // console.log (c);
-console.log (hello)
+console.log(hello)
 
 
 
@@ -1634,7 +1634,7 @@ console.log (hello)
 
 
 // 2. Написать функцию возведения числа в степень.
-function pow(a:number, b:number) {
+function pow(a: number, b: number) {
   return a ** b;
 }
 console.log(pow(2, 3))
@@ -1643,7 +1643,7 @@ console.log(pow(2, 3))
 // 3. Написать функцию, которая принимает 2 числа и знак 
 // (+ - * /), считает пример и возвращает результат.
 
-function calculator(a:any, b:any, operator:any) {
+function calculator(a: any, b: any, operator: any) {
   if (operator == "+") {
     return (a + b)
   }
@@ -1813,7 +1813,7 @@ console.log(multiplier(90))
 // том, что каждое число равно сумме двух предыдущих чисел. 
 // Например: порядковый номер 3 – число 2, порядковый 
 // номер 6 – число 8
-function fib(n:number) {
+function fib(n: number) {
   let a = 1;
   let b = 1;
   for (let i = 3; i <= n; i++) {
@@ -2137,13 +2137,13 @@ function longestWord(str: string = 'asdfasd adf  dsfsdfsd sdfsdf') {
 //CONCUT копирует массив и добавляет к нему свои данные и тоже
 //'меняет его в одной консоле'
 
-let arr = [1,2]
-console.log (arr)
+let arr = [1, 2]
+console.log(arr)
 
-console.log (arr.concat ([3, 4])) // БЕЗ консоли метод не работает
+console.log(arr.concat([3, 4])) // БЕЗ консоли метод не работает
 
-console.log (arr.concat ([3, 4], [5, 6]))
-console.log(arr) 
+console.log(arr.concat([3, 4], [5, 6]))
+console.log(arr)
 
 
 
@@ -2151,19 +2151,19 @@ console.log(arr)
 // пользователем диапазона в прямом порядке. И еще одну
 // функцию – для вывода в обратном порядке.
 
-function printNumbersRange (from=1, to=10) {
+function printNumbersRange(from = 1, to = 10) {
   const arr = []
-  for (let i=from; i<=to; i++) {
+  for (let i = from; i <= to; i++) {
     arr.push(i)
   }
   console.log(arr.toString())
 }
-function printNumbersRangeReverse (from=10, to=1) {
+function printNumbersRangeReverse(from = 10, to = 1) {
   const arr = []
-  for (let i=from; i>=to; i--) {
+  for (let i = from; i >= to; i--) {
     arr.push(i)
   }
-  console.log(arr.toString( ))
+  console.log(arr.toString())
 }
 
 // return +a.toString().split('').reverse().join('')
@@ -2173,18 +2173,18 @@ var animal = {
 } as any
 var rabbit = {
   jumps: true
-}as any
+} as any
 
 rabbit.__proto__ = animal
-console.log (rabbit.jumps)
-console.log (rabbit.eats)
+console.log(rabbit.jumps)
+console.log(rabbit.eats)
 
 
 // 5. Написать функцию, которая принимает число и выводит 
 // соответствующее количество вложенных пар круглых скобок. 
 // Например: число 4 – (((()))).
-function brackets (a = 5) {
-  for (let i=0; i<=a; i++) {
+function brackets(a = 5) {
+  for (let i = 0; i <= a; i++) {
     // i = ()
   }
 
@@ -2193,18 +2193,18 @@ function brackets (a = 5) {
 
 
 let people = [
-  {name : 'Kate', age: 17},
-  {name : 'Sveta', age: 27},
-  {name : 'Dasha', age: 29},
+  { name: 'Kate', age: 17 },
+  { name: 'Sveta', age: 27 },
+  { name: 'Dasha', age: 29 },
 ]
 // for (let i = 0; i<people.length; i++) {
 //   console.log(people[i])
 
 // }
 
-people.forEach(person => console.log (person))
-let adults = people.filter(person => (person.age>=18))
-console.log (adults)
+people.forEach(person => console.log(person))
+let adults = people.filter(person => (person.age >= 18))
+console.log(adults)
 
 
 printNumbersRange()
@@ -2215,7 +2215,7 @@ printNumbersRangeReverse()
 
 // Метод arr.forEach позволяет запускать функцию для каждого элемента массива.
 // нужна точка с запятой, т.к. строка начинает с литерала массива
-arr = ["Бильбо", "Гэндальф", "Назгул"].forEach(function(item, index, array) {
+arr = ["Бильбо", "Гэндальф", "Назгул"].forEach(function (item, index, array) {
   console.log(`У ${item} индекс ${index} в ${array}`)
 })
 
@@ -2228,25 +2228,25 @@ console.log(`\u25BD`)
 
 // ?????????????
 
-// let array = [1, 3, 5]
-// let str2 = Number (array)
-// let maxNumber = []
-// for (let i=0; i<=str2; i++) {
-//   maxNumber.push(i)
+// найти наибольшее число в массиве
+
+let array = [1, 3, 5]
+console.log(Math.max(...array))
+
+// function maxNum(a: number) {
+//   let str = String(a)
+//   return Math.max(...str.split('').map(el => +el))
 // }
-// console.log(maxNumber(i))
-
-
-
+// console.log(maxNum(123459))
 
 
 let mass = [1, 3, 5]
 console.log(mass)
 
-mass.push ('hello' as any)
+mass.push('hello' as any)
 console.log(mass)
 
-mass.push (95)
+mass.push(95)
 console.log(mass)
 
 let ba = mass.pop()
@@ -2258,12 +2258,12 @@ console.log(mass)
 mass.shift()
 console.log(mass)
 
-mass.unshift ('world' as any)
+mass.unshift('world' as any)
 console.log(mass)
 console.log(mass.length)
 
 
-let mass2 = [ 'hello world']
+let mass2 = ['hello world']
 let str2 = String(mass2)
 
 // str2.split('')
@@ -2272,8 +2272,8 @@ console.log(str2.split(' ').reverse().join(' '))
 let f = 'Hi my name is Vladimir'
 console.log(f)
 let e = f.split(' ').reverse().join('-')
-if (e==f) {
-  console.log ('полиндром')
+if (e == f) {
+  console.log('полиндром')
 } else {
   console.log('не полиндром')
 }
@@ -2281,7 +2281,7 @@ if (e==f) {
 console.log(e)
 
 console.log(`\u25B3`)
-console.log(`ANSWER`) 
+console.log(`ANSWER`)
 
 
 // let people2 = [
@@ -2296,6 +2296,42 @@ console.log(`ANSWER`)
 // console.log(people2)
 // console.log(person)
 // console.log(person2)
+
+
+let now = new Date()
+console.log(now)
+console.log()
+
+// var d = new Date(2014, 0, 30); // 30 января 2014
+// console.log(FormatDate(d)); // '30.01.14'
+
+
+// Задача 1
+// Создайте объект Date для даты: 20 февраля 2012 года, 3 часа 12 минут. 
+// Временная зона – местная.
+
+// let date = new Date(2012, 1, 20, 3, 12);
+// console.log(date)
+
+// Задача 2
+// Напишите функцию getWeekDay(date), показывающую день недели в коротком формате: 
+// «ПН», «ВТ», «СР», «ЧТ», «ПТ», «СБ», «ВС».
+
+// Например:
+// let date = new Date(2012, 0, 3);  // 3 января 2012 года
+// alert( getWeekDay(date) );   
+
+function getWeekDay(date:Date)  {
+  let days = ['ВС','ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ']
+  return days[date.getDay()]
+}
+ 
+console.log(getWeekDay(new Date()))
+
+
+
+
+
 
 console.log('DOWN')
 console.log('DOWN')
