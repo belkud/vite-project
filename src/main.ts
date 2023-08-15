@@ -2383,7 +2383,7 @@ function commonDivisor (a:number, b:number) {
     }
   }
 }
-console.log (massive)
+// console.log (massive)
 
 
 
