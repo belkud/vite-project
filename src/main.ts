@@ -2186,7 +2186,7 @@
 //   for (let i = 0; i <= a; i++) {
 //     // i = ()
 //   }
- 
+
 // }
 
 
@@ -2323,7 +2323,7 @@
 //   let days = ['ВС','ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ']
 //   return days[date.getDay()]
 // }
- 
+
 // console.log(getWeekDay(new Date()))
 
 
@@ -2347,8 +2347,8 @@
 // let number = 7
 // let massive = []
 // for (let i=1; i<number; i++) {
-  //   massive.push('#')
-  // }
+//   massive.push('#')
+// }
 // console.log (massive)
 
 
@@ -2356,62 +2356,110 @@
 // ??????????
 // 2. Пользователь ввел число, а на экран вывелись все числа 
 // от введенного до 0.
-// let number = 7
-// let massive = []
-// for (let i=0; i<number; i++) {
-  //   massive.push(i)
-  //   // massive.reverse() 
-  // }
-  // // console.log(massive)
-  // console.log (massive.reverse())
-  
-  // 3. Запросить число и степень. Возвести число в указанную 
-  // степень и вывести результат
-  function result (a:number, b:number) {
-    return a**b
+let number = 7
+let massive = []
+for (let i = number; i >= 0; i--) {
+  massive.push(i)
+}
+massive.reverse()
+console.log(massive)
+// console.log (massive.reverse())
+
+// 3. Запросить число и степень. Возвести число в указанную 
+// степень и вывести результат
+function result(a: number, b: number) {
+  return a ** b
+}
+console.log(result(7, 2))
+
+
+// 4. Запросить 2 числа и найти все общие делители
+function commonDivisor(a: number, b: number) {
+  let massive = []
+  for (let i = 1; i < a || i < b; i++) {
+    if (a % i == 0 && b % i == 0)
+      massive.push(i)
   }
-  console.log(result(7,2))
-  
-  
-  // 4. Запросить 2 числа и найти все общие делители
-  function commonDivisor (a:number, b:number) {
-    let massive = []
-    for (let i=1; i<a || i<b; i++) {
-      if (a%i==0 && b%i==0)
-        massive.push(i)
-    }
-    return massive
-  }
-  // console.log (commonDivisor(100,20))
-  console.log (commonDivisor(15, 10))
+  return massive
+}
+// console.log (commonDivisor(100,20))
+console.log(commonDivisor(15, 10))
 
-  
-  // 5. Посчитать факториал введенного пользователем числа
-  // факториал 5 = 1*2*3*4*5
-  
-  let a = 5; 
-  function facktorial (a:number) {
-    let num = 1
-    for (let i=2; i<=a; i++)
-      num = num * i 
-      return num
-   
-  }
-  console.log(facktorial(a))
-  console.log(facktorial(15))
-  
-  
- 
+
+// 5. Посчитать факториал введенного пользователем числа
+// факториал 5 = 1*2*3*4*5
+
+let a = 5;
+function facktorial(a: number) {
+  let num = 1
+  for (let i = 2; i <= a; i++)
+    num = num * i
+  return num
+
+}
+console.log(facktorial(a))
+console.log(facktorial(15))
 
 
 
-
-
-
-
-//   Вывести все числа от 1 до 100, которые кратные указанному 
+//  1. Вывести все числа от 1 до 100, которые кратные указанному 
 //   пользователем числу.
-//   2
-//   Практическое задание №3
+// function numbers (a:number) {
+//   let massive = []
+//   for (let i=1; i<=100; i++) {
+//     if (i%a==0)
+//     massive.push(i)
+//   }
+//   console.log(massive)
+// }
+// // ??????????????
+// console.log(numbers(4))
+// console.log(numbers(9))
+
+
+
+
+
+
 // 4. Вывести каждый 4 - й элемент из указанного пользователем
-// диапазона.Пользователь указывает минимальное и максимальное значения диапазона.
+// диапазона.Пользователь указывает минимальное и максимальное значения диапазона.
+
+function diapason(a: number, b: number) {
+  let massive = []
+  for (let i = a; i < b; i++) {
+    if (i % 4 == 0) {
+      massive.push(i)
+    }
+  }
+  console.log('Диапазон ' + massive)
+}
+diapason(10, 20)
+diapason(25, 100)
+
+
+
+// let minDiapason = prompt ('Введите первое число')
+// let maxDiapason = prompt ('Введите второе число')
+// let massive2 = []
+// for (let i=minDiapason; i<maxDiapason; i++) {
+//   if (i%4==0)  {
+//     massive2.push (i)
+//   }
+// }
+// console.log(`числа в вашем диапазоне от ${minDiapason} до ${maxDiapason}: ${massive2}`)
+
+
+
+
+
+// 2. Написать функцию поиска наибольшего общего делителя
+// function maxDiv(a = 24, b = 16) {
+//   let div = 0
+//   for (let i = 1; i <= Math.min(a, b); i++) {
+//     if (a % i == 0 && b % i == 0) {
+//       div = i
+//     }
+//   }
+//   return (div)
+// }
+// console.log('divider', maxDiv())
