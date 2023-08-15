@@ -2359,49 +2359,46 @@
 // let number = 7
 // let massive = []
 // for (let i=0; i<number; i++) {
-//   massive.push(i)
-//   // massive.reverse() 
-// }
-// // console.log(massive)
-// console.log (massive.reverse())
-
-// 3. Запросить число и степень. Возвести число в указанную 
-// степень и вывести результат
-function result (a:number, b:number) {
-return a**b
-}
-console.log(result(7,2))
-
-// 4. Запросить 2 числа и найти все общие делители
-function commonDivisor (a:number, b:number) {
-  massive = []
-  for (let i=1; i<a || i<b; i++) {
-    if (a>b && a%b==0) {
-        i++
-      
-      console.log (massive(a,b))
-    }
+  //   massive.push(i)
+  //   // massive.reverse() 
+  // }
+  // // console.log(massive)
+  // console.log (massive.reverse())
+  
+  // 3. Запросить число и степень. Возвести число в указанную 
+  // степень и вывести результат
+  function result (a:number, b:number) {
+    return a**b
   }
-}
-// console.log (massive)
+  console.log(result(7,2))
+  
+  
+  // 4. Запросить 2 числа и найти все общие делители
+  function commonDivisor (a:number, b:number) {
+    let massive = []
+    for (let i=1; i<a || i<b; i++) {
+      if (a%i==0 && b%i==0)
+        massive.push(i)
+    }
+    return massive
+  }
+  // console.log (commonDivisor(100,20))
+  console.log (commonDivisor(15, 10))
 
-
-
-
-
-
-
-// //  Запросить 2 числа и найти все общие делители
-// let numb1 = 30
-// let numb2 = 20
-// let div: any = []
-// if (numb1 > numb2) {
-//   while (numb1 % numb2 == 0) {
-//     div++
-//   }
-// } else {
-//   while (numb2 % numb1 == 0) {
-//     div++
-//   }
-// }
-// console.log(div)
+  
+  // 5. Посчитать факториал введенного пользователем числа
+  // факториал 5 = 1*2*3*4*5
+  
+  let a = 5; 
+  function facktorial (a:number) {
+    let num = 1
+    for (let i=2; i<=a; i++)
+      num = num * i 
+      return num
+   
+  }
+  console.log(facktorial(a))
+  console.log(facktorial(15))
+  
+  
+ 
