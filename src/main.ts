@@ -2438,28 +2438,3 @@ diapason(25, 100)
 
 
 
-// let minDiapason = prompt ('Введите первое число')
-// let maxDiapason = prompt ('Введите второе число')
-// let massive2 = []
-// for (let i=minDiapason; i<maxDiapason; i++) {
-//   if (i%4==0)  {
-//     massive2.push (i)
-//   }
-// }
-// console.log(`числа в вашем диапазоне от ${minDiapason} до ${maxDiapason}: ${massive2}`)
-
-
-
-
-
-// 2. Написать функцию поиска наибольшего общего делителя
-// function maxDiv(a = 24, b = 16) {
-//   let div = 0
-//   for (let i = 1; i <= Math.min(a, b); i++) {
-//     if (a % i == 0 && b % i == 0) {
-//       div = i
-//     }
-//   }
-//   return (div)
-// }
-// console.log('divider', maxDiv())
