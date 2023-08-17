@@ -2517,7 +2517,7 @@ console.log (quantityNumbers(123))
 // число 123456 сдвинуть на 2 цифры, то получится 345612).
 
 // let q = prompt(' Введите число', '1234567890');
-//         let move = Number( prompt(' На сколько цифр сдвинуть?') );
+//         let move = ( prompt(' На сколько цифр сдвинуть?') );
 //         alert(q.slice(move) + q.slice(0, move));
 
 
@@ -2530,8 +2530,58 @@ console.log (quantityNumbers(123))
 // }
 // shiftDigitals(12345)
 
+// console.log(Date.now())
 
 
+
+
+// Задание 1
+// Реализовать класс, описывающий простой маркер. В классе
+// должны быть следующие компоненты:
+// ■ поле, которое хранит цвет маркера;
+// ■ поле, которое хранит количество чернил в маркере (в про-
+// центах);
+// ■ метод для печати (метод принимает строку и выводит
+// текст соответствующим цветом; текст выводится до тех
+// пор, пока в маркере есть чернила; один не пробельный
+// символ – это 0,5% чернил в маркере).
+// Реализовать класс, описывающий заправляющийся маркер,
+// унаследовав его от простого маркера и добавив метод для заправки
+// маркера.
+// Продемонстрировать работу написанных методов.
+class Marker {
+  constructor(color, amountInk) {
+    this.color = color;
+    this.amountInk = amountInk;
+  }
+  print(text) {
+    if (this.amountInk === 0) {
+      alert('Нет чернил в маркере для вывода текста!');
+    }
+    let outputText = '';
+    for (let i = 0, length = text.length; i < length; i++) {
+      if (this.amountInk === 0) {
+        alert('Чернила в маркере для вывода текста закончились!');
+        break;
+      }
+      outputText += text[i];
+      if (text[i] !== ' ') {
+        this.amountInk -= 0.5;
+      }
+    }
+    const html = `<p style="color: ${this.color};">${outputText}</p>`;
+    document.body.insertAdjacentHTML('beforeend', html);
+  }
+}
+class RefuelingMarker extends Marker {
+  fillup(amountInk) {
+    if (this.amountInk + amountInk > 100) {
+      alert('Нельзя заполнить маркер больше чем на 100%');
+    } else {
+      this.amountInk += amountInk;
+    }
+  }
+}
 
 console.log('DOWN')
 console.log('DOWN')
