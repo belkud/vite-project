@@ -725,33 +725,55 @@
 // // достаточно одной переменной (не 10) для ввода чисел пользователем.
 
 
-// // let positive = 0;
-// // let negative = 0;
-// // let zero = 0;
-// // let even = 0;
-// // let odd = 0;
 
-// // for (let i = 1; i <= 10; i++ ) {
-// //     const num = prompt("Введите число");
 
-// //     if (num > 0) {
-// //     positive++;
-// //     };
-// //     if (num < 0) {
-// //     negative++;
-// //     };
-// //     if (num == 0) {
-// //     zero++;
-// //     };
-// //     if (num % 2 == 0) {
-// //     even++;
-// //     };
-// //     if (num % 2 !== 0) {
-// //     odd++;
-// //     };
-// // };
 
-// // alert(` Из введенных цифр - положительных: ${positive}, отрицательных: ${negative}, нулей: ${zero}, четных: ${even}, нечетных: ${odd}.`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let positive = 0;
+// let negative = 0;
+// let zero = 0;
+// let even = 0;
+// let odd = 0;
+
+// for (let i = 1; i <= 10; i++ ) {
+//     const num = prompt("Введите число");
+
+//     if (num > 0) {
+//     positive++;
+//     };
+//     if (num < 0) {
+//     negative++;
+//     };
+//     if (num == 0) {
+//     zero++;
+//     };
+//     if (num % 2 == 0) {
+//     even++;
+//     };
+//     if (num % 2 !== 0) {
+//     odd++;
+//     };
+// };
+
+// alert(` Из введенных цифр - положительных: ${positive}, отрицательных: ${negative}, нулей: ${zero}, четных: ${even}, нечетных: ${odd}.`)
 
 
 
@@ -2331,13 +2353,6 @@
 
 
 
-// console.log('DOWN')
-// console.log('DOWN')
-// console.log('DOWN')
-// console.log('DOWN')
-// console.log('DOWN')
-
-
 
 
 // МОДУЛЬ 1, НЕДЕЛЯ 3
@@ -2356,13 +2371,13 @@
 // ??????????
 // 2. Пользователь ввел число, а на экран вывелись все числа 
 // от введенного до 0.
-let number = 7
-let massive = []
-for (let i = number; i >= 0; i--) {
-  massive.push(i)
-}
-massive.reverse()
-console.log(massive)
+// let number = 7
+// let massive = []
+// for (let i = number; i >= 0; i--) {
+//   massive.push(i)
+// }
+// massive.reverse()
+// console.log(massive)
 // console.log (massive.reverse())
 
 // 3. Запросить число и степень. Возвести число в указанную 
@@ -2374,16 +2389,15 @@ console.log(result(7, 2))
 
 
 // 4. Запросить 2 числа и найти все общие делители
-function commonDivisor(a: number, b: number) {
-  let massive = []
-  for (let i = 1; i < a || i < b; i++) {
-    if (a % i == 0 && b % i == 0)
-      massive.push(i)
-  }
-  return massive
-}
-// console.log (commonDivisor(100,20))
-console.log(commonDivisor(15, 10))
+// function commonDivisor(a: number, b: number) {
+//   let massive = []
+//   for (let i = 1; i < a || i < b; i++)
+//     if (a % i == 0 && b % i == 0)
+//       massive.push(i)
+//   return (massive)
+// }
+// // console.log (commonDivisor(100,20))
+// console.log(commonDivisor(15, 10))
 
 
 // 5. Посчитать факториал введенного пользователем числа
@@ -2412,8 +2426,7 @@ console.log(facktorial(15))
 //   }
 //   console.log(massive)
 // }
-// // ??????????????
-// console.log(numbers(4))
+// numbers(4)
 // console.log(numbers(9))
 
 
@@ -2424,17 +2437,105 @@ console.log(facktorial(15))
 // 4. Вывести каждый 4 - й элемент из указанного пользователем
 // диапазона.Пользователь указывает минимальное и максимальное значения диапазона.
 
-function diapason(a: number, b: number) {
+// function diapason(a: number, b: number) {
+//   let massive = []
+//   for (let i = a; i < b; i++)
+//     if (i % 4 == 0)
+//       massive.push(i)
+//   console.log('Диапазон ' + massive)
+// }
+// diapason(10, 20)
+// diapason(25, 100)
+
+
+
+// 1. Подсчитать сумму всех чисел в заданном пользователем 
+// диапазоне. 
+
+// function summs(min:number, max:number) {
+//   let summ = 1
+//   for (let i = min; i < max; i++)
+//     summ = summ + i
+//   return summ
+// }
+// console.log(summs(3, 12))
+
+
+
+
+// let a = 5;
+// function facktorial(a: number) {
+//   let num = 1
+//   for (let i = 2; i <= a; i++)
+//     num = num * i
+//   return num
+
+// }
+// console.log(facktorial(a))
+// console.log(facktorial(15))
+
+
+
+// 2. Запросить 2 числа и найти только наибольший общий 
+// делитель.
+
+// function compare (a:number, b:number) {
+//   let massive=[]
+//   for (let i=1; i<a || i<b; i++) 
+//    if (a%i==0 && b%i==0) 
+//     massive.push(i)
+//     return massive.pop()
+// }
+// console.log (compare(15,120))
+
+
+
+
+// 3. Запросить у пользователя число и вывести все делители 
+// этого числа.
+function findDivider (a:number) {
   let massive = []
-  for (let i = a; i < b; i++) {
-    if (i % 4 == 0) {
-      massive.push(i)
-    }
-  }
-  console.log('Диапазон ' + massive)
+  for (let i=1; i<a; i++) 
+  if (a%i==0)
+  massive.push(i)
+return massive
 }
-diapason(10, 20)
-diapason(25, 100)
+// findDivider(20)
+console.log(findDivider(30))
 
 
+// 4. Определить количество цифр в введенном числе.
+function quantityNumbers (a=123){
+  let str = String (a)
+  return str.length
+
+}
+console.log (quantityNumbers(123))
+
+// 7. Запросить у пользователя число и на сколько цифр его 
+// сдвинуть. Сдвинуть цифры числа и вывести результат (если 
+// число 123456 сдвинуть на 2 цифры, то получится 345612).
+
+// let q = prompt(' Введите число', '1234567890');
+//         let move = Number( prompt(' На сколько цифр сдвинуть?') );
+//         alert(q.slice(move) + q.slice(0, move));
+
+
+// фигня с underfined))))))))))
+
+// function shiftDigitals (a:number) {
+//   let str = String(a)
+//   return str.slice (3.1)
+   
+// }
+// shiftDigitals(12345)
+
+
+
+
+console.log('DOWN')
+console.log('DOWN')
+console.log('DOWN')
+console.log('DOWN')
+console.log('DOWN')
 
