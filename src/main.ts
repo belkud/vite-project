@@ -2526,7 +2526,7 @@ console.log (quantityNumbers(123))
 // function shiftDigitals (a:number) {
 //   let str = String(a)
 //   return str.slice (3.1)
-   
+  
 // }
 // shiftDigitals(12345)
 
