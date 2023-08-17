@@ -2582,6 +2582,8 @@ class RefuelingMarker extends Marker {
     }
   }
 }
+console.log (window.innerHeight)
+console.log (window.innerWidth)
 
 console.log('DOWN')
 console.log('DOWN')
