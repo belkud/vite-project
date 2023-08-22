@@ -2550,11 +2550,13 @@ console.log (quantityNumbers(123))
 // маркера.
 // Продемонстрировать работу написанных методов.
 class Marker {
-  constructor(color, amountInk) {
+  color
+  amountInk
+  constructor(color:string, amountInk:number) {
     this.color = color;
     this.amountInk = amountInk;
   }
-  print(text) {
+  print(text:string) {
     if (this.amountInk === 0) {
       alert('Нет чернил в маркере для вывода текста!');
     }
@@ -2573,15 +2575,29 @@ class Marker {
     document.body.insertAdjacentHTML('beforeend', html);
   }
 }
+
 class RefuelingMarker extends Marker {
-  fillup(amountInk) {
+  fillup(amountInk:number) {
     if (this.amountInk + amountInk > 100) {
       alert('Нельзя заполнить маркер больше чем на 100%');
     } else {
       this.amountInk += amountInk;
     }
+    console.log (amountInk)
   }
 }
+
+
+
+
+const someMarker = new Marker('#234332',100)
+someMarker.print('sdfsdfsdfsd fsdfsd fwer fdsdf sdf sdfs')
+const someRefuelMarker = new RefuelingMarker('#ff4332',100)
+someRefuelMarker.print('sdfsdfsdfsd fsdfsd fwer fdsdf sdf sdfs')
+console.log(someRefuelMarker)
+someRefuelMarker.fillup(10)
+console.log(someRefuelMarker)
+console.log(someMarker)
 console.log (window.innerHeight)
 console.log (window.innerWidth)
 
