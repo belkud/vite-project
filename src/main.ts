@@ -2530,7 +2530,7 @@ console.log (quantityNumbers(123))
 // }
 // shiftDigitals(12345)
 
-// console.log(Date.now())
+console.log(Date.now())
 
 
 
@@ -2600,6 +2600,46 @@ console.log(someRefuelMarker)
 console.log(someMarker)
 console.log (window.innerHeight)
 console.log (window.innerWidth)
+
+
+
+class Comment{
+  constructor (text) {
+    this.text = text
+    this.quantity = 0
+  }
+  upvote () {
+    quantity +=1
+  }
+}
+
+const firstComment  = new Comment('проверяю')
+  console.log(firstComment)
+
+
+
+
+function multyplier(a:number,b=3) {
+  return a*b
+}
+console.log ('multyplier ' + multyplier(12,205))
+
+
+
+
+// function diapason(a: number, b: number) {
+//   let massive = []
+//   for (let i = a; i < b; i++)
+//     if (i % 4 == 0)
+//       massive.push(i)
+//   console.log('Диапазон ' + massive)
+// }
+// diapason(10, 20)
+// diapason(25, 100)
+
+
+
+
 
 console.log('DOWN')
 console.log('DOWN')
