@@ -2641,6 +2641,95 @@ console.log ('multyplier ' + multyplier(12,205))
 
 
 
+
+function Animal (name, years) {
+  this.name = name;
+  this.years = 10;
+  this.color = 'yellow'
+  this.years += 1
+}
+
+console.log (Animal)
+
+
+
+
+let piggy = new Animal('sticky')
+console.log(piggy)
+let piggy2 = new Animal('sweaty')
+console.log(piggy)
+console.log (piggy instanceof Animal)
+console.log (piggy instanceof Object)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// КОНСТРУКТОР
+// function Car (brand, color) {
+//   this.brand = brand
+//   this.color = color
+//   this.power = '123 horses'
+// }
+
+// let Rio = new Car ('Rio', 'White')
+// console.log(Rio)
+
+// let Reno
+// console.log(Reno  = new Car( 'Reno', 'Grey'))
+
+
+
+
+// МЕТОДЫ
+const cars = ['Renault', 'Kia']
+console.log(cars)
+
+console.log(cars.join('').split('').toString().toUpperCase())
+
+
+
+
+
+class Car {
+  constructor (brand, color) {
+    this.brand = brand
+    this.color = color
+    this.power = '123 horses'
+  }
+  start () {
+      console.log(`${this.brand} - ${this.color} - start!`)
+  }
+  stop () {
+    console.log(`${this.brand} - STOP!`)
+  }
+  static discount() {
+    console.log ('Общая скидка 10%')
+  } 
+}
+  const Rio = new Car ('Rio', 'White') 
+  console.log (Rio)
+  
+  let Renault = new Car ('Renault', 'Grey')
+  console.log (Renault)
+
+  console.log (Rio.start())
+  console.log (Renault.stop())
+  console.log (Car.prototype.start)
+
+
+
 console.log('DOWN')
 console.log('DOWN')
 console.log('DOWN')
