@@ -2535,71 +2535,6 @@ console.log(Date.now())
 
 
 
-// Задание 1
-// Реализовать класс, описывающий простой маркер. В классе
-// должны быть следующие компоненты:
-// ■ поле, которое хранит цвет маркера;
-// ■ поле, которое хранит количество чернил в маркере (в про-
-// центах);
-// ■ метод для печати (метод принимает строку и выводит
-// текст соответствующим цветом; текст выводится до тех
-// пор, пока в маркере есть чернила; один не пробельный
-// символ – это 0,5% чернил в маркере).
-// Реализовать класс, описывающий заправляющийся маркер,
-// унаследовав его от простого маркера и добавив метод для заправки
-// маркера.
-// Продемонстрировать работу написанных методов.
-class Marker {
-  color
-  amountInk
-  constructor(color:string, amountInk:number) {
-    this.color = color;
-    this.amountInk = amountInk;
-  }
-  print(text:string) {
-    if (this.amountInk === 0) {
-      alert('Нет чернил в маркере для вывода текста!');
-    }
-    let outputText = '';
-    for (let i = 0, length = text.length; i < length; i++) {
-      if (this.amountInk === 0) {
-        alert('Чернила в маркере для вывода текста закончились!');
-        break;
-      }
-      outputText += text[i];
-      if (text[i] !== ' ') {
-        this.amountInk -= 0.5;
-      }
-    }
-    const html = `<p style="color: ${this.color};">${outputText}</p>`;
-    document.body.insertAdjacentHTML('beforeend', html);
-  }
-}
-
-class RefuelingMarker extends Marker {
-  fillup(amountInk:number) {
-    if (this.amountInk + amountInk > 100) {
-      alert('Нельзя заполнить маркер больше чем на 100%');
-    } else {
-      this.amountInk += amountInk;
-    }
-    console.log (amountInk)
-  }
-}
-
-
-
-
-const someMarker = new Marker('#234332',100)
-someMarker.print('sdfsdfsdfsd fsdfsd fwer fdsdf sdf sdfs')
-const someRefuelMarker = new RefuelingMarker('#ff4332',100)
-someRefuelMarker.print('sdfsdfsdfsd fsdfsd fwer fdsdf sdf sdfs')
-console.log(someRefuelMarker)
-someRefuelMarker.fillup(10)
-console.log(someRefuelMarker)
-console.log(someMarker)
-console.log (window.innerHeight)
-console.log (window.innerWidth)
 
 
 
@@ -2727,6 +2662,136 @@ class Car {
   console.log (Rio.start())
   console.log (Renault.stop())
   console.log (Car.prototype.start)
+
+
+
+
+
+
+// Задание 1
+// Реализовать класс, описывающий простой маркер. В классе
+// должны быть следующие компоненты:
+// ■ поле, которое хранит цвет маркера;
+// ■ поле, которое хранит количество чернил в маркере (в про-
+// центах);
+// ■ метод для печати (метод принимает строку и выводит
+// текст соответствующим цветом; текст выводится до тех
+// пор, пока в маркере есть чернила; один не пробельный
+// символ – это 0,5% чернил в маркере).
+// Реализовать класс, описывающий заправляющийся маркер,
+// унаследовав его от простого маркера и добавив метод для заправки
+// маркера.
+// Продемонстрировать работу написанных методов.
+
+class Marker {
+  color
+  amountInk
+  constructor(color:string, amountInk:number) {
+    this.color = color;
+    this.amountInk = amountInk;
+  }
+  print(text:string) {
+    if (this.amountInk === 0) {
+      alert('Нет чернил в маркере для вывода текста!');
+    }
+    let outputText = '';
+    for (let i = 0, length = text.length; i < length; i++) {
+      if (this.amountInk === 0) {
+        alert('Чернила в маркере для вывода текста закончились!');
+        break;
+      }
+      outputText += text[i];
+      if (text[i] !== ' ') {
+        this.amountInk -= 0.5;
+      }
+    }
+    const html = `<p style="color: ${this.color};">${outputText}</p>`;
+    document.body.insertAdjacentHTML('beforeend', html);
+  }
+}
+
+class RefuelingMarker extends Marker {
+  fillup(amountInk:number) {
+    if (this.amountInk + amountInk > 100) {
+      alert('Нельзя заполнить маркер больше чем на 100%');
+    } else {
+      this.amountInk += amountInk;
+    }
+    console.log (amountInk)
+  }
+}
+
+
+
+
+const someMarker = new Marker('#234332',100)
+someMarker.print('sdfsdfsdfsd fsdfsd fwer fdsdf sdf sdfs')
+const someRefuelMarker = new RefuelingMarker('#ff4332',100)
+someRefuelMarker.print('sdfsdfsdfsd fsdfsd fwer fdsdf sdf sdfs')
+console.log(someRefuelMarker)
+
+someRefuelMarker.fillup(10)
+console.log(someRefuelMarker)
+
+console.log(someMarker)
+// console.log (window.innerHeight)
+// console.log (window.innerWidth)
+
+
+
+// Задание 2
+// Реализовать класс, описывающий новость (заголовок, текст, 
+// массив тегов, дата публикации). В классе необходимо реализовать 
+// один метод print, который выводит всю информацию в таком 
+// виде, как на рисунке 1.
+// Обратите внимание на то, как выводится дата:
+// ■ если с даты публикации прошло менее дня, то выводится 
+// «сегодня»;
+// ■ если с даты публикации прошло менее недели, то выводится «N дней назад»;
+// ■ в остальных случаях, полная дата в формате «дд.мм.гггг».
+
+class News {
+  title
+  text
+  tags
+  date
+  constructor (title:string, text:string, tags:string, date:number) {
+    this.title = title;
+    this.text = text;
+    this.tags = tags;
+    this.date = date
+  }
+  print(date:number) {
+    if(date< 60*60*24*1000){
+      console.log('Запись опубликована сегодня')
+      } else if (date>=60*60*24*1000 && date< 2*60*60*24*1000){
+        console.log('Запись опубликована вчера')
+      } else if (date>=2*60*60*24*1000 && date< 3*60*60*24*1000){
+        console.log('Запись опубликована позавчера')
+      } else if (date>=3*60*60*24*1000 && date< 4*60*60*24*1000){
+        console.log('Запись опубликована 3 дня  назад')
+      } else if (date>=4*60*60*24*1000 && date< 5*60*60*24*1000){
+        console.log('Запись опубликована 4 дня  назад')
+      } else if (date>=5*60*60*24*1000 && date< 6*60*60*24*1000){
+        console.log('Запись опубликована 5 дней назад')
+      } else if (date>=6*60*60*24*1000 && date< 7*60*60*24*1000){
+        console.log('Запись опубликована 6 дней назад')
+    } else {
+      console.log(Date)
+    }
+  }
+  
+}
+
+
+// let now = new Date()
+// console.log(now)
+
+
+
+
+
+
 
 
 
