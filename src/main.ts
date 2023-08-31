@@ -2493,24 +2493,24 @@ console.log(facktorial(15))
 
 // 3. Запросить у пользователя число и вывести все делители 
 // этого числа.
-function findDivider (a:number) {
+function findDivider(a: number) {
   let massive = []
-  for (let i=1; i<a; i++) 
-  if (a%i==0)
-  massive.push(i)
-return massive
+  for (let i = 1; i < a; i++)
+    if (a % i == 0)
+      massive.push(i)
+  return massive
 }
 // findDivider(20)
 console.log(findDivider(30))
 
 
 // 4. Определить количество цифр в введенном числе.
-function quantityNumbers (a=123){
-  let str = String (a)
+function quantityNumbers(a = 123) {
+  let str = String(a)
   return str.length
 
 }
-console.log (quantityNumbers(123))
+console.log(quantityNumbers(123))
 
 // 7. Запросить у пользователя число и на сколько цифр его 
 // сдвинуть. Сдвинуть цифры числа и вывести результат (если 
@@ -2526,7 +2526,7 @@ console.log (quantityNumbers(123))
 // function shiftDigitals (a:number) {
 //   let str = String(a)
 //   return str.slice (3.1)
-  
+
 // }
 // shiftDigitals(12345)
 
@@ -2538,26 +2538,26 @@ console.log(Date.now())
 
 
 
-class Comment{
-  constructor (text) {
+class Comment {
+  constructor(text) {
     this.text = text
     this.quantity = 0
   }
-  upvote () {
-    quantity +=1
+  upvote() {
+    quantity += 1
   }
 }
 
-const firstComment  = new Comment('проверяю')
-  console.log(firstComment)
+const firstComment = new Comment('проверяю')
+console.log(firstComment)
 
 
 
 
-function multyplier(a:number,b=3) {
-  return a*b
+function multyplier(a: number, b = 3) {
+  return a * b
 }
-console.log ('multyplier ' + multyplier(12,205))
+console.log('multyplier ' + multyplier(12, 205))
 
 
 
@@ -2577,14 +2577,14 @@ console.log ('multyplier ' + multyplier(12,205))
 
 
 
-function Animal (name, years) {
+function Animal(name, years) {
   this.name = name;
   this.years = 10;
   this.color = 'yellow'
   this.years += 1
 }
 
-console.log (Animal)
+console.log(Animal)
 
 
 
@@ -2593,8 +2593,8 @@ let piggy = new Animal('sticky')
 console.log(piggy)
 let piggy2 = new Animal('sweaty')
 console.log(piggy)
-console.log (piggy instanceof Animal)
-console.log (piggy instanceof Object)
+console.log(piggy instanceof Animal)
+console.log(piggy instanceof Object)
 
 
 
@@ -2638,30 +2638,30 @@ console.log(cars.join('').split('').toString().toUpperCase())
 
 
 class Car {
-  constructor (brand, color) {
+  constructor(brand, color) {
     this.brand = brand
     this.color = color
     this.power = '123 horses'
   }
-  start () {
-      console.log(`${this.brand} - ${this.color} - start!`)
+  start() {
+    console.log(`${this.brand} - ${this.color} - start!`)
   }
-  stop () {
+  stop() {
     console.log(`${this.brand} - STOP!`)
   }
   static discount() {
-    console.log ('Общая скидка 10%')
-  } 
+    console.log('Общая скидка 10%')
+  }
 }
-  const Rio = new Car ('Rio', 'White') 
-  console.log (Rio)
-  
-  let Renault = new Car ('Renault', 'Grey')
-  console.log (Renault)
+const Rio = new Car('Rio', 'White')
+console.log(Rio)
 
-  console.log (Rio.start())
-  console.log (Renault.stop())
-  console.log (Car.prototype.start)
+let Renault = new Car('Renault', 'Grey')
+console.log(Renault)
+
+console.log(Rio.start())
+console.log(Renault.stop())
+console.log(Car.prototype.start)
 
 
 
@@ -2686,11 +2686,11 @@ class Car {
 class Marker {
   color
   amountInk
-  constructor(color:string, amountInk:number) {
+  constructor(color: string, amountInk: number) {
     this.color = color;
     this.amountInk = amountInk;
   }
-  print(text:string) {
+  print(text: string) {
     if (this.amountInk === 0) {
       alert('Нет чернил в маркере для вывода текста!');
     }
@@ -2711,22 +2711,22 @@ class Marker {
 }
 
 class RefuelingMarker extends Marker {
-  fillup(amountInk:number) {
+  fillup(amountInk: number) {
     if (this.amountInk + amountInk > 100) {
       alert('Нельзя заполнить маркер больше чем на 100%');
     } else {
       this.amountInk += amountInk;
     }
-    console.log (amountInk)
+    console.log(amountInk)
   }
 }
 
 
 
 
-const someMarker = new Marker('#214332',100)
+const someMarker = new Marker('#214332', 100)
 someMarker.print('123sdfsdfsdfsd fsdfsd fwer fdsdf sdf sdfs')
-const someRefuelMarker = new RefuelingMarker('#ff4332',100)
+const someRefuelMarker = new RefuelingMarker('#ff4332', 100)
 someRefuelMarker.print('sdfsdfsdfsd fsdfsd fwer fdsdf sdf sdfs')
 console.log(someRefuelMarker)
 
@@ -2751,52 +2751,36 @@ console.log(someMarker)
 // ■ в остальных случаях, полная дата в формате «дд.мм.гггг».
 
 class News {
-  title
-  text
-  tags
-  date
-  constructor (title:string, text:string, tags:string, date:number) {
+  title:string
+  text:string
+  tags:string[]
+  date:Date
+  constructor(title: string, text: string, tags: string[], date: Date) {
     this.title = title;
     this.text = text;
     this.tags = tags;
     this.date = date
   }
-  print(date:number) {
-    if(date< 60*60*24*1000){
-      console.log('Запись опубликована сегодня')
-    } else if (date>=60*60*24*1000 && date< 2*60*60*24*1000){
-      console.log('Запись опубликована вчера')
-    } else if (date>=2*60*60*24*1000 && date< 3*60*60*24*1000){
-      console.log('Запись опубликована позавчера')
-    } else if (date>=3*60*60*24*1000 && date< 4*60*60*24*1000){
-      console.log('Запись опубликована 3 дня  назад')
-    } else if (date>=4*60*60*24*1000 && date< 5*60*60*24*1000){
-      console.log('Запись опубликована 4 дня  назад')
-    } else if (date>=5*60*60*24*1000 && date< 6*60*60*24*1000){
-      console.log('Запись опубликована 5 дней назад')
-    } else if (date>=6*60*60*24*1000 && date< 7*60*60*24*1000){
-      console.log('Запись опубликована 6 дней назад')
+  get postDate() {
+    const now = Date.now()
+    if (this.date.valueOf() > now - 60 * 60 * 24 * 1000) {
+      return 'Запись опубликована сегодня'
+    } else if (this.date.valueOf() > now - 7 * 60 * 60 * 24 * 1000) {
+      return 'Запись опубликована' + Math.floor((now - this.date.valueOf())/(1000*60*60*24)) + 'дней назад'
     } else {
-      console.log(Date)
-    }
-    // document.body.insertAdjacentHTML('beforeend', html);
-    const html = `<p style="color: ${this.text};</p>`;
-    document.body.insertAdjacentHTML('beforeend', html);
+      return this.date.toDateString() // вывести в формате «дд.мм.гггг»
+    }   
   }
-  
+  print() {
+
+  }
 }
-const firstFile = new News ('#Loremipsum', 'lorem lorem lorem lorem lorem', '<br>', 2023)
-firstFile.print (1234567)
-
-console.log(firstFile)
 
 
-// const someMarker = new Marker('#234332',100)
-// someMarker.print('sdfsdfsdfsd fsdfsd fwer fdsdf sdf sdfs')
 
 
-let now = new Date()
-console.log(now)
+
+
 
 
 
