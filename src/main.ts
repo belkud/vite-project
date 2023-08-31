@@ -2724,8 +2724,8 @@ class RefuelingMarker extends Marker {
 
 
 
-const someMarker = new Marker('#234332',100)
-someMarker.print('sdfsdfsdfsd fsdfsd fwer fdsdf sdf sdfs')
+const someMarker = new Marker('#214332',100)
+someMarker.print('123sdfsdfsdfsd fsdfsd fwer fdsdf sdf sdfs')
 const someRefuelMarker = new RefuelingMarker('#ff4332',100)
 someRefuelMarker.print('sdfsdfsdfsd fsdfsd fwer fdsdf sdf sdfs')
 console.log(someRefuelMarker)
@@ -2764,31 +2764,39 @@ class News {
   print(date:number) {
     if(date< 60*60*24*1000){
       console.log('Запись опубликована сегодня')
-      } else if (date>=60*60*24*1000 && date< 2*60*60*24*1000){
-        console.log('Запись опубликована вчера')
-      } else if (date>=2*60*60*24*1000 && date< 3*60*60*24*1000){
-        console.log('Запись опубликована позавчера')
-      } else if (date>=3*60*60*24*1000 && date< 4*60*60*24*1000){
-        console.log('Запись опубликована 3 дня  назад')
-      } else if (date>=4*60*60*24*1000 && date< 5*60*60*24*1000){
-        console.log('Запись опубликована 4 дня  назад')
-      } else if (date>=5*60*60*24*1000 && date< 6*60*60*24*1000){
-        console.log('Запись опубликована 5 дней назад')
-      } else if (date>=6*60*60*24*1000 && date< 7*60*60*24*1000){
-        console.log('Запись опубликована 6 дней назад')
+    } else if (date>=60*60*24*1000 && date< 2*60*60*24*1000){
+      console.log('Запись опубликована вчера')
+    } else if (date>=2*60*60*24*1000 && date< 3*60*60*24*1000){
+      console.log('Запись опубликована позавчера')
+    } else if (date>=3*60*60*24*1000 && date< 4*60*60*24*1000){
+      console.log('Запись опубликована 3 дня  назад')
+    } else if (date>=4*60*60*24*1000 && date< 5*60*60*24*1000){
+      console.log('Запись опубликована 4 дня  назад')
+    } else if (date>=5*60*60*24*1000 && date< 6*60*60*24*1000){
+      console.log('Запись опубликована 5 дней назад')
+    } else if (date>=6*60*60*24*1000 && date< 7*60*60*24*1000){
+      console.log('Запись опубликована 6 дней назад')
     } else {
       console.log(Date)
     }
+    // document.body.insertAdjacentHTML('beforeend', html);
+    const html = `<p style="color: ${this.text};</p>`;
+    document.body.insertAdjacentHTML('beforeend', html);
   }
   
 }
+const firstFile = new News ('#Loremipsum', 'lorem lorem lorem lorem lorem', '<br>', 2023)
+firstFile.print (1234567)
+
+console.log(firstFile)
 
 
+// const someMarker = new Marker('#234332',100)
+// someMarker.print('sdfsdfsdfsd fsdfsd fwer fdsdf sdf sdfs')
 
 
-
-// let now = new Date()
-// console.log(now)
+let now = new Date()
+console.log(now)
 
 
 
