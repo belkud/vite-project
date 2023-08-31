@@ -2772,7 +2772,7 @@ class News {
     }   
   }
   print() {
-
+// need to solve first task
   }
 }
 
