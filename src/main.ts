@@ -2641,55 +2641,55 @@ console.log(cars.join('').split('').toString().toUpperCase())
 
 
 
-class Car {
-  brand
-  color
-  power
-  static type = 'Machine!'
-  constructor(brand:string, color:any) {
-    this.brand = brand
-    this.color = color
-    this.power = '123 horses'
-  }
-  start() {
-    console.log('Car start!')
-  }
-  stop() {
-    console.log(`${this.brand} - STOP!`)
-  }
-  static discount() {
-    console.log('Общая скидка 10%')
-  }
-}
-class Bicycle extends Car {
-  wheels
-  constructor(brand:string, color:any, wheels:number){
-    super(brand, color)
-    this.wheels=color.wheels 
-  }
-  start() {
-    super.start()
-      console.log('BIKE !')
-  }
-}
+// class Car {
+//   brand
+//   color
+//   power
+//   static type = 'Machine!'
+//   constructor(brand:string, color:any) {
+//     this.brand = brand
+//     this.color = color
+//     this.power = '123 horses'
+//   }
+//   start() {
+//     console.log('Car start!')
+//   }
+//   stop() {
+//     console.log(`${this.brand} - STOP!`)
+//   }
+//   static discount() {
+//     console.log('Общая скидка 10%')
+//   }
+// }
+// class Bicycle extends Car {
+//   wheels
+//   constructor(brand:string, color:any, wheels:number){
+//     super(brand, color)
+//     this.wheels=color.wheels 
+//   }
+//   start() {
+//     super.start()
+//       console.log('BIKE !')
+//   }
+// }
 
-Bicycle.prototype.wheels = '333'
-const bicycle = new Bicycle  ('qqq', 'www', 26)
+// Bicycle.prototype.wheels = '333'
+// const bicycle = new Bicycle  ('qqq', 'www', 26)
 
-console.log(bicycle.start)
+// console.log(bicycle.start)
 
-let Renault = new Car('Renault', 'Grey')
-console.log(Renault)
-console.log(Renault.stop)
+// let Renault = new Car('Renault', 'Grey')
+// console.log(Renault)
+// console.log(Renault.stop)
 
-console.log(Car.type)
-
-
+// console.log(Car.type)
 
 
-const Rio = new Car('Rio', 'White')
-console.log(Rio)
-console.log(Rio.start)
+
+
+// const Rio = new Car('Rio', 'White')
+// console.log(Rio)
+// console.log(Rio.start)
 
 
 
@@ -2848,7 +2848,6 @@ class News {
 
 // let anonim = () => console.log('мышка')
 // anonim()
-
 
  
 // // Отсутствие фигурных скобок после стрелки, НЕЯВНО (не пишем return) возвращает результат
@@ -3215,19 +3214,6 @@ console.log(areaOfSquare(9))
 
 
 
-// const rec = (num:number) => {
-//   const iter = (counter:number, acc:number)=>{
-//     if (counter===1) {
-//       return acc
-//     }
-//     return iter (counter-1, counter*acc)
-//   }
-//   return iter (num,1)
-// }
-// console.log(rec(7))
-
- 
-
 
 
 // const iteration = (num:number) => {
@@ -3241,6 +3227,11 @@ console.log(areaOfSquare(9))
 // }
 // console.log (iteration(5))
 
+ 
+
+
+
+
 
 // const recursy = (num:number) => {
 //   if (num==1)
@@ -3250,60 +3241,24 @@ console.log(areaOfSquare(9))
 // }
 // console.log (recursy(7))
 
-// // Определить количество цифр в введенном числе.
-
-// let num = '12378jkjk';
-// let str = String(num);
-// console.log(str.length);
-
-
-// Написать функцию, которая принимает строку и выводит 
-// статистику о ней: количество букв, количество цифр и 
-// количество других знаков.
-
-
-// let output = '12378jkjk'
-//   let count = 0
-//     for (let i=0; i< output.length; i++) {
-//       count +=1
-
-//     }
-
-//   console.log(output)
-
-// console.log(output.length)
 
 
 
 
+let now = new Date(0)
+console.log (Date() )
 
 
+let date = new Date(2023, 8, 17, 19, 41)
+console.log(date)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ let today  = new Date ()
+//  today.setDate(date.getDate()-2)
+ console.log(today)
 
 
 // ???????? плюсануть все числа кроме кратных 5 (11)
+let start = new Date()
 let evenOdd = (num:number) => {
   let sum = 0
   for (let i=0; i<=num; i+=1) {
@@ -3311,18 +3266,28 @@ let evenOdd = (num:number) => {
     }
     return sum
 }
-console.log(evenOdd(10))
+console.log(evenOdd(15000000))
+
+let end = new Date()
+console.log(`цикл обработан за ${(end-start)/1000} секунд`)
 
 
 
 
-// let evenOdd =(num1:number) => {
-//   let arr = 0
-//   for (let i=1; i<=num1; i++) {
 
-//   }
-// }
 
-// console.log(odd(11))
 
+
+
+
+
+
+
+
+
+//! Создайте объект Date для даты: 20 февраля 2012 года, 
+//! 3 часа 12 минут. Временная зона – местная.
+
+let today1 = new Date(2012, 1, 20, 3, 12)
+console.log(today1)
 
