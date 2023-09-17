@@ -238,9 +238,13 @@
 // // var c = Number((nmb - a - b * 10) / 100);
 // // console.log('Перевертыш: ' + (a * 100 + b * 10 + c));
 
+function checkParity (num:number) {
+  let x
+  num%2 == 0 
+    console.log('Число четное')
+}
 
-
-
+console.log (checkParity(8))
 
 // //  Запросить у пользователя число и определить,
 // //  оно полjжительное, отрицательное или ноль.
@@ -469,11 +473,11 @@
 // // странице N заголовков 
 // // второго уровня (<h2>) с надписями Header1, Header2 … HeaderN
 
-// // function createHeaders(N:number) {
-// //   for (let N = 0; N <= 5; N++)
-// //     return 'asdasd'
-// // }
-// // document.write (createHeaders())
+// function createHeaders(N:number) {
+//   for (let N = 0; N <= 5; N++)
+//     return 'asdasd'
+// }
+// document.write (createHeaders())
 
 // // 4. Создайте функцию checkPassword(x), которая вернет 
 // // значение true, если в качестве аргумента в нее будет 
@@ -2638,13 +2642,17 @@ console.log(cars.join('').split('').toString().toUpperCase())
 
 
 class Car {
-  constructor(brand, color) {
+  brand
+  color
+  power
+  static type = 'Machine!'
+  constructor(brand:string, color:any) {
     this.brand = brand
     this.color = color
     this.power = '123 horses'
   }
   start() {
-    console.log(`${this.brand} - ${this.color} - start!`)
+    console.log('Car start!')
   }
   stop() {
     console.log(`${this.brand} - STOP!`)
@@ -2653,15 +2661,35 @@ class Car {
     console.log('Общая скидка 10%')
   }
 }
-const Rio = new Car('Rio', 'White')
-console.log(Rio)
+class Bicycle extends Car {
+  wheels
+  constructor(brand:string, color:any, wheels:number){
+    super(brand, color)
+    this.wheels=color.wheels 
+  }
+  start() {
+    super.start()
+      console.log('BIKE !')
+  }
+}
+
+Bicycle.prototype.wheels = '333'
+const bicycle = new Bicycle  ('qqq', 'www', 26)
+
+console.log(bicycle.start)
 
 let Renault = new Car('Renault', 'Grey')
 console.log(Renault)
+console.log(Renault.stop)
 
-console.log(Rio.start())
-console.log(Renault.stop())
-console.log(Car.prototype.start)
+console.log(Car.type)
+
+
+
+
+const Rio = new Car('Rio', 'White')
+console.log(Rio)
+console.log(Rio.start)
 
 
 
@@ -2724,7 +2752,7 @@ class RefuelingMarker extends Marker {
 
 
 
-const someMarker = new Marker('#214332', 100)
+const someMarker = new Marker('red', 100)
 someMarker.print('123sdfsdfsdfsd fsdfsd fwer fdsdf sdf sdfs')
 const someRefuelMarker = new RefuelingMarker('#ff4332', 100)
 someRefuelMarker.print('sdfsdfsdfsd fsdfsd fwer fdsdf sdf sdfs')
@@ -2738,6 +2766,21 @@ console.log(someMarker)
 // console.log (window.innerWidth)
 
 
+class Mmm {
+  color:string
+  constructor (color: string) {
+    this.color = color
+
+  }
+}
+ 
+
+
+// const letter = new Mmm{
+// color = 'red'
+// }
+// console.log (letter.color)
+// letter.print ('adsd')
 
 // Задание 2
 // Реализовать класс, описывающий новость (заголовок, текст, 
@@ -2776,10 +2819,162 @@ class News {
   }
 }
 
+// let news = new News()
+// console.log(news.postDate())
+
+
+// let now = new Date()
+// console.log(now)
+
+// console.log(News.prototype.postDate())
+
+// setInterval(function() {
+//   alert('hello friend')
+// },10000)
+
+
+// // вариант 1
+// let arrow = () => console.log('Стрелочная функция')
+// arrow()
+
+// // вариант 2
+// let arrow2 = () => {return 'Стрелочная функция'}
+// console.log(arrow2())
+
+// function name2 () {
+//   console.log('123')
+// }
+// name2()
+
+// let anonim = () => console.log('мышка')
+// anonim()
+
+
+ 
+// // Отсутствие фигурных скобок после стрелки, НЕЯВНО (не пишем return) возвращает результат
+// let func1 = (a: number, b: number) => a+b;
+// // let func1 = (a: number, b: number) => { return a }
+// let func2 = function (a: number, b: number) {
+//   return a+b
+// }
+// // Стрелочная функция с логикой и явным возвратом
+// let func3 = (a: number, b: number) => { 
+//   const c = a + b
+//   return c 
+// }
+
+// console.log('func1', func1(1,2))
+// console.log('func2', func2(1,2))
+// console.log('func3', func3(1,2))
+
+
+// const colorRed = [
+//   {
+//     name: 'color',
+//     value: 'red'
+//   },
+//   {
+//     name: 'text-decoration',
+//     value: 'underline'
+//   },
+// ]
+
+
+// // const purchase = [
+// //   {
+// //     name: 'a',
+// //     count: 12,
+// //     purchased: true,
+// //   },
+// //   {
+// //     name: 'b',
+// //     count: 6,
+// //     purchased: false,
+// //   },
+// //   {
+// //     name: 'c',
+// //     count: 1,
+// //     purchased: true,
+// //   },
+// // ]
+
+// // const addPurchaseButton = document.querySelector('.addPurchase')
+// // const setPurchasedButton = document.querySelector('.setPurchased')
+
+// function whatToBuy(arr:any[]) {
+//   let n = 1
+//   for (let el of arr) {
+//     if (!el.purchased) {
+//       console.log(`${n}. ${el.name} Надо купить ${el.count} штук`)
+//       n++
+//       // console.log(n + ". " +el.name+" Надо купить "+el.cont+"штук")
+//     }
+//   }
+//   for (let el of arr) {
+//     if (el.purchased) {
+//       console.log(`${n}. ${el.name} Куплено ${el.count} штук`)
+//       n++
+//       // console.log(n + ". " +el.name+" Надо купить "+el.cont+"штук")
+//     }
+//   }
+// }
+
+// // console.log('DOWN')
+// // console.log('DOWN')
+// // console.log('DOWN')
+// // console.log('DOWN')
+// // console.log('DOWN')
+
+
+// // 3. Запросить у пользователя трехзначное и число и проверить,
+// // есть ли в нем одинаковые цифры.
+// // let number = +prompt( 'Введите трехзначное число: ');
+// // let number1 = parseInt(number / 100);
+// // let number2 = parseInt(number / 10) % 10;
+// // let number3 = number % 10;
+// // if(number1===number2 || number2===number3 || number1===number3)
+// // console.log('Найдено совпадение цифр');
+// // else
+// // console.log('Совпадений не найдено')
+
+
+// const facktorial2 = (n) =>{
+//   if (n==1) {
+//     return 1;
+//   } else {
+//     return n * facktorial2(n-1) 
+//   }
+// }
+// const answer = facktorial2(7)
+// console.log (answer)
 
 
 
-// sdfe
+// let x = 17
+
+// console.log (x%2==0 ? 'четное':'не четное')
+
+// console.log()
+
+
+// // // 3. Создайте функцию createHeaders(N), которая создаст на 
+// // // странице N заголовков 
+// // // второго уровня (<h2>) с надписями Header1, Header2 … HeaderN
+
+// // createHeaders(5);
+ 
+// // function createHeaders(N) {
+// //     let ins = document.querySelector("body");
+// //   for (let i = 0; i < N; i++) {
+// //     ins.insertAdjacentHTML("beforeend", `ooo  ${i + 1} <h2>Header${i + 1}</h2>`);
+// //   }
+// // }
+
+// // let arr = [1, 2, 3]
+// //   for (let i=0; i<arr.length;i++) {
+// //   console.log (arr.popl;(i))
+// // }
+// // arr.forEach(elem=>console.log(elem))
 
 
 
@@ -2790,9 +2985,344 @@ class News {
 
 
 
-console.log('DOWN')
-console.log('DOWN')
-console.log('DOWN')
-console.log('DOWN')
-console.log('DOWN')
+
+
+               
+
+
+
+
+
+
+
+
+// // числа умноженные друг за другом
+
+// const multiplier  = (number:number) => {
+//   if (number==1) {
+//     return 1
+//   } else {
+//     return number * (multiplier (number-1))
+//   }  
+// }
+// console.log (multiplier(5))
+
+
+
+
+// // const facktorial2 = (n) =>{
+// //   if (n==1) {
+// //     return 1;
+// //   } else {
+// //     return n * facktorial2(n-1) 
+// //   }
+// // }
+// // const answer = facktorial2(7)
+// // console.log (answer)
+
+
+
+
+
+
+
+
+
+
+// const sum = (num:number) => {
+//   if (num == 1) {
+//     return 1 
+//   } else {
+//     return num + sum(num-1)
+//   }
+// }
+// console.log (sum(10))
+
+// const mult = (n:number) => {
+//   if (n==1){
+//     return 1
+//   } else {
+//     return n * mult(n-1)
+//   }
+// }
+// console.log(mult(10))
+
+// // const fib = (n:number) => {
+// //   let summ = 0
+// //   summ 
+// //   console.log (n + (n))
+// // }
+// // console.log(fib(10))
+// // fib(10)
+
+
+
+
+// function fib(n: number) {
+//   let a = 1;
+//   let b = 1;
+//   for (let i = 1; i <= n; i++) {
+//     let c = a + b;
+//     a = b;
+//     b = c;
+//   }
+//   return b ;
+  
+// }
+// console.log(fib(6))
+// console.log(`fibonachi 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 `)
+
+// // // через рекурсивную функцию
+// // function fib(n) {
+// //   return n<=1 ? n : fib(n-1) + fib(n-2);
+// // }
+// console.log(fib(19))
+// console.log(fib(7))
+// console.log(fib(23))
+
+
+
+
+
+
+// 1. числа, которые плюсуются
+// 2. числа, которые перемножаются (только НЕ четные числа)
+// 3. числа фибоначи
+
+
+let summ = (num:number) => {
+    if (num==1) {
+      return 1 
+    } else {
+      return (num = num + summ(num-1)) 
+      
+    }
+  }
+  console.log (summ(5))
+  
+  
+// ????????????
+let mult = (num:number) => {
+  // let odd = num
+  num%2==0
+    if (num==1) {
+      return 1 
+    } else {
+      return (num = num * mult(num-1)) 
+      
+    }
+  }
+  console.log (mult(5))
+
+
+// let mult = (num:number) => {
+//   let total = 1
+//   for (let i=1; i<=num; i+=2){
+//     total*=i
+//   }
+//   return total
+// }
+// console.log(mult(9))
+
+ 
+
+// вывести четные числа до 18 в массив
+const odd = (num:number) => {
+  let summ = []
+  for (let i=0; i<=num; i+=2) {
+    summ.unshift(i)
+  }
+    return summ 
+}
+
+console.log(odd(18))
+
+
+
+
+
+// плюсануть четные в квадрате
+
+const numInSquare = (num:number) => {
+  let summ = 0
+  for (let i=0; i<=num; i+=2) {
+    summ += i*i
+  }
+  return summ
+}
+console.log(numInSquare(6))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const areaOfSquare = (side:number) => {
+    return side*side
+}
+console.log(areaOfSquare(9))
+
+
+
+
+
+
+
+ 
+// let totalDistance = (speed:number, time:number) => {
+//   return speed * time
+// }
+// console.log(totalDistance(80,10))
+
+// // если ввожу 5, то умножаются числа 1*2*3*4*5
+
+// let facktorial3  = (num:number) => {
+//   if (num==1) {
+//     return 1
+//   } else {
+//     return num * (facktorial3(num-1))
+//   }
+// }
+// console.log(facktorial3(5))
+
+
+
+// //вывести общие делители двух чисел 
+// //вывести макс и мин делитель двух чисел
+
+// let num1 = 40
+// let num2 = 30
+// let massive =[]
+// let max = 0
+// for (let i=1; i<=num1 || i<=num2; i++) {
+//   if (num1%i==0 && num2%i==0) {
+//     massive.push(i)
+//      massive.pop(i)
+// }
+// }
+// console.log(massive)
+// console.log(max)
+
+
+
+// const rec = (num:number) => {
+//   const iter = (counter:number, acc:number)=>{
+//     if (counter===1) {
+//       return acc
+//     }
+//     return iter (counter-1, counter*acc)
+//   }
+//   return iter (num,1)
+// }
+// console.log(rec(7))
+
+ 
+
+
+
+// const iteration = (num:number) => {
+//   const iter = (counter:number, acc:number) => {
+//     if (counter==1) {
+//       return acc
+//     }
+//     return iter (counter-1, counter*acc) 
+//   }
+//   return iter(num, 1)
+// }
+// console.log (iteration(5))
+
+
+// const recursy = (num:number) => {
+//   if (num==1)
+//   return 1
+//   else
+//   return num* recursy(num-1)
+// }
+// console.log (recursy(7))
+
+// // Определить количество цифр в введенном числе.
+
+// let num = '12378jkjk';
+// let str = String(num);
+// console.log(str.length);
+
+
+// Написать функцию, которая принимает строку и выводит 
+// статистику о ней: количество букв, количество цифр и 
+// количество других знаков.
+
+
+// let output = '12378jkjk'
+//   let count = 0
+//     for (let i=0; i< output.length; i++) {
+//       count +=1
+
+//     }
+
+//   console.log(output)
+
+// console.log(output.length)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ???????? плюсануть все числа кроме кратных 5 (11)
+let evenOdd = (num:number) => {
+  let sum = 0
+  for (let i=0; i<=num; i+=1) {
+      sum +=i
+    }
+    return sum
+}
+console.log(evenOdd(10))
+
+
+
+
+// let evenOdd =(num1:number) => {
+//   let arr = 0
+//   for (let i=1; i<=num1; i++) {
+
+//   }
+// }
+
+// console.log(odd(11))
+
 
