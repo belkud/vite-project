@@ -2741,7 +2741,7 @@ class Marker {
 class RefuelingMarker extends Marker {
   fillup(amountInk: number) {
     if (this.amountInk + amountInk > 100) {
-      alert('Нельзя заполнить маркер больше чем на 100%');
+      console.log('Нельзя заполнить маркер больше чем на 100%');
     } else {
       this.amountInk += amountInk;
     }
@@ -2750,14 +2750,14 @@ class RefuelingMarker extends Marker {
 }
 
 
-
+ 
 
 const someMarker = new Marker('red', 100)
-someMarker.print('123sdfsdfsdfsd fsdfsd fwer fdsdf sdf sdfs')
+someMarker.print('123 marker')
 const someRefuelMarker = new RefuelingMarker('#ff4332', 100)
-someRefuelMarker.print('sdfsdfsdfsd fsdfsd fwer fdsdf sdf sdfs')
+someRefuelMarker.print('marker refuel ')
 console.log(someRefuelMarker)
-
+ 
 someRefuelMarker.fillup(10)
 console.log(someRefuelMarker)
 
@@ -3249,15 +3249,15 @@ let now = new Date(0)
 console.log (Date() )
 
 
-let date = new Date(2023, 8, 17, 19, 41)
-console.log(date)
+// let date = new Date(2023, 8, 17, 19, 41)
+// console.log(date)
 
  let today  = new Date ()
 //  today.setDate(date.getDate()-2)
  console.log(today)
 
 
-// ???????? плюсануть все числа кроме кратных 5 (11)
+//! ???????? плюсануть все числа кроме кратных 5 (11)
 let start = new Date()
 let evenOdd = (num:number) => {
   let sum = 0
@@ -3291,3 +3291,144 @@ console.log(`цикл обработан за ${(end-start)/1000} секунд`)
 let today1 = new Date(2012, 1, 20, 3, 12)
 console.log(today1)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//* Создайте функцию getDateAgo(date, days), возвращающую число, которое было
+//* days дней назад от даты date.
+
+//* К примеру, если сегодня двадцатое число, то getDateAgo(new Date(), 1) вернёт 
+//* девятнадцатое и getDateAgo(new Date(), 2) – восемнадцатое.
+
+//* Функция должна надёжно работать при значении days=365 и больших значениях:
+
+// function getDateAgo(date:number, days:any) {
+//   let today = new Date ()
+//   return today.toDateString()
+// }
+
+// console.log(getDateAgo())
+
+
+
+
+
+
+
+
+let start2 = new Date
+console.log(start2.getMilliseconds() +' миллисекунды')
+
+
+let day = new Date
+console.log(day.toLocaleString())
+
+
+day.setMonth (day.getMonth()-333)
+console.log(day)
+
+let day2 = new Date (2013, 8, 7,12,12)
+console.log(day2)
+
+
+let finish2 = new Date
+console.log(finish2.getMilliseconds() +' миллисекунды')
+console.log(`${finish2 - start2} + nnn`)
+ 
+
+
+const day4 = new Date('03 september 1954')
+console.log(day4)
+
+const day5 = new Date()
+day5.getDay()+1
+console.log(day5.getDay()+3)
+
+ 
+
+
+
+
+
+
+
+
+const day7 = new Date()
+console.log(day7)
+
+const day8 = new Date(2023,8,19)
+console.log(day8)
+
+const timeDifference = day7 - day8
+console.log (timeDifference + ' прошло секунд с полуночи')
+ 
+
+
+function getWeekDay(date:any) {
+  let week = ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС']
+  return week[date.getDay()]
+}
+let date = new Date(2012, 1, 20, 3, 12)
+console.log(getWeekDay(date))
+// console.log(getWeekDay(2019))
+
+
+
+const day9 = new Date (2012, 1, 20, 3, 12)
+  if (day9.getDay()==1) {
+    console.log ('понедельник')
+  } else {
+    console.log('Другой день недели')
+  }
+console.log(day9.getDay())
+
+
+
+document.querySelector('.time').innerHTML = day5.toString();
+
+
+
+
+
+
+let milliseconds = new Date()
+document.querySelector('.time2').innerHTML = milliseconds.getMilliseconds()
+
+
+
+let week = new Date()
+document.querySelector('.weekWeek').innerHTML = week.getDay() 
+
+
+
+
+
+let dateString = new Date()
+document.querySelector('.time3').innerHTML = dateString.toDateString()
+
+
+
+
+
+
+
+
+// написать Солнце 
+let sun = 'Солнце'
+
+document.querySelector('.star').innerHTML = sun
