@@ -3252,9 +3252,9 @@ console.log (Date() )
 // let date = new Date(2023, 8, 17, 19, 41)
 // console.log(date)
 
- let today  = new Date ()
+//  let today  = new Date ()
 //  today.setDate(date.getDate()-2)
- console.log(today)
+//  console.log(today)
 
 
 //! ???????? плюсануть все числа кроме кратных 5 (11)
@@ -3262,14 +3262,17 @@ let start = new Date()
 let evenOdd = (num:number) => {
   let sum = 0
   for (let i=0; i<=num; i+=1) {
-      sum +=i
-    }
-    return sum
+    if (i%5!=0)
+    sum +=i
+  }
+  return sum
 }
-console.log(evenOdd(15000000))
+console.log(evenOdd(6))
 
 let end = new Date()
-console.log(`цикл обработан за ${(end-start)/1000} секунд`)
+console.log(`цикл обработан за ${(end-start)/1000} секунд`)   
+
+
 
 
 
@@ -3348,7 +3351,7 @@ console.log(day2)
 
 let finish2 = new Date
 console.log(finish2.getMilliseconds() +' миллисекунды')
-console.log(`${finish2 - start2} + nnn`)
+console.log(`${finish2 - start2}`)
  
 
 
@@ -3399,8 +3402,15 @@ console.log(day9.getDay())
 
 
 
-document.querySelector('.time').innerHTML = day5.toString();
 
+
+
+const timeDiv = document.querySelector('.time') as HTMLDivElement
+timeDiv.innerHTML = day5.toString();
+timeDiv.addEventListener('click', ()=>{
+  console.log(day5.toString())
+  timeDiv.innerHTML = day5.toLocaleString()
+})
 
 
 
@@ -3414,6 +3424,7 @@ document.querySelector('.time2').innerHTML = milliseconds.getMilliseconds()
 let week = new Date()
 document.querySelector('.weekWeek').innerHTML = week.getDay() 
 
+console.log();
 
 
 
@@ -3432,3 +3443,36 @@ document.querySelector('.time3').innerHTML = dateString.toDateString()
 let sun = 'Солнце'
 
 document.querySelector('.star').innerHTML = sun
+
+
+
+
+
+let check = 'fff hhh kkk'
+const texxDiv = document.querySelector('.texx') as HTMLDivElement
+texxDiv.innerHTML = check
+
+
+// Создайте функцию getSecondsToTomorrow(),
+//  возвращающую количество секунд до завтрашней даты.
+function getSecondsToTomorrow() {
+  let now = new Date()
+  let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
+
+  let diff = tomorrow - now; // разница в миллисекундах
+  return Math.round(diff / 1000);
+}
+console.log(getSecondsToTomorrow())
+
+let today = new Date()
+let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
+console.log (tomorrow)
+
+
+
+function formatDate(date:any) {
+  let diff = new Date() - date;
+  return diff
+}
+console.log (formatDate(10003434234))
+
