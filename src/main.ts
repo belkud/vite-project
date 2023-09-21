@@ -2711,113 +2711,117 @@ console.log(cars.join('').split('').toString().toUpperCase())
 // маркера.
 // Продемонстрировать работу написанных методов.
 
-class Marker {
-  color
-  amountInk
-  constructor(color: string, amountInk: number) {
-    this.color = color;
-    this.amountInk = amountInk;
-  }
-  print(text: string) {
-    if (this.amountInk === 0) {
-      alert('Нет чернил в маркере для вывода текста!');
-    }
-    let outputText = '';
-    for (let i = 0, length = text.length; i < length; i++) {
-      if (this.amountInk === 0) {
-        alert('Чернила в маркере для вывода текста закончились!');
-        break;
-      }
-      outputText += text[i];
-      if (text[i] !== ' ') {
-        this.amountInk -= 0.5;
-      }
-    }
-    const html = `<p style="color: ${this.color};">${outputText}</p>`;
-    document.body.insertAdjacentHTML('beforeend', html);
-  }
-}
-
-class RefuelingMarker extends Marker {
-  fillup(amountInk: number) {
-    if (this.amountInk + amountInk > 100) {
-      console.log('Нельзя заполнить маркер больше чем на 100%');
-    } else {
-      this.amountInk += amountInk;
-    }
-    console.log(amountInk)
-  }
-}
 
 
- 
 
-const someMarker = new Marker('red', 100)
-someMarker.print('123 marker')
-const someRefuelMarker = new RefuelingMarker('#ff4332', 100)
-someRefuelMarker.print('marker refuel ')
-console.log(someRefuelMarker)
- 
-someRefuelMarker.fillup(10)
-console.log(someRefuelMarker)
-
-console.log(someMarker)
-// console.log (window.innerHeight)
-// console.log (window.innerWidth)
-
-
-class Mmm {
-  color:string
-  constructor (color: string) {
-    this.color = color
-
-  }
-}
- 
-
-
-// const letter = new Mmm{
-// color = 'red'
+//!!!!!!!!!!!!!!!! КЛАССЫ!!!!!!!!!!!!!!!!!!!!!!!!!!
+// class Marker {
+//   color
+//   amountInk
+//   constructor(color: string, amountInk: number) {
+//     this.color = color;
+//     this.amountInk = amountInk;
+//   }
+//   print(text: string) {
+//     if (this.amountInk === 0) {
+//       alert('Нет чернил в маркере для вывода текста!');
+//     }
+//     let outputText = '';
+//     for (let i = 0, length = text.length; i < length; i++) {
+//       if (this.amountInk === 0) {
+//         alert('Чернила в маркере для вывода текста закончились!');
+//         break;
+//       }
+//       outputText += text[i];
+//       if (text[i] !== ' ') {
+//         this.amountInk -= 0.5;
+//       }
+//     }
+//     const html = `<p style="color: ${this.color};">${outputText}</p>`;
+//     document.body.insertAdjacentHTML('beforeend', html);
+//   }
 // }
-// console.log (letter.color)
-// letter.print ('adsd')
 
-// Задание 2
-// Реализовать класс, описывающий новость (заголовок, текст, 
-// массив тегов, дата публикации). В классе необходимо реализовать 
-// один метод print, который выводит всю информацию в таком 
-// виде, как на рисунке 1.
-// Обратите внимание на то, как выводится дата:
-// ■ если с даты публикации прошло менее дня, то выводится 
-// «сегодня»;
-// ■ если с даты публикации прошло менее недели, то выводится «N дней назад»;
-// ■ в остальных случаях, полная дата в формате «дд.мм.гггг».
+// class RefuelingMarker extends Marker {
+//   fillup(amountInk: number) {
+//     if (this.amountInk + amountInk > 100) {
+//       console.log('Нельзя заполнить маркер больше чем на 100%');
+//     } else {
+//       this.amountInk += amountInk;
+//     }
+//     console.log(amountInk)
+//   }
+// }
 
-class News {
-  title:string
-  text:string
-  tags:string[]
-  date:Date
-  constructor(title: string, text: string, tags: string[], date: Date) {
-    this.title = title;
-    this.text = text;
-    this.tags = tags;
-    this.date = date
-  }
-  get postDate() {
-    const now = Date.now()
-    if (this.date.valueOf() > now - 60 * 60 * 24 * 1000) {
-      return 'Запись опубликована сегодня'
-    } else if (this.date.valueOf() > now - 7 * 60 * 60 * 24 * 1000) {
-      return 'Запись опубликована' + Math.floor((now - this.date.valueOf())/(1000*60*60*24)) + 'дней назад'
-    } else {
-      return this.date.toDateString() // вывести в формате «дд.мм.гггг»
-    }   
-  }
-  print() {
-// need to solve first task
-  }
-}
+
+ 
+
+// const someMarker = new Marker('red', 100)
+// someMarker.print('123 marker')
+// const someRefuelMarker = new RefuelingMarker('#ff4332', 100)
+// someRefuelMarker.print('marker refuel ')
+// console.log(someRefuelMarker)
+ 
+// someRefuelMarker.fillup(10)
+// console.log(someRefuelMarker)
+
+// console.log(someMarker)
+// // console.log (window.innerHeight)
+// // console.log (window.innerWidth)
+
+
+// class Mmm {
+//   color:string
+//   constructor (color: string) {
+//     this.color = color
+
+//   }
+// }
+ 
+
+
+// // const letter = new Mmm{
+// // color = 'red'
+// // }
+// // console.log (letter.color)
+// // letter.print ('adsd')
+
+// // Задание 2
+// // Реализовать класс, описывающий новость (заголовок, текст, 
+// // массив тегов, дата публикации). В классе необходимо реализовать 
+// // один метод print, который выводит всю информацию в таком 
+// // виде, как на рисунке 1.
+// // Обратите внимание на то, как выводится дата:
+// // ■ если с даты публикации прошло менее дня, то выводится 
+// // «сегодня»;
+// // ■ если с даты публикации прошло менее недели, то выводится «N дней назад»;
+// // ■ в остальных случаях, полная дата в формате «дд.мм.гггг».
+
+// class News {
+//   title:string
+//   text:string
+//   tags:string[]
+//   date:Date
+//   constructor(title: string, text: string, tags: string[], date: Date) {
+//     this.title = title;
+//     this.text = text;
+//     this.tags = tags;
+//     this.date = date
+//   }
+//   get postDate() {
+//     const now = Date.now()
+//     if (this.date.valueOf() > now - 60 * 60 * 24 * 1000) {
+//       return 'Запись опубликована сегодня'
+//     } else if (this.date.valueOf() > now - 7 * 60 * 60 * 24 * 1000) {
+//       return 'Запись опубликована' + Math.floor((now - this.date.valueOf())/(1000*60*60*24)) + 'дней назад'
+//     } else {
+//       return this.date.toDateString() // вывести в формате «дд.мм.гггг»
+//     }   
+//   }
+//   print() {
+// // need to solve first task
+//   }
+// }
 
 // let news = new News()
 // console.log(news.postDate())
