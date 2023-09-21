@@ -3452,6 +3452,17 @@ extraButton.addEventListener ('click', arrow)
 const colored = document.querySelectorAll('.color')
 colored.forEach(color=>
   color.addEventListener('click', function(){
-    console.log('Успешно');
+    alert('Успешно');
   })
   )
+console.log(
+  '%c MultyCOLORed',
+  'color:red; font-size:15px;'
+);
+
+
+
+console.log(
+  '%c Shadow   -^=^-',
+  'font-size:15px; font-family:cursive'
+);
