@@ -3380,8 +3380,8 @@ console.log(day5.getDay()+3)
 //! Напишите функцию getWeekDay(date), показывающую день недели в 
 //! коротком формате: «ПН», «ВТ», «СР», «ЧТ», «ПТ», «СБ», «ВС».
 
-const day5 = new Date()
-console.log(day5.getDay())
+// const day5 = new Date()
+// console.log(day5.getDay())
 
  
 
@@ -3417,75 +3417,41 @@ console.log(getWeekDay(date));
 
  
 //!ПРАВИЛЬНЫЙ ВАРИАНТ!!!
-const timeDiv = document.querySelector('.time') as HTMLDivElement
-timeDiv.innerHTML = day5.toString();
-timeDiv.addEventListener('click', ()=>{
-  console.log(day5.toString())
-  timeDiv.innerHTML = day5.toLocaleString()
-})
+// const timeDiv = document.querySelector('.time') as HTMLDivElement
+// timeDiv.innerHTML = day5.toString();
+// timeDiv.addEventListener('click', ()=>{
+//   console.log(day5.toString())
+//   timeDiv.innerHTML = day5.toLocaleString()
+// })
 
 
-
-
-let check = 'fff hhh kkk'
-const texxDiv = document.querySelector('.texx') as HTMLDivElement
-texxDiv.innerHTML = check
-
-
-
-const buttone = document.querySelector('.btn') as HTMLButtonElement 
-
-buttone.addEventListener ('click', function(){
-console.log('gfg')
-}) 
-
-
-const buttone2 = document.querySelector('.btn')
-
-buttone2.addEventListener ('click', function(){
-console.log('gfqqqg')
-}) 
+// const texxDiv = document.querySelector('.texx') as HTMLDivElement
+// texxDiv.innerHTML = 'fff hhh kkk' // чтобы не писать в html
 
 
 
 
 
+const btns = document.querySelectorAll('.btn') 
+btns.forEach (button => button.addEventListener ('click', arrow)
+)
+
+function arrow () {
+  console.log('клик!!!')
+}
 
 
 
-const surname = document.querySelector('.Surname') as HTMLDivElement
-surname.addEventListener ('mouseover', function(){
-  console.log('Мояфамилия');
-  
-})
-
-
-
-
-
-// function add2 () {
-//   console.log('вернуть результат');
-// }
-
-
-let button3 = document.querySelector('.btn3') as HTMLButtonElement
-button3.addEventListener('keydown', function add2 () {
-  console.log('вернуть результат');
-})
-
-
-function clickMouse() {
-  console.log('hello');
- }
-
-let Vova = document.querySelector('.Vladimir') as HTMLDivElement
-Vova.addEventListener ('click', clickMouse)
-
-// vovvvvv
+const extraButton = document.querySelector('.cherry')  as HTMLButtonElement
+extraButton.addEventListener ('click', arrow)
 
 
 
 
 
-
- 
+const colored = document.querySelectorAll('.color')
+colored.forEach(color=>
+  color.addEventListener('click', function(){
+    console.log('Успешно');
+  })
+  )
