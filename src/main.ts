@@ -3364,6 +3364,12 @@ console.log(day5.getDay()+3)
 
  
 
+// >>>>>>> начиная со строчки с номером 3377
+
+
+// const years = new Date ()
+// years.setFullYear(years.getFullYear() +65)
+// console.log(years.getFullYear());
 
 
 
@@ -3371,40 +3377,46 @@ console.log(day5.getDay()+3)
 
 
 
-const day7 = new Date()
-console.log(day7)
+//! Напишите функцию getWeekDay(date), показывающую день недели в 
+//! коротком формате: «ПН», «ВТ», «СР», «ЧТ», «ПТ», «СБ», «ВС».
 
-const day8 = new Date(2023,8,19)
-console.log(day8)
+const day5 = new Date()
+console.log(day5.getDay())
 
-const timeDifference = day7 - day8
-console.log (timeDifference + ' прошло секунд с полуночи')
  
 
 
-function getWeekDay(date:any) {
-  let week = ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС']
-  return week[date.getDay()]
+
+function getWeekDay (date:any)  {
+  let arr = ['ВС','ПН','ВТ','СР','ЧТ','ПТ','СБ']
+  return arr [date.getDay()]
 }
-let date = new Date(2012, 1, 20, 3, 12)
-console.log(getWeekDay(date))
-// console.log(getWeekDay(2019))
-
-
-
-const day9 = new Date (2012, 1, 20, 3, 12)
-  if (day9.getDay()==1) {
-    console.log ('понедельник')
-  } else {
-    console.log('Другой день недели')
-  }
-console.log(day9.getDay())
+let date = new Date()
+console.log(getWeekDay(date));
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+//! с понедельника (день номер 1), затем идёт вторник (номер 2) и
+//!  так до воскресенья (номер 7). Напишите функцию getLocalDay(date),
+//!  которая возвращает «европейский» день недели для даты date.
+
+
+
+
+
+ 
+//!ПРАВИЛЬНЫЙ ВАРИАНТ!!!
 const timeDiv = document.querySelector('.time') as HTMLDivElement
 timeDiv.innerHTML = day5.toString();
 timeDiv.addEventListener('click', ()=>{
@@ -3415,64 +3427,65 @@ timeDiv.addEventListener('click', ()=>{
 
 
 
-
-let milliseconds = new Date()
-document.querySelector('.time2').innerHTML = milliseconds.getMilliseconds()
-
-
-
-let week = new Date()
-document.querySelector('.weekWeek').innerHTML = week.getDay() 
-
-console.log();
-
-
-
-
-let dateString = new Date()
-document.querySelector('.time3').innerHTML = dateString.toDateString()
-
-
-
-
-
-
-
-
-// написать Солнце 
-let sun = 'Солнце'
-
-document.querySelector('.star').innerHTML = sun
-
-
-
-
-
 let check = 'fff hhh kkk'
 const texxDiv = document.querySelector('.texx') as HTMLDivElement
 texxDiv.innerHTML = check
 
 
-// Создайте функцию getSecondsToTomorrow(),
-//  возвращающую количество секунд до завтрашней даты.
-function getSecondsToTomorrow() {
-  let now = new Date()
-  let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
 
-  let diff = tomorrow - now; // разница в миллисекундах
-  return Math.round(diff / 1000);
-}
-console.log(getSecondsToTomorrow())
+const buttone = document.querySelector('.btn') as HTMLButtonElement 
 
-let today = new Date()
-let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
-console.log (tomorrow)
+buttone.addEventListener ('click', function(){
+console.log('gfg')
+}) 
 
 
+const buttone2 = document.querySelector('.btn')
 
-function formatDate(date:any) {
-  let diff = new Date() - date;
-  return diff
-}
-console.log (formatDate(10003434234))
+buttone2.addEventListener ('click', function(){
+console.log('gfqqqg')
+}) 
 
+
+
+
+
+
+
+
+const surname = document.querySelector('.Surname') as HTMLDivElement
+surname.addEventListener ('mouseover', function(){
+  console.log('Мояфамилия');
+  
+})
+
+
+
+
+
+// function add2 () {
+//   console.log('вернуть результат');
+// }
+
+
+let button3 = document.querySelector('.btn3') as HTMLButtonElement
+button3.addEventListener('keydown', function add2 () {
+  console.log('вернуть результат');
+})
+
+
+function clickMouse() {
+  console.log('hello');
+ }
+
+let Vova = document.querySelector('.Vladimir') as HTMLDivElement
+Vova.addEventListener ('click', clickMouse)
+
+// vovvvvv
+
+
+
+
+
+
+ 
