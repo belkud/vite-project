@@ -1,4 +1,4 @@
-// import './style.css'
+import './style.css'
 
 
 // let x10 = 18
@@ -3403,7 +3403,10 @@ console.log(getWeekDay(date));
 
 
 
-
+const title = document.querySelector('.title')
+title?.addEventListener ('click', function () {
+  alert ('Добро пожаловать!!!')
+})
 
 
 
@@ -3420,7 +3423,7 @@ console.log(getWeekDay(date));
 
 
  
-//!ПРАВИЛЬНЫЙ ВАРИАНТ!!!
+//! ПРАВИЛЬНЫЙ ВАРИАНТ!!!
 // const timeDiv = document.querySelector('.time') as HTMLDivElement
 // timeDiv.innerHTML = day5.toString();
 // timeDiv.addEventListener('click', ()=>{
@@ -3434,14 +3437,14 @@ console.log(getWeekDay(date));
 
 
 
-
+ 
 
 const btns = document.querySelectorAll('.btn') 
 btns.forEach (button => button.addEventListener ('click', arrow)
 )
 
-function arrow () {
-  console.log('клик!!!')
+function arrow (event) {
+  console.log('клик!!!',parseInt(event.target.dataset.num))
 }
 
 
@@ -3467,6 +3470,55 @@ console.log(
 
 
 console.log(
-  '%c Shadow   -^=^-',
+  '%c Shadow -^=^- ${.btns}',
   'font-size:15px; font-family:cursive'
+    
 );
+
+console.log(btns);
+
+function checkMashine(event) {
+  console.log(event.target.dataset.number);
+  console.log(event.target.textContent);
+  console.log(event.currentTarget.dataset.number);
+  
+}
+
+
+const button2 = document.querySelectorAll('.newButton')
+button2.forEach(newButton=>
+  newButton.addEventListener ('click', checkMashine));
+  
+  
+  
+ 
+// ! const colored = document.querySelectorAll('.color')
+// ! colored.forEach(color=>
+// !   color.addEventListener('click', function(){
+// !     alert('Успешно');
+// !   })
+// !   )
+
+
+
+function chase(event) {
+  console.log(event.target.dataset.num);
+  event.stopPropagation()
+}
+
+const buttonClick = document.querySelectorAll('.col')
+buttonClick.forEach(col=>
+  col.addEventListener('click', chase))
+
+
+
+
+//! Спросить!
+  // function wind(event) {
+  //   console.log(`ось Х=${parseInt(event.screenX)}px, ось У=${event.screenY}px`);
+    // event.stopPropagation()
+   
+  // }
+  // window.addEventListener ('click', wind)
+
+  

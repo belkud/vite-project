@@ -40,7 +40,7 @@
         background-color: rgb(247, 118, 118);
       }
 
-
+jk
 
 
 
@@ -60,11 +60,11 @@
   <body>
     
     <div class="wrapper">
-      <h1>Event target</h1>
-      <button class="btn">кнопка 1</button>
-        <button class="btn">кнопка 2</button>
-        <button class="btn">кнопка 3</button>
-      <button class="btn">кнопка 4</button>
+      <h1 class="title">Event target</h1>
+      <button data-num="1" class="btn">кнопка 1</button>
+      <button data-num="2" class="btn">кнопка 2</button>
+      <button data-num="3" class="btn">кнопка 3</button>
+      <button data-num="4" class="btn">кнопка 4</button>
     </div>
 
 <button class="cherry"> доп кнопка</button>
@@ -90,7 +90,38 @@
 
 
 
+<div class="Button2">
+  <button data-number="машина-1" class="newButton">Opel</button>
+  <button data-number="машина-2" class="newButton">Renault</button>
+  <button data-number="машина-3" class="newButton">Toyota</button>
+  <button data-number="машина-4" class="newButton">Lada</button>
+  </div> 
+
+
+
+
+  
+  
+ 
+<div>
+  <button class="col" data-num="Красная кнопка"> красный</button>
+  <button class="col" data-num="Синяя кнопка"> синий </button>
+</div>
+ 
+
+
+  
+ 
+<input type="text" class="car" placeholder="<<в html>>" onkeypress="(console.log(value.length+1))">
+  
+
+<input type="button" class="car" value="Скрытая кнопка"  onclick="(type='hidden')">
+<div>
+
+
+ 
 
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
+
