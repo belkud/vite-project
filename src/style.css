@@ -57,10 +57,7 @@ h1 {
   background-color:coral;
 }
 
-
-
-
-
+ 
 .football {
   position: absolute;
   left: 0px;
@@ -69,28 +66,52 @@ h1 {
   border: 1px solid red;
   border-radius: 50%;
   transition: 0.5s;
+  z-index: 1;
 }
 .football:hover {
   transition: 1s;
   border: 1px solid yellow;
 }
 
-.field {
-  /* border: 2px solid red; */
+.trickField {
+  width: 365px;
+  height: 200px;
+  margin: 45px 45px;
+  position: absolute;
+  background-color: aqua;
+
 }
 .changeWidth {
-  border: 2px solid red;
+  border: 1px solid red;
   width: 500px;
 }
 
 .redBlock {
+  border: 1px solid red;
   position: absolute;
-  background-color: transparent;
-  height: 140px;
-  margin-top: 250px;
-  width: 25px;
+  /* background-color: transparent; */
+  height: 100px;
+  margin-top: 100px;
+  margin-left: 45px;
 }
 
+.title2 {
+  background-color: red;
+  width: 200px;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 5px;
+  text-decoration:underline;
+  z-index: 2;
+  margin: auto;
+  /* display: none; */
+}
+
+.title2:hover {
+  opacity: 50%;
+  transition: 0.5s;
+}
 
 
 

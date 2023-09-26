@@ -3528,11 +3528,11 @@ buttonClick.forEach(col=>
 
 
     //поле
-    let playGame = document.querySelector('.field') as HTMLPictureElement
+    let playGame = document.querySelector('.trickField') as HTMLPictureElement
     
     function action(event: any) {
-      game.style.left = (event.clientX-30) + 'px'
-      game.style.top = (event.clientY-30) + 'px'
+      game.style.left = (event.clientX-83) + 'px'
+      game.style.top = (event.clientY-241) + 'px'
 
     }
     
@@ -3542,13 +3542,36 @@ buttonClick.forEach(col=>
 
 
     let block = document.querySelector('.redBlock')
-    block.addEventListener ('click', function() {
-      console.log ('гол!!!');
-      
+    block.addEventListener ('click', function(event) {
+      // document.createEvent (info);
+      game.style.left = (event.clientX-83) + 'px'
+      game.style.top = (event.clientY-241) + 'px'
     })
 
-  
+
+
+
+
+
+
+
+    //! Закрытие надписи  'Вы забили гол!!!'
+    function goal (event) {
+      // window.SVGRectElement
+      
+    }
+  let info = document.querySelector('.title2')
+  info.addEventListener('click', goal)
     
+
+
+
+
+
+
+
+
+
 
 console.log(document.querySelector('.football'));
 
