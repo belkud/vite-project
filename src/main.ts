@@ -3524,11 +3524,7 @@ button2.forEach(newButton=>
   // window.addEventListener ('mousemove', wind)
 
 
-
-
-
   
-    
 
 
     //поле
