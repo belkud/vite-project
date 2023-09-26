@@ -77,7 +77,26 @@ h1 {
 
 .field {
   width: 300px;
+  /* border: 2px solid red; */
 }
+img {
+  border: 2px solid red;
+}
+
+.redBlock {
+  position: absolute;
+  background-color: transparent;
+  height: 140px;
+  margin-top: 250px;
+  width: 25px;
+}
+
+
+
+
+
+
+
 
 
 .redSquare {
@@ -96,7 +115,3 @@ h1 {
   z-index: 1;
 }
 
-.side {
-  /* position: absolute; */
-  box-sizing: border-box;
-}

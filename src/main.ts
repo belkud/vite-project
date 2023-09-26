@@ -3533,13 +3533,22 @@ button2.forEach(newButton=>
     function action(event: any) {
       game.style.left = (event.clientX-30) + 'px'
       game.style.top = (event.clientY-30) + 'px'
+
     }
     
     //мячик
     let game = document.querySelector('.football') as HTMLPictureElement
     playGame.addEventListener('click', action)
+
+
+    let block = document.querySelector('.redBlock')
+    block.addEventListener ('click', function() {
+      console.log ('гол!!!');
+      
+    })
+
   
- 
+    
 
 console.log(document.querySelector('.football'));
 
