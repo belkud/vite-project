@@ -1,3 +1,38 @@
+body {
+  background-color: rgb(247, 118, 118);
+  /* position: relative; */
+}
+
+
+.time {
+  background-color:red;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
+div{
+  padding:  20px;
+}
+.btn {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.btn:hover {
+  transition: 0.5s;
+  background-color:red;
+  box-shadow: 0px 0px 2px 2px rgb(240, 42, 138);
+  border: 2px solid red;
+}
+.color:hover {
+  transition:  0.5s;
+  box-shadow: 0px 0px 2px 2px aqua;
+}
+h1 {
+  color:  white;
+}
 
 
 .car, .newButton {
@@ -24,4 +59,13 @@
 
 .btn {
   width: 100px;
+}
+
+.football {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100px;
+  border: 2px solid red;
+  border-radius: 50%;
 }

@@ -3521,4 +3521,36 @@ buttonClick.forEach(col=>
   // }
   // window.addEventListener ('click', wind)
 
+
+
+    function ball(event) {
+       console.log(event.clientY)
+       console.log(event.clientX)
+      
+    }
+
+  let game = document.querySelector('.football') as HTMLPictureElement
+  window.addEventListener('click', function(event) {
+    game.style.left = (event.clientX-50) + 'px'
+    game.style.top = (event.clientY-50) + 'px'
+
+
+
+
+
+
+  })
   
+  // game.addEventListener('click', ball)
+
+
+
+
+
+
+
+
+
+
+
+
