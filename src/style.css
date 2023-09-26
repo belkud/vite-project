@@ -19,7 +19,9 @@ div{
   border-radius: 5px;
   margin-top: 20px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 100px;
 }
+
 .btn:hover {
   transition: 0.5s;
   background-color:red;
@@ -55,22 +57,32 @@ h1 {
   background-color:coral;
 }
 
- 
 
-.btn {
-  width: 100px;
-}
+
+
 
 .football {
   position: absolute;
   left: 0px;
   top: 0px;
   width: 60px;
-  border: 2px solid red;
+  border: 1px solid red;
   border-radius: 50%;
+  transition: 0.5s;
+}
+.football:hover {
+  transition: 1s;
+  border: 1px solid yellow;
 }
 
 .field {
   width: 300px;
   border: 2px solid red;
+}
+
+
+.redSquare {
+  border: 2px solid red;
+  width:300px;
+  height: 300px;
 }

@@ -3501,14 +3501,14 @@ button2.forEach(newButton=>
 
 
 
-function chase(event) {
-  console.log(event.target.dataset.num);
-  event.stopPropagation()
-}
+// function chase(event) {
+//   console.log(event.target.dataset.num);
+//   event.stopPropagation()
+// }
 
-const buttonClick = document.querySelectorAll('.col')
-buttonClick.forEach(col=>
-  col.addEventListener('click', chase))
+// const buttonClick = document.querySelectorAll('.col')
+// buttonClick.forEach(col=>
+//   col.addEventListener('click', chase))
 
 
 
@@ -3523,19 +3523,15 @@ buttonClick.forEach(col=>
 
 
 
-    function ball(event) {
-       console.log(event.clientY)
-       console.log(event.clientX)
-      
-    }
+    
 
 
     //поле
-    let playGame = document.querySelector('.field')
+    let playGame = document.querySelector('.field') as HTMLPictureElement
     
-    function action(event) {
-        game.style.left = (event.clientX-30) + 'px'
-        game.style.top = (event.clientY-30) + 'px'
+    function action(event: any) {
+      game.style.left = (event.clientX-30) + 'px'
+      game.style.top = (event.clientY-30) + 'px'
     }
     
     //мячик
@@ -3544,6 +3540,7 @@ buttonClick.forEach(col=>
   
  
 
+console.log(document.querySelector('.football'));
 
 
 
