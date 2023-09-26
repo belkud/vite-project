@@ -76,11 +76,11 @@ h1 {
 }
 
 .field {
-  width: 300px;
   /* border: 2px solid red; */
 }
-img {
+.changeWidth {
   border: 2px solid red;
+  width: 500px;
 }
 
 .redBlock {

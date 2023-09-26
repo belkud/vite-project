@@ -3480,7 +3480,7 @@ console.log(btns);
 function checkMashine(event) {
   console.log(event.target.dataset.number);
   console.log(event.target.textContent);
-  console.log(event.currentTarget.dataset.number);
+  // console.log(event.currentTarget.dataset.number);
   
 }
 
@@ -3501,14 +3501,14 @@ button2.forEach(newButton=>
 
 
 
-// function chase(event) {
-//   console.log(event.target.dataset.num);
-//   event.stopPropagation()
-// }
+function chase(event) {
+  console.log(event.target.dataset.num);
+  event.stopPropagation()
+}
 
-// const buttonClick = document.querySelectorAll('.col')
-// buttonClick.forEach(col=>
-//   col.addEventListener('click', chase))
+const buttonClick = document.querySelectorAll('.col')
+buttonClick.forEach(col=>
+  col.addEventListener('click', chase))
 
 
 
