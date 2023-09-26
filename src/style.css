@@ -65,7 +65,12 @@ h1 {
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 100px;
+  width: 60px;
   border: 2px solid red;
   border-radius: 50%;
+}
+
+.field {
+  width: 300px;
+  border: 2px solid red;
 }

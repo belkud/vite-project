@@ -3529,25 +3529,20 @@ buttonClick.forEach(col=>
       
     }
 
-  let game = document.querySelector('.football') as HTMLPictureElement
-  window.addEventListener('click', function(event) {
-    game.style.left = (event.clientX-50) + 'px'
-    game.style.top = (event.clientY-50) + 'px'
 
-
-
-
-
-
-  })
+    //поле
+    let playGame = document.querySelector('.field')
+    
+    function action(event) {
+        game.style.left = (event.clientX-30) + 'px'
+        game.style.top = (event.clientY-30) + 'px'
+    }
+    
+    //мячик
+    let game = document.querySelector('.football') as HTMLPictureElement
+    playGame.addEventListener('click', action)
   
-  // game.addEventListener('click', ball)
-
-
-
-
-
-
+ 
 
 
 
