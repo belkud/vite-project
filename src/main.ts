@@ -3514,12 +3514,14 @@ button2.forEach(newButton=>
 
 
 //! Спросить!
+// let coordinate 
+
   // function wind(event) {
-  //   console.log(`ось Х=${parseInt(event.screenX)}px, ось У=${event.screenY}px`);
-    // event.stopPropagation()
+  //   console.log(`ось Х=${event.screenX}px, ось У=${event.screenY}px`);
+  //   event.stopPropagation()
    
   // }
-  // window.addEventListener ('click', wind)
+  // window.addEventListener ('mousemove', wind)
 
 
 
