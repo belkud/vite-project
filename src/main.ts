@@ -3551,12 +3551,12 @@ console.log(document.querySelector('.football'));
 
 
 
-const bigSquare = document.querySelector('.redSquare') as HTMLDivElement
+// const bigSquare = document.querySelector('.redSquare') as HTMLDivElement
 
 
-function square (event:any) {
-  smallSquare.style.left = (event.clientX)+ 'px'
-}
-const smallSquare = document.querySelector('.blackSquare') as HTMLDivElement
-document.addEventListener ('click', square)
+// function square (event:any) {
+//   smallSquare.style.left = (event.clientX)+ 'px'
+// }
+// const smallSquare = document.querySelector('.blackSquare') as HTMLDivElement
+// document.addEventListener ('click', square)
 
