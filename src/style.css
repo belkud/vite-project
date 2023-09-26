@@ -82,7 +82,17 @@ h1 {
 
 
 .redSquare {
+  position: relative;
   border: 2px solid red;
-  width:300px;
-  height: 300px;
+  width:200px;
+  height: 200px;
+}
+.blackSquare {
+  position: absolute;
+  left:0px;
+  top:0px;
+  border: 2px solid black;
+  width:20px;
+  height: 20px;
+  z-index: 1;
 }
