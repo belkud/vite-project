@@ -3541,32 +3541,27 @@ buttonClick.forEach(col=>
     playGame.addEventListener('click', action)
 
 
-    let block = document.querySelector('.redBlock')
-    block.addEventListener ('click', function(event) {
-      // document.createEvent (info);
-      game.style.left = (event.clientX-83) + 'px'
-      game.style.top = (event.clientY-241) + 'px'
-    })
-
-
-
-
-
-
+ 
 
 
     //! Закрытие надписи  'Вы забили гол!!!'
     function goal (event) {
-      // window.SVGRectElement
-      
-    }
-  let info = document.querySelector('.title2')
-  info.addEventListener('click', goal)
-    
+      info.style.display = 'none'
+   }
 
-
-
-
+   let info = document.querySelector('.title2')
+   info.addEventListener('click', goal)
+   
+   
+   
+   
+   //! Всплытие модального окна
+   let block = document.querySelector('.redBlock')
+    block.addEventListener ('click', function(event) {
+      info.style.display = 'block'
+      game.style.left = (event.clientX-83) + 'px'
+      game.style.top = (event.clientY-241) + 'px'
+    })
 
 
 

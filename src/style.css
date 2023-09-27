@@ -58,6 +58,7 @@ h1 {
 }
 
  
+ /*! Футбол */
 .football {
   position: absolute;
   left: 0px;
@@ -89,13 +90,14 @@ h1 {
 .redBlock {
   border: 1px solid red;
   position: absolute;
-  /* background-color: transparent; */
   height: 100px;
   margin-top: 100px;
   margin-left: 45px;
 }
 
+
 .title2 {
+  position: fixed;
   background-color: red;
   width: 200px;
   text-align: center;
@@ -103,16 +105,15 @@ h1 {
   font-size: 1.2em;
   border-radius: 5px;
   text-decoration:underline;
-  z-index: 2;
-  margin: auto;
-  /* display: none; */
+  z-index: 1;
+  margin-left: 550px;
+  display:block;
 }
 
 .title2:hover {
-  opacity: 50%;
-  transition: 0.5s;
+  opacity: 100%;
 }
-
+/*! Конец кода */
 
 
 
