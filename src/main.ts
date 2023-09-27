@@ -2596,9 +2596,9 @@ console.log(Animal)
 let piggy = new Animal('sticky')
 console.log(piggy)
 let piggy2 = new Animal('sweaty')
-console.log(piggy)
-console.log(piggy instanceof Animal)
-console.log(piggy instanceof Object)
+console.log(piggy2)
+console.log(piggy2 instanceof Animal)
+console.log(piggy2 instanceof Object)
 
 
 
@@ -3443,7 +3443,7 @@ const btns = document.querySelectorAll('.btn')
 btns.forEach (button => button.addEventListener ('click', arrow)
 )
 
-function arrow (event) {
+function arrow (event:any) {
   // console.log('клик!!!',parseInt(event.target.dataset.num))
 }
 
@@ -3477,7 +3477,7 @@ console.log(
 
 console.log(btns);
 
-function checkMashine(event) {
+function checkMashine(event:any) {
   console.log(event.target.dataset.number);
   console.log(event.target.textContent);
   // console.log(event.currentTarget.dataset.number);
@@ -3501,7 +3501,7 @@ button2.forEach(newButton=>
 
 
 
-function chase(event) {
+function chase(event:any) {
   console.log(event.target.dataset.num);
   event.stopPropagation()
 }
@@ -3545,8 +3545,9 @@ buttonClick.forEach(col=>
     // Закрытие надписи  'Вы забили гол!!!'
     function goal () {
       closeTitle.style.display = 'none'
+      game.style.rotate.delete
    }
-   let closeTitle = document.querySelector('.title2')
+   let closeTitle = document.querySelector('.title2') as HTMLDivElement
    closeTitle.addEventListener('click', goal)
    
    // Всплытие модального окна
@@ -3555,17 +3556,32 @@ buttonClick.forEach(col=>
       closeTitle.style.display = 'block'
       game.style.left = (event.clientX-83) + 'px'
       game.style.top = (event.clientY-241) + 'px'
+      //!как сделать так, чтобы команда срабатывала многократно?
+      game.style.rotate = 180 + 'deg'
     })
+
+
     
     //установка мяча по центру поля
     let ballInCenter = document.querySelector('.cherry') as HTMLButtonElement
-    ballInCenter.addEventListener ('click', function (event) {
-       game.style.left = 174 + 'px'
-       game.style.top = 92 + 'px'
+    ballInCenter.addEventListener ('click', function () {
+      game.style.left = 174 + 'px'
+      game.style.top = 92 + 'px'
+      //!как сделать так, чтобы команда срабатывала многократно?
+      game.style.rotate = 180 + 'deg'
     })
 
- 
+   
 
 
 
- 
+//! Задание с животными
+
+let animal = document.querySelector ('.extraAnimal')
+
+let close = document.querySelector('.cross') as HTMLSpanElement
+close.addEventListener ('click', function(){
+  animal.style.display = 'none'
+  
+})
+  

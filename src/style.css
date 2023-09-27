@@ -130,23 +130,27 @@ h1 {
 
 
 
-
-
-
-
-.redSquare {
-  position: relative;
-  border: 2px solid red;
-  width:200px;
-  height: 200px;
+/* !Модальные окна с животными */
+.animal {
+  background-color:aquamarine;
+  width: 500px;
+  padding: 0px !important;
 }
-.blackSquare {
-  position: absolute;
-  left:0px;
-  top:0px;
-  border: 2px solid black;
-  width:20px;
-  height: 20px;
-  z-index: 1;
+.extraAnimal {
+  padding: 0px !important;
+  border: 1px solid red;
 }
-
+.flex {
+  display: flex;
+  justify-content: space-between;
+ 
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.cross {
+  padding-top: 10px;
+  color: red;
+  font-size: 18px;
+  width: 17px;
+  height: 17px;
+}
