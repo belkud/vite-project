@@ -59,7 +59,7 @@ h1 {
 
  
  /*! Футбол */
-.football {
+.ball {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -69,17 +69,18 @@ h1 {
   transition: 0.5s;
   z-index: 1;
 }
-.football:hover {
+.ball:hover {
   transition: 1s;
   border: 1px solid yellow;
 }
 
 .trickField {
+  border: 1px solid red;
   width: 365px;
   height: 200px;
   margin: 45px 45px;
   position: absolute;
-  background-color: aqua;
+  /* background-color: aqua; */
 
 }
 .changeWidth {
@@ -87,8 +88,8 @@ h1 {
   width: 500px;
 }
 
-.redBlock {
-  border: 1px solid red;
+.gate {
+  /* border: 1px solid red; */
   position: absolute;
   height: 100px;
   margin-top: 100px;
@@ -98,21 +99,33 @@ h1 {
 
 .title2 {
   position: fixed;
-  background-color: red;
+  color: transparent  ;
   width: 200px;
   text-align: center;
-  color: white;
   font-size: 1.2em;
   border-radius: 5px;
   text-decoration:underline;
   z-index: 1;
-  margin-left: 550px;
-  display:block;
+  margin-top: 50px;
+  display:none;
+  animation: anim 3s alternate forwards;
 }
 
-.title2:hover {
-  opacity: 100%;
+@keyframes anim {
+  from  {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 130px;
+    background-color: red;
+    color: white;
+  }
 }
+
+.cherry {
+  color: brown;
+}
+
 /*! Конец кода */
 
 

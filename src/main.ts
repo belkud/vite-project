@@ -3444,7 +3444,7 @@ btns.forEach (button => button.addEventListener ('click', arrow)
 )
 
 function arrow (event) {
-  console.log('клик!!!',parseInt(event.target.dataset.num))
+  // console.log('клик!!!',parseInt(event.target.dataset.num))
 }
 
 
@@ -3526,65 +3526,46 @@ buttonClick.forEach(col=>
 
   
 
-
+                    //!Игра в мячик
     //поле
-    let playGame = document.querySelector('.trickField') as HTMLPictureElement
+    let removeBall = document.querySelector('.trickField') as HTMLPictureElement
     
+    //передвижение мяча
+    removeBall.addEventListener('click', action)
+    
+    //мячик
+    let game = document.querySelector('.ball') as HTMLPictureElement
+    
+    //координаты мячика при клике
     function action(event: any) {
       game.style.left = (event.clientX-83) + 'px'
       game.style.top = (event.clientY-241) + 'px'
-
     }
+     
+    // Закрытие надписи  'Вы забили гол!!!'
+    function goal () {
+      closeTitle.style.display = 'none'
+   }
+   let closeTitle = document.querySelector('.title2')
+   closeTitle.addEventListener('click', goal)
+   
+   // Всплытие модального окна
+   let block = document.querySelector('.gate') as HTMLDivElement
+    block.addEventListener ('click', function(event) {
+      closeTitle.style.display = 'block'
+      game.style.left = (event.clientX-83) + 'px'
+      game.style.top = (event.clientY-241) + 'px'
+    })
     
-    //мячик
-    let game = document.querySelector('.football') as HTMLPictureElement
-    playGame.addEventListener('click', action)
-
+    //установка мяча по центру поля
+    let ballInCenter = document.querySelector('.cherry') as HTMLButtonElement
+    ballInCenter.addEventListener ('click', function (event) {
+       game.style.left = 174 + 'px'
+       game.style.top = 92 + 'px'
+    })
 
  
 
 
-    //! Закрытие надписи  'Вы забили гол!!!'
-    function goal (event) {
-      info.style.display = 'none'
-   }
 
-   let info = document.querySelector('.title2')
-   info.addEventListener('click', goal)
-   
-   
-   
-   
-   //! Всплытие модального окна
-   let block = document.querySelector('.redBlock')
-    block.addEventListener ('click', function(event) {
-      info.style.display = 'block'
-      game.style.left = (event.clientX-83) + 'px'
-      game.style.top = (event.clientY-241) + 'px'
-    })
-
-
-
-
-
-
-console.log(document.querySelector('.football'));
-
-
-
-
-
-
-
-
-
-
-// const bigSquare = document.querySelector('.redSquare') as HTMLDivElement
-
-
-// function square (event:any) {
-//   smallSquare.style.left = (event.clientX)+ 'px'
-// }
-// const smallSquare = document.querySelector('.blackSquare') as HTMLDivElement
-// document.addEventListener ('click', square)
-
+ 
