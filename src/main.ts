@@ -3588,32 +3588,9 @@ ownGoal.addEventListener('click', function (event) {
 
 //! Задание с животными
 
-let animal = document.querySelector('.extraAnimal')
 
 
-
-
-
-let close = document.querySelectorAll('.cross')
-close.forEach(cross =>
-  cross.addEventListener('click', function () {
-    animal.style.display = 'none'
-
-  }))
-
-
-
-
-
-
-let cityRussia = document.querySelectorAll('.city') //as HTMLButtonElement
-cityRussia.forEach(city =>
-  city.addEventListener('click', function (event) {
-    // console.log(parseInt(event.target.dataset.num));
-    city.style.display = 'none'
-
-  })
-)
+ 
 
 
 
@@ -3629,9 +3606,17 @@ document.addEventListener ('mousemove', function(event){
 
 
 
-// function move(event) {
-//   console.log (`ось Х=${event.screenX}px, ось У=${event.screenY}px`);
-//   event.stopPropagation()
+let animals = document.querySelectorAll('.animal')
 
-// }
-// window.addEventListener ('mousemove', move)
+
+  
+
+for(let animal of animals) {
+  animal.insertAdjacentHTML("afterbegin", '<span class="cross">&#9746;</span>');
+  // кнопка становится первым потомком плитки (animal)
+  animal.firstChild.onclick = () => animal.remove();
+}
+
+
+
+
