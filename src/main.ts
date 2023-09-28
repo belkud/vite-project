@@ -3511,20 +3511,7 @@ buttonClick.forEach(col =>
   col.addEventListener('click', chase))
 
 
-
-
-//! Спросить!
-// let coordinate 
-
-// function wind(event) {
-//   console.log(`ось Х=${event.screenX}px, ось У=${event.screenY}px`);
-//   event.stopPropagation()
-
-// }
-// window.addEventListener ('mousemove', wind)
-
-
-
+ 
 
 //!Игра в мячик
 //поле
@@ -3627,3 +3614,24 @@ cityRussia.forEach(city =>
 
   })
 )
+
+
+
+
+let coordinate = document.querySelector('.coordinates') as HTMLDivElement
+let pageCoordinate = document.querySelector('.pageCoordinates') as HTMLDivElement
+document.addEventListener ('mousemove', function(event){
+  coordinate.innerHTML = `окна <br> Х=${event.clientX}px <br> У=${event.clientY}px`
+  pageCoordinate.innerHTML = `документа <br> Х=${event.pageX}px <br> У=${event.pageY}px`
+})
+
+
+
+
+
+// function move(event) {
+//   console.log (`ось Х=${event.screenX}px, ось У=${event.screenY}px`);
+//   event.stopPropagation()
+
+// }
+// window.addEventListener ('mousemove', move)
