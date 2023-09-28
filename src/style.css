@@ -97,7 +97,7 @@ h1 {
 }
 
 
-.title2 {
+.title2, .title3 {
   position: fixed;
   color: transparent  ;
   width: 200px;
@@ -109,6 +109,7 @@ h1 {
   margin-top: 50px;
   display:none;
   animation: anim 3s alternate forwards;
+  cursor: pointer;
 }
 
 @keyframes anim {
@@ -122,7 +123,7 @@ h1 {
   }
 }
 
-.cherry {
+.cherry, .cherry2 {
   color: brown;
 }
 

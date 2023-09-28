@@ -3545,7 +3545,7 @@ buttonClick.forEach(col=>
     // Закрытие надписи  'Вы забили гол!!!'
     function goal () {
       closeTitle.style.display = 'none'
-      game.style.rotate.delete
+      // game.style.rotate.delete
    }
    let closeTitle = document.querySelector('.title2') as HTMLDivElement
    closeTitle.addEventListener('click', goal)
@@ -3575,6 +3575,29 @@ buttonClick.forEach(col=>
 
 
 
+    let handsome = document.querySelector ('.title3')
+    handsome.addEventListener ('click', function() {
+      handsome.style.display = 'none'
+    })
+
+    let ownGoal = document.querySelector ('.cherry2') as HTMLButtonElement
+    ownGoal.addEventListener ('click', function(event){
+      game.style.top =  90 +'px'
+      game.style.left = -20 + 'px'
+      handsome.style.display = 'block'
+    
+    
+    
+      
+      
+    })
+
+
+
+
+
+
+
 //! Задание с животными
 
 let animal = document.querySelector ('.extraAnimal')
@@ -3585,3 +3608,8 @@ close.addEventListener ('click', function(){
   
 })
   
+
+
+
+
+
