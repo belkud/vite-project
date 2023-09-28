@@ -3444,7 +3444,7 @@ btns.forEach (button => button.addEventListener ('click', arrow)
 )
 
 function arrow (event:any) {
-  // console.log('клик!!!',parseInt(event.target.dataset.num))
+  console.log('кнопка', parseInt(event.target.dataset.num))
 }
 
 
@@ -3538,8 +3538,9 @@ buttonClick.forEach(col=>
     
     //координаты мячика при клике
     function action(event: any) {
-      game.style.left = (event.clientX-83) + 'px'
-      game.style.top = (event.clientY-241) + 'px'
+      // event.clientY = event.scrollHeight
+      game.style.left = (event.pageX-83) + 'px'
+      game.style.top = (event.pageY-308) + 'px'
     }
      
     // Закрытие надписи  'Вы забили гол!!!'
@@ -3550,12 +3551,12 @@ buttonClick.forEach(col=>
    let closeTitle = document.querySelector('.title2') as HTMLDivElement
    closeTitle.addEventListener('click', goal)
    
-   // Всплытие модального окна
+   // Всплытие модального окна 
    let block = document.querySelector('.gate') as HTMLDivElement
     block.addEventListener ('click', function(event) {
       closeTitle.style.display = 'block'
-      game.style.left = (event.clientX-83) + 'px'
-      game.style.top = (event.clientY-241) + 'px'
+      game.style.left = (event.pageX-83) + 'px'
+      game.style.top = (event.pageY-308) + 'px'
       //!как сделать так, чтобы команда срабатывала многократно?
       game.style.rotate = 180 + 'deg'
     })
@@ -3569,17 +3570,16 @@ buttonClick.forEach(col=>
       game.style.top = 92 + 'px'
       //!как сделать так, чтобы команда срабатывала многократно?
       game.style.rotate = 180 + 'deg'
+     
     })
 
-   
-
-
-
+    //кнопка автогола
     let handsome = document.querySelector ('.title3')
     handsome.addEventListener ('click', function() {
       handsome.style.display = 'none'
     })
 
+    //надпись 'сделать автогол?'
     let ownGoal = document.querySelector ('.cherry2') as HTMLButtonElement
     ownGoal.addEventListener ('click', function(event){
       game.style.top =  90 +'px'
@@ -3602,14 +3602,27 @@ buttonClick.forEach(col=>
 
 let animal = document.querySelector ('.extraAnimal')
 
-let close = document.querySelector('.cross') as HTMLSpanElement
-close.addEventListener ('click', function(){
-  animal.style.display = 'none'
+
+
+
+
+let close = document.querySelectorAll('.cross') 
+close.forEach(cross=>
+  cross.addEventListener ('click', function(){
+      cross.style.display= 'none'
+      
+  }))
+
+
   
-})
-  
 
 
 
-
-
+let cityRussia = document.querySelectorAll ('.city') //as HTMLButtonElement
+cityRussia.forEach(city=>
+  city.addEventListener ('click', function(event){
+    // console.log(parseInt(event.target.dataset.num));
+    city.style.display = 'none'
+    
+  })
+)
