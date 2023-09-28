@@ -238,13 +238,13 @@ import './style.css'
 // // var c = Number((nmb - a - b * 10) / 100);
 // // console.log('Перевертыш: ' + (a * 100 + b * 10 + c));
 
-function checkParity (num:number) {
+function checkParity(num: number) {
   let x
-  num%2 == 0 
-    console.log('Число четное')
+  num % 2 == 0
+  console.log('Число четное')
 }
 
-console.log (checkParity(8))
+console.log(checkParity(8))
 
 // //  Запросить у пользователя число и определить,
 // //  оно полjжительное, отрицательное или ноль.
@@ -2754,14 +2754,14 @@ console.log(cars.join('').split('').toString().toUpperCase())
 // }
 
 
- 
+
 
 // const someMarker = new Marker('red', 100)
 // someMarker.print('123 marker')
 // const someRefuelMarker = new RefuelingMarker('#ff4332', 100)
 // someRefuelMarker.print('marker refuel ')
 // console.log(someRefuelMarker)
- 
+
 // someRefuelMarker.fillup(10)
 // console.log(someRefuelMarker)
 
@@ -2777,7 +2777,7 @@ console.log(cars.join('').split('').toString().toUpperCase())
 
 //   }
 // }
- 
+
 
 
 // // const letter = new Mmm{
@@ -2853,7 +2853,7 @@ console.log(cars.join('').split('').toString().toUpperCase())
 // let anonim = () => console.log('мышка')
 // anonim()
 
- 
+
 // // Отсутствие фигурных скобок после стрелки, НЕЯВНО (не пишем return) возвращает результат
 // let func1 = (a: number, b: number) => a+b;
 // // let func1 = (a: number, b: number) => { return a }
@@ -2965,7 +2965,7 @@ console.log(cars.join('').split('').toString().toUpperCase())
 // // // второго уровня (<h2>) с надписями Header1, Header2 … HeaderN
 
 // // createHeaders(5);
- 
+
 // // function createHeaders(N) {
 // //     let ins = document.querySelector("body");
 // //   for (let i = 0; i < N; i++) {
@@ -2990,7 +2990,7 @@ console.log(cars.join('').split('').toString().toUpperCase())
 
 
 
-               
+
 
 
 
@@ -3070,7 +3070,7 @@ console.log(cars.join('').split('').toString().toUpperCase())
 //     b = c;
 //   }
 //   return b ;
-  
+
 // }
 // console.log(fib(6))
 // console.log(`fibonachi 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 `)
@@ -3093,29 +3093,29 @@ console.log(cars.join('').split('').toString().toUpperCase())
 // 3. числа фибоначи
 
 
-let summ = (num:number) => {
-    if (num==1) {
-      return 1 
-    } else {
-      return (num = num + summ(num-1)) 
-      
-    }
+let summ = (num: number) => {
+  if (num == 1) {
+    return 1
+  } else {
+    return (num = num + summ(num - 1))
+
   }
-  console.log (summ(5))
-  
-  
+}
+console.log(summ(5))
+
+
 // ????????????
-let mult = (num:number) => {
+let mult = (num: number) => {
   // let odd = num
-  num%2==0
-    if (num==1) {
-      return 1 
-    } else {
-      return (num = num * mult(num-1)) 
-      
-    }
+  num % 2 == 0
+  if (num == 1) {
+    return 1
+  } else {
+    return (num = num * mult(num - 1))
+
   }
-  console.log (mult(5))
+}
+console.log(mult(5))
 
 
 // let mult = (num:number) => {
@@ -3127,15 +3127,15 @@ let mult = (num:number) => {
 // }
 // console.log(mult(9))
 
- 
+
 
 // вывести четные числа до 18 в массив
-const odd = (num:number) => {
+const odd = (num: number) => {
   let summ = []
-  for (let i=0; i<=num; i+=2) {
+  for (let i = 0; i <= num; i += 2) {
     summ.unshift(i)
   }
-    return summ 
+  return summ
 }
 
 console.log(odd(18))
@@ -3146,10 +3146,10 @@ console.log(odd(18))
 
 // плюсануть четные в квадрате
 
-const numInSquare = (num:number) => {
+const numInSquare = (num: number) => {
   let summ = 0
-  for (let i=0; i<=num; i+=2) {
-    summ += i*i
+  for (let i = 0; i <= num; i += 2) {
+    summ += i * i
   }
   return summ
 }
@@ -3170,8 +3170,8 @@ console.log(numInSquare(6))
 
 
 
-const areaOfSquare = (side:number) => {
-    return side*side
+const areaOfSquare = (side: number) => {
+  return side * side
 }
 console.log(areaOfSquare(9))
 
@@ -3181,7 +3181,7 @@ console.log(areaOfSquare(9))
 
 
 
- 
+
 // let totalDistance = (speed:number, time:number) => {
 //   return speed * time
 // }
@@ -3231,7 +3231,7 @@ console.log(areaOfSquare(9))
 // }
 // console.log (iteration(5))
 
- 
+
 
 
 
@@ -3250,7 +3250,7 @@ console.log(areaOfSquare(9))
 
 
 let now = new Date(0)
-console.log (Date() )
+console.log(Date())
 
 
 // let date = new Date(2023, 8, 17, 19, 41)
@@ -3263,18 +3263,18 @@ console.log (Date() )
 
 //! ???????? плюсануть все числа кроме кратных 5 (11)
 let start = new Date()
-let evenOdd = (num:number) => {
+let evenOdd = (num: number) => {
   let sum = 0
-  for (let i=0; i<=num; i+=1) {
-    if (i%5!=0)
-    sum +=i
+  for (let i = 0; i <= num; i += 1) {
+    if (i % 5 != 0)
+      sum += i
   }
   return sum
 }
 console.log(evenOdd(6))
 
 let end = new Date()
-console.log(`цикл обработан за ${(end-start)/1000} секунд`)   
+console.log(`цикл обработан за ${(end - start) / 1000} секунд`)
 
 
 
@@ -3339,34 +3339,34 @@ console.log(today1)
 
 
 let start2 = new Date
-console.log(start2.getMilliseconds() +' миллисекунды')
+console.log(start2.getMilliseconds() + ' миллисекунды')
 
 
 let day = new Date
 console.log(day.toLocaleString())
 
 
-day.setMonth (day.getMonth()-333)
+day.setMonth(day.getMonth() - 333)
 console.log(day)
 
-let day2 = new Date (2013, 8, 7,12,12)
+let day2 = new Date(2013, 8, 7, 12, 12)
 console.log(day2)
 
 
 let finish2 = new Date
-console.log(finish2.getMilliseconds() +' миллисекунды')
+console.log(finish2.getMilliseconds() + ' миллисекунды')
 console.log(`${finish2 - start2}`)
- 
+
 
 
 const day4 = new Date('03 september 1954')
 console.log(day4)
 
 const day5 = new Date()
-day5.getDay()+1
-console.log(day5.getDay()+3)
+day5.getDay() + 1
+console.log(day5.getDay() + 3)
 
- 
+
 
 // >>>>>>> начиная со строчки с номером 3377
 
@@ -3387,13 +3387,13 @@ console.log(day5.getDay()+3)
 // const day5 = new Date()
 // console.log(day5.getDay())
 
- 
 
 
 
-function getWeekDay (date:any)  {
-  let arr = ['ВС','ПН','ВТ','СР','ЧТ','ПТ','СБ']
-  return arr [date.getDay()]
+
+function getWeekDay(date: any) {
+  let arr = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ']
+  return arr[date.getDay()]
 }
 let date = new Date()
 console.log(getWeekDay(date));
@@ -3404,8 +3404,8 @@ console.log(getWeekDay(date));
 
 
 const title = document.querySelector('.title')
-title?.addEventListener ('click', function () {
-  alert ('Добро пожаловать!!!')
+title?.addEventListener('click', function () {
+  alert('Добро пожаловать!!!')
 })
 
 
@@ -3422,7 +3422,7 @@ title?.addEventListener ('click', function () {
 
 
 
- 
+
 //! ПРАВИЛЬНЫЙ ВАРИАНТ!!!
 // const timeDiv = document.querySelector('.time') as HTMLDivElement
 // timeDiv.innerHTML = day5.toString();
@@ -3437,31 +3437,31 @@ title?.addEventListener ('click', function () {
 
 
 
- 
 
-const btns = document.querySelectorAll('.btn') 
-btns.forEach (button => button.addEventListener ('click', arrow)
+
+const btns = document.querySelectorAll('.btn')
+btns.forEach(button => button.addEventListener('click', arrow)
 )
 
-function arrow (event:any) {
+function arrow(event: any) {
   console.log('кнопка', parseInt(event.target.dataset.num))
 }
 
 
 
-const extraButton = document.querySelector('.cherry')  as HTMLButtonElement
-extraButton.addEventListener ('click', arrow)
+const extraButton = document.querySelector('.cherry') as HTMLButtonElement
+extraButton.addEventListener('click', arrow)
 
 
 
 
 
 const colored = document.querySelectorAll('.color')
-colored.forEach(color=>
-  color.addEventListener('click', function(){
+colored.forEach(color =>
+  color.addEventListener('click', function () {
     alert('Успешно');
   })
-  )
+)
 console.log(
   '%c MultyCOLORed',
   'color:red; font-size:15px;'
@@ -3472,26 +3472,26 @@ console.log(
 console.log(
   '%c Shadow -^=^- ${.btns}',
   'font-size:15px; font-family:cursive'
-    
+
 );
 
 console.log(btns);
 
-function checkMashine(event:any) {
+function checkMashine(event: any) {
   console.log(event.target.dataset.number);
   console.log(event.target.textContent);
   // console.log(event.currentTarget.dataset.number);
-  
+
 }
 
 
 const button2 = document.querySelectorAll('.newButton')
-button2.forEach(newButton=>
-  newButton.addEventListener ('click', checkMashine));
-  
-  
-  
- 
+button2.forEach(newButton =>
+  newButton.addEventListener('click', checkMashine));
+
+
+
+
 // ! const colored = document.querySelectorAll('.color')
 // ! colored.forEach(color=>
 // !   color.addEventListener('click', function(){
@@ -3501,13 +3501,13 @@ button2.forEach(newButton=>
 
 
 
-function chase(event:any) {
+function chase(event: any) {
   console.log(event.target.dataset.num);
   event.stopPropagation()
 }
 
 const buttonClick = document.querySelectorAll('.col')
-buttonClick.forEach(col=>
+buttonClick.forEach(col =>
   col.addEventListener('click', chase))
 
 
@@ -3516,81 +3516,82 @@ buttonClick.forEach(col=>
 //! Спросить!
 // let coordinate 
 
-  // function wind(event) {
-  //   console.log(`ось Х=${event.screenX}px, ось У=${event.screenY}px`);
-  //   event.stopPropagation()
-   
-  // }
-  // window.addEventListener ('mousemove', wind)
+// function wind(event) {
+//   console.log(`ось Х=${event.screenX}px, ось У=${event.screenY}px`);
+//   event.stopPropagation()
+
+// }
+// window.addEventListener ('mousemove', wind)
 
 
-  
-
-                    //!Игра в мячик
-    //поле
-    let removeBall = document.querySelector('.trickField') as HTMLPictureElement
-    
-    //передвижение мяча
-    removeBall.addEventListener('click', action)
-    
-    //мячик
-    let game = document.querySelector('.ball') as HTMLPictureElement
-    
-    //координаты мячика при клике
-    function action(event: any) {
-      // event.clientY = event.scrollHeight
-      game.style.left = (event.pageX-83) + 'px'
-      game.style.top = (event.pageY-308) + 'px'
-    }
-     
-    // Закрытие надписи  'Вы забили гол!!!'
-    function goal () {
-      closeTitle.style.display = 'none'
-      // game.style.rotate.delete
-   }
-   let closeTitle = document.querySelector('.title2') as HTMLDivElement
-   closeTitle.addEventListener('click', goal)
-   
-   // Всплытие модального окна 
-   let block = document.querySelector('.gate') as HTMLDivElement
-    block.addEventListener ('click', function(event) {
-      closeTitle.style.display = 'block'
-      game.style.left = (event.pageX-83) + 'px'
-      game.style.top = (event.pageY-308) + 'px'
-      //!как сделать так, чтобы команда срабатывала многократно?
-      game.style.rotate = 180 + 'deg'
-    })
 
 
-    
-    //установка мяча по центру поля
-    let ballInCenter = document.querySelector('.cherry') as HTMLButtonElement
-    ballInCenter.addEventListener ('click', function () {
-      game.style.left = 174 + 'px'
-      game.style.top = 92 + 'px'
-      //!как сделать так, чтобы команда срабатывала многократно?
-      game.style.rotate = 180 + 'deg'
-     
-    })
+//!Игра в мячик
+//поле
+let removeBall = document.querySelector('.trickField') as HTMLPictureElement
 
-    //кнопка автогола
-    let handsome = document.querySelector ('.title3')
-    handsome.addEventListener ('click', function() {
-      handsome.style.display = 'none'
-    })
+//передвижение мяча
+removeBall.addEventListener('click', action)
 
-    //надпись 'сделать автогол?'
-    let ownGoal = document.querySelector ('.cherry2') as HTMLButtonElement
-    ownGoal.addEventListener ('click', function(event){
-      game.style.top =  90 +'px'
-      game.style.left = -20 + 'px'
-      handsome.style.display = 'block'
-    
-    
-    
-      
-      
-    })
+//мячик
+let game = document.querySelector('.ball') as HTMLPictureElement
+
+//координаты мячика при клике
+function action(event: any) {
+  // event.clientY = event.scrollHeight
+  game.style.left = (event.pageX - 83) + 'px'
+  game.style.top = (event.pageY - 308) + 'px'
+  game.style.rotate = rotate()
+}
+
+// Закрытие надписи  'Вы забили гол!!!'
+function goal() {
+  closeTitle.style.display = 'none'
+  // game.style.rotate.delete
+}
+let closeTitle = document.querySelector('.title2') as HTMLDivElement
+closeTitle.addEventListener('click', goal)
+
+let deg = 0
+const rotate = ()=>{
+  deg += 180
+  if (deg == 360) deg = 0
+  return deg+'deg'
+}
+
+// Всплытие модального окна 
+let block = document.querySelector('.gate') as HTMLDivElement
+block.addEventListener('click', function (event) {
+  closeTitle.style.display = 'block'
+  action(event)
+})
+
+//установка мяча по центру поля
+let ballInCenter = document.querySelector('.cherry') as HTMLButtonElement
+ballInCenter.addEventListener('click', function () {
+  game.style.left = 174 + 'px'
+  game.style.top = 92 + 'px'
+  //!как сделать так, чтобы команда срабатывала многократно?
+  game.style.rotate = rotate()
+
+})
+
+//кнопка автогола
+let handsome = document.querySelector('.title3')
+handsome.addEventListener('click', function () {
+  handsome.style.display = 'none'
+})
+
+//надпись 'сделать автогол?'
+let ownGoal = document.querySelector('.cherry2') as HTMLButtonElement
+ownGoal.addEventListener('click', function (event) {
+  game.style.top = 90 + 'px'
+  game.style.left = -20 + 'px'
+  handsome.style.display = 'block'
+  game.style.rotate = rotate()
+
+
+})
 
 
 
@@ -3600,29 +3601,29 @@ buttonClick.forEach(col=>
 
 //! Задание с животными
 
-let animal = document.querySelector ('.extraAnimal')
+let animal = document.querySelector('.extraAnimal')
 
 
 
 
 
-let close = document.querySelectorAll('.cross') 
-close.forEach(cross=>
-  cross.addEventListener ('click', function(){
-      cross.style.display= 'none'
-      
+let close = document.querySelectorAll('.cross')
+close.forEach(cross =>
+  cross.addEventListener('click', function () {
+    animal.style.display = 'none'
+
   }))
 
 
-  
 
 
 
-let cityRussia = document.querySelectorAll ('.city') //as HTMLButtonElement
-cityRussia.forEach(city=>
-  city.addEventListener ('click', function(event){
+
+let cityRussia = document.querySelectorAll('.city') //as HTMLButtonElement
+cityRussia.forEach(city =>
+  city.addEventListener('click', function (event) {
     // console.log(parseInt(event.target.dataset.num));
     city.style.display = 'none'
-    
+
   })
 )
