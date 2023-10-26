@@ -1,8 +1,157 @@
 import './style.css'
 
 
+// Задание 1
+
+const task1 = document.querySelector('#task1') as HTMLButtonElement
+const enteranswer1 = document.querySelector('#enteranswer1') as HTMLButtonElement
+const answer1 = document.querySelector('#answer1') as HTMLButtonElement
+const showanswer1 = document.querySelector('#showanswer1') as HTMLButtonElement
+
+task1.addEventListener('click', () =>
+  alert('Давайте посмотрим, являетесь ли вы совершеннолетним'))
+
+answer1.addEventListener('click', () => {
+  if (enteranswer1.value>0 && enteranswer1.value <= 18) {
+    showanswer1.value = 'Вы несовершеннолетний';
+  } else if (enteranswer1.value > 18) {
+    showanswer1.value = 'Вы совершеннолетний';
+  } else if (enteranswer1.value) {
+    showanswer1.value = 'Введите корректную информацию';
+  } else {
+    showanswer1.value = 'Пустой запрос';
+    //!расширение окна под количество символов??? showanswer1.style.width = showanswer1.value
+  }
+})
+
+
+// Задание 2
+
+const task2 = document.querySelector('#task2') as HTMLButtonElement
+const enteranswer2 = document.querySelector('#enteranswer2') as HTMLButtonElement
+const answer2 = document.querySelector('#answer2') as HTMLButtonElement
+const showanswer2 = document.querySelector('#showanswer2') as HTMLButtonElement
+
+task2.addEventListener('click', () =>
+  alert('Запросить у пользователя год и проверить, високосный он или нет.'))
+
+
+answer2.addEventListener('click', () => {
+  if (enteranswer2.value % 100 == 0) {
+    showanswer2.value = 'год не високосный'
+  } else if (enteranswer2.value % 4 == 0) {
+    showanswer2.value = 'год високосный'
+  } else {
+    showanswer2.value = 'год не високосный'
+  }
+})
+
+
+
+// Задание 3
+
+const task3 = document.querySelector('#task3') as HTMLButtonElement
+const enteranswer3 = document.querySelector('#enteranswer3') as HTMLButtonElement
+const enteranswer3_2 = document.querySelector('#enteranswer3_2') as HTMLButtonElement
+const answer3 = document.querySelector('#answer3') as HTMLButtonElement
+const showanswer3 = document.querySelector('#showanswer3') as HTMLButtonElement
+
+task3.addEventListener('click', () =>
+  alert('Написать конвертор валют. Пользователь вводит количество USD, выбирает, в какую валюту хочет перевести: EUR, UAN или AZN и получает в ответ соответствующую сумму'))
+
+answer3.addEventListener ('click', ()=> {
+  if (enteranswer3.value == 'azn') {
+showanswer3.value = 2*enteranswer3_2.value +'azn'
+  } else if(enteranswer3.value == 'uan') {
+showanswer3.value = 0.9*enteranswer3_2.value +'uan'
+  } else if (enteranswer3.value == 'euro') {
+
+  }
+  
+  // || enteranswer3.value ==  'euro' || enteranswer3.value ==  'uan') {
+     
+      
+    // console.log('что-то неверно');
+  
+  
+  
+})
+  
+
+
+let summ = 100
+let currency = 'euro'
+switch (currency) {
+  case 'euro': 
+  console.log (summ * 0.8 + ' euro')
+  break 
+  case 'uan': 
+  console.log (summ * 5 + ' uan')
+  break 
+  case 'azn': 
+  console.log (summ * 10 + ' azn')
+  break 
+  default:
+}
+
+
+
+// let summ = 100
+// let currency = 3
+// switch (currency) {
+//   case 1: 
+//   console.log (summ * 0.8 + ' euro')
+//   break 
+//   case 2: 
+//   console.log (summ * 5 + ' uan')
+//   break 
+//   case 3: 
+//   console.log (summ * 10 + ' azn')
+//   break 
+//   default:
+// }
+
+// let summ = prompt ('введите сколько долларов хотите поменять')
+// let currency = prompt ('выбор валюты')
+// if (currency== 'eur') {
+//   console.log (summ * 0.9 + ' eur')
+// }
+// else if (currency== 'uan') {
+//   console.log (summ * 5 + ' uan')
+// }
+// else if (currency== 'azn') {
+//   console.log (summ * 10 + ' azn')
+// }
+// else {
+// console.log ('Данную валюту не меняем')
+// }
+
+
+
+
+
+
+
+
+
+
 // let x10 = 18
 // console.log((x10 >= 18) ? 'you are adult' : 'you are young')
+
+
+//  if ( year % 100 == 0) {
+///   console.log ('год не високосный')
+//  } else if (year % 4 == 0) {
+//   console.log ('год високосный')
+//   } else {
+//   console.log ('год не високосный')
+//  }
+
+
+
+
+
+
 
 // // let i = 3
 // // for (i=0, i>5, i++)
@@ -40,8 +189,6 @@ import './style.css'
 
 
 
-
-
 // // Запросить у пользователя год и проверить, високосный он
 // // или нет. Високосный год либо кратен 400, либо кратен 4 и
 // // при этом не кратен 100
@@ -55,6 +202,7 @@ import './style.css'
 // //   } else {
 // //   console.log ('год не високосный')
 // //  }
+
 
 
 // // Написать конвертор валют. Пользователь вводит количе-
@@ -93,6 +241,9 @@ import './style.css'
 // // }
 
 
+
+
+// !
 // // Запросить у пользователя сумму покупки и вывести сумму
 // // к оплате со скидкой: от 200 до 300 – скидка будет 3%, от 300
 // // до 500 – 5%, от 500 и выше – 7%.
@@ -238,13 +389,12 @@ import './style.css'
 // // var c = Number((nmb - a - b * 10) / 100);
 // // console.log('Перевертыш: ' + (a * 100 + b * 10 + c));
 
-function checkParity(num: number) {
-  let x
-  num % 2 == 0
-  console.log('Число четное')
-}
+// function checkParity(num: number) {
+//   num % 2 == 0
+//   console.log('Число четное')
+// }
 
-console.log(checkParity(8))
+// checkParity(8)
 
 // //  Запросить у пользователя число и определить,
 // //  оно полjжительное, отрицательное или ноль.
@@ -731,7 +881,7 @@ console.log(checkParity(8))
 
 
 
- 
+
 
 
 
@@ -2371,10 +2521,10 @@ console.log(checkParity(8))
 
 // 3. Запросить число и степень. Возвести число в указанную 
 // степень и вывести результат
-function result(a: number, b: number) {
-  return a ** b
-}
-console.log(result(7, 2))
+// function result(a: number, b: number) {
+//   return a ** b
+// }
+// console.log(result(7, 2))
 
 
 // 4. Запросить 2 числа и найти все общие делители
@@ -2392,16 +2542,16 @@ console.log(result(7, 2))
 // 5. Посчитать факториал введенного пользователем числа
 // факториал 5 = 1*2*3*4*5
 
-let a = 5;
-function facktorial(a: number) {
-  let num = 1
-  for (let i = 2; i <= a; i++)
-    num = num * i
-  return num
+// let a = 5;
+// function facktorial(a: number) {
+//   let num = 1
+//   for (let i = 2; i <= a; i++)
+//     num = num * i
+//   return num
 
-}
-console.log(facktorial(a))
-console.log(facktorial(15))
+// }
+// console.log(facktorial(a))
+// console.log(facktorial(15))
 
 
 
@@ -2482,24 +2632,24 @@ console.log(facktorial(15))
 
 // 3. Запросить у пользователя число и вывести все делители 
 // этого числа.
-function findDivider(a: number) {
-  let massive = []
-  for (let i = 1; i < a; i++)
-    if (a % i == 0)
-      massive.push(i)
-  return massive
-}
+// function findDivider(a: number) {
+//   let massive = []
+//   for (let i = 1; i < a; i++)
+//     if (a % i == 0)
+//       massive.push(i)
+//   return massive
+// }
 // findDivider(20)
-console.log(findDivider(30))
+// console.log(findDivider(30))
 
 
 // 4. Определить количество цифр в введенном числе.
-function quantityNumbers(a = 123) {
-  let str = String(a)
-  return str.length
+// function quantityNumbers(a = 123) {
+//   let str = String(a)
+//   return str.length
 
-}
-console.log(quantityNumbers(123))
+// }
+// console.log(quantityNumbers(123))
 
 // 7. Запросить у пользователя число и на сколько цифр его 
 // сдвинуть. Сдвинуть цифры числа и вывести результат (если 
@@ -2519,7 +2669,7 @@ console.log(quantityNumbers(123))
 // }
 // shiftDigitals(12345)
 
-console.log(Date.now())
+// console.log(Date.now())
 
 
 
@@ -2527,26 +2677,26 @@ console.log(Date.now())
 
 
 
-class Comment {
-  constructor(text) {
-    this.text = text
-    this.quantity = 0
-  }
-  upvote() {
-    quantity += 1
-  }
-}
+// class Comment {
+//   constructor(text) {
+//     this.text = text
+//     this.quantity = 0
+//   }
+//   upvote() {
+//     quantity += 1
+//   }
+// }
 
-const firstComment = new Comment('проверяю')
-console.log(firstComment)
-
-
+// const firstComment = new Comment('проверяю')
+// console.log(firstComment)
 
 
-function multyplier(a: number, b = 3) {
-  return a * b
-}
-console.log('multyplier ' + multyplier(12, 205))
+
+
+// function multyplier(a: number, b = 3) {
+//   return a * b
+// }
+// console.log('multyplier ' + multyplier(12, 205))
 
 
 
@@ -2566,24 +2716,24 @@ console.log('multyplier ' + multyplier(12, 205))
 
 
 
-function Animal(name, years) {
-  this.name = name;
-  this.years = 10;
-  this.color = 'yellow'
-  this.years += 1
-}
+// function Animal(name, years) {
+//   this.name = name;
+//   this.years = 10;
+//   this.color = 'yellow'
+//   this.years += 1
+// }
 
-console.log(Animal)
-
-
+// console.log(Animal)
 
 
-let piggy = new Animal('sticky')
-console.log(piggy)
-let piggy2 = new Animal('sweaty')
-console.log(piggy2)
-console.log(piggy2 instanceof Animal)
-console.log(piggy2 instanceof Object)
+
+
+// let piggy = new Animal('sticky')
+// console.log(piggy)
+// let piggy2 = new Animal('sweaty')
+// console.log(piggy2)
+// console.log(piggy2 instanceof Animal)
+// console.log(piggy2 instanceof Object)
 
 
 
@@ -2617,10 +2767,10 @@ console.log(piggy2 instanceof Object)
 
 
 // МЕТОДЫ
-const cars = ['Renault', 'Kia']
-console.log(cars)
+// const cars = ['Renault', 'Kia']
+// console.log(cars)
 
-console.log(cars.join('').split('').toString().toUpperCase())
+// console.log(cars.join('').split('').toString().toUpperCase())
 
 
 
@@ -3078,29 +3228,29 @@ console.log(cars.join('').split('').toString().toUpperCase())
 // 3. числа фибоначи
 
 
-let summ = (num: number) => {
-  if (num == 1) {
-    return 1
-  } else {
-    return (num = num + summ(num - 1))
+// let summ = (num: number) => {
+//   if (num == 1) {
+//     return 1
+//   } else {
+//     return (num = num + summ(num - 1))
 
-  }
-}
-console.log(summ(5))
+//   }
+// }
+// console.log(summ(5))
 
 
 // ????????????
-let mult = (num: number) => {
-  // let odd = num
-  num % 2 == 0
-  if (num == 1) {
-    return 1
-  } else {
-    return (num = num * mult(num - 1))
+// let mult = (num: number) => {
+// let odd = num
+//   num % 2 == 0
+//   if (num == 1) {
+//     return 1
+//   } else {
+//     return (num = num * mult(num - 1))
 
-  }
-}
-console.log(mult(5))
+//   }
+// }
+// console.log(mult(5))
 
 
 // let mult = (num:number) => {
@@ -3115,15 +3265,15 @@ console.log(mult(5))
 
 
 // вывести четные числа до 18 в массив
-const odd = (num: number) => {
-  let summ = []
-  for (let i = 0; i <= num; i += 2) {
-    summ.unshift(i)
-  }
-  return summ
-}
+// const odd = (num: number) => {
+//   let summ = []
+//   for (let i = 0; i <= num; i += 2) {
+//     summ.unshift(i)
+//   }
+//   return summ
+// }
 
-console.log(odd(18))
+// console.log(odd(18))
 
 
 
@@ -3131,14 +3281,14 @@ console.log(odd(18))
 
 // плюсануть четные в квадрате
 
-const numInSquare = (num: number) => {
-  let summ = 0
-  for (let i = 0; i <= num; i += 2) {
-    summ += i * i
-  }
-  return summ
-}
-console.log(numInSquare(6))
+// const numInSquare = (num: number) => {
+//   let summ = 0
+//   for (let i = 0; i <= num; i += 2) {
+//     summ += i * i
+//   }
+//   return summ
+// }
+// console.log(numInSquare(6))
 
 
 
@@ -3155,10 +3305,10 @@ console.log(numInSquare(6))
 
 
 
-const areaOfSquare = (side: number) => {
-  return side * side
-}
-console.log(areaOfSquare(9))
+// const areaOfSquare = (side: number) => {
+//   return side * side
+// }
+// console.log(areaOfSquare(9))
 
 
 
@@ -3234,8 +3384,8 @@ console.log(areaOfSquare(9))
 
 
 
-let now = new Date(0)
-console.log(Date())
+// let now = new Date(0)
+// console.log(Date())
 
 
 // let date = new Date(2023, 8, 17, 19, 41)
@@ -3247,19 +3397,19 @@ console.log(Date())
 
 
 //! ???????? плюсануть все числа кроме кратных 5 (11)
-let start = new Date()
-let evenOdd = (num: number) => {
-  let sum = 0
-  for (let i = 0; i <= num; i += 1) {
-    if (i % 5 != 0)
-      sum += i
-  }
-  return sum
-}
-console.log(evenOdd(6))
+// let start = new Date()
+// let evenOdd = (num: number) => {
+//   let sum = 0
+//   for (let i = 0; i <= num; i += 1) {
+//     if (i % 5 != 0)
+//       sum += i
+//   }
+//   return sum
+// }
+// console.log(evenOdd(6))
 
-let end = new Date()
-console.log(`цикл обработан за ${(end - start) / 1000} секунд`)
+// let end = new Date()
+// console.log(`цикл обработан за ${(end - start) / 1000} секунд`)
 
 
 
@@ -3280,8 +3430,8 @@ console.log(`цикл обработан за ${(end - start) / 1000} секун
 //! Создайте объект Date для даты: 20 февраля 2012 года, 
 //! 3 часа 12 минут. Временная зона – местная.
 
-let today1 = new Date(2012, 1, 20, 3, 12)
-console.log(today1)
+// let today1 = new Date(2012, 1, 20, 3, 12)
+// console.log(today1)
 
 
 
@@ -3323,33 +3473,33 @@ console.log(today1)
 
 
 
-let start2 = new Date
-console.log(start2.getMilliseconds() + ' миллисекунды')
+// let start2 = new Date
+// console.log(start2.getMilliseconds() + ' миллисекунды')
 
 
-let day = new Date
-console.log(day.toLocaleString())
+// let day = new Date
+// console.log(day.toLocaleString())
 
 
-day.setMonth(day.getMonth() - 333)
-console.log(day)
+// day.setMonth(day.getMonth() - 333)
+// console.log(day)
 
-let day2 = new Date(2013, 8, 7, 12, 12)
-console.log(day2)
-
-
-let finish2 = new Date
-console.log(finish2.getMilliseconds() + ' миллисекунды')
-console.log(`${finish2 - start2}`)
+// let day2 = new Date(2013, 8, 7, 12, 12)
+// console.log(day2)
 
 
+// let finish2 = new Date
+// console.log(finish2.getMilliseconds() + ' миллисекунды')
+// console.log(`${finish2 - start2}`)
 
-const day4 = new Date('03 september 1954')
-console.log(day4)
 
-const day5 = new Date()
-day5.getDay() + 1
-console.log(day5.getDay() + 3)
+
+// const day4 = new Date('03 september 1954')
+// console.log(day4)
+
+// const day5 = new Date()
+// day5.getDay() + 1
+// console.log(day5.getDay() + 3)
 
 
 
@@ -3376,22 +3526,22 @@ console.log(day5.getDay() + 3)
 
 
 
-function getWeekDay(date: any) {
-  let arr = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ']
-  return arr[date.getDay()]
-}
-let date = new Date()
-console.log(getWeekDay(date));
+// function getWeekDay(date: any) {
+//   let arr = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ']
+//   return arr[date.getDay()]
+// }
+// let date = new Date()
+// console.log(getWeekDay(date));
 
 
 
 
 
 
-const title = document.querySelector('.title')
-title?.addEventListener('click', function () {
-  alert('Добро пожаловать!!!')
-})
+// const title = document.querySelector('.title')
+// title?.addEventListener('click', function () {
+//   alert('Добро пожаловать!!!')
+// })
 
 
 
@@ -3496,7 +3646,7 @@ buttonClick.forEach(col =>
   col.addEventListener('click', chase))
 
 
- 
+
 
 //!Игра в мячик
 //поле
@@ -3525,10 +3675,10 @@ let closeTitle = document.querySelector('.title2') as HTMLDivElement
 closeTitle.addEventListener('click', goal)
 
 let deg = 0
-const rotate = ()=>{
+const rotate = () => {
   deg += 180
   if (deg == 360) deg = 0
-  return deg+'deg'
+  return deg + 'deg'
 }
 
 // Всплытие модального окна 
@@ -3575,14 +3725,14 @@ ownGoal.addEventListener('click', function (event) {
 
 
 
- 
+
 
 
 
 
 let coordinate = document.querySelector('.coordinates') as HTMLDivElement
 let pageCoordinate = document.querySelector('.pageCoordinates') as HTMLDivElement
-document.addEventListener ('mousemove', function(event){
+document.addEventListener('mousemove', function (event) {
   coordinate.innerHTML = `окна <br> Х=${event.clientX}px <br> У=${event.clientY}px`
   pageCoordinate.innerHTML = `документа <br> Х=${event.pageX}px <br> У=${event.pageY}px`
 })
@@ -3594,9 +3744,9 @@ document.addEventListener ('mousemove', function(event){
 let animals = document.querySelectorAll('.animal')
 
 
-  
 
-for(let animal of animals) {
+
+for (let animal of animals) {
   animal.insertAdjacentHTML("afterbegin", '<span class="cross">&#9746;</span>');
   // кнопка становится первым потомком плитки (animal)
   animal.firstChild.onclick = () => animal.remove();

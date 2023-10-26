@@ -5,6 +5,56 @@ body {
   overflow-x: hidden;
 }
 
+.content {
+  /* margin-left: 10px; */
+  background:linear-gradient(145deg, rgb(233, 231, 231),white, rgb(175, 172, 172));
+}
+
+.btn_task {
+  background:linear-gradient(145deg, red , blue );
+  width: 100px;
+  color: white;
+  border: 1px solid black;
+}
+
+.btn_task:hover {
+  box-shadow: -2px -2px 5px red ,
+  2px 2px 5px blue; 
+  border: 1px solid white;
+  transition: .5s;
+}
+
+.btn_answer {
+  color: white;
+  background-color: gray;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.btn_answer:hover {
+  background-color: black;
+  border: 1px solid white;
+  box-shadow: 0px 0px 10px gray;
+  transition: .5s;
+}
+
+
+
+#enteranswer3_2{
+/* border: 1px solid red; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .time {
   background-color:red;
