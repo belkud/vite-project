@@ -731,22 +731,7 @@ console.log(checkParity(8))
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
