@@ -41,7 +41,7 @@ body {
 
 #eye {
 
-  animation: anim3 5.5s ease-in-out infinite;
+  animation: anim3 4s ease-in-out infinite;
 }
 
 @keyframes anim3 {

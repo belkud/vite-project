@@ -117,6 +117,7 @@ const cat_animation = document.querySelector('#cat_animation') as HTMLButtonElem
 const rope = document.querySelector('#rope') as HTMLDivElement
 const rope1 = document.querySelector('#rope1') as HTMLDivElement
 const rope2 = document.querySelector('#rope2') as HTMLDivElement
+
 button_remove_cat.addEventListener('click', ()=> {
 
     setTimeout(() => {
@@ -131,32 +132,26 @@ button_remove_cat.addEventListener('click', ()=> {
     cat_animation.style.marginTop = 200+ 'px'
     cat_animation.style.transition = 3 + 's'
   }, 3500);
-  
-  // setTimeout(() => {
-  //   // cat2.style.transition = 3 + 's'
-  // }, 8000);
-  
+ 
   setTimeout(() => {
     cat2.style.display = 'block'
-  }, 8000);
+  }, 7000);
   
   setTimeout(() => {
-    // cat2.style.marginLeft = 150 +'px'
-    cat2.style.marginTop = -600 +'px'
-    // cat2.style.marginBottom = 200 +'px'
-    cat2.style.transition = 3 + 's'
-  }, 9000);
-
+    cat2.style.marginTop = -550 +'px'
+    eye.style.marginTop = -550 +'px'
+    cat2.style.transition = 6 + 's'
+  }, 7500);
+  
   setTimeout(() => {
     cat2.style.marginLeft = 250 +'px'
-    cat2.style.marginTop = -1000 +'px'
+    cat2.style.marginTop = -800 +'px'
+    eye.style.marginLeft = 250 +'px'
+    eye.style.marginTop = -800 +'px'
     cat2.style.transition = 3 + 's'
-  }, 11000);
+    eye.style.transition = 3 + 's'
+  }, 12000);
 
-
-
-  
-  
 })
 
 
