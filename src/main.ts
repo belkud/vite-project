@@ -119,7 +119,7 @@ const rope1 = document.querySelector('#rope1') as HTMLDivElement
 const rope2 = document.querySelector('#rope2') as HTMLDivElement
 
 button_remove_cat.addEventListener('click', ()=> {
-
+ 
     setTimeout(() => {
       rope1.style.display = 'block'
       rope2.style.display = 'block'
