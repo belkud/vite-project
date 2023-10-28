@@ -38,11 +38,66 @@ body {
   transition: .5s;
 }
 
+#eye {
 
-
-#enteranswer3_2{
-/* border: 1px solid red; */
+  animation: anim3 5.5s ease-in-out infinite;
 }
+
+@keyframes anim3 {
+  0% {
+    margin-top: 0px;
+    opacity: 0;
+  }
+  50% {
+    margin-top: 10px;
+    opacity: 1;
+  }
+  100% {
+    margin-top: 60px;
+    opacity: 0;
+  }
+}
+
+#cat_leg {
+  animation: anim4 1s linear infinite;
+}
+
+
+@keyframes anim4 {
+  0% {
+    rotate: 30deg;
+  }
+  50% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 30deg;
+  }
+}
+
+
+
+
+
+#cat_leg.animate{
+  
+ 
+  
+   /* transform: rotate(0deg) ;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  animation-iteration-count:infinite ; */
+  
+  /* animation: anim4 3s linear infinite; */
+}
+ 
+
+ 
+
+
+
+
+
 
 
 

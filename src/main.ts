@@ -96,6 +96,52 @@ switch (currency) {
 
 
 
+const eye = document.querySelector('#eye') as HTMLPictureElement
+const button_eye = document.querySelector('#button_eye') as HTMLButtonElement
+button_eye.addEventListener('click', ()=> {
+  eye.style.display === 'none' ? eye.style.display = 'block' : eye.style.display = 'none';
+  console.log('123');
+  // eye.style.display ='none'
+})
+
+const cat_leg = document.querySelector ('#cat_leg')
+const cat_leg2 = document.querySelector ('#cat_leg2')
+const button_cat_leg = document.querySelector ('#button_cat_leg')
+button_cat_leg?.addEventListener('click', ()=>{
+ if (button_cat_leg.innerHTML== 'Кот, помаши лапкой '){
+  cat_leg.style.display='block'
+  cat_leg2.style.display='none'
+  button_cat_leg.innerHTML= 'Спасибо, кот '
+} else {
+  button_cat_leg.innerHTML= 'Кот, помаши лапкой '
+  cat_leg.style.display='none'
+   cat_leg2.style.display='block'
+
+ }
+  
+
+  // function changeBackground2() {
+  //   if (btn6.style.backgroundColor == 'blueviolet') {
+  //      btn6.style.backgroundColor = 'orange'
+  //      btn6.innerHTML = 'Выключить'
+  //      btn6.style.boxShadow = '0px 0px 30px orange'
+       
+  //   } else {
+  //      btn6.style.backgroundColor = 'blueviolet'
+  //      btn6.style.boxShadow = '0px 0px 30px blueviolet'
+  //      btn6.innerHTML = 'Включить'
+  //   }
+  //   }
+
+
+
+  // cat_leg.classList.add('anim')
+})
+
+
+
+
+
 // let summ = 100
 // let currency = 3
 // switch (currency) {
