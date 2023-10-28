@@ -7,7 +7,8 @@ body {
 
 .content {
   /* margin-left: 10px; */
-  background:linear-gradient(145deg, rgb(233, 231, 231),white, rgb(175, 172, 172));
+  /* background:linear-gradient(145deg, rgb(233, 231, 231),white, rgb(175, 172, 172)); */
+  background-color: white;
 }
 
 .btn_task {
@@ -59,6 +60,8 @@ body {
 }
 
 #cat_leg {
+  /* top: 50%;
+  left: 50%; */
   animation: anim4 1s linear infinite;
 }
 
@@ -91,6 +94,22 @@ body {
   /* animation: anim4 3s linear infinite; */
 }
  
+
+#button_eye, #button_cat_leg{
+  background-color: aqua;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  background:linear-gradient(145deg, aqua, gray);
+}
+
+
+#button_remove{
+  background: linear-gradient(145deg, red, gray);
+  border-radius: 5px;
+  color: white !important;
+  padding: 10px;
+}
 
  
 

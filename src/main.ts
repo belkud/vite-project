@@ -65,17 +65,7 @@ showanswer3.value = 2*enteranswer3_2.value +'azn'
   } else if(enteranswer3.value == 'uan') {
 showanswer3.value = 0.9*enteranswer3_2.value +'uan'
   } else if (enteranswer3.value == 'euro') {
-
-  }
-  
-  // || enteranswer3.value ==  'euro' || enteranswer3.value ==  'uan') {
-     
-      
-    // console.log('что-то неверно');
-  
-  
-  
-})
+  }})
   
 
 
@@ -100,14 +90,13 @@ const eye = document.querySelector('#eye') as HTMLPictureElement
 const button_eye = document.querySelector('#button_eye') as HTMLButtonElement
 button_eye.addEventListener('click', ()=> {
   eye.style.display === 'none' ? eye.style.display = 'block' : eye.style.display = 'none';
-  console.log('123');
-  // eye.style.display ='none'
 })
 
 const cat_leg = document.querySelector ('#cat_leg')
 const cat_leg2 = document.querySelector ('#cat_leg2')
 const button_cat_leg = document.querySelector ('#button_cat_leg')
 button_cat_leg?.addEventListener('click', ()=>{
+ 
  if (button_cat_leg.innerHTML== 'Кот, помаши лапкой '){
   cat_leg.style.display='block'
   cat_leg2.style.display='none'
@@ -116,27 +105,67 @@ button_cat_leg?.addEventListener('click', ()=>{
   button_cat_leg.innerHTML= 'Кот, помаши лапкой '
   cat_leg.style.display='none'
    cat_leg2.style.display='block'
-
  }
-  
-
-  // function changeBackground2() {
-  //   if (btn6.style.backgroundColor == 'blueviolet') {
-  //      btn6.style.backgroundColor = 'orange'
-  //      btn6.innerHTML = 'Выключить'
-  //      btn6.style.boxShadow = '0px 0px 30px orange'
-       
-  //   } else {
-  //      btn6.style.backgroundColor = 'blueviolet'
-  //      btn6.style.boxShadow = '0px 0px 30px blueviolet'
-  //      btn6.innerHTML = 'Включить'
-  //   }
-  //   }
-
-
-
+ 
   // cat_leg.classList.add('anim')
 })
+
+
+const cat2 = document.querySelector('#cat2') as HTMLButtonElement
+const button_remove_cat = document.querySelector('#button_remove') as HTMLButtonElement
+const cat_animation = document.querySelector('#cat_animation') as HTMLButtonElement
+const rope = document.querySelector('#rope') as HTMLDivElement
+const rope1 = document.querySelector('#rope1') as HTMLDivElement
+const rope2 = document.querySelector('#rope2') as HTMLDivElement
+button_remove_cat.addEventListener('click', ()=> {
+
+    setTimeout(() => {
+      rope1.style.display = 'block'
+      rope2.style.display = 'block'
+      rope.style.marginTop = 230 +'px'
+      rope.style.transition = 3 + 's'
+    }, 500);
+
+  setTimeout(() => {
+    rope.style.marginTop = 80 +'px'
+    cat_animation.style.marginTop = 200+ 'px'
+    cat_animation.style.transition = 3 + 's'
+  }, 3500);
+  
+  // setTimeout(() => {
+  //   // cat2.style.transition = 3 + 's'
+  // }, 8000);
+  
+  setTimeout(() => {
+    cat2.style.display = 'block'
+  }, 8000);
+  
+  setTimeout(() => {
+    // cat2.style.marginLeft = 150 +'px'
+    cat2.style.marginTop = -600 +'px'
+    // cat2.style.marginBottom = 200 +'px'
+    cat2.style.transition = 3 + 's'
+  }, 9000);
+
+  setTimeout(() => {
+    cat2.style.marginLeft = 250 +'px'
+    cat2.style.marginTop = -1000 +'px'
+    cat2.style.transition = 3 + 's'
+  }, 11000);
+
+
+
+  
+  
+})
+
+
+
+
+
+
+
+
 
 
 
