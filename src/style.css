@@ -5,10 +5,83 @@ body {
   overflow-x: hidden;
 }
 
+.item {
+  font-size: 2em;
+  /* color: aqua; */
+}
+
+#switcher {
+  border: 1px solid aliceblue;
+  box-shadow: -5px 0px 5px red,
+  0px -5px 5px yellow,
+  0px 5px 5px green,
+  5px 0px 5px blue; 
+}
+
+.red  {
+  background-color: red  ;
+  color: aliceblue;
+  border-radius: 5px; 
+  transition:  .5s;
+  padding: 5px;
+}
+
+.blue {
+  background-color: blue ;
+  color: aliceblue;
+  border-radius: 5px; 
+  transition:  .5s;
+  padding: 5px;
+}
+.colored {
+  background-color: orange;
+  color: aliceblue;
+  padding: 5px;
+  border-radius: 5px; 
+  transition:  .5s;
+}
+
+
+.box{
+  height: 150px;
+  width: 150px;
+  background:linear-gradient(145deg, red, blue);
+  margin: 10px;
+  border:  5px solid orange;
+}
+
+.box2 {
+  border: 5px solid greenyellow;
+}
+
+
+
+.circle {
+  height: 120px;
+  width: 120px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 2px solid #000;
+}
+
+.circle2{
+  background-color: blue;
+}
+
+
+
+
+
+
 .content {
   /* margin-left: 10px; */
-  /* background:linear-gradient(145deg, rgb(233, 231, 231),white, rgb(175, 172, 172)); */
-  background-color: white;
+  background:linear-gradient(145deg, rgb(233, 231, 231),white, rgb(175, 172, 172));
+  /* background-color: white; */
 }
 
 .btn_task {
@@ -16,6 +89,7 @@ body {
   width: 100px;
   color: white;
   border: 1px solid black;
+  transition: .5s;
 }
 
 .btn_task:hover {
@@ -30,18 +104,20 @@ body {
   background-color: gray;
   border: 1px solid black;
   border-radius: 4px;
-}
-
-.btn_answer:hover {
-  background-color: black;
-  border: 1px solid white;
-  box-shadow: 0px 0px 10px gray;
   transition: .5s;
 }
 
-#eye {
+.btn_answer:hover {
+  background-color: rgb(4, 74, 74);
+  border: 1px solid white;
+  box-shadow: 0px 0px 20px rgb(9, 127, 127);
+  transition: .5s;
+}
 
-  animation: anim3 4s ease-in-out infinite;
+ 
+
+#eye {
+  animation: anim3 2s ease-in-out infinite;
 }
 
 @keyframes anim3 {
@@ -101,17 +177,48 @@ body {
   padding: 10px;
   border-radius: 5px;
   background:linear-gradient(145deg, aqua, gray);
+  transition: .5s;
 }
+
+#button_eye:hover, #button_cat_leg:hover{
+  box-shadow: -2px -2px 10px aqua ,
+  2px 2px 10px black; 
+  border: 2px solid white;
+    /* background:linear-gradient(145deg, gray, aqua); */
+  transition: .5s;
+}
+
 
 
 #button_remove{
   background: linear-gradient(145deg, red, gray);
   border-radius: 5px;
-  color: white !important;
+  color: white;
   padding: 10px;
+  transition: .5s;
 }
 
- 
+#button_remove:hover{
+  box-shadow: -2px -2px 10px red ,
+  2px 2px 10px black; 
+  border: 2px solid white;
+  transition: .5s;
+}
+#button_phantom{
+  background: linear-gradient(145deg, gray, black);
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  transition: .5s;
+}
+
+#button_phantom:hover{
+  box-shadow: -2px -2px 10px gray ,
+  2px 2px 10px black; 
+  border: 2px solid white;
+  transition: .5s;
+}
+
 
 
 

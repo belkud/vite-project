@@ -13,68 +13,102 @@
 
 <body>
 
-  <div class="content" style="display: flex;  width: 100%; height: 100vh; padding: 50px;">
+
+
+  <div class="content" style="display: flex;  width: 100%; height: 97vh; padding: 50px;">
     <div>
+      <button id="switcher"
+        style="padding: 5px; border-radius: 5px; background-color: red; color: aliceblue;">переключатель
+        картинок</button>
+      <button id="clear">обновить анимацию</button>
+
+      <div style="height: 120px;">
+        <img id="ball_switcher" src="ball2.png" style="width: 100px; display: none;" alt="">
+        <img id="field_switcher" src="Football_field.jpg" style="width: 200px;" alt="">
+      </div>
+
+
 
       <div>
-        <button type="button" class="btn_task" id="task1">Задание 1</button>
+        <button type="button" class="btn_task" id="task1" style="cursor: pointer;">Задание 1</button>
         <input type="text" name="" class="" id="enteranswer1" placeholder="Введите ваш возраст"
           style="margin: 10px; text-align: center;">
-        <button type="button" class="btn_answer" id="answer1">Ответ</button>
+        <button type="button" class="btn_answer" id="answer1" style="cursor: pointer;">Ответ</button>
         <input type="text" class="" id="showanswer1" style="margin: 10px; text-align: center; ">
       </div>
 
       <div>
-        <button type="button" class="btn_task" id="task2">Задание 2</button>
+        <button type="button" class="btn_task" id="task2" style="cursor: pointer;">Задание 2</button>
         <input type="text" name="" class="" id="enteranswer2" placeholder="Введите год для проверки"
           style="margin: 10px; text-align: center;">
-        <button type="button" class="btn_answer" id="answer2">Ответ</button>
+        <button type="button" class="btn_answer" id="answer2" style="cursor: pointer;">Ответ</button>
         <input type="text" class="" id="showanswer2" style="margin: 10px; text-align: center; ">
       </div>
 
       <div>
-        <button type="button" class="btn_task" id="task3">Задание 3</button>
+        <button type="button" class="btn_task" id="task3" style="cursor: pointer;">Задание 3</button>
         <input type="text" name="" class="" id="enteranswer3" placeholder="Введите валюту"
           style="margin: 10px; text-align: center; width: 110px;">
         <input type="text" name="" class="" id="enteranswer3_2" placeholder="Количество USD"
           style="margin-right: 10px; text-align: center; width: 110px;">
-        <button type="button" class="btn_answer" id="answer3">Ответ</button>
+        <button type="button" class="btn_answer" id="answer3" style="cursor: pointer;">Ответ</button>
         <input type="text" class="" id="showanswer3" style="margin: 10px; text-align: center; ">
       </div>
+
+
+
+      <button id="multycolor" class="colored">изменить цвет</button>
+      <div class="box"></div>
+
+      <ul class="list">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+        <li class="item">Item 4</li>
+      </ul>
+
+      <div class="circle"></div>
+
+
 
     </div>
 
 
 
 
-    <div
-      style="padding: 0px; margin-top: -50px;  display: flex; flex-direction:column; height: 100vh; ">
+    <div style="padding: 0px; margin-top: -50px;  display: flex; flex-direction:column; height: 100vh; ">
       <div id="rope"
         style="display: none; position: absolute; display: flex; flex-direction: column; margin-left: 20px;  margin-top: 0px;">
         <img src="cat_rope.png" id="rope1" style="display: none; width: 220px;" alt="">
-        <img src="cat_rope2.png" id="rope2" style="display: none; width: 220px; z-index: 2;" alt="">
+        <img src="cat_rope2.png" id="rope2" style="display: none; width: 220px; z-index: 3;" alt="">
       </div>
-      <div id="cat_animation" style="padding-bottom: 0px !important; margin-bottom: 0px; margin-top: 350px; height: 100%; ">
+      <div id="cat_animation"
+        style="padding-bottom: 0px !important; margin-bottom: 0px; margin-top: 350px; height: 100%; ">
         <div style="position: absolute; margin-left: 95px; margin-top: 90px; "><img src="cat_leg.png" id="cat_leg"
             style="display: none;" alt="" srcset="">
-          </div>
-          <div style="position: absolute; margin-left: 95px; margin-top: 90px;"><img src="cat_leg2.png" id="cat_leg2"
+        </div>
+        <div style="position: absolute; margin-left: 95px; margin-top: 90px;"><img src="cat_leg2.png" id="cat_leg2"
             style="display: block;" alt="" srcset=""></div>
-          <img src="cat.png" id="cat" style="background-color: transparent; position: relative; border:  1px solid transparent;">
-         
-          
-          <img src="cat_ghost.png" id="cat2"
-          style="display: none;  position: relative; border:  1px solid transparent;  opacity: .5; z-index: 1;  margin-left: 0px; margin-top: -300px;">
-        
-          <div style="position: absolute; height: 200px; margin-top: -240px; margin-left: 147px;"><img
-            src="eye.png" id="eye" alt="" style="z-index: 2;  width: 25px;  display: none; "></div>
+            
+        <img src="cat.png" id="cat"
+          style="position: relative; margin-right: 0px ;">
+
+          <img src="cat_die.png" id="cat_die" style="position: relative; z-index: 1; margin-top: -300px; display: none;" alt="">
+
+        <img src="cat_ghost.png" id="cat_phantom"
+          style="display: none;  position: relative;  opacity: .5; z-index: 2;  margin-left: 0px; margin-top: -300px;">
+
+        <div style="position: absolute; height: 200px; margin-top: -240px; margin-left: 147px;"><img src="eye.png"
+            id="eye" alt="" style="z-index: 2;  width: 25px;  display: none; "></div>
       </div>
-      
+
 
       <div style="margin: 0px;">
-        <button id="button_eye">Кот, пусти слезу</button>
-        <button id="button_cat_leg" style="margin: 0px 10px 0px 10px; width: 150px;">Кот, помаши лапкой </button>
-        <button id="button_remove">Вздернуть кота?</button>
+        <button id="button_eye" style="cursor: pointer;">Кот, пусти слезу</button>
+        <button id="button_cat_leg" style="cursor: pointer; margin: 0px 10px 0px 10px; width: 150px;">Кот, помаши лапкой
+        </button>
+        <button id="button_remove" style="cursor: no-drop;">Вздернуть кота?</button>
+        <button id="button_phantom" style="cursor: pointer; margin-left: 10px;">Вызвать котодух?</button>
       </div>
 
     </div>

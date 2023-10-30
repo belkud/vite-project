@@ -1,6 +1,85 @@
 import './style.css'
 
 
+
+const intervalId = setInterval(function() {
+  console.log('Я выполняюсь каждую секунду')
+}, 1000)
+
+// clearInterval(intervalId)
+// clearTimeout(timerId)
+
+function sss() {
+  console.log(multycolor)
+  multycolor.classList.remove('colored')
+  multycolor.classList.add('red')
+  multycolor.classList.toggle ('blue')
+  // border.classList.toggle('bord')
+}
+const multycolor = document.querySelector('#multycolor') as HTMLButtonElement
+multycolor.addEventListener('click', sss)
+
+
+const box = document.querySelector('.box') as HTMLButtonElement
+box.onmouseup =()=> {
+  console.log(box)
+
+  box.classList.toggle('box2')
+  
+}
+
+
+
+
+const list = document.querySelector('.list') as HTMLUListElement
+list.style.backgroundColor = 'lightgray'
+console.log(list);
+
+
+list.addEventListener ('click', (event)=> {
+ const changeClass = event.target
+//  changeClass.classList.add('blue')
+// changeClass.classList.toggle('red')
+ changeClass.classList.add('red')
+  
+ 
+//  console.log(target.classlist.add);
+ 
+})
+ 
+
+// console.log(event.timeStamp);
+
+const circle = document.querySelector('.circle') as HTMLDivElement
+circle.addEventListener ('click', (event)=> {
+  console.log(event.timeStamp);
+  circle.innerHTML = `pageY = ${event.pageY}px <br> clientY = ${event.clientY}px`
+  circle.classList.toggle ('circle2')
+  cat_animation.style.display= 'none'
+  setTimeout(() => {
+    
+   cat_animation.style.display= 'block'
+ }, 2000);
+})
+
+const switcher = document.querySelector('#switcher') as HTMLButtonElement
+switcher.addEventListener('click', ()=> {
+  if (ball_switcher.style.display == 'none') {
+    ball_switcher.style.display = 'block'
+    field_switcher.style.display = 'none'
+  } else {
+    ball_switcher.style.display = 'none'
+    field_switcher.style.display = 'block'
+    // field_switcher.style.display = 'none'
+  }
+
+  // clearTimeout(button_remove_cat)
+  clearInterval(button_remove_cat)
+})
+
+
+
+
 // Задание 1
 
 const task1 = document.querySelector('#task1') as HTMLButtonElement
@@ -97,36 +176,38 @@ const cat_leg2 = document.querySelector ('#cat_leg2')
 const button_cat_leg = document.querySelector ('#button_cat_leg')
 button_cat_leg?.addEventListener('click', ()=>{
  
- if (button_cat_leg.innerHTML== 'Кот, помаши лапкой '){
-  cat_leg.style.display='block'
-  cat_leg2.style.display='none'
-  button_cat_leg.innerHTML= 'Спасибо, кот '
+ if (cat_leg.style.display=='none'){
+    cat_leg.style.display='block'
+    cat_leg2.style.display='none'
+    button_cat_leg.innerHTML= 'Спасибо, кот '
 } else {
-  button_cat_leg.innerHTML= 'Кот, помаши лапкой '
-  cat_leg.style.display='none'
-   cat_leg2.style.display='block'
+    cat_leg.style.display='none'
+    cat_leg2.style.display='block'
+    button_cat_leg.innerHTML= 'Кот, помаши лапкой '
  }
- 
   // cat_leg.classList.add('anim')
 })
 
+  
 
-const cat2 = document.querySelector('#cat2') as HTMLButtonElement
+const button_phantom = document.querySelector('#button_phantom') as HTMLButtonElement
 const button_remove_cat = document.querySelector('#button_remove') as HTMLButtonElement
+const cat_die = document.querySelector('#cat_die') as HTMLButtonElement
+const cat_phantom = document.querySelector('#cat_phantom') as HTMLButtonElement
 const cat_animation = document.querySelector('#cat_animation') as HTMLButtonElement
 const rope = document.querySelector('#rope') as HTMLDivElement
 const rope1 = document.querySelector('#rope1') as HTMLDivElement
 const rope2 = document.querySelector('#rope2') as HTMLDivElement
 
 button_remove_cat.addEventListener('click', ()=> {
- 
-    setTimeout(() => {
-      rope1.style.display = 'block'
-      rope2.style.display = 'block'
-      rope.style.marginTop = 230 +'px'
-      rope.style.transition = 3 + 's'
-    }, 500);
 
+  setTimeout(() => {
+    rope1.style.display = 'block'
+    rope2.style.display = 'block'
+    rope.style.marginTop = 230 +'px'
+    rope.style.transition = 3 + 's'
+  }, 500);
+  
   setTimeout(() => {
     rope.style.marginTop = 80 +'px'
     cat_animation.style.marginTop = 200+ 'px'
@@ -134,29 +215,54 @@ button_remove_cat.addEventListener('click', ()=> {
   }, 3500);
  
   setTimeout(() => {
-    cat2.style.display = 'block'
+    cat_phantom.style.display = 'block'
+    cat_die.style.display = 'block'
   }, 7000);
   
   setTimeout(() => {
-    cat2.style.marginTop = -550 +'px'
+    cat_phantom.style.marginTop = -550 +'px'
     eye.style.marginTop = -550 +'px'
-    cat2.style.transition = 6 + 's'
+    cat_phantom.style.transition = 6 + 's'
   }, 7500);
   
   setTimeout(() => {
-    cat2.style.marginLeft = 250 +'px'
-    cat2.style.marginTop = -800 +'px'
-    eye.style.marginLeft = 250 +'px'
+    cat_phantom.style.marginTop = -800 +'px'
     eye.style.marginTop = -800 +'px'
-    cat2.style.transition = 3 + 's'
+    cat_phantom.style.transition = 3 + 's'
+    cat_phantom.style.transition = 3 + 's'
     eye.style.transition = 3 + 's'
   }, 12000);
 
 })
 
+const cat = document.querySelector('#cat') as HTMLImageElement
+button_phantom.addEventListener ('click', ()=> {
+  setTimeout(() => {
+    cat_phantom.style.display = 'block'
+  }, 500);
+  
+  setTimeout(() => {
+    cat_phantom.style.marginLeft = 300 +'px'
+    cat_phantom.style.marginTop = -300 +'px'
+    eye.style.marginLeft = 300 +'px'
+    eye.style.marginTop = -300 +'px'
+    cat_phantom.style.transition = 5 +'s'
+    // cat_phantom.style.animationTimingFunction = 'linear'
+    
+  }, 1000);
+  
+})
 
 
 
+
+
+
+const clear = document.querySelector('#clear') as HTMLButtonElement
+clear.addEventListener ('click', ()=>{
+  clearTimeout(button_remove_cat)
+  
+})
 
 
 
@@ -3811,13 +3917,13 @@ document.addEventListener('mousemove', function (event) {
 
 
 
-let animals = document.querySelectorAll('.animal')
+let anim  = document.querySelectorAll('.animal')
 
 
 
 
-for (let animal of animals) {
-  animal.insertAdjacentHTML("afterbegin", '<span class="cross">&#9746;</span>');
+for (let animal of anim ) {
+  animal.insertAdjacentHTML("afterbegin", '<span  class="cross">&#9746;</span>');
   // кнопка становится первым потомком плитки (animal)
   animal.firstChild.onclick = () => animal.remove();
 }
