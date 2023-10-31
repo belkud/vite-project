@@ -2,9 +2,9 @@ import './style.css'
 
 
 
-const intervalId = setInterval(function() {
-  console.log('Я выполняюсь каждую секунду')
-}, 1000)
+// const intervalId = setInterval(function() {
+//   console.log('Я выполняюсь каждую секунду')
+// }, 1000)
 
 // clearInterval(intervalId)
 // clearTimeout(timerId)
@@ -243,6 +243,8 @@ button_phantom.addEventListener ('click', ()=> {
 
 
 
+const tomb_cat = document.querySelector('#tomb_cat') as HTMLDivElement
+const tomb_cat2 = document.querySelector('#tomb_cat2') as HTMLDivElement
 const cat_phrase2 = document.querySelector('#cat_phrase2') as HTMLDivElement
 const cat_dialog = document.querySelector('#cat_dialog') as HTMLDivElement
 const cat_option1 = document.querySelector('#cat_option1') as HTMLDivElement
@@ -277,15 +279,32 @@ cat_option1.addEventListener ('click', ()=> {
   }, 7500);
   
   setTimeout(() => {
-    cat_phantom.style.marginTop = -800 +'px'
-    eye.style.marginTop = -800 +'px'
-    cat_phantom.style.transition = 3 + 's'
-    eye.style.transition = 3 + 's'
+    cat_phantom.style.marginTop = -1200 +'px'
+    eye.style.marginTop = -1200 +'px'
+    cat_phantom.style.transition = 4 + 's'
+    eye.style.transition = 4 + 's'
     button_phantom.style.opacity = 1
     button_phantom.style.transition = 3 + 's'
   }, 12000);
+  setTimeout(() => {
+    rope1.style.display = 'none'
+    rope2.style.display = 'none'
+    tomb_cat2.style.opacity = 1
+    tomb_cat2.style.transition = 3 + 's'
+  }, 15000);
+  setTimeout(() => {
+    cat_animation.style.marginTop = 830 +'px'
+    cat_animation.style.animation = 5 +'s'
+  
+  }, 18000);
+  setTimeout(() => {
+    cat_animation.style.opacity = 0
+ }, 18001);
+  setTimeout(() => {
+    tomb_cat.style.opacity = 1
+    tomb_cat.style.transition = 3 + 's'
+  }, 21000);
 
-  // cat_option1.style.animationIterationCount = 1
 })
 
 cat_option2.addEventListener ('click', ()=> {

@@ -74,7 +74,7 @@
 
 
 
-    <div id="cat_container" style="padding: 0px; margin-top: -50px;  display: flex; flex-direction:column; height: 100vh; ">
+    <div id="cat_container" style="overflow: hidden; padding: 0px; margin-top: -50px;  display: flex; flex-direction:column; height: 100vh; ">
       <div id="rope"
         style="display: none; position: absolute; display: flex; flex-direction: column; margin-left: 20px;  margin-top: 0px;">
         <img src="cat_rope.png" id="rope1" style="display: none; width: 220px;" alt="">
@@ -82,37 +82,41 @@
       </div>
 
       <div id="cat_animation"
-        style="padding-bottom: 0px !important; margin-bottom: 0px; margin-top: 350px; height: 100%; ">
+        style="overflow: hidden; padding-bottom: 0px !important; margin-bottom: 0px; margin-top: 350px; height: 100%; border: 2px solid red;">
         <div style="position: absolute; margin-left: 95px; margin-top: 90px; "><img src="cat_leg.png" id="cat_leg"
             style="display: none;" alt="" srcset="">
         </div>
         <div style="position: absolute; margin-left: 95px; margin-top: 90px;"><img src="cat_leg2.png" id="cat_leg2"
             style="display: block;" alt="" srcset=""></div>
             
-        <img src="cat.png" id="cat"
-          style="position: relative; margin-right: 0px ;">
+            <img src="cat.png" id="cat"
+            style="position: relative; margin-right: 0px ;">
+            
+            <img src="cat_die.png" id="cat_die" style="position: relative; z-index: 1; margin-top: -300px; display: none;" alt="">
+            
+            <img src="cat_ghost.png" id="cat_phantom"
+            style="display: none;  position: relative;  opacity: .5; z-index: 2;  margin-left: 0px; margin-top: -300px;">
 
-          <img src="cat_die.png" id="cat_die" style="position: relative; z-index: 1; margin-top: -300px; display: none;" alt="">
-
-        <img src="cat_ghost.png" id="cat_phantom"
-          style="display: none;  position: relative;  opacity: .5; z-index: 2;  margin-left: 0px; margin-top: -300px;">
-
-        <div style="position: absolute; height: 200px; margin-top: -240px; margin-left: 147px;"><img src="eye.png"
-            id="eye" alt="" style="z-index: 2;  width: 25px;  display: none; "></div>
-        <div id="cat_dialog" style=" position: absolute; margin-top: -290px; margin-left: 200px; text-align: center;">
-            <div id="cat_phrase" style="opacity: 0;"> Хозяин, ты уверен, что хочешь меня вздернуть?</div>
-            <div id="cat_phrase2" style="opacity: 0;"> Спасибо</div>
-            <div style="display: flex; border: none;">
-              <button id="cat_option1" class="cat_opt" style="opacity: 0;">Давай посмотрим</button>
-              <button id="cat_option2" class="cat_opt" style="opacity: 0;">Пожалуй откажусь</button>
+  
+            
+            <div style="position: absolute; height: 200px; margin-top: -240px; margin-left: 147px;"><img src="eye.png"
+              id="eye" alt="" style="z-index: 2;  width: 25px;  display: none; "></div>
+              <div id="cat_dialog" style=" position: absolute; margin-top: -290px; margin-left: 200px; text-align: center;">
+                <div id="cat_phrase" style="opacity: 0;"> Хозяин, ты уверен, что хочешь меня вздернуть?</div>
+                <div id="cat_phrase2" style="opacity: 0;"> Спасибо</div>
+                <div style="display: flex; border: none;">
+                  <button id="cat_option1" class="cat_opt" style="opacity: 0;">Давай посмотрим</button>
+                  <button id="cat_option2" class="cat_opt" style="opacity: 0;">Пожалуй откажусь</button>
+                </div>
+              </div>
+              
             </div>
-        </div>
-      
-          </div>
-
-
-      <div style="margin: 0px;">
-        <button id="button_eye" style="cursor: pointer;">Кот, пусти слезу</button>
+            
+            <img src="tomb_cat.png" id="tomb_cat" alt="" srcset="" style="position: absolute; width: 300px; margin-left: 0px; margin-top: 670px; opacity: 0;">
+            <img src="tomb_cat2.png" id="tomb_cat2" alt="" srcset="" style="position: absolute; width: 300px; margin-left: 0px; margin-top: 670px; opacity: 0;">
+            
+            <div style="margin: 0px;">
+              <button id="button_eye" style="cursor: pointer;">Кот, пусти слезу</button>
         <button id="button_cat_leg" style="cursor: pointer; margin: 0px 10px 0px 10px; width: 150px;">Кот, помаши лапкой
         </button>
         <button id="button_remove" style="cursor: no-drop;">Вздернуть кота?</button>
