@@ -256,6 +256,27 @@ button_phantom.addEventListener ('click', ()=> {
 
 
 
+const cat_option1 = document.querySelector('#cat_option1') as HTMLDivElement
+const cat_option2 = document.querySelector('#cat_option2') as HTMLDivElement
+cat_option1.addEventListener ('click', ()=> {
+
+})
+
+cat_option2.addEventListener ('click', ()=> {
+  cat_dialog.style.display = 'none' 
+})
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const clear = document.querySelector('#clear') as HTMLButtonElement

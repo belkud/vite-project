@@ -220,10 +220,49 @@ body {
   transition: .5s;
 }
 
+#cat_dialog>div {
+  
+  border: 1px solid #000;
+}
 
+#cat_question {
+  /* color: grey; */
+  border: 3px solid grey !important;
+  border-radius: 20px 20px 20px 0px;
+  margin-top: -50px;
+  margin-bottom: 20px;
+}
 
+.cat_opt {
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  margin-top: 25px;
+  color: aliceblue;
+  cursor: pointer;
+}
 
+#cat_option1 {
+  background-color: red;
+  transition: 1s;
+}
 
+#cat_option1:hover {
+  border: 2px solid white;
+  box-shadow: 0px 0px 20px red;
+  transition: 1s;
+}
+
+#cat_option2 {
+  background-color: blue;
+  transition: 1s;
+}
+
+#cat_option2:hover {
+  border: 2px solid white;
+  box-shadow: 0px 0px 20px blue;
+  transition: 1s;
+}
 
 
 
