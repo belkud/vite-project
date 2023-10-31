@@ -190,6 +190,7 @@ button_cat_leg?.addEventListener('click', ()=>{
 
   
 
+const cat_phrase = document.querySelector('#cat_phrase') as HTMLDivElement
 const button_phantom = document.querySelector('#button_phantom') as HTMLButtonElement
 const button_remove_cat = document.querySelector('#button_remove') as HTMLButtonElement
 const cat_die = document.querySelector('#cat_die') as HTMLButtonElement
@@ -200,8 +201,56 @@ const rope1 = document.querySelector('#rope1') as HTMLDivElement
 const rope2 = document.querySelector('#rope2') as HTMLDivElement
 
 button_remove_cat.addEventListener('click', ()=> {
+ 
+  
+    setTimeout(() => {
+      cat_phrase.style.opacity = 1 
+      cat_phrase.style.transition = 3 +'s'
+    }, 1000);
+    
+    setTimeout(() => {
+      cat_option1.style.opacity = 1 
+      cat_option1.style.transition = 3 + 's' 
+    }, 2000);
+    
+    setTimeout(() => {
+      cat_option2.style.opacity = 1 
+      cat_option2.style.transition = 3 + 's' 
+    }, 3000);
 
+
+})
+
+const cat = document.querySelector('#cat') as HTMLImageElement
+button_phantom.addEventListener ('click', ()=> {
   setTimeout(() => {
+    cat_phantom.style.display = 'block'
+  }, 500);
+  
+  setTimeout(() => {
+    cat_phantom.style.marginLeft = 300 +'px'
+    cat_phantom.style.marginTop = -300 +'px'
+    eye.style.marginLeft = 300 +'px'
+    eye.style.marginTop = -300 +'px'
+    cat_phantom.style.transition = 5 +'s'
+    eye.style.transition = 5 +'s'
+    
+  }, 1000);
+  
+})
+
+
+
+
+const cat_phrase2 = document.querySelector('#cat_phrase2') as HTMLDivElement
+const cat_dialog = document.querySelector('#cat_dialog') as HTMLDivElement
+const cat_option1 = document.querySelector('#cat_option1') as HTMLDivElement
+const cat_option2 = document.querySelector('#cat_option2') as HTMLDivElement
+
+cat_option1.addEventListener ('click', ()=> {
+  
+  setTimeout(() => {
+    cat_dialog.style.display = 'none' 
     rope1.style.display = 'block'
     rope2.style.display = 'block'
     rope.style.marginTop = 230 +'px'
@@ -223,47 +272,38 @@ button_remove_cat.addEventListener('click', ()=> {
     cat_phantom.style.marginTop = -550 +'px'
     eye.style.marginTop = -550 +'px'
     cat_phantom.style.transition = 6 + 's'
+    eye.style.transition = 6 + 's'
   }, 7500);
   
   setTimeout(() => {
     cat_phantom.style.marginTop = -800 +'px'
     eye.style.marginTop = -800 +'px'
     cat_phantom.style.transition = 3 + 's'
-    cat_phantom.style.transition = 3 + 's'
     eye.style.transition = 3 + 's'
   }, 12000);
 
-})
-
-const cat = document.querySelector('#cat') as HTMLImageElement
-button_phantom.addEventListener ('click', ()=> {
-  setTimeout(() => {
-    cat_phantom.style.display = 'block'
-  }, 500);
-  
-  setTimeout(() => {
-    cat_phantom.style.marginLeft = 300 +'px'
-    cat_phantom.style.marginTop = -300 +'px'
-    eye.style.marginLeft = 300 +'px'
-    eye.style.marginTop = -300 +'px'
-    cat_phantom.style.transition = 5 +'s'
-    // cat_phantom.style.animationTimingFunction = 'linear'
-    
-  }, 1000);
-  
-})
-
-
-
-
-const cat_option1 = document.querySelector('#cat_option1') as HTMLDivElement
-const cat_option2 = document.querySelector('#cat_option2') as HTMLDivElement
-cat_option1.addEventListener ('click', ()=> {
 
 })
 
 cat_option2.addEventListener ('click', ()=> {
-  cat_dialog.style.display = 'none' 
+  setTimeout(() => {
+    cat_phrase.style.opacity = 0 
+    cat_phrase.style.transition = 2.5 +'s' 
+    cat_option1.style.opacity = 0 
+    cat_option2.style.opacity = 0 
+  }, 500);
+  setTimeout(() => {
+    cat_phrase2.style.opacity = 1
+    cat_phrase2.style.transition = 3 + 's' 
+  }, 3000);
+  setTimeout(() => {
+    cat_phrase2.style.opacity = 0
+    cat_phrase2.style.transition = 2 + 's' 
+  }, 5000);
+  
+  // setTimeout(() => {
+  //   cat_phrase2.style.display = 'none' 
+  // }, 4000);
 })
 
 
