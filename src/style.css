@@ -409,7 +409,13 @@ h1 {
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: 3px solid blue;
+    border: 3px solid red;
     height: 100%;
+  }
+  #cat_container{
+    margin-left: 0px;
+  }
+  #cat_animation>div{
+    margin-left: 0px;
   }
   }
