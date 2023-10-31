@@ -204,8 +204,9 @@ button_remove_cat.addEventListener('click', ()=> {
  
   
     setTimeout(() => {
+ 
       cat_phrase.style.opacity = 1 
-      cat_phrase.style.transition = 3 +'s'
+    cat_phrase.style.transition = 2.5 +'s'
     }, 1000);
     
     setTimeout(() => {
@@ -280,9 +281,11 @@ cat_option1.addEventListener ('click', ()=> {
     eye.style.marginTop = -800 +'px'
     cat_phantom.style.transition = 3 + 's'
     eye.style.transition = 3 + 's'
+    button_phantom.style.opacity = 1
+    button_phantom.style.transition = 3 + 's'
   }, 12000);
 
-
+  // cat_option1.style.animationIterationCount = 1
 })
 
 cat_option2.addEventListener ('click', ()=> {
