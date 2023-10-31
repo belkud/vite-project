@@ -409,7 +409,7 @@ h1 {
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: 3px solid red;
+    border: 3px solid blue;
     height: 100%;
   }
   }
