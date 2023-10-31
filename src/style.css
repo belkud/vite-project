@@ -81,6 +81,7 @@ body {
 .content {
   /* margin-left: 10px; */
   background:linear-gradient(145deg, rgb(233, 231, 231),white, rgb(175, 172, 172));
+  /* height: 100vh; */
   /* background-color: white; */
 }
 
@@ -401,3 +402,14 @@ h1 {
   margin-right: 10px;
   display: inline-block;
 }
+
+
+@media screen and (max-width: 900px) {
+  #container_animation {
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+    border: 3px solid red;
+    height: 100%;
+  }
+  }
