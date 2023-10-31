@@ -408,7 +408,7 @@ h1 {
   #container_animation {
     display: flex;
     flex-direction: column;
-    height: 200vh;
+    width: 100%;
     border: 3px solid red;
     height: 100%;
   }
