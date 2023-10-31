@@ -225,15 +225,15 @@ button_remove_cat.addEventListener('click', ()=> {
 const cat = document.querySelector('#cat') as HTMLImageElement
 button_phantom.addEventListener ('click', ()=> {
   setTimeout(() => {
-    cat_phantom.style.display = 'block'
+    // cat_phantom.style.display = 'block'
   }, 500);
   
   setTimeout(() => {
-    cat_phantom.style.marginLeft = 300 +'px'
-    cat_phantom.style.marginTop = -300 +'px'
+    // cat_phantom.style.marginLeft = 300 +'px'
+    // cat_phantom.style.marginTop = -300 +'px'
     eye.style.marginLeft = 300 +'px'
     eye.style.marginTop = -300 +'px'
-    cat_phantom.style.transition = 5 +'s'
+    // cat_phantom.style.transition = 5 +'s'
     eye.style.transition = 5 +'s'
     
   }, 1000);
@@ -258,6 +258,8 @@ cat_option1.addEventListener ('click', ()=> {
     rope2.style.display = 'block'
     rope.style.marginTop = 230 +'px'
     rope.style.transition = 3 + 's'
+    button_phantom.style.opacity = 1
+    button_phantom.style.transition = 3 + 's'
   }, 500);
   
   setTimeout(() => {
@@ -278,32 +280,28 @@ cat_option1.addEventListener ('click', ()=> {
     eye.style.transition = 6 + 's'
   }, 7500);
   
-  setTimeout(() => {
-    cat_phantom.style.marginTop = -1200 +'px'
-    eye.style.marginTop = -1200 +'px'
-    cat_phantom.style.transition = 4 + 's'
-    eye.style.transition = 4 + 's'
-    button_phantom.style.opacity = 1
-    button_phantom.style.transition = 3 + 's'
-  }, 12000);
+  // setTimeout(() => {
+  //   eye.style.marginTop = -1200 +'px'
+  //   eye.style.transition = 4 + 's'
+  // }, 12000);
   setTimeout(() => {
     rope1.style.display = 'none'
     rope2.style.display = 'none'
     tomb_cat2.style.opacity = 1
     tomb_cat2.style.transition = 3 + 's'
-  }, 15000);
+  }, 10000);
   setTimeout(() => {
     cat_animation.style.marginTop = 830 +'px'
     cat_animation.style.animation = 5 +'s'
   
-  }, 18000);
+  }, 13000);
   setTimeout(() => {
     cat_animation.style.opacity = 0
- }, 18001);
+ }, 13001);
   setTimeout(() => {
     tomb_cat.style.opacity = 1
     tomb_cat.style.transition = 3 + 's'
-  }, 21000);
+  }, 15000);
 
 })
 
