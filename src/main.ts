@@ -70,11 +70,8 @@ switcher.addEventListener('click', ()=> {
   } else {
     ball_switcher.style.display = 'none'
     field_switcher.style.display = 'block'
-    // field_switcher.style.display = 'none'
-  }
 
-  // clearTimeout(button_remove_cat)
-  clearInterval(button_remove_cat)
+  }
 })
 
 
@@ -222,6 +219,7 @@ button_remove_cat.addEventListener('click', ()=> {
 })
 
 
+const cat_phrase3 = document.querySelector('cat_phrase3') as HTMLDivElement
 
 button_phantom.addEventListener ('click', ()=> {
   setTimeout(() => {
@@ -230,14 +228,24 @@ button_phantom.addEventListener ('click', ()=> {
   
   setTimeout(() => {
     cat_phantom.style.marginLeft = 300 +'px'
-    cat_phantom.style.marginTop = 600 +'px'
-    eye.style.marginLeft = 300 +'px'
-    eye.style.marginTop = 450 +'px'
+    cat_phantom.style.marginTop = 300 +'px'
     cat_phantom.style.transition = 5 +'s'
-    eye.style.transition = 5 +'s'
     
   }, 1000);
-  
+
+  setTimeout(() => {
+    cat_phantom.style.filter = 'brightness(5.3)'
+    cat_phantom.style.animation = 2+ 's'
+  }, 6000);
+  setTimeout(() => {
+    cat_phantom.style.opacity = 0
+    cat_phantom.style.animation = 2 + 's'
+  }, 8000);
+
+  // setTimeout(() => {
+  //   cat_phrase3.style.display = 'block'
+  // }, 7000);
+
 })
 
 
@@ -303,9 +311,6 @@ cat_option1.addEventListener ('click', ()=> {
 
 // !закопать кота
 
-//!
- 
-
 const button_cat_digger = document.querySelector('#button_cat_digger') as HTMLButtonElement
 button_cat_digger.addEventListener ('click', ()=> {
   
@@ -342,7 +347,7 @@ button_cat_digger.addEventListener ('click', ()=> {
 
 
 
-
+//! диалог с котом
 cat_option2.addEventListener ('click', ()=> {
   setTimeout(() => {
     cat_phrase.style.opacity = 0 
@@ -358,10 +363,6 @@ cat_option2.addEventListener ('click', ()=> {
     cat_phrase2.style.opacity = 0
     cat_phrase2.style.transition = 2 + 's' 
   }, 5000);
-  
-  // setTimeout(() => {
-  //   cat_phrase2.style.display = 'none' 
-  // }, 4000);
 })
 
 
@@ -376,12 +377,14 @@ cat_option2.addEventListener ('click', ()=> {
 
 
 
+// cat_phantom.style.filter = 'brightness(5.3)'
+
 
 const clear = document.querySelector('#clear') as HTMLButtonElement
 clear.addEventListener ('click', ()=>{
-  cat_phantom.style.marginTop = 450 +'px'
-  cat_phantom.style.transition = 1 + 's'
-  console.log(56756);
+  // answer1.style.display = 'none'
+  // cat_phrase3.style.display= 'none'
+
   
   
 })
