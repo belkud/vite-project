@@ -185,11 +185,12 @@ button_cat_leg?.addEventListener('click', ()=>{
     cat_leg2.style.display='block'
     button_cat_leg.innerHTML= 'Кот, помаши лапкой '
  }
-  // cat_leg.classList.add('anim')
+ // cat_leg.classList.add('anim')
 })
 
   
 
+const cat = document.querySelector('#cat') as HTMLImageElement
 const cat_phrase = document.querySelector('#cat_phrase') as HTMLDivElement
 const button_phantom = document.querySelector('#button_phantom') as HTMLButtonElement
 const button_remove_cat = document.querySelector('#button_remove') as HTMLButtonElement
@@ -221,18 +222,18 @@ button_remove_cat.addEventListener('click', ()=> {
 })
 
 
-const cat = document.querySelector('#cat') as HTMLImageElement
+
 button_phantom.addEventListener ('click', ()=> {
   setTimeout(() => {
-    // cat_phantom.style.display = 'block'
+    cat_phantom.style.display = 'block'
   }, 500);
   
   setTimeout(() => {
-    // cat_phantom.style.marginLeft = 300 +'px'
-    // cat_phantom.style.marginTop = -300 +'px'
+    cat_phantom.style.marginLeft = 300 +'px'
+    cat_phantom.style.marginTop = 600 +'px'
     eye.style.marginLeft = 300 +'px'
-    eye.style.marginTop = -300 +'px'
-    // cat_phantom.style.transition = 5 +'s'
+    eye.style.marginTop = 450 +'px'
+    cat_phantom.style.transition = 5 +'s'
     eye.style.transition = 5 +'s'
     
   }, 1000);
@@ -378,7 +379,10 @@ cat_option2.addEventListener ('click', ()=> {
 
 const clear = document.querySelector('#clear') as HTMLButtonElement
 clear.addEventListener ('click', ()=>{
-  clearTimeout(button_remove_cat)
+  cat_phantom.style.marginTop = 450 +'px'
+  cat_phantom.style.transition = 1 + 's'
+  console.log(56756);
+  
   
 })
 
