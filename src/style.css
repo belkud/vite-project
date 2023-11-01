@@ -206,7 +206,7 @@ body {
   border: 2px solid white;
   transition: .5s;
 }
-#button_phantom{
+#button_phantom, #button_cat_digger{
   background: linear-gradient(145deg, gray, black);
   border-radius: 5px;
   color: white;
