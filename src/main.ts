@@ -275,9 +275,10 @@ cat_option1.addEventListener ('click', ()=> {
     cat_leg.style.display = 'none'
     cat_leg2.style.display = 'none'
     cat_die.style.display = 'none'
+    cat.style.display = 'none'
     cat_phantom.style.display = 'block'
     cat_ghost_to_tomb.style.display = 'block'
-    cat_ghost_to_tomb.style.opacity = 0
+    cat_ghost_to_tomb.style.position = 'relative'
   }, 2000);
   
   setTimeout(() => {
@@ -286,7 +287,9 @@ cat_option1.addEventListener ('click', ()=> {
     eye.style.marginTop = -550 +'px'
     eye.style.transition = 0.5 + 's'
     cat_ghost_to_tomb.style.opacity = 1
-  }, 2500);
+    cat.style.opacity = 0
+    cat_ghost_to_tomb.style.display = 'block'
+  }, 4500);
 
 
 
@@ -307,17 +310,15 @@ button_cat_digger.addEventListener ('click', ()=> {
   }, 2000);
   
   setTimeout(() => {
-    cat.style.opacity = 0.5
-    cat_ghost_to_tomb.style.display = 'block'
     // cat_animation.style.marginTop = 230 +'px'
     // cat_animation.style.animation = 5 +'s'
     
   }, 4000);
   
   setTimeout(() => {
-    cat_ghost_to_tomb.style.marginTop = 120 +'px'
-    cat_ghost_to_tomb.style.transition = 4 + 's'
- }, 5000);
+    cat_ghost_to_tomb.style.marginTop = 320 +'px'
+    cat_ghost_to_tomb.style.transition = 2 + 's'
+ }, 3000);
  
   setTimeout(() => {
     tomb_cat.style.opacity = 1
