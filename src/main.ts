@@ -260,8 +260,6 @@ cat_option1.addEventListener ('click', ()=> {
     rope2.style.display = 'block'
     rope.style.marginTop = 230 +'px'
     rope.style.transition = 3 + 's'
-    button_phantom.style.opacity = 1
-    button_phantom.style.transition = 3 + 's'
   }, 500);
   
   setTimeout(() => {
@@ -293,10 +291,12 @@ cat_option1.addEventListener ('click', ()=> {
   
   setTimeout(() => {
     tomb_cat.style.display = 'block'
-    
   }, 11000);
 
-
+  setTimeout(() => {
+    button_cat_digger.style.opacity = 1
+    button_cat_digger.style.transition = 3 +'s'
+  }, 11000);
 })
  
 
@@ -329,14 +329,13 @@ button_cat_digger.addEventListener ('click', ()=> {
    tomb_cat.style.display = 'relative'
    tomb_cat.style.opacity = 1
    tomb_cat.style.animation = 3 +'s'
-    
-  }, 6000);
-  
- setTimeout(() => {
-  
-    tomb_cat.style.opacity = 1
-    tomb_cat.style.transition = 3 + 's'
   }, 8000);
+
+  setTimeout(() => {
+    button_phantom.style.opacity = 1
+    button_phantom.style.transition = 3 + 's'
+  }, 9000);
+  
 })
 
 
