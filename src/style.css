@@ -1,5 +1,6 @@
 body {
-  background-color: rgb(233, 231, 231) ;
+  /* background-color: rgb(233, 231, 231) ; */
+  background: black;
   padding: 0px;
   margin:  0px;
   overflow-x: hidden;
