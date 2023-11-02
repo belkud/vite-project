@@ -1,6 +1,44 @@
 import './style.css'
 
 
+let balls = document.querySelector('.ball') as HTMLImageElement
+let fields = document.querySelector('.field') as HTMLDivElement
+// let rect = fields.getBoundingClientRect()
+
+fields.addEventListener('click', function (e) {
+   let x = e.pageX - this.clientLeft - this.offsetLeft - 30
+   let y = e.pageY - this.clientTop - this.offsetTop - 30
+   if (x < 0) {
+      x = 0
+   }
+   if (x > fields.clientWidth - 50) {
+      x = fields.clientWidth - balls.width
+   }
+   if (y < 0) {
+      y = 0
+   }
+   if (y > fields.clientHeight - 50) {
+      y = fields.clientHeight - balls.height
+   }
+
+   balls.style.left = x + 'px'
+   balls.style.top = y + 'px'
+   balls.style.rotate = rotate2()
+   console.log('x =' + x + ';' + 'y= ' + y);
+})
+
+
+
+let deg2 = 0
+const rotate2 = () => {
+  deg2 += 180
+  if (deg2 == 360) deg2 = 0
+  return deg2 + 'deg'
+}
+
+
+
+
 
 // const intervalId = setInterval(function() {
 //   console.log('Я выполняюсь каждую секунду')
