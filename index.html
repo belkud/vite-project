@@ -19,7 +19,7 @@
     
     
     
-    <div class="container_left" style="border: 2px solid red">
+    <div class="container_left" style="border: 2px solid red; margin-top: -50px;">
 
     
       
@@ -47,6 +47,7 @@
           width: 60px;
           border-radius: 50%;
           transition: 1s;
+          filter: drop-shadow(15px -15px 6px black);
         }
         .field {
           width: 500px;
@@ -62,34 +63,37 @@
 
 
 <!--! задания с вводом ответа -->
-        <div>
-          <button type="button" class="btn_task" id="task1" style="cursor: pointer;">Задание 1</button>
-          <input type="text" name="" class="" id="enteranswer1" placeholder="Введите ваш возраст"
-          style="margin: 10px; text-align: center;">
-          <button type="button" class="btn_answer" id="answer1" style="cursor: pointer;">Ответ</button>
-          <input type="text" class="" id="showanswer1" style="margin: 10px; text-align: center; ">
-        </div>
+<div>
+  <div style=" margin-top: 50px; margin-left: 0px;">
 
-      <div>
-        <button type="button" class="btn_task" id="task2" style="cursor: pointer;">Задание 2</button>
-        <input type="text" name="" class="" id="enteranswer2" placeholder="Введите год для проверки"
-          style="margin: 10px; text-align: center;">
-        <button type="button" class="btn_answer" id="answer2" style="cursor: pointer;">Ответ</button>
-        <input type="text" class="" id="showanswer2" style="margin: 10px; text-align: center; ">
+    <button type="button" class="btn_task" id="task1" style="cursor: pointer;">Задание 1</button>
+    <input type="text" name="" class="" id="enteranswer1" placeholder="Введите ваш возраст"
+    style="margin: 10px; text-align: center;">
+    <button type="button" class="btn_answer" id="answer1" style="cursor: pointer;">Ответ</button>
+    <input type="text" class="" id="showanswer1" style="margin: 10px; text-align: center; ">
+  </div>
+  
+  <div>
+    <button type="button" class="btn_task" id="task2" style="cursor: pointer;">Задание 2</button>
+    <input type="text" name="" class="" id="enteranswer2" placeholder="Введите год для проверки"
+    style="margin: 10px; text-align: center;">
+    <button type="button" class="btn_answer" id="answer2" style="cursor: pointer;">Ответ</button>
+    <input type="text" class="" id="showanswer2" style="margin: 10px; text-align: center; ">
       </div>
-
+      
       <div>
         <button type="button" class="btn_task" id="task3" style="cursor: pointer;">Задание 3</button>
         <input type="text" name="" class="" id="enteranswer3" placeholder="Введите валюту"
-          style="margin: 10px; text-align: center; width: 110px;">
+        style="margin: 10px; text-align: center; width: 110px;">
         <input type="text" name="" class="" id="enteranswer3_2" placeholder="Количество USD"
-          style="margin-right: 10px; text-align: center; width: 110px;">
+        style="margin-right: 10px; text-align: center; width: 110px;">
         <button type="button" class="btn_answer" id="answer3" style="cursor: pointer;">Ответ</button>
         <input type="text" class="" id="showanswer3" style="margin: 10px; text-align: center; ">
       </div>
-
-
-
+    </div>
+      
+      
+      
       <button id="multycolor" class="colored">изменить цвет</button>
       <div class="box"></div>
 

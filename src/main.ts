@@ -23,7 +23,8 @@ fields.addEventListener('click', function (e) {
 
    balls.style.left = x + 'px'
    balls.style.top = y + 'px'
-   balls.style.rotate = rotate2()
+   //!вращение мяча (отключил из-за dropShadow)
+  //  balls.style.rotate = rotate2()
    console.log('x =' + x + ';' + 'y= ' + y);
 })
 
@@ -100,17 +101,21 @@ circle.addEventListener ('click', (event)=> {
  }, 2000);
 })
 
-const switcher = document.querySelector('#switcher') as HTMLButtonElement
-switcher.addEventListener('click', ()=> {
-  if (ball_switcher.style.display == 'none') {
-    ball_switcher.style.display = 'block'
-    field_switcher.style.display = 'none'
-  } else {
-    ball_switcher.style.display = 'none'
-    field_switcher.style.display = 'block'
 
-  }
-})
+
+
+//! перключение картинок
+// const switcher = document.querySelector('#switcher') as HTMLButtonElement
+// switcher.addEventListener('click', ()=> {
+//   if (ball_switcher.style.display == 'none') {
+//     ball_switcher.style.display = 'block'
+//     field_switcher.style.display = 'none'
+//   } else {
+//     ball_switcher.style.display = 'none'
+//     field_switcher.style.display = 'block'
+
+//   }
+// })
 
 
 
@@ -410,23 +415,7 @@ cat_option2.addEventListener ('click', ()=> {
 
 
 
-
-
-
-
-
-// cat_phantom.style.filter = 'brightness(5.3)'
-
-
-const clear = document.querySelector('#clear') as HTMLButtonElement
-clear.addEventListener ('click', ()=>{
-  // answer1.style.display = 'none'
-  // cat_phrase3.style.display= 'none'
-
-  
-  
-})
-
+ 
 
 
 
