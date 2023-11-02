@@ -13,7 +13,7 @@
 
 <body>
 
-<div style="border: 2px solid red; margin: 0px; padding: 0px; background: transparent;">
+<div style="border: 2px solid red; margin: 0px; padding: 0px; background: black;">
 
   <div class="text">JavaScript</div>
   <div id="showText">Lorem, amet maiores pariatur quasidelectus ipsum ex nisi dolorum molestias porro explicabo.</div>
@@ -25,18 +25,15 @@
   /* width: 11ch; */
   width: 500px;
   padding-top: 25px;
-
   padding-bottom: -20px;
   margin-left: 35%;
   background-clip:text;
   -webkit-background-clip: text;
   -webkit-text-stroke: 5px transparent;
-  color:rgb(245, 243, 243);
+  /* color:rgb(245, 243, 243); */
   font-family: monospace;
-  /* white-space: nowrap; */
   display: flex;
   border-right: 4px solid red;
-  /* animation: text-anim 1.5s steps(11) forwards; */
   animation: text-anim 8.5s ease-in-out forwards;
 }
 
@@ -102,9 +99,9 @@
       </div> -->
 
       <!--! Футбольное поле -->
-<h1 style="padding-left: 20%; color: red; filter: drop-shadow(15px 15px 1px rgb(125, 121, 121));">Игра в мячик</h1>
+<h1 style="text-align: center; margin-left: -185px; color: red; filter: drop-shadow(15px 15px 1px rgb(125, 121, 121));">Игра в мячик</h1>
 
-      <div class="field" style="border: 1px solid red; margin: 0px; padding: 0px;">
+      <div class="field" style="margin: 0px; padding: 0px;">
         <img width="500px" src="Football_field.jpg" alt="">
         <img class="ball" src="ball2.png">
       </div>
@@ -117,6 +114,7 @@
           border-radius: 50%;
           transition: 1s;
           filter: drop-shadow(15px 15px 6px black);
+  
         }
         .field {
           width: 500px;
@@ -135,28 +133,28 @@
 <div>
   <div style=" margin-top: 50px; margin-left: 0px;">
 
-    <button type="button" class="btn_task" id="task1" style="cursor: pointer;">Задание 1</button>
+    <button type="button" class="btn_task" id="task1" style="cursor: pointer; border: 1px solid aliceblue;">Задание 1</button>
     <input type="text" name="" class="" id="enteranswer1" placeholder="Введите ваш возраст"
     style="margin: 10px; text-align: center;">
-    <button type="button" class="btn_answer" id="answer1" style="cursor: pointer;">Ответ</button>
+    <button type="button" class="btn_answer" id="answer1" style="cursor: pointer; border: 1px solid aliceblue;">Ответ</button>
     <input type="text" class="" id="showanswer1" style="margin: 10px; text-align: center; ">
   </div>
   
   <div>
-    <button type="button" class="btn_task" id="task2" style="cursor: pointer;">Задание 2</button>
+    <button type="button" class="btn_task" id="task2" style="cursor: pointer; border: 1px solid aliceblue;">Задание 2</button>
     <input type="text" name="" class="" id="enteranswer2" placeholder="Введите год для проверки"
     style="margin: 10px; text-align: center;">
-    <button type="button" class="btn_answer" id="answer2" style="cursor: pointer;">Ответ</button>
+    <button type="button" class="btn_answer" id="answer2" style="cursor: pointer; border: 1px solid aliceblue;">Ответ</button>
     <input type="text" class="" id="showanswer2" style="margin: 10px; text-align: center; ">
       </div>
       
       <div>
-        <button type="button" class="btn_task" id="task3" style="cursor: pointer;">Задание 3</button>
+        <button type="button" class="btn_task" id="task3" style="cursor: pointer; border: 1px solid aliceblue;">Задание 3</button>
         <input type="text" name="" class="" id="enteranswer3" placeholder="Введите валюту"
         style="margin: 10px; text-align: center; width: 110px;">
         <input type="text" name="" class="" id="enteranswer3_2" placeholder="Количество USD"
         style="margin-right: 10px; text-align: center; width: 110px;">
-        <button type="button" class="btn_answer" id="answer3" style="cursor: pointer;">Ответ</button>
+        <button type="button" class="btn_answer" id="answer3" style="cursor: pointer; border: 1px solid aliceblue;">Ответ</button>
         <input type="text" class="" id="showanswer3" style="margin: 10px; text-align: center; ">
       </div>
     </div>
@@ -166,12 +164,7 @@
       <button id="multycolor" class="colored">изменить цвет</button>
       <div class="box"></div>
 
-      <ul class="list">
-        <li class="item">Item 1</li>
-        <li class="item">Item 2</li>
-        <li class="item">Item 3</li>
-        <li class="item">Item 4</li>
-      </ul>
+     
 
       <div class="circle"></div>
 
@@ -196,7 +189,7 @@
       style="display: block;" alt="" srcset=""></div>
       
       
-      <img src="cat_ghost_to_tomb.png" style="position: absolute; z-index: 0; margin-top: 0px; opacity: 0;   margin-left:0;   display:block  ;" id="cat_ghost_to_tomb" alt="" srcset="">
+      <img src="cat_ghost_to_tomb.png" style=" position: absolute; z-index: 0; margin-top: 0px; opacity: 0;   margin-left:0;   display:block  ;" id="cat_ghost_to_tomb" alt="" srcset="">
       <img src="cat.png" id="cat"
       style="position: relative; margin-right: 0px ;">
       
@@ -209,8 +202,8 @@
         id="eye" alt="" style="z-index: 2;  width: 25px;  display: none; "></div>
         
         <div id="cat_dialog" style=" position: absolute; margin-top: -290px; margin-left: 200px; text-align: center;">
-          <div id="cat_phrase" style="opacity: 0;"> Хозяин, ты уверен, что хочешь меня вздернуть?</div>
-          <div id="cat_phrase2" style="opacity: 0;"> Спасибо</div>
+          <div id="cat_phrase" style="opacity: 0; color: aliceblue;"> Хозяин, ты уверен, что хочешь меня вздернуть?</div>
+          <div id="cat_phrase2" style="opacity: 0; color: aliceblue;"> Спасибо</div>
           <div style="display: flex; border: none;">
             <button id="cat_option1" class="cat_opt" style="opacity: 0;">Давай посмотрим</button>
             <button id="cat_option2" class="cat_opt" style="opacity: 0;">Пожалуй откажусь</button>
@@ -219,7 +212,7 @@
       </div>
       
       <img src="cat_ghost.png" id="cat_phantom"
-      style="display: none;  position: absolute;  opacity: .5; z-index: 2;  margin-left: 20px; margin-top: 220px;">
+      style="filter: drop-shadow(0px 0px 10px aliceblue); display: none;  position: absolute;  opacity: .6; z-index: 2;  margin-left: 20px; margin-top: 220px;">
       
 
       <!-- полная часть -->
@@ -235,7 +228,7 @@
 
 
       
-      <div style="margin-top: 0px; z-index: 10; max-height: 20px;">   
+      <div style="margin-top: 0px; margin-bottom: 10px; z-index: 10; max-height: 20px;">   
         <button id="button_eye" style="cursor: pointer;">Кот, пусти слезу</button>
         <button id="button_cat_leg" style="cursor: pointer; margin: 0px 10px 0px 10px; width: 150px;">Кот, помаши лапкой
         </button>

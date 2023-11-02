@@ -69,34 +69,21 @@ box.onmouseup =()=> {
 
 
 
-
-const list = document.querySelector('.list') as HTMLUListElement
-list.style.backgroundColor = 'lightgray'
-console.log(list);
-
-
-list.addEventListener ('click', (event)=> {
- const changeClass = event.target
-//  changeClass.classList.add('blue')
-// changeClass.classList.toggle('red')
- changeClass.classList.add('red')
-  
  
-//  console.log(target.classlist.add);
- 
-})
+
+
  
 
 // console.log(event.timeStamp);
 
 const circle = document.querySelector('.circle') as HTMLDivElement
-circle.addEventListener ('click', (event)=> {
+circle.addEventListener ('mousemove', (event)=> {
   console.log(event.timeStamp);
   circle.innerHTML = `pageY = ${event.pageY}px <br> clientY = ${event.clientY}px`
   circle.classList.toggle ('circle2')
   cat_animation.style.display= 'none'
+  
   setTimeout(() => {
-    
    cat_animation.style.display= 'block'
  }, 2000);
 })
@@ -333,7 +320,7 @@ cat_option1.addEventListener ('click', ()=> {
   
   setTimeout(() => {
     cat_phantom.style.marginTop = -550 +'px'
-    cat_phantom.style.transition = 6 + 's'
+    cat_phantom.style.transition = 12 + 's'
     eye.style.marginTop = -550 +'px'
     eye.style.transition = 0.5 + 's'
     
