@@ -13,12 +13,75 @@
 
 <body>
 
-<h1>fgdfgh</h1>
+<div style="border: 2px solid red; margin: 0px; padding: 0px; background: transparent;">
+
+  <div class="text">JavaScript</div>
+  <div id="showText">Lorem, amet maiores pariatur quasidelectus ipsum ex nisi dolorum molestias porro explicabo.</div>
+  </div>
+ <style>
+  .text{
+  background: linear-gradient(180deg,   rgb(25, 25, 167), rgb(72, 251, 132), rgb(93, 93, 244));
+  font-size: 90px;
+  /* width: 11ch; */
+  width: 500px;
+  margin-left: 35%;
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 5px transparent;
+  color:rgb(245, 243, 243);
+  font-family: monospace;
+  /* white-space: nowrap; */
+  display: flex;
+  border-right: 4px solid red;
+  /* animation: text-anim 1.5s steps(11) forwards; */
+  animation: text-anim 8.5s ease-in-out forwards;
+}
+
+/* -webkit-background-clip: text;// Обрезаем фон по тексту */
+/* -webkit-text-fill-color: transparent;// Прозрачный текст */
+
+@keyframes text-anim {
+  from{
+    width: 0;
+  }
+  to {
+    border-right:4px solid transparent;
+  }
+}
+
+#showText {
+  margin-left: 23%;
+  width: 91ch;
+  height: 20px;
+  /* background-clip:text; */
+  -webkit-background-clip: text;
+  /* -webkit-text-stroke: transparent; */
+  font-size: 1.3em;
+  font-family: monospace;
+  border-right: 3px solid red;
+  background-color: red;
+  color: transparent;
+  white-space: nowrap;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  animation: animShowText 5s  steps(91);
+  animation-delay: 5s;
+  }
   
+  @keyframes animShowText {
+    from{
+      width: 0;
+    }
+    to {
+     /* border: 3px solid transparent; */
+    }
+  }
+ </style>
+
+
+
   <div id="container_animation" class="content" style="display: flex;  width: 100%; padding: 50px;">
-    
-    
-    
+   
     <div class="container_left" style="border: 2px solid red; margin-top: -50px;">
 
     
