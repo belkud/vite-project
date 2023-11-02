@@ -360,6 +360,9 @@ button_cat_digger.addEventListener ('click', ()=> {
     cat_ghost_to_tomb.style.marginTop = 420 +'px'
     cat_ghost_to_tomb.style.transition = 3 + 's'
   }, 4500);
+  setTimeout(() => {
+    cat_ghost_to_tomb.style.display = 'none'
+  }, 7501);
   
   setTimeout(() => {
    tomb_cat.style.display = 'relative'
