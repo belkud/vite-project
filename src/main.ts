@@ -1,6 +1,25 @@
 import './style.css'
 
 
+//! ящик с шириной экрана
+
+const box = document.querySelector('.box') as HTMLButtonElement
+// box.onmousemove =(event)=> {
+document.onmousemove =(event)=> {
+  //! смена класса
+  box.classList.toggle('box2')
+
+  //! получение стилей JS
+  let computedStyle = getComputedStyle(document.body)
+  box.innerHTML = 'ширина экрана ' + computedStyle.width 
+  
+  console.log(computedStyle.marginTop );
+}
+
+
+
+
+
 let balls = document.querySelector('.ball') as HTMLImageElement
 let fields = document.querySelector('.field') as HTMLDivElement
 // let rect = fields.getBoundingClientRect()
@@ -59,18 +78,6 @@ const multycolor = document.querySelector('#multycolor') as HTMLButtonElement
 multycolor.addEventListener('click', sss)
 
 
-const box = document.querySelector('.box') as HTMLButtonElement
-// box.onmousemove =(event)=> {
-document.onmousemove =(event)=> {
-  //! смена класса
-  box.classList.toggle('box2')
-
-  //! получение стилей JS
-  let computedStyle = getComputedStyle(document.body)
-  box.innerHTML = 'ширина экрана ' + computedStyle.width 
-  
-  console.log(computedStyle.marginTop );
-}
 
 
 
