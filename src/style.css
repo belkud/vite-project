@@ -139,19 +139,20 @@ body {
 #cat_leg {
   /* top: 50%;
   left: 50%; */
-  animation: anim4 1s linear infinite;
+  animation: anim4 0.84s linear calc(3);
+  /* animation-iteration-count: calc(3); */
 }
 
 
 @keyframes anim4 {
   0% {
-    rotate: 30deg;
-  }
-  50% {
     rotate: 0deg;
   }
+  50% {
+    rotate: 40deg;
+  }
   100% {
-    rotate: 30deg;
+    rotate: 0deg;
   }
 }
 

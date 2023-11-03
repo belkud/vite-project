@@ -4,14 +4,14 @@ import './style.css'
 //! ящик с шириной экрана
 
 const box = document.querySelector('.box') as HTMLButtonElement
+let computedStyle = getComputedStyle(document.body)
+box.innerHTML = 'ширина экрана ' + computedStyle.width 
 // box.onmousemove =(event)=> {
 document.onmousemove =(event)=> {
   //! смена класса
   box.classList.toggle('box2')
 
   //! получение стилей JS
-  let computedStyle = getComputedStyle(document.body)
-  box.innerHTML = 'ширина экрана ' + computedStyle.width 
   
   console.log(computedStyle.marginTop );
 }
@@ -439,10 +439,9 @@ setInterval(() => {
   setTimeout(() => {
     cat_leg.style.display = 'none'
     cat_leg2.style.display = 'block'
-  }, 3500);
+  }, 4000);
 }, 10000);
 
-   
 
   
 
@@ -4102,7 +4101,7 @@ let anim  = document.querySelectorAll('.animal')
 anim.forEach(animal =>
   animal.addEventListener ('mousemove', ()=>{
   // anim.style.color = 'red'
-  
+
 }))
 
 
