@@ -319,11 +319,10 @@ cat_option1.addEventListener ('click', ()=> {
     cat_animation.style.marginTop = 200+ 'px'
     cat_animation.style.transition = 1.5 + 's'
   }, 4000);
- 
+  
   setTimeout(() => {
-    cat_leg.style.display = 'none'
-    cat_leg2.style.display = 'none'
-    cat_die.style.display = 'none'
+    cat_leg.style.marginTop = 400 +'px'
+    cat_leg2.style.marginTop = 400 +'px'
     cat.style.display = 'none'
     cat_phantom.style.display = 'block'
     cat_ghost_to_tomb.style.display = 'block'
@@ -417,20 +416,35 @@ cat_option2.addEventListener ('click', ()=> {
 
 //! Надпись "Добро пожаловать"
 const cat_phrase4 = document.querySelector('#cat_phrase4')as HTMLDivElement
+
+
 setTimeout(() => {
   cat_phrase4.style.opacity =1
   cat_phrase4.style.transition = 3 +'s'
   cat_leg.style.display = 'block'
   cat_leg2.style.display = 'none'
-}, 3000);
+}, 1000);
 setTimeout(() => {
   cat_phrase4.style.opacity = 0
   cat_phrase4.style.transition = 3 +'s'
   cat_leg.style.display = 'none'
   cat_leg2.style.display = 'block'
-}, 6500);
- 
+}, 3500);
 
+setInterval(() => {
+  setTimeout(() => {
+    cat_leg.style.display = 'block'
+    cat_leg2.style.display = 'none'
+  }, 1000);
+  setTimeout(() => {
+    cat_leg.style.display = 'none'
+    cat_leg2.style.display = 'block'
+  }, 3500);
+}, 10000);
+
+   
+
+  
 
 
 
