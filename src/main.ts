@@ -6,13 +6,25 @@ import './style.css'
 const box = document.querySelector('.box') as HTMLButtonElement
 let computedStyle = getComputedStyle(document.body)
 box.innerHTML = 'ширина экрана ' + computedStyle.width 
+window.addEventListener('resize',()=>{
+  box.innerHTML = 'ширина экрана ' + computedStyle.width 
+})
+
+
+
+
+
+
+
+
+
+
 // box.onmousemove =(event)=> {
 document.onmousemove =(event)=> {
   //! смена класса
   box.classList.toggle('box2')
 
-  //! получение стилей JS
-  
+  //! вывод стилей JS
   console.log(computedStyle.marginTop );
 }
 
@@ -417,19 +429,21 @@ cat_option2.addEventListener ('click', ()=> {
 //! Надпись "Добро пожаловать"
 const cat_phrase4 = document.querySelector('#cat_phrase4')as HTMLDivElement
 
-
-setTimeout(() => {
-  cat_phrase4.style.opacity =1
-  cat_phrase4.style.transition = 3 +'s'
-  cat_leg.style.display = 'block'
-  cat_leg2.style.display = 'none'
-}, 1000);
-setTimeout(() => {
-  cat_phrase4.style.opacity = 0
-  cat_phrase4.style.transition = 3 +'s'
-  cat_leg.style.display = 'none'
-  cat_leg2.style.display = 'block'
-}, 3500);
+if (!localStorage.hello) {
+  setTimeout(() => {
+    cat_phrase4.style.opacity ='1'
+    cat_phrase4.style.transition = 3 +'s'
+    cat_leg.style.display = 'block'
+    cat_leg2.style.display = 'none'
+  }, 1000);
+  setTimeout(() => {
+    cat_phrase4.style.opacity = '0'
+    cat_phrase4.style.transition = 3 +'s'
+    cat_leg.style.display = 'none'
+    cat_leg2.style.display = 'block'
+  }, 3500);
+  localStorage.hello = true
+}
 
 setInterval(() => {
   setTimeout(() => {
