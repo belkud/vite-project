@@ -33,7 +33,7 @@ fields.addEventListener('click', function (e) {
 let deg2 = 0
 const rotate2 = () => {
   deg2 += 180
-  if (deg2 == 360) deg2 = 0
+  //// if (deg2 == 360) deg2 = 0
   return deg2 + 'deg'
 }
 
@@ -60,11 +60,16 @@ multycolor.addEventListener('click', sss)
 
 
 const box = document.querySelector('.box') as HTMLButtonElement
-box.onmouseup =()=> {
-  console.log(box)
-
+// box.onmousemove =(event)=> {
+document.onmousemove =(event)=> {
+  //! смена класса
   box.classList.toggle('box2')
+
+  //! получение стилей JS
+  let computedStyle = getComputedStyle(document.body)
+  box.innerHTML = 'ширина экрана ' + computedStyle.width 
   
+  console.log(computedStyle.marginTop );
 }
 
 
@@ -403,8 +408,16 @@ cat_option2.addEventListener ('click', ()=> {
 
 
 
-
-
+//! Надпись "Добро пожаловать"
+const cat_phrase4 = document.querySelector('#cat_phrase4')as HTMLDivElement
+setTimeout(() => {
+  cat_phrase4.style.opacity =1
+  cat_phrase4.style.transition = 3 +'s'
+}, 3000);
+setTimeout(() => {
+  cat_phrase4.style.opacity = 0
+  cat_phrase4.style.transition = 3 +'s'
+}, 6000);
  
 
 
@@ -4059,7 +4072,14 @@ document.addEventListener('mousemove', function (event) {
 
 
 
-let anim  = document.querySelectorAll('.animal')
+let anim  = document.querySelectorAll('.animal') 
+
+anim.forEach(animal =>
+  animal.addEventListener ('mousemove', ()=>{
+  // anim.style.color = 'red'
+  
+}))
+
 
 
 

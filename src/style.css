@@ -2,8 +2,8 @@ body {
   /* background-color: rgb(233, 231, 231) ; */
   background: black;
   padding: 0px;
-  margin:  0px;
-  overflow-x: hidden;
+  margin-left:  50px;
+  overflow-x:hidden;
 }
 
 
@@ -233,7 +233,7 @@ body {
   margin-bottom: 20px;
 }
 
-#cat_phrase2, #cat_phrase3{
+#cat_phrase2, #cat_phrase3, #cat_phrase4{
   border: 3px solid grey !important;
   border-radius: 20px 20px 20px 0px;
   margin-top: -50px;
@@ -416,18 +416,35 @@ h1 {
 
 /* !Модальные окна с животными */
 .container {
-  background-color:aquamarine;
+  margin-top: 0px;
+  background-color:transparent;
   width: 500px;
   padding: 0px !important;
+  /* border: 1px solid red; */
+  min-height: 680px;
 }
 .animal{
+  border: 2px solid aliceblue;
   padding: 0px !important;
-  border: 1px solid red;
+  border-radius: 5px;
+  background: linear-gradient(45deg, aqua, rgb(66, 238, 66),aqua );
+  margin-top: 30px; 
+  box-shadow: 10px 10px 10px gray; 
+  transition: 1s;
+  position:static;
 }
+.animal:hover {
+  /* box-sizing:border-box; */
+  box-shadow: 20px 20px 10px gray;
+  margin-top: 15px ;
+  scale: 1.02;
+  transition: 1s;
+}
+
+
 .flex {
   display: flex;
   justify-content: space-between;
- 
   padding-top: 0px;
   padding-bottom: 0px;
 }
@@ -437,8 +454,14 @@ h1 {
   font-size: 18px;
   width: 17px;
   height: 17px;
+  cursor: pointer;
+  margin: 5px;
 }
-
+.cross:hover {
+  color: blue;
+  rotate: 45deg;
+  transition: .5s;
+}
 
 .city {
   background-color: coral;
@@ -459,7 +482,7 @@ h1 {
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: 3px solid red;
+    /* border: 3px solid red; */
     height: 100%;
   }
   #cat_container{
@@ -469,3 +492,5 @@ h1 {
     margin-left: 0px;
   }
   }
+  /*!ВАЖНО */
+  /*! ПРИ ИЗМЕНЕНИИ СКРИН МЕДИА УБРАТЬ <html lang="en" style="min-width: 900px;"> */
