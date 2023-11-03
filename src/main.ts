@@ -420,11 +420,15 @@ const cat_phrase4 = document.querySelector('#cat_phrase4')as HTMLDivElement
 setTimeout(() => {
   cat_phrase4.style.opacity =1
   cat_phrase4.style.transition = 3 +'s'
+  cat_leg.style.display = 'block'
+  cat_leg2.style.display = 'none'
 }, 3000);
 setTimeout(() => {
   cat_phrase4.style.opacity = 0
   cat_phrase4.style.transition = 3 +'s'
-}, 6000);
+  cat_leg.style.display = 'none'
+  cat_leg2.style.display = 'block'
+}, 6500);
  
 
 
