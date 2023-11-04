@@ -7,11 +7,13 @@ body {
 }
 
 .text {
-  
+  padding: 0px !important;
   background: linear-gradient(180deg, rgb(25, 25, 167), rgb(72, 251, 132), rgb(93, 93, 244));
   font-size: 90px;
+text-align: center;
   /* width: 11ch; */
   width: 500px;
+ 
   padding-top: 25px;
   padding-bottom: -20px;
   background-clip: text;
@@ -19,9 +21,9 @@ body {
   -webkit-text-stroke: 5px transparent;
   /* color:rgb(245, 243, 243); */
   font-family: monospace;
-  display: flex;
+  /* display: flex; */
   border-right: 4px solid red;
-  animation: text-anim .5s ease-in-out forwards;
+  animation: text-anim 2.5s ease-in-out forwards;
 }
 
 /* -webkit-background-clip: text;// Обрезаем фон по тексту */
@@ -38,6 +40,7 @@ body {
 }
 
 #showText {
+
   width: 91ch;
   height: 20px;
   /* background-clip:text; */
@@ -51,8 +54,8 @@ body {
   white-space: nowrap;
   margin-bottom: 25px;
   /* margin-top: 25px; */
-  animation: animShowText .5s steps(91);
-  animation-delay: 3s;
+  animation: animShowText 2.5s steps(91);
+  animation-delay: 1s;
   padding: 0px;
   padding-top: -20px;
 }
@@ -557,8 +560,7 @@ h1 {
     font-size: 85px;
   }
   #showText  {
-font-size: 0.9em;
-border: 1px solid wheat;
+  font-size: 0.9em;
   }
 
   #container_animation {
@@ -577,18 +579,19 @@ border: 1px solid wheat;
   }
   
   
-  
     }
 
+
+
   @media screen and (max-width: 768px) {
+
     #showText{
       font-size: 0.7em;
-      border: 1px solid red;
         }
     }
+
   @media screen and (max-width: 460px) {
     #showText {
       font-size: 0.6em;
-      border: 1px solid wheat;
         }
     }
