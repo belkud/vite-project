@@ -2,11 +2,70 @@ body {
   /* background-color: rgb(233, 231, 231) ; */
   background: black;
   padding: 0px;
-  margin-left:  50px;
+  margin-left:  auto;
   overflow-x:hidden;
 }
 
+.text {
+  
+  background: linear-gradient(180deg, rgb(25, 25, 167), rgb(72, 251, 132), rgb(93, 93, 244));
+  font-size: 90px;
+  /* width: 11ch; */
+  width: 500px;
+  padding-top: 25px;
+  padding-bottom: -20px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 5px transparent;
+  /* color:rgb(245, 243, 243); */
+  font-family: monospace;
+  display: flex;
+  border-right: 4px solid red;
+  animation: text-anim .5s ease-in-out forwards;
+}
 
+/* -webkit-background-clip: text;// Обрезаем фон по тексту */
+/* -webkit-text-fill-color: transparent;// Прозрачный текст */
+
+@keyframes text-anim {
+  from {
+    width: 0;
+  }
+
+  to {
+    border-right: 4px solid transparent;
+  }
+}
+
+#showText {
+  width: 91ch;
+  height: 20px;
+  /* background-clip:text; */
+  -webkit-background-clip: text;
+  /* -webkit-text-stroke: transparent; */
+  font-size: 1.3em;
+  font-family: monospace;
+  border-right: 3px solid red;
+  background-color: red;
+  color: transparent;
+  white-space: nowrap;
+  margin-bottom: 25px;
+  /* margin-top: 25px; */
+  animation: animShowText .5s steps(91);
+  animation-delay: 3s;
+  padding: 0px;
+  padding-top: -20px;
+}
+
+@keyframes animShowText {
+  from {
+    width: 0;
+  }
+
+  to {
+    /* border: 3px solid transparent; */
+  }
+}
 
 #switcher {
   border: 1px solid aliceblue;
@@ -478,7 +537,30 @@ h1 {
 }
 
 
-@media screen and (max-width: 900px) {
+
+
+
+
+
+
+
+  
+  @media screen and (max-width: 1200px) {
+    #width_of_display {
+      background: blue !important;
+      color: white;
+    }
+  
+
+@media screen and (max-width: 1000px) {
+  .text {
+    font-size: 85px;
+  }
+  #showText  {
+font-size: 0.9em;
+border: 1px solid wheat;
+  }
+
   #container_animation {
     display: flex;
     flex-direction: column;
@@ -493,5 +575,20 @@ h1 {
     margin-left: 0px;
   }
   }
-  /*!ВАЖНО */
-  /*! ПРИ ИЗМЕНЕНИИ СКРИН МЕДИА УБРАТЬ <html lang="en" style="min-width: 900px;"> */
+  
+  
+  
+    }
+
+  @media screen and (max-width: 768px) {
+    #showText{
+      font-size: 0.7em;
+      border: 1px solid red;
+        }
+    }
+  @media screen and (max-width: 460px) {
+    #showText {
+      font-size: 0.6em;
+      border: 1px solid wheat;
+        }
+    }

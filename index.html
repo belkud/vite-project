@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="min-width: 900px;">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -13,74 +13,25 @@
 
 <body>
 
-  <div style="margin: 0px; padding: 0px;">
 
-    <div class="text">JavaScript</div>
+
+
+
+  <div id="titles" style="align-items: center; margin: 0px; padding: 0px; display: flex;flex-direction: column; width: 100%;">
+
+    <div class="text" style="justify-content: center">JavaScript</div>
     <div id="showText">Lorem, amet maiores pariatur quasidelectus ipsum ex nisi dolorum molestias porro explicabo.</div>
   </div>
-  <style>
-    .text {
-      background: linear-gradient(180deg, rgb(25, 25, 167), rgb(72, 251, 132), rgb(93, 93, 244));
-      font-size: 90px;
-      /* width: 11ch; */
-      width: 500px;
-      padding-top: 25px;
-      padding-bottom: -20px;
-      margin-left: 35%;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-stroke: 5px transparent;
-      /* color:rgb(245, 243, 243); */
-      font-family: monospace;
-      display: flex;
-      border-right: 4px solid red;
-      animation: text-anim 8.5s ease-in-out forwards;
-    }
 
-    /* -webkit-background-clip: text;// Обрезаем фон по тексту */
-    /* -webkit-text-fill-color: transparent;// Прозрачный текст */
 
-    @keyframes text-anim {
-      from {
-        width: 0;
-      }
 
-      to {
-        border-right: 4px solid transparent;
-      }
-    }
 
-    #showText {
-      margin-left: 23%;
-      width: 91ch;
-      height: 20px;
-      /* background-clip:text; */
-      -webkit-background-clip: text;
-      /* -webkit-text-stroke: transparent; */
-      font-size: 1.3em;
-      font-family: monospace;
-      border-right: 3px solid red;
-      background-color: red;
-      color: transparent;
-      white-space: nowrap;
-      margin-bottom: 25px;
-      /* margin-top: 25px; */
-      animation: animShowText 15s steps(91);
-      animation-delay: 3s;
-      padding: 0px;
-      padding-top: -20px;
-    }
 
-    @keyframes animShowText {
-      from {
-        width: 0;
-      }
+  // div c шириной экрана
+  <div id="width_of_display"
+    style=" text-align: center; position: fixed; z-index: 12; width: 120px; height: 35px; border-radius: 5px;border: 2px solid aquamarine; background-color: lightgrey;">
+  </div>
 
-      to {
-        /* border: 3px solid transparent; */
-      }
-    }
-  </style>
 
 
 
@@ -186,7 +137,7 @@
 
     <!-- !Анимация кота -->
     <div id="cat_container"
-      style="overflow: hidden; padding: 0px; margin-top: -50px;  display: flex; flex-direction:column; height: 100vh; ">
+      style="margin-bottom: 100px; overflow: hidden; padding: 0px; margin-top: -100px;  display: flex; flex-direction:column; height: 100vh; ">
       <div id="rope"
         style="display: none; position: absolute; display: flex; flex-direction: column; margin-left: 20px;  margin-top: 0px;">
         <img src="cat_rope.png" id="rope1" style="display: none; width: 220px;" alt="">

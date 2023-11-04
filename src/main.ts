@@ -1,11 +1,26 @@
 import './style.css'
 
 
+
+
+const width_of_display = document.querySelector ('#width_of_display') as HTMLButtonElement
+window.addEventListener ('resize', ()=> {
+
+  let computedStyle = getComputedStyle(document.body)
+
+  width_of_display.innerHTML = 'ширина экрана ' + computedStyle.width 
+  
+})
+
+
+
+
 //! ящик с шириной экрана
 
 const box = document.querySelector('.box') as HTMLButtonElement
 let computedStyle = getComputedStyle(document.body)
 box.innerHTML = 'ширина экрана ' + computedStyle.width 
+
 window.addEventListener('resize',()=>{
   box.innerHTML = 'ширина экрана ' + computedStyle.width 
 })
@@ -25,7 +40,7 @@ document.onmousemove =(event)=> {
   box.classList.toggle('box2')
 
   //! вывод стилей JS
-  console.log(computedStyle.marginTop );
+  // console.log(computedStyle.marginTop );
 }
 
 
