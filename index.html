@@ -35,9 +35,9 @@
 
 
 
-  <div id="container_animation" class="content" style="display: flex;  width: 100%; padding: 50px;">
+  <div id="container_animation" class="content" style="display: flex;  width: 100%; padding: 0px;">
 
-    <div class="container_left" style=" margin-top: -50px;">
+    <div class="container_left" style=" margin-top: -50px; padding: 0px;">
 
 
 
@@ -53,13 +53,14 @@
       </div> -->
 
       <!--! Футбольное поле -->
-      <h1
-        style="text-align: center; margin-left: -185px; color: red; filter: drop-shadow(15px 15px 1px rgb(125, 121, 121));">
+      <div style="align-items: center; padding: 0px; display: flex; flex-direction: column; justify-content: center;">
+        <h1
+        style=" text-align: center; margin-left: 0px; color: red; filter: drop-shadow(15px 15px 1px rgb(125, 121, 121));">
         Игра в мячик</h1>
-
-      <div class="field" style="overflow: hidden; margin: 0px; padding: 0px; border: 1px solid aliceblue;">
-        <img width="500px" src="Football_field.jpg" alt="">
-        <img class="ball" src="ball2.png">
+        <div class="field" style="overflow: hidden; margin: 0px; padding: 0px; border: 1px solid aliceblue;">
+          <img width="500px" src="Football_field.jpg" alt="">
+          <img class="ball" src="ball2.png">
+        </div>
       </div>
       <style>
         .ball {
@@ -188,7 +189,7 @@
 
       <!-- <div id="cat_phrase3" style="position: absolute; display: block; width: 150px; margin-left: 450px; margin-top: 100px; opacity: 1;"> Спасибо за просмотр</div> -->
 
-      <div style="margin-top: 0px; margin-bottom: 10px; z-index: 10; max-height: 20px;">
+      <div style="border: 1px solid red; margin-top: 0px; margin-bottom: 10px; z-index: 10; max-height: 20px;">
         <button id="button_eye" style="cursor: pointer;">Кот, пусти слезу</button>
         <button id="button_cat_leg" style="cursor: pointer; margin: 0px 10px 0px 10px; width: 150px;">Кот, помаши лапкой
         </button>
