@@ -6,8 +6,9 @@ body {
   overflow-x:hidden;
 }
 
-#cat_animation {
-/* border: 1px solid gold; */
+#cat_container {
+border: 1px solid gold;
+margin:  0 auto;
 }
 
 .text {
@@ -600,10 +601,10 @@ h1 {
     #showText {
       font-size: 0.6em;
         }
-        #cat_animation {
-          margin-left: 50px;
+        #game_football {
+          margin-left: 10%;
         }
         #titles {
-          margin-left: 50px;
+          margin-left: 10%;
         }
     }
