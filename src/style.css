@@ -22,7 +22,7 @@ text-align: center;
   /* color:rgb(245, 243, 243); */
   font-family: monospace;
   /* display: flex; */
-  border-right: 4px solid red;
+  /* border-right: 4px solid red; */
   animation: text-anim 2.5s ease-in-out forwards;
 }
 
@@ -48,11 +48,11 @@ text-align: center;
   /* -webkit-text-stroke: transparent; */
   font-size: 1.3em;
   font-family: monospace;
-  border-right: 3px solid red;
+  /* border-right: 3px solid red; */
   background-color: red;
   color: transparent;
   white-space: nowrap;
-  animation: animShowText 2.5s steps(91);
+  animation: animShowText 10s steps(91);
   animation-delay: 1s;
   padding: 0px;
 
