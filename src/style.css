@@ -602,9 +602,10 @@ h1 {
       font-size: 0.6em;
         }
         #game_football {
-          margin-left: 100px;
+          margin-left: 130px;
         }
         #titles {
-          margin-left: 100px;
+          margin-left: 150px;
+          align-content: flex-end;
         }
     }
