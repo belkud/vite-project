@@ -52,11 +52,14 @@ text-align: center;
   background-color: red;
   color: transparent;
   white-space: nowrap;
-  /* margin-bottom: 25px; */
   animation: animShowText 2.5s steps(91);
   animation-delay: 1s;
   padding: 0px;
+
+  padding-bottom: -10px;
+  
   margin-top: 20px;
+  margin-bottom: 25px;
 }
 
 @keyframes animShowText {
