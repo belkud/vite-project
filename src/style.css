@@ -6,6 +6,24 @@ body {
   overflow-x:hidden;
 }
 
+
+
+/*! Идущий человек */
+.container_forest {
+border: 1px solid red;
+width: 800px;
+height: 500px;
+/* background: pink; */
+background-image:
+url('forest_background.jpg');
+background-size: cover;
+margin: 100px;
+}
+
+
+
+
+
 #cat_container {
 border: 1px solid gold;
 margin:  0 auto;
