@@ -11,18 +11,25 @@ body {
 /*! Идущий человек */
 .container_forest {
 box-shadow: 0px 0px 20px red;
-height: 50lvh;
+height: 500px;
 /* background: pink; */
 background-image:
 url('forest_background.jpg');
 background-size: cover;
 margin: 3%;
-
 }
-
-
-
-
+/* 
+.container_forest {
+  box-shadow: 0px 0px 20px red;
+  height: 50lvh;
+  /* background: pink; */
+  /* background-image: */
+  /* url('forest_background.jpg'); */
+  /* background-size: cover; */
+  /* margin: 3%; */
+  /* width: 100%; */
+/* } */
+ /* */ */
 
 #cat_container {
 border: 1px solid gold;
