@@ -10,14 +10,15 @@ body {
 
 /*! Идущий человек */
 .container_forest {
-border: 1px solid red;
-width: 800px;
-height: 500px;
+box-shadow: 0px 0px 20px red;
+height: 50vh;
 /* background: pink; */
 background-image:
 url('forest_background.jpg');
 background-size: cover;
 margin: 3%;
+display: flex;
+/* align-items: center; */
 }
 
 
