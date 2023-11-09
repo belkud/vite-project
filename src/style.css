@@ -17,7 +17,47 @@ background-image:
 url('forest_background.jpg');
 background-size: cover;
 margin: 3%;
+position: absolute;
 }
+
+
+
+
+#sportsman_box {
+  box-shadow: 15px 0px 10px aliceblue;
+  margin-top: 190px;
+  margin-left: 0px; 
+  position: absolute; 
+  z-index: 15;
+  height: 200px;
+  /* width: 200px !important; */
+}
+
+
+#sportsman {
+  border:  2px solid red;
+  height: 134px;
+  filter: drop-shadow(0px 0px 10px aqua); width: 100%;
+  animation: anim6 5.5s  infinite steps(6) ;
+}
+
+@keyframes anim6 {
+  0% {
+    transform: translate(0%, 0%);   
+    } 
+
+    100% {
+      transform: translate(107.6%, 0%);
+
+      /* background-position: -354px 0; */
+    
+  } 
+}
+
+
+
+
+
 /* 
 .container_forest {
   box-shadow: 0px 0px 20px red;
