@@ -12,9 +12,9 @@ body {
 .container_forest {
 box-shadow: 0px 0px 20px red;
 height: 500px;
-background: pink;
-/* background-image:
-url('forest_background.jpg'); */
+background: rgb(225, 10, 46);
+background-image:
+url('forest_background.jpg');
 background-size: cover;
 margin: 3%;
 position: absolute;
