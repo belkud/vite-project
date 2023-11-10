@@ -30,11 +30,12 @@ position: absolute;
   position: absolute; 
   z-index: 4;
   /* border:  5px solid blue; */
- 
+  
 }
 
 
 #sportsman {
+  z-index: 4;
   /* border:  1px solid red; */
   /* background-image: url(/Sportsman.png) ; */
   background-image: url(/Sportsman2.png) ;
