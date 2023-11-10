@@ -18,6 +18,7 @@ url('forest_background.jpg');
 background-size: cover;
 margin: 3%;
 position: absolute;
+min-width: 500px;
 }
 
 
