@@ -15,23 +15,23 @@ window.addEventListener ('resize', ()=> {
 //! бегающий мальчик
 const img_port_left = document.querySelector('#img_port_left') as HTMLDivElement
 const img_port_right = document.querySelector('#img_port_right') as HTMLDivElement
-setInterval(() => {
-  img_port_left.style.opacity = '0'
-  img_port_left.style.transition = 2 + 's'
-}, 1500);
-setInterval(() => {
-  img_port_left.style.opacity = '1'
-  img_port_left.style.transition = 2 + 's'
-}, 6000);
+// setInterval(() => {
+//   img_port_left.style.opacity = '0'
+//   img_port_left.style.transition = 2 + 's'
+// }, 1500);
+// setInterval(() => {
+//   img_port_left.style.opacity = '1'
+//   img_port_left.style.transition = 2 + 's'
+// }, 6000);
 
-setInterval(() => {
-  img_port_right.style.opacity = '1'
-  img_port_right.style.transition = 2 + 's'
-}, 4000);
-setInterval(() => {
-  img_port_right.style.opacity = '0'
-  img_port_right.style.transition = 2 + 's'
-}, 6000);
+// setInterval(() => {
+//   img_port_right.style.opacity = '1'
+//   img_port_right.style.transition = 2 + 's'
+// }, 4000);
+// setInterval(() => {
+//   img_port_right.style.opacity = '0'
+//   img_port_right.style.transition = 2 + 's'
+// }, 6000);
 
 
 
