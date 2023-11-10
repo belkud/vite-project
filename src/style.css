@@ -24,36 +24,49 @@ position: absolute;
 
 
 #sportsman_box {
-  box-shadow: 15px 0px 10px aliceblue;
+  /* box-shadow: 15px 0px 10px aliceblue; */
   margin-top: 190px;
   margin-left: 0px; 
   position: absolute; 
-  z-index: 15;
-  height: 200px;
-  /* width: 200px !important; */
+  z-index: 4;
+  /* height: 200px; */
+  border:  5px solid blue;
+ 
 }
 
 
 #sportsman {
-  border:  2px solid red;
-  height: 134px;
+  border:  1px solid red;
+  /* background-image: url(/Sportsman.png) ; */
+  background-image: url(/Sportsman2.png) ;
+  height: 114px;
+  width: 100px;
   filter: drop-shadow(0px 0px 10px aqua); width: 100%;
-  animation: anim6 5.5s  infinite steps(6) ;
+  animation: anim6 .5s  infinite steps(6),
+  anim7  6s linear  infinite;
+  left: 0%;
+  position: absolute;
 }
 
 @keyframes anim6 {
   0% {
-    transform: translate(0%, 0%);   
-    } 
-
-    100% {
-      transform: translate(107.6%, 0%);
-
-      /* background-position: -354px 0; */
-    
+    background-position: 1160px 0;
+  } 
+  
+  100% {
+    background-position: 20px 0;
   } 
 }
-
+@keyframes anim7 {
+  0% {
+    /* transform: translate(0%, 0%);    */
+    /* background-position: 1160px 0; */
+  } 
+  
+  100% {
+    left: 1760%;
+  } 
+}
 
 
 
