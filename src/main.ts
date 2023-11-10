@@ -12,6 +12,22 @@ window.addEventListener ('resize', ()=> {
   
 })
 
+//! бегающий мальчик
+const img_port_left = document.querySelector('#img_port_left') as HTMLDivElement
+const img_port_right = document.querySelector('#img_port_right') as HTMLDivElement
+setInterval(() => {
+  img_port_left.style.opacity = '0'
+}, 1500);
+setInterval(() => {
+  img_port_left.style.opacity = '1'
+}, 6000);
+setInterval(() => {
+  img_port_right.style.opacity = '1'
+}, 4500);
+setInterval(() => {
+  img_port_right.style.opacity = '0'
+}, 6000);
+
 
 
 

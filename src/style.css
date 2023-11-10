@@ -29,17 +29,16 @@ position: absolute;
   margin-left: 0px; 
   position: absolute; 
   z-index: 4;
-  /* height: 200px; */
-  border:  5px solid blue;
+  /* border:  5px solid blue; */
  
 }
 
 
 #sportsman {
-  border:  1px solid red;
+  /* border:  1px solid red; */
   /* background-image: url(/Sportsman.png) ; */
   background-image: url(/Sportsman2.png) ;
-  height: 114px;
+  height: 110px;
   width: 100px;
   filter: drop-shadow(0px 0px 10px aqua); width: 100%;
   animation: anim6 .5s  infinite steps(6),
