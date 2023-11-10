@@ -18,7 +18,11 @@ url('/forest_background.jpg');
 background-size: cover;
 margin: 3%;
 position: absolute;
-min-width: 500px;
+position: relative;
+z-index: 3; 
+/* overflow: hidden; */
+width: 45%;
+/* min-width: 500px; */
 }
 
 
@@ -663,7 +667,10 @@ h1 {
     margin-left: 0px;
   }
   }
-  
+  .container_forest {
+   
+    min-width: 100%;
+    }
   
     }
 
