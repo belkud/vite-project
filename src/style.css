@@ -670,6 +670,7 @@ h1 {
   .container_forest {
    
     min-width: 100%;
+    padding-right: 0px;
     }
   
     }
@@ -697,6 +698,6 @@ h1 {
       align-content: flex-end;
     }
     .container_forest {
-      padding-right: 500px;
+      padding-right: 450px;
       }
     }
