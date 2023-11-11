@@ -47,9 +47,11 @@ width: 55%;
   width: 100px;
   filter: drop-shadow(0px 0px 10px aqua); width: 100%;
   animation: anim6 .5s  infinite steps(6),
-  anim7  6s linear  infinite;
+  anim7  6s linear  infinite ;
+  /* animation-delay: 1s; */
   left: 0%;
   position: absolute;
+  opacity: 0;
 }
 
 @keyframes anim6 {

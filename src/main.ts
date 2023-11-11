@@ -15,24 +15,59 @@ window.addEventListener ('resize', ()=> {
 //! бегающий мальчик
 const img_port_left = document.querySelector('#img_port_left') as HTMLDivElement
 const img_port_right = document.querySelector('#img_port_right') as HTMLDivElement
-// setInterval(() => {
-//   img_port_left.style.opacity = '0'
-//   img_port_left.style.transition = 2 + 's'
-// }, 1500);
-// setInterval(() => {
-//   img_port_left.style.opacity = '1'
-//   img_port_left.style.transition = 2 + 's'
-// }, 6000);
+const sportsman = document.querySelector('#sportsman') as HTMLDivElement
+setInterval(() => {
+  img_port_left.style.opacity = '0'
+  // img_port_left.style.transition = .5 + 's'
+}, 1500);
+setInterval(() => {
+  img_port_left.style.opacity = '1'
+  // img_port_left.style.transition = .5 + 's'
+}, 6000);
 
-// setInterval(() => {
-//   img_port_right.style.opacity = '1'
-//   img_port_right.style.transition = 2 + 's'
-// }, 4000);
-// setInterval(() => {
-//   img_port_right.style.opacity = '0'
-//   img_port_right.style.transition = 2 + 's'
-// }, 6000);
+setTimeout(() => {
+  img_port_right.style.opacity = '1'
+  // img_port_right.style.transition = 2 + 's'
+}, 4500);
+setTimeout(() => {
+  img_port_right.style.opacity = '0'
+  // img_port_right.style.transition = 2 + 's'
+}, 6000);
 
+
+setInterval(()=> {
+  setTimeout(() => {
+    img_port_right.style.opacity = '1'
+    // img_port_right.style.transition = 2 + 's'
+  }, 4500);
+  setTimeout(() => {
+    img_port_right.style.opacity = '0'
+    // img_port_right.style.transition = 2 + 's'
+  }, 6000);
+},6000)
+
+
+
+setTimeout(() => {
+  sportsman.style.opacity = '1'
+  sportsman.style.transition = 1 + 's'
+}, 1000);
+setTimeout(() => {
+  sportsman.style.opacity = '0'
+  sportsman.style.transition = 1 + 's'
+}, 5000);
+
+
+setInterval(()=> {
+  setTimeout(() => {
+    sportsman.style.opacity = '1'
+    sportsman.style.transition = 1 + 's'
+  }, 1000);
+  setTimeout(() => {
+    sportsman.style.opacity = '0'
+    sportsman.style.transition = 1 + 's'
+  }, 5000);
+},6000)
 
 
 
