@@ -18,31 +18,31 @@ const img_port_right = document.querySelector('#img_port_right') as HTMLDivEleme
 const sportsman = document.querySelector('#sportsman') as HTMLDivElement
 setInterval(() => {
   img_port_left.style.opacity = '0'
-  // img_port_left.style.transition = .5 + 's'
+  img_port_left.style.transition = 1 + 's'
 }, 1500);
 setInterval(() => {
   img_port_left.style.opacity = '1'
-  // img_port_left.style.transition = .5 + 's'
+  img_port_left.style.transition = 1 + 's'
 }, 6000);
 
 setTimeout(() => {
   img_port_right.style.opacity = '1'
-  // img_port_right.style.transition = 2 + 's'
+  img_port_right.style.transition = 1 + 's'
 }, 4500);
 setTimeout(() => {
   img_port_right.style.opacity = '0'
-  // img_port_right.style.transition = 2 + 's'
+  img_port_right.style.transition = 1 + 's'
 }, 6000);
 
 
 setInterval(()=> {
   setTimeout(() => {
     img_port_right.style.opacity = '1'
-    // img_port_right.style.transition = 2 + 's'
+    img_port_right.style.transition = 1 + 's'
   }, 4500);
   setTimeout(() => {
     img_port_right.style.opacity = '0'
-    // img_port_right.style.transition = 2 + 's'
+    img_port_right.style.transition = 1 + 's'
   }, 6000);
 },6000)
 
