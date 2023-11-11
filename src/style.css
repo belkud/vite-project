@@ -16,6 +16,7 @@ height: 500px;
 background-image:
 url('/forest_background.jpg');
 background-size: cover;
+background: gray;
 margin: 3%;
 position: relative;
 z-index: 3; 
@@ -42,7 +43,6 @@ min-width: 600px;
 #sportsman {
   z-index: 4;
   /* border:  1px solid red; */
-  /* background-image: url(/Sportsman.png) ; */
   background-image: url(/Sportsman2.png) ;
   height: 110px;
   width: 100px;
