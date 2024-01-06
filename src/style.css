@@ -34,13 +34,14 @@ body {
 }
 
 h1 {
-  text-align: center; 
+  /* text-align: center;  */
   margin-left: 50px;
   margin-top: 80px;
   color: red !important; 
   filter: drop-shadow(15px 15px 1px rgb(125, 121, 121));
   color:  white;
-  min-width: 220px;
+  min-width: 320px;
+  /* border: 1px solid red; */
 }
 
 
