@@ -14,84 +14,6 @@
 <body>
 
 
-
-<!-- <div class="container_of_containers" style="display: flex; flex-direction: column;"> -->
-
-
-  
-  <div class="container_forest" style="">
-    
-    <div id="sportsman_box" style=" "> 
-      <div id="sportsman"></div>
-    </div>
-    
-    
-    <div id="img_port_left" style="width: 265px; margin-top: 100px; position: absolute; opacity: 1;">
-      <img   src="port_1.png" style="width: 114px;margin-right: -5px;position: relative;  z-index: 10;" alt="">
-      <img src="port_2.png" style="width: 148px; position: relative;  z-index: 3;" alt="">
-      <div style="width: 110px; height: 200px; background-color:black; border-radius: 50%; position:relative; z-index: 2; margin-left: 30px;margin-top: -280px;"></div>
-    </div>
-    <div id="img_port_right" style=" width: 265px; margin-top: 100px; position: absolute; margin-left: 500px; opacity: 0;   z-index:;">
-      <img src="port_2.png" style="transform: rotate(180deg); width: 148px;  position: relative; z-index: 3; margin-right: -5px;" alt="">
-      <img src="port_1.png" style="transform: rotate(180deg); width: 114px;margin-right: -5px;position: relative;  z-index: 10; padding-right: ;" alt="">
-      <div style="width: 110px; height: 200px; background-color:black; border-radius: 50%; position:relative; z-index: 2; margin-left: 90px;margin-top: -280px;"></div>
-    </div>
-    
-    
-  </div>
-  
-  <!-- <div class="container_forest" style="position: relative; z-index: ; overflow: hidden;width: 45%;">
-
-    <div style="box-shadow: 15px 0px 10px aliceblue; margin-top: 25%; margin-left: 0px;  position: absolute; z-index: 5;"> <img style="filter: drop-shadow(0px 0px 10px aqua); width: 100%;" src="sportsman.png" alt=""></div>
-    
-        <div id="img_port_left" style="width: 40%; height: 50%; margin-top: 10%; position: absolute; border: 2px solid greenyellow; z-index:;">
-          <img src="port_1.png" style="width: 40%; margin-right: -5px;position: relative; border: 1px solid red; z-index: 10;" alt="">
-          <img src="port_2.png" style="width: 52%; position: relative; border: 1px solid red; z-index: 3;" alt="">
-          <div style="width: 40%;   height: 45%;   background-color:black; border-radius: 50%; position:relative; z-index: 12; margin-left: 3%;margin-top: 0%; border:  2px solid pink;"></div>
-        </div>
-        <div id="img_port_right" style=" width: 265px; margin-top: 100px; position: absolute; margin-left: 500px;   border: 2px solid blue; z-index:;">
-          <img src="port_2.png" style="transform: rotate(180deg); width: 148px;  position: relative; border: 1px solid red; z-index: 3; margin-right: -5px;" alt="">
-          <img src="port_1.png" style="transform: rotate(180deg); width: 114px;margin-right: -5px;position: relative; border: 1px solid red; z-index: 10; padding-right: ;" alt="">
-          <div style="width: 110px; height: 200px; background-color:black; border-radius: 50%; position:relative; z-index: 2; margin-left: 90px;margin-top: -280px;"></div>
-        </div>
-    
-    
-      </div> -->
-
-
-  <!-- </div> -->
-    
-    
-      <!-- </div> -->
-
-
-
-  <!--! div c шириной экрана -->
-
-  <div id="width_of_display"
-    style=" text-align: center; position: fixed; z-index: 12; width: 120px; height: 35px; border-radius: 5px;border: 2px solid aquamarine; background-color: lightgrey;">
-  </div>
-
-
-
-
-  <div id="container_animation" class="content" style="display: flex;  width: 100%; padding: 0px;">
-
-    <div class="container_left" style=" margin-top: -50px; padding: 0px;">
-
-
-
-      <!-- ! перключатель картинок
-      <button id="switcher"
-      style="padding: 5px; border-radius: 5px; background-color: red; color: aliceblue;">переключатель
-        картинок</button>
-        <button id="clear">обновить анимацию</button>
-        
-      <div style="height: 120px;">
-        <img id="ball_switcher" src="ball2.png" style="width: 100px; display: none;" alt="">
-        <img id="field_switcher" src="Football_field.jpg" style="width: 200px;" alt="">
-      </div> -->
-
       <!--! Футбольное поле -->
       <div id="game_football"
         style="align-items: center; padding: 0px; display: flex; flex-direction: column; justify-content: center;">
@@ -112,7 +34,6 @@
           border-radius: 50%;
           transition: 1s;
           filter: drop-shadow(15px 15px 6px black);
-
         }
 
         .field {
@@ -122,6 +43,42 @@
           position: relative;
         }
       </style>
+  
+
+
+  <h1
+  style=" text-align: center; margin-left: 0px; color: red; filter: drop-shadow(15px 15px 1px rgb(125, 121, 121));">
+  Работа со спрайтами</h1>
+  <div class="container_forest">
+    <div id="sportsman_box"> 
+      <div id="sportsman"></div>
+    </div>
+    
+    
+    <div id="img_port_left" style="width: 265px; margin-top: 100px; position: absolute; opacity: 1;">
+      <img   src="port_1.png" style="width: 114px;margin-right: -5px;position: relative;  z-index: 10;" alt="">
+      <img src="port_2.png" style="width: 148px; position: relative;  z-index: 3;" alt="">
+      <div style="width: 110px; height: 200px; background-color:black; border-radius: 50%; position:relative; z-index: 2; margin-left: 30px;margin-top: -280px;"></div>
+    </div>
+    <div id="img_port_right" style=" width: 265px; margin-top: 100px; position: absolute; margin-left: 500px; opacity: 0;   z-index:;">
+      <img src="port_2.png" style="transform: rotate(180deg); width: 148px;  position: relative; z-index: 3; margin-right: -5px;" alt="">
+      <img src="port_1.png" style="transform: rotate(180deg); width: 114px;margin-right: -5px;position: relative;  z-index: 10; padding-right: ;" alt="">
+      <div style="width: 110px; height: 200px; background-color:black; border-radius: 50%; position:relative; z-index: 2; margin-left: 90px;margin-top: -280px;"></div>
+    </div>
+    
+    
+  </div>
+  
+
+
+  <div id="container_animation" class="content" style="display: flex;  width: 100%; padding: 0px;">
+
+    <div class="container_left" style=" margin-top: -50px; padding: 0px;">
+
+
+ 
+
+
 
 
 
@@ -177,81 +134,6 @@
 
 
 
-    <!-- !Анимация кота -->
-    <div id="cat_container"
-      style=" overflow: hidden; padding: 0px; margin-top: -100px;  display: flex; flex-direction:column; height: 100vh; min-height: 923px; min-width: 495px;">
-      <div id="rope"
-        style="display: none; position: absolute; display: flex; flex-direction: column; margin-left: 20px;  margin-top: 0px;">
-        <img src="cat_rope.png" id="rope1" style="display: none; width: 220px;" alt="">
-        <img src="cat_rope2.png" id="rope2" style="display: none; width: 220px; z-index: 3;" alt="">
-      </div>
-
-      <div id="cat_animation"
-        style=" overflow: hidden; padding-bottom: 150px !important; margin-bottom: 0px; margin-top: 350px; height: 100%;">
-        <div style="position: absolute; margin-left: 95px; margin-top: 90px; "><img src="cat_leg.png" id="cat_leg"
-            style="display: none;" alt="" srcset="">
-        </div>
-        <div style="position: absolute; margin-left: 95px; margin-top: 90px;"><img src="cat_leg2.png" id="cat_leg2"
-            style="display: block;" alt="" srcset=""></div>
-
-        <img src="cat_ghost_to_tomb.png"
-          style=" position: absolute; z-index: 0; margin-top: 0px; opacity: 0;   margin-left:0;   display:block  ;"
-          id="cat_ghost_to_tomb" alt="" srcset="">
-        <img src="cat.png" id="cat" style="position: relative; margin-right: 0px ;">
-        <img src="cat_die.png" id="cat_die" style="position: relative; z-index: 1; margin-top: -300px; display: none;"
-          alt="">
-
-
-        <div style=" position: absolute; height: 200px; margin-top: -240px; margin-left: 147px;"><img src="eye.png"
-            id="eye" alt="" style="z-index: 2;  width: 25px;  display: none; "></div>
-
-        <div id="cat_dialog" style=" position: absolute; margin-top: -290px; margin-left: 200px; text-align: center;">
-          <div id="cat_phrase" style="opacity: 0; color: aliceblue;"> Хозяин, ты уверен, что хочешь меня вздернуть?
-          </div>
-          <div id="cat_phrase2" style="opacity: 0; color: aliceblue;"> Спасибо</div>
-          <div style="display: flex; border: none;">
-            <button id="cat_option1" class="cat_opt" style="opacity: 0;">Давай посмотрим</button>
-            <button id="cat_option2" class="cat_opt" style="opacity: 0;">Пожалуй откажусь</button>
-          </div>
-        </div>
-      </div>
-
-      <img src="cat_ghost.png" id="cat_phantom"
-        style="filter: drop-shadow(0px 0px 10px aliceblue); display: none;  position: absolute;  opacity: .6; z-index: 2;  margin-left: 20px; margin-top: 220px;">
-
-
-      <!-- полная часть -->
-      <img src="tomb_cat.png" id="tomb_cat" alt="" srcset=""
-        style="z-index: 4; position: absolute; width: 300px; margin-left: 0px; margin-top: 436px; opacity: 0;">
-
-      <!-- земля -->
-      <img src="tomb_cat2.png" id="tomb_cat2" alt="" srcset=""
-        style="z-index: 3; position: absolute; width: 300px; margin-left: 0px; margin-top: 436px; opacity:0 ;">
-
-      <!-- <div id="cat_phrase3" style="position: absolute; display: block; width: 150px; margin-left: 450px; margin-top: 100px; opacity: 1;"> Спасибо за просмотр</div> -->
-
-      <div
-        style="display: grid; grid-gap: 10px; grid-template-columns:  repeat(3, 1fr); margin-top: 0px; margin-bottom: 10px; z-index: 10; ">
-        <button id="button_eye" style="cursor: pointer; min-width: 140px;">Кот, пусти слезу</button>
-        <button id="button_cat_leg" style="cursor: pointer; min-width: 140px; ">Кот, помаши лапкой
-        </button>
-        <button id="button_remove" style="cursor: no-drop; min-width: 140px;">Вздернуть кота?</button>
-        <button id="button_cat_digger" style="cursor: pointer; min-width: 150px; opacity: 0.5; ">Закопать кота?</button>
-        <button id="button_phantom" style="opacity: 0.5; cursor: pointer; min-width: 150px;">Вызвать котодух?</button>
-      </div>
-
-      <!--! "Адаптация бага под экран" -->
-      <div style=" position: absolute; margin-top: 655px; width: 250px; height: 200px; background-color: black;"></div>
-
-      <!--! Приветствие кота -->
-      <div id="cat_phrase4"
-        style="position: absolute; opacity: 0; color: aliceblue;margin-top: 380px; margin-left: 250px; font-size: 1.5em; width: 220px; text-align: center;">
-        Добро пожаловать!</div>
-
-    </div>
-
-
-
 
 
 
@@ -276,34 +158,7 @@
       <button data-num="4" class="btn">кнопка 4</button>
     </div>
   </div>
-
-
-
-  <!-- красный и черный квадраты -->
-  <!-- <div class="blackSquare"></div> -->
-  <!-- <div class="redSquare"></div> -->
-
-
-
-
-  <!--! Футбольное поле -->
-
-  <div class="title2">Вы забили гол!!!</div>
-  <div class="title3">Вы красавчик!</div>
-  <div class="trickField">
-    <img class="ball" src="/ball2.png">
-  </div>
-  <div class="gate"></div>
-  <img class="changeWidth" src="/Football_field.jpg" alt="">
-
-  <div>
-    <button class="cherry"> начать игру?</button>
-    <button class="cherry2">сделать автогол?</button>
-  </div>
-
-
-  <div class="coordinates"> </div>
-  <div class="pageCoordinates"> </div>
+ 
 
 
 
