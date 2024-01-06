@@ -181,6 +181,199 @@ circle.addEventListener ('mousemove', (event)=> {
 
 
 
+//! Маркер
+
+const markerContainer = document.querySelector('#markerContainer') as HTMLDivElement
+const redMarker = document.querySelector('#red') as HTMLButtonElement
+const greenMarker = document.querySelector('#green') as HTMLButtonElement
+const blueMarker = document.querySelector('#blue') as HTMLButtonElement
+const deleteLetters = document.querySelector('#deleteLetters') as HTMLButtonElement
+const deleteLetters2 = document.querySelector('#deleteLetters2') as HTMLButtonElement
+const printLetters = document.querySelector('#printLetters') as HTMLButtonElement
+const writeText = document.querySelector('#writeText') as HTMLInputElement
+const printText = document.querySelector('#printText') as HTMLDivElement
+const pencil = document.querySelector('#pencil') as HTMLPictureElement
+const rightSide = document.querySelector('#rightSide') as HTMLDivElement
+const line1 = document.querySelector('#line1') as HTMLDivElement
+const line2 = document.querySelector('#line2') as HTMLDivElement
+const simbols = document.querySelector('#simbols') as HTMLDivElement
+
+
+// звуки
+const audio = new Audio()
+audio.src = 'ChangeMarker.mp3'
+
+const audio2 = new Audio()
+audio2.src = 'WriteMarker.mp3'
+
+let eraser = new Audio()
+eraser.src = 'eraserSound.mp3'
+
+let print = new Audio()
+print.src = 'printSound.mp3.mp3'
+
+// printText.style.height = 20 +'px'
+
+printLetters.addEventListener('click', () => {
+   print.play()
+   // div c печатными символами
+   printText.innerHTML += writeText.value
+   let num = printText.innerHTML.length
+   //    if (num>=0 && num<=43) {
+   //       printText.style.height =20 +'px'
+   //    } else if (num>43 && num<=86) {
+   //       printText.style.height =32 +'px'
+   //    } else if (num>86 && num<=129) {
+   //       printText.style.height =48 +'px'
+   //    } else if (num>129 && num<=172){
+   //       printText.style.height =64 +'px'
+   //    } else {
+   //       printText.style.height =80 +'px'
+   //    }
+   //    if (num>=200) {
+   //       alert ('Нижний блок заполнен')
+   //       printText.style.color ='red'
+   // }
+
+   //! ВОПРОСЫ:
+   //! 1. Как можно код выше сделать через цикл
+   //! 2. Через <span> менять цвет маркера
+   //! 3. Некорректное отображение поведения кнопок (event.code == 'Backspace' || event.code == 'Delete')
+
+   // div c печатными символами (второй способ)
+   for (let i = 1; i <= 5; i++) {
+      if (num / 43 > i) {
+         printText.style.height = 16 * (i + 1) + 'px'
+         // console.log(num);
+         // console.log(i);
+      }
+      if (num >= 200) {
+         console.log('Нижний блок заполнен')
+         printText.style.color = 'red'
+      }
+   }
+
+
+
+   //бегущая нижняя строчка
+   let number = rightSide.childNodes[15]
+   number.innerHTML = printText.innerHTML.length
+   let moveLine = line2.firstElementChild
+
+   moveLine.style.width = simbols.innerHTML * 1.19 + 'px'
+   moveLine.style.transition = .5 + 's'
+   moveLine.style.border = '1px solid aliceblue'
+
+   // div 'Заполненность нижнего блока'
+   line2.previousElementSibling.innerHTML = simbols.innerHTML / 2 + '%'
+
+})
+
+
+let moveLine = line1.firstElementChild as HTMLDivElement
+// печать текста в верхнем блоке
+writeText.addEventListener('keydown', (event) => {
+
+   pencil.style.marginLeft = writeText.value.length * 7.4 - 1000 + 'px'
+   let elem = rightSide.childNodes[3] as HTMLDivElement
+   let digital = writeText.value.length
+   elem.innerHTML = digital + 1
+
+   let elem2 = rightSide.childNodes[7]
+   elem2.innerHTML = (digital + 1) * 2.5 + '%'
+
+
+   moveLine.style.border = '1px solid aliceblue'
+   moveLine.style.width = (digital + 1) * 6 + 'px'
+   moveLine.style.transition = .5 + 's'
+
+   audio2.play()
+
+   if (elem.innerHTML >= 41) {
+      writeText.innerHTML = ''
+      alert('Блок переполнен')
+   }
+
+   if (event.code == 'Backspace' || event.code == 'Delete' || event.key == 'Backspace' || event.key == 'Delete') {
+      pencil.style.marginLeft = writeText.value.length * 7.4 - 1014.4 + 'px'
+      elem2.innerHTML = (digital - 1) * 2.5 + '%'
+      elem.innerHTML = digital - 1
+      if (elem.innerHTML == -1) {
+         elem.innerHTML = 0
+      }
+
+      if (elem2.innerHTML == -2.5 + '%') {
+         elem2.innerHTML = 0 + '%'
+      }
+
+      if (moveLine.style.width == (digital + 1) * 6 + 'px') {
+         moveLine.style.width = (digital - 1) * 6 + 'px'
+         // console.log(digital);
+      }
+      if (digital == 0) {
+         moveLine.style.width = 0 + 'px'
+         pencil.style.marginLeft = -1007 + 'px'
+      }
+   }
+
+
+
+})
+
+
+//! смена маркера
+redMarker.addEventListener('click', () => {
+   writeText.style.color = 'red'
+   pencil.classList.remove('pencilBlue')
+   pencil.classList.add('pencilRed')
+   pencil.classList.remove('pencilGreen')
+   audio.play()
+})
+
+greenMarker.addEventListener('click', () => {
+   writeText.style.color = 'green'
+   pencil.classList.add('pencilGreen')
+   pencil.classList.remove('pencilBlue')
+   audio.play()
+})
+
+blueMarker.addEventListener('click', () => {
+   writeText.style.color = 'blue'
+   pencil.classList.add('pencilBlue')
+   audio.play()
+})
+
+// удаление символов в верхнем блоке
+deleteLetters.addEventListener('click', (event) => {
+   eraser.play()
+   writeText.value = ''
+   pencil.style.marginLeft = -1007 + 'px'
+   if (event.code == 'Backspace') {
+      pencil.style.marginLeft = writeText.value.length * 7.4 - 1014.4 + 'px'
+   }
+})
+
+// удаление символов в нижнем блоке
+deleteLetters2.addEventListener('click', (event) => {
+   eraser.play()
+   printText.innerHTML = ''
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Задание 1
 
