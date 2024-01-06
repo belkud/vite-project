@@ -16,58 +16,38 @@
 
       <!--! Футбольное поле -->
       <div id="game_football"
-        style="align-items: center; padding: 0px; display: flex; flex-direction: column; justify-content: center;">
-        <h1
-          style=" text-align: center; margin-left: 0px; color: red; filter: drop-shadow(15px 15px 1px rgb(125, 121, 121));">
-          Игра в мячик</h1>
+        style="align-items: center; padding: 0px; display: flex; flex-direction: column;">
+        <h1>Игра в мячик</h1>
         <div class="field" style="overflow: hidden; margin: 0px; padding: 0px; border: 1px solid aliceblue;">
-          <img width="500px" src="Football_field.jpg" alt="">
+          <img width="600px" src="Football_field.jpg" alt="">
           <img class="ball" src="ball2.png">
         </div>
       </div>
-      <style>
-        .ball {
-          position: absolute;
-          left: 0px;
-          top: 0px;
-          width: 60px;
-          border-radius: 50%;
-          transition: 1s;
-          filter: drop-shadow(15px 15px 6px black);
-        }
-
-        .field {
-          width: 500px;
-          height: 333px;
-          margin: 45px 45px;
-          position: relative;
-        }
-      </style>
-  
+      
+ 
 
 
-  <h1
-  style=" text-align: center; margin-left: 0px; color: red; filter: drop-shadow(15px 15px 1px rgb(125, 121, 121));">
-  Работа со спрайтами</h1>
-  <div class="container_forest">
-    <div id="sportsman_box"> 
-      <div id="sportsman"></div>
+      <!--! Бегущий парень -->
+    <h1>Работа со спрайтами</h1>
+      <div class="container_forest">
+        <div id="sportsman_box"> 
+          <div id="sportsman"></div>
+        </div>
+        
+        
+        <div id="img_port_left" style="width: 265px; margin-top: 100px; position: absolute; opacity: 1;">
+          <img   src="port_1.png" style="width: 114px;margin-right: -5px;position: relative;  z-index: 10;" alt="">
+          <img src="port_2.png" style="width: 148px; position: relative;  z-index: 3;" alt="">
+          <div style="width: 110px; height: 200px; background-color:black; border-radius: 50%; position:relative; z-index: 2; margin-left: 30px;margin-top: -280px;"></div>
+        </div>
+        <div id="img_port_right" style=" width: 265px; margin-top: 100px; position: absolute; margin-left: 500px; opacity: 0;   z-index:;">
+          <img src="port_2.png" style="transform: rotate(180deg); width: 148px;  position: relative; z-index: 3; margin-right: -5px;" alt="">
+          <img src="port_1.png" style="transform: rotate(180deg); width: 114px;margin-right: -5px;position: relative;  z-index: 10; padding-right: ;" alt="">
+          <div style="width: 110px; height: 200px; background-color:black; border-radius: 50%; position:relative; z-index: 2; margin-left: 90px;margin-top: -280px;"></div>
+        </div>
+      
+      
     </div>
-    
-    
-    <div id="img_port_left" style="width: 265px; margin-top: 100px; position: absolute; opacity: 1;">
-      <img   src="port_1.png" style="width: 114px;margin-right: -5px;position: relative;  z-index: 10;" alt="">
-      <img src="port_2.png" style="width: 148px; position: relative;  z-index: 3;" alt="">
-      <div style="width: 110px; height: 200px; background-color:black; border-radius: 50%; position:relative; z-index: 2; margin-left: 30px;margin-top: -280px;"></div>
-    </div>
-    <div id="img_port_right" style=" width: 265px; margin-top: 100px; position: absolute; margin-left: 500px; opacity: 0;   z-index:;">
-      <img src="port_2.png" style="transform: rotate(180deg); width: 148px;  position: relative; z-index: 3; margin-right: -5px;" alt="">
-      <img src="port_1.png" style="transform: rotate(180deg); width: 114px;margin-right: -5px;position: relative;  z-index: 10; padding-right: ;" alt="">
-      <div style="width: 110px; height: 200px; background-color:black; border-radius: 50%; position:relative; z-index: 2; margin-left: 90px;margin-top: -280px;"></div>
-    </div>
-    
-    
-  </div>
   
 
 
