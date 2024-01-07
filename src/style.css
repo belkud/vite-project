@@ -109,6 +109,9 @@ width: 55%;
   display: flex;
   margin: 50px;
 }
+#randomColor {
+  margin-top: 0px;
+}
 
 #randomColor>div, #randomColor2>div, #randomColor3>div {
 border: 1px solid #747373;
@@ -789,6 +792,9 @@ div{
     }
     #writeText {
      font-size: 0.97em; 
+    }
+    #markerTitle {
+      margin-top: 105px;
     }
     }
 
