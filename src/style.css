@@ -247,6 +247,7 @@ transition: .3s;
  border: 1px solid white;
  text-align: center;
  font-size: .9em;
+ border-radius: 5px;
 }
 
 #rightSide>div {
@@ -770,8 +771,12 @@ div{
         margin-top: 200px;
       }
       #rightSide {
-        width: 343px;
+        width: 310px;
+        margin-top: 15px;
         margin-left: 0px;
+      }
+      #changePosition {
+        margin-bottom: 450px;
       }
       
      #markerContainer {
