@@ -328,19 +328,28 @@ changeDigitals.addEventListener('click', ()=> {
 //! Смена языка
 const changeLanguage = document.querySelector('#changeLanguage') as HTMLHeadElement
 const language = document.querySelector('#language') as HTMLButtonElement
-
 const markerColor = document.querySelector('#markerColor') as HTMLDivElement
+const red = document.querySelector('#red') as HTMLDivElement
+const green = document.querySelector('#green') as HTMLDivElement
+const blue = document.querySelector('#blue') as HTMLDivElement
 
 changeLanguage.addEventListener ('click', ()=> {
    if (language.innerHTML =='русский') {
       language.innerHTML = 'английский'
       language.style.backgroundColor = 'blue'
+      
       markerColor.innerHTML = 'Выбрать цвет маркера'
-   } else {
+      red.innerHTML = 'красный'
+      green.innerHTML = 'зелёный'
+      blue.innerHTML = 'синий'
+    } else {
       language.innerHTML = 'русский'
       language.style.backgroundColor = 'red'
       
       markerColor.innerHTML = 'Change color of marker'
+      red.innerHTML = 'red'
+      green.innerHTML = 'green'
+      blue.innerHTML = 'blue'
    }
 })
 
