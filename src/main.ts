@@ -176,6 +176,155 @@ circle.addEventListener ('mousemove', (event)=> {
 })
 
 
+
+const startChangeColor = document.querySelector('#startChangeColor') as HTMLButtonElement
+const randomColor = document.querySelector  ('#randomColor')  as HTMLDivElement
+const scoreNum = document.querySelector('#scoreNum') as HTMLDivElement
+
+
+const giftPicture = document.querySelector('#giftPicture') as HTMLPictureElement
+const monkey = document.querySelector('#monkey') as HTMLPictureElement
+
+
+
+
+
+
+
+startChangeColor.addEventListener('mouseup', ()=> {
+    giftPicture.style.transition = 3 +'s'
+
+    
+    let x = randomColor.children[(Math.round(Math.random()*9))] 
+    if(x.style.backgroundColor == 'yellow') {
+        x.style.backgroundColor = 'transparent'
+     } else {
+        x.style.backgroundColor = 'yellow'    
+    }
+    scoreNum.innerHTML += `${x.innerHTML} `
+    
+    if (x==randomColor.children[4]){
+        monkey.style.display = 'block'
+        giftPicture.style.display = 'block'
+    }  
+})
+
+
+giftPicture.addEventListener('click',()=> {
+    alert('Вы выиграли 0 рублей')
+    setTimeout(() => {
+        monkey.style.marginTop = -65 +'px'
+        monkey.style.transition = 3 +'s'
+    }, 500);
+    setTimeout(() => {
+        monkey.style.transition = 3 +'s'
+        monkey.style.marginTop = 0 +'px'
+    }, 2500);
+})
+    
+ 
+
+//! Работа с случайными числами
+const startChangeColor2 = document.querySelector('#startChangeColor2') as HTMLButtonElement
+const randomColor2 = document.querySelector('#randomColor2') as HTMLDivElement
+
+startChangeColor2.addEventListener('click', ()=> {
+    for (let a of randomColor2.children) {
+        a.classList.remove('yellow')
+    }
+
+    let x = randomColor2?.children[(Math.round(Math.random()*9))] 
+    x?.classList.add('yellow')        
+})
+
+const startChangeColor3 = document.querySelector('#startChangeColor3') as HTMLButtonElement
+const randomColor3 = document.querySelector('#randomColor3')
+
+startChangeColor3.addEventListener('click', ()=>{
+    let color = randomColor3.children[(Math.round(Math.random()*10))]
+    color.style.backgroundColor = 'yellowgreen'
+
+    setTimeout(() => {
+        color.style.backgroundColor = 'transparent'
+    }, 500);
+    console.log(color)
+})
+
+
+
+
+
+
+//! Движение линий по обработчику 
+
+const moveLines = document.querySelectorAll <HTMLDivElement> ('.moveLines')  
+
+const massiveNum = [99, 78, 55, 91, 23, 77, 84, 45]
+
+let score = 0
+
+const buttonLines = document.querySelector('#buttonLines') as HTMLButtonElement
+buttonLines.addEventListener('click',  ()=> {
+    if (buttonLines.innerHTML == 'Start (◕‿◕)') {
+        buttonLines.innerHTML = 'Come back'
+        
+// счетчик цифр на увеличение
+    setInterval( ()=>{
+        score+=1
+        for (let i=0; i<=massiveNum.length; i++) {
+            moveLines[i].innerHTML = `${score}`
+            let num = massiveNum[i]
+        if (moveLines[i].innerHTML>=num) {
+             moveLines[i].innerHTML=num
+        }
+      }    
+    },60)
+
+    // 'Увеличение' строк
+    for (let i=0; i<massiveNum.length; i++) {
+        let digital = (massiveNum[i])
+        moveLines[i].style.marginLeft = digital*.9 +'%'  
+        moveLines[i].style.transition = digital/16 +'s'  
+        setTimeout(() => {
+            moveLines[i].style.color = 'black'
+        }, 6000);
+        setTimeout(() => {
+            moveLines[i].style.color = 'white'
+        }, 12000);
+    }
+    
+     
+//! кнопка 'come back'
+} else {
+    if (buttonLines.innerHTML = 'Start (◕‿◕)') {
+        // 'Уменьшение' строк
+        for (let i=0; i<massiveNum.length; i++) {
+            let digital = (massiveNum[i])
+            moveLines[i].style.marginLeft = 0 +'%'  
+            moveLines[i].style.transition = digital/16 +'s'  
+            }
+        }
+    }
+})
+
+
+
+
+const changeDigitals = document.querySelector('#changeDigitals') as HTMLButtonElement
+changeDigitals.addEventListener('click', ()=> {
+    
+    if (changeDigitals.style.backgroundColor=='yellow'){
+        changeDigitals.style.backgroundColor='aliceblue'       
+    }else {
+        changeDigitals.style.backgroundColor='yellow'
+        console.log(2);
+          let reload = window.location.reload()
+   }  
+})
+
+
+
+
 //! Смена языка
 const changeLanguage = document.querySelector('#changeLanguage') as HTMLHeadElement
 const language = document.querySelector('#language') as HTMLButtonElement

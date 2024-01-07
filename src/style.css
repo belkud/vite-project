@@ -103,6 +103,107 @@ width: 55%;
 }
 
 
+/*! Работа с случайными числами */
+
+#randomColor, #randomColor2, #randomColor3 {
+  display: flex;
+  margin: 50px;
+}
+
+#randomColor>div, #randomColor2>div, #randomColor3>div {
+border: 1px solid #747373;
+border-right: none;
+width: 60px;
+text-align: center;
+color: aliceblue;
+padding: 0px;
+}
+
+
+
+#startChangeColor, #startChangeColor2, #showList, #startChangeColor3 {
+  width: 100px;
+  margin-left: 50px;
+  background-color: rgb(65, 152, 228);
+  color: aliceblue;
+}
+
+.yellow {
+  background-color: yellow ;
+  color: white;
+}
+
+#showList {
+  width: 200px;
+  margin-top: 25px;
+}
+
+#scoreNum {
+  background-color: lightgray;
+  margin: 25px;
+  width: 300px;
+  min-height: 55px;
+}
+
+#giftPicture, #monkey {
+  animation: fallingButton cubic-bezier(1,2.92,0,.41) 3s forwards 0s;
+}
+#monkey {
+  z-index: 3;
+}
+
+
+
+/*! Динамичный график */
+#graphicContainer {
+  width: 350px;
+  margin-left: 50px;
+}
+#graphicContainer>div {
+  margin-top: 10px;
+  background: black;
+  border: 2px solid aliceblue;
+  height: 28px;
+  padding: 0px;
+}
+
+.moveLines {
+  margin: -2px;
+  padding-left: 5px;
+  padding: 5px;
+  color: aliceblue;
+  border: 2px solid #d13131;
+  background-color: gray;
+  transition-timing-function: linear !important;
+  height: 19px;
+  
+}
+.moveLines2 {
+  color: black;
+}
+
+#buttonLines {
+  width: 100px;
+  margin-left: 50px;
+  color: red;
+}
+ 
+#changeDigitals {
+  background-color: aliceblue;
+  width: 180px;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: .3s;
+}
+
+#changeDigitals:hover {
+background-color: gray;
+transition: .3s;
+}
+
 
 
 /*! смена языка */
