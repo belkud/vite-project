@@ -233,7 +233,6 @@ transition: .3s;
 
 /*! Маркер */
 #markerContainer {
-  margin-top: 50px;
   margin-left: 50px;
   display: flex;
   max-height: 372px ;
