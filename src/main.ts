@@ -597,20 +597,20 @@ showanswer3.value = 0.9*enteranswer3_2.value +'uan'
   
 
 
-let summ = 100
-let currency = 'euro'
-switch (currency) {
-  case 'euro': 
-  console.log (summ * 0.8 + ' euro')
-  break 
-  case 'uan': 
-  console.log (summ * 5 + ' uan')
-  break 
-  case 'azn': 
-  console.log (summ * 10 + ' azn')
-  break 
-  default:
-}
+// let summ = 100
+// let currency = 'euro'
+// switch (currency) {
+//   case 'euro': 
+//   console.log (summ * 0.8 + ' euro')
+//   break 
+//   case 'uan': 
+//   console.log (summ * 5 + ' uan')
+//   break 
+//   case 'azn': 
+//   console.log (summ * 10 + ' azn')
+//   break 
+//   default:
+// }
 
 
   

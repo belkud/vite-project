@@ -117,6 +117,7 @@ width: 60px;
 text-align: center;
 color: aliceblue;
 padding: 0px;
+min-width: 45px;
 }
 
 
@@ -811,5 +812,13 @@ div{
     .container_forest {
       padding-right: 450px;
       margin: 0%;
+      }
+      #monkey {
+        left: 63.2% !important; 
+        top: 359% !important;
+      }
+      #giftPicture {
+        left: 63.2% !important; 
+        top: 357% !important;
       }
     }
