@@ -176,8 +176,24 @@ circle.addEventListener ('mousemove', (event)=> {
 })
 
 
+//! Смена языка
+const changeLanguage = document.querySelector('#changeLanguage') as HTMLHeadElement
+const language = document.querySelector('#language') as HTMLButtonElement
 
- 
+const markerColor = document.querySelector('#markerColor') as HTMLDivElement
+
+changeLanguage.addEventListener ('click', ()=> {
+   if (language.innerHTML =='русский') {
+      language.innerHTML = 'английский'
+      language.style.backgroundColor = 'blue'
+      markerColor.innerHTML = 'Выбрать цвет маркера'
+   } else {
+      language.innerHTML = 'русский'
+      language.style.backgroundColor = 'red'
+      
+      markerColor.innerHTML = 'Change color of marker'
+   }
+})
 
 
 
@@ -212,34 +228,14 @@ eraser.src = 'eraserSound.mp3'
 let print = new Audio()
 print.src = 'printSound.mp3.mp3'
 
-// printText.style.height = 20 +'px'
 
 printLetters.addEventListener('click', () => {
    print.play()
+
    // div c печатными символами
    printText.innerHTML += writeText.value
    let num = printText.innerHTML.length
-   //    if (num>=0 && num<=43) {
-   //       printText.style.height =20 +'px'
-   //    } else if (num>43 && num<=86) {
-   //       printText.style.height =32 +'px'
-   //    } else if (num>86 && num<=129) {
-   //       printText.style.height =48 +'px'
-   //    } else if (num>129 && num<=172){
-   //       printText.style.height =64 +'px'
-   //    } else {
-   //       printText.style.height =80 +'px'
-   //    }
-   //    if (num>=200) {
-   //       alert ('Нижний блок заполнен')
-   //       printText.style.color ='red'
-   // }
-
-   //! ВОПРОСЫ:
-   //! 1. Как можно код выше сделать через цикл
-   //! 2. Через <span> менять цвет маркера
-   //! 3. Некорректное отображение поведения кнопок (event.code == 'Backspace' || event.code == 'Delete')
-
+  
    // div c печатными символами (второй способ)
    for (let i = 1; i <= 5; i++) {
       if (num / 43 > i) {

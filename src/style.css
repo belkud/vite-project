@@ -63,16 +63,12 @@ z-index: 3;
 width: 55%;
 }
 
-
-
-
 #sportsman_box {
   margin-top: 190px;
   margin-left: 0px; 
   position: absolute; 
   z-index: 4;
 }
-
 
 #sportsman {
   z-index: 4;
@@ -109,9 +105,31 @@ width: 55%;
 
 
 
+/*! смена языка */
+#changeLanguage, #language {
+  color: white;
+  background-color: rgb(201, 179, 179);
+  width: 120px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 10px;
+  border: 1px solid aliceblue;
+  cursor: pointer;
+}
+
+#changeLanguage {
+  background:linear-gradient(45deg, red, blue);
+}
+.red {
+  background-color: red !important;
+}
+.blue {
+  background-color: blue !important;
+}
 
 
-
+/*! Маркер */
 #markerContainer {
   margin-top: 50px;
   margin-left: 50px;
