@@ -2,11 +2,430 @@ body {
   /* background-color: rgb(233, 231, 231) ; */
   background: black;
   padding: 0px;
-  margin-left:  50px;
+  margin:  0 auto;
   overflow-x:hidden;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+/*! Футбол */
+#game_football {
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  padding: 0px; 
+}
+
+.ball {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 60px;
+  border-radius: 50%;
+  transition: 1s;
+  filter: drop-shadow(15px 15px 6px black);
+}
+
+.field {
+  width: 600px;
+  height: 400px;
+  margin: 45px 45px;
+  position: relative;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  /* text-align: center;  */
+  margin-left: 50px;
+  margin-top: 80px;
+  color: red !important; 
+  filter: drop-shadow(15px 15px 1px rgb(125, 121, 121));
+  color:  white;
+  min-width: 500px;
+  /* border: 1px solid red; */
 }
 
 
+
+
+/*! Идущий человек */
+.container_forest {
+left: 19%;
+box-shadow: 0px 0px 20px aqua;
+height: 500px;
+background-image:
+url('/forest_background.jpg');
+background-size:auto;
+margin: 3%;
+position: relative;
+z-index: 3; 
+width: 55%;
+}
+
+#sportsman_box {
+  margin-top: 190px;
+  margin-left: 0px; 
+  position: absolute; 
+  z-index: 4;
+}
+
+#sportsman {
+  z-index: 4;
+  background-image: url(/Sportsman2.png) ;
+  height: 110px;
+  width: 100px;
+  filter: drop-shadow(0px 0px 10px aqua); width: 100%;
+  animation: anim6 .5s  infinite steps(6),
+  anim7  6s linear  infinite ;
+  left: 0%;
+  position: absolute;
+  opacity: 0;
+}
+
+@keyframes anim6 {
+  0% {
+    background-position: 1160px 0;
+  } 
+  
+  100% {
+    background-position: 20px 0;
+  } 
+}
+@keyframes anim7 {
+  0% {
+
+  } 
+  
+  100% {
+    left: 1760%;
+  } 
+}
+
+
+/*! Работа с случайными числами */
+
+#randomColor, #randomColor2, #randomColor3 {
+  display: flex;
+  margin: 50px;
+}
+#randomColor {
+  margin-top: 0px;
+}
+
+#randomColor>div, #randomColor2>div, #randomColor3>div {
+border: 1px solid #747373;
+border-right: none;
+width: 60px;
+text-align: center;
+color: aliceblue;
+padding: 0px;
+min-width: 45px;
+}
+
+
+
+#startChangeColor, #startChangeColor2, #showList, #startChangeColor3 {
+  width: 100px;
+  margin-left: 50px;
+  background-color: rgb(65, 152, 228);
+  color: aliceblue;
+}
+
+.yellow {
+  background-color: yellow ;
+  color: white;
+}
+
+#showList {
+  width: 200px;
+  margin-top: 25px;
+}
+
+#scoreNum {
+  background-color: lightgray;
+  margin: 25px;
+  width: 300px;
+  min-height: 55px;
+}
+
+#giftPicture, #monkey {
+  animation: fallingButton cubic-bezier(1,2.92,0,.41) 3s forwards 0s;
+}
+#monkey {
+  z-index: 3;
+}
+
+
+
+/*! Динамичный график */
+#graphicContainer {
+  width: 350px;
+  margin-left: 50px;
+}
+#graphicContainer>div {
+  margin-top: 10px;
+  background: black;
+  border: 2px solid aliceblue;
+  height: 28px;
+  padding: 0px;
+}
+
+.moveLines {
+  margin: -2px;
+  padding-left: 5px;
+  padding: 5px;
+  color: aliceblue;
+  border: 2px solid #d13131;
+  background-color: gray;
+  transition-timing-function: linear !important;
+  height: 19px;
+  
+}
+.moveLines2 {
+  color: black;
+}
+
+#buttonLines {
+  width: 100px;
+  margin-left: 50px;
+  color: red;
+}
+ 
+#changeDigitals {
+  background-color: aliceblue;
+  width: 180px;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: .3s;
+}
+
+#changeDigitals:hover {
+background-color: gray;
+transition: .3s;
+}
+
+
+
+/*! смена языка */
+#changeLanguage, #language {
+  color: white;
+  background-color: rgb(201, 179, 179);
+  width: 120px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 10px;
+  border: 1px solid aliceblue;
+  cursor: pointer;
+}
+
+#changeLanguage {
+  background:linear-gradient(45deg, red, blue);
+}
+.red {
+  background-color: red !important;
+}
+.blue {
+  background-color: blue !important;
+}
+
+
+/*! Маркер */
+#markerContainer {
+  margin-left: 50px;
+  display: flex;
+  max-height: 372px ;
+}
+
+#rightSide {
+ color: aliceblue;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin-left: 20px;
+ border: 1px solid white;
+ text-align: center;
+ font-size: .9em;
+ border-radius: 5px;
+}
+
+#rightSide>div {
+  padding: 0px;
+}
+
+#markerContent {
+ display: flex;
+ flex-direction: column;
+ width: 310px;
+ gap: 15px;
+ background-color:rgb(148, 218, 218);
+ padding: 20px;
+ border: 1px solid rgb(133, 133, 229);
+ border-radius: 5px;
+}
+
+#markerContent>div  {
+padding: 0px;
+}
+
+#red {
+ background-color: red;
+}
+#blue {
+ background-color: blue;
+}
+#green {
+ background-color: green;
+}
+
+#red:active, #blue:active, #green:active, #printLetters:active, #deleteLetters:active, #deleteLetters2:active {
+ border-color: aliceblue;
+}
+
+#markerContent>div>button, #deleteLetters, #deleteLetters2, #printLetters {
+ color: aliceblue;
+ width: 100px;
+ padding: 3px;
+ border-radius: 5px;
+ border-color:white;
+ cursor: pointer;
+ border: 1px solid #000;
+}
+#markerContent>h3 {
+ text-align: center;
+ text-shadow: 1px -1px white;
+ color: red;
+}
+#writeText {
+ height: 50px;
+ font-family: monospace;
+ letter-spacing: 0px;
+}
+
+#printLetters, #deleteLetters, #deleteLetters2 {
+ width: 120px !important;
+ background-color: black;
+}
+
+#printText  {
+ background-color: aliceblue;
+ border: 1px solid #000;
+ border-radius: 3px;
+ height: 20px;
+ font-family: monospace;
+ word-break:break-all;
+ margin-top: 15px;
+}
+
+
+#pencil {
+ padding-left:10px;
+ margin-top: 135px;
+}
+
+.pencilRed {
+ filter: drop-shadow(1000px 1px red);
+ transition: .1s;
+}
+.pencilGreen {
+ filter: drop-shadow(1000px 1px green);
+ transition: .1s;
+}
+.pencilBlue {
+ filter: drop-shadow(1000px 1px blue);
+ transition: .1s;
+}
+#line1, #line2 {
+ position: relative;
+ height: 30px;
+ width: 240px;
+ border: 1px solid red;
+ background: linear-gradient(145deg, rgb(108, 108, 109, .1), rgb(232, 228, 228, .5));
+}
+#line1>div, #line2>div {
+ background-color: rgb(80, 238, 80);
+ background: linear-gradient(145deg,blue, red);
+ /* border: 1px solid wheat; */
+ height: 28px;
+ position: absolute;
+ padding: 0px;
+}
+
+
+
+
+
+
+
+.text {
+  padding: 0px !important;
+  background: linear-gradient(180deg, rgb(25, 25, 167), rgb(72, 251, 132), rgb(93, 93, 244));
+  font-size: 90px;
+text-align: center;
+  /* width: 11ch; */
+  width: 500px;
+ 
+  padding-top: 25px;
+  padding-bottom: -20px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 5px transparent;
+  /* color:rgb(245, 243, 243); */
+  font-family: monospace;
+  /* display: flex; */
+  /* border-right: 4px solid red; */
+  animation: text-anim 2.5s ease-in-out forwards;
+}
+
+/* -webkit-background-clip: text;// Обрезаем фон по тексту */
+/* -webkit-text-fill-color: transparent;// Прозрачный текст */
+
+@keyframes text-anim {
+  from {
+    width: 0;
+  }
+
+  to {
+    border-right: 4px solid transparent;
+  }
+}
+
+#showText {
+
+  width: 91ch;
+  height: 20px;
+  /* background-clip:text; */
+  -webkit-background-clip: text;
+  /* -webkit-text-stroke: transparent; */
+  font-size: 1.3em;
+  font-family: monospace;
+  /* border-right: 3px solid red; */
+  background-color: red;
+  color: transparent;
+  white-space: nowrap;
+  animation: animShowText 10s steps(91);
+  animation-delay: 1s;
+  padding: 0px;
+
+  padding-bottom: -10px;
+  
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+@keyframes animShowText {
+  from {
+    width: 0;
+  }
+
+  to {
+    /* border: 3px solid transparent; */
+  }
+}
 
 #switcher {
   border: 1px solid aliceblue;
@@ -136,12 +555,7 @@ body {
   }
 }
 
-#cat_leg {
-  /* top: 50%;
-  left: 50%; */
-  animation: anim4 0.84s linear calc(3);
-  /* animation-iteration-count: calc(3); */
-}
+
 
 
 @keyframes anim4 {
@@ -158,38 +572,7 @@ body {
 
 
 
-
-
-#cat_leg.animate{
-  
  
-  
-   /* transform: rotate(0deg) ;
-  transition-duration: 1s;
-  transition-timing-function: linear;
-  animation-iteration-count:infinite ; */
-  
-  /* animation: anim4 3s linear infinite; */
-}
- 
-
-#button_eye, #button_cat_leg{
-  background-color: aqua;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  background:linear-gradient(145deg, aqua, gray);
-  transition: .5s;
-}
-
-#button_eye:hover, #button_cat_leg:hover{
-  box-shadow: -2px -2px 10px aqua ,
-  2px 2px 10px lightgray; 
-  border: 2px solid white;
-    background:linear-gradient(145deg, gray, aqua);
-  transition: .5s;
-}
-
 
 
 #button_remove{
@@ -206,87 +589,6 @@ body {
   border: 2px solid white;
   transition: .5s;
 }
-#button_phantom, #button_cat_digger{
-  background: linear-gradient(145deg, gray, black);
-  border-radius: 5px;
-  color: white;
-  padding: 10px;
-  transition: .5s;
-}
-
-#button_phantom:hover, #button_cat_digger:hover {
-  box-shadow: -2px -2px 10px gray ,
-  2px 2px 10px aliceblue; 
-  border: 2px solid white;
-  transition: .5s;
-}
-
-#cat_dialog>div {
-  
-  /* border: 1px solid #000; */
-}
-
-#cat_phrase{
-
-  border: 3px solid grey !important;
-  border-radius: 20px 20px 20px 0px;
-  margin-top: -50px;
-  margin-bottom: 20px;
-}
-
-#cat_phrase2, #cat_phrase3, #cat_phrase4{
-  border: 3px solid grey !important;
-  border-radius: 20px 20px 20px 0px;
-  margin-top: -50px;
-  margin-bottom: 20px;
-  width: 100px;
-  padding: 10px;
-}
-
-.cat_opt {
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px;
-  margin-top: 25px;
-  color: aliceblue;
-  cursor: pointer;
-}
-
-#cat_option1 {
-  background: linear-gradient(180deg, red,#f08395, red);
-  /* background-color: red; */
-  transition: .5s;
-}
-
-#cat_option1:hover {
-  border: 2px solid white;
-  box-shadow: 0px 0px 20px red;
-  transition: 0.5s  !important;
-}
-
-#cat_option2 {
-  background-color: blue;
-  background: linear-gradient(180deg, blue,  rgb(149, 149, 238), blue);
-  transition: .5s;
-}
-
-#cat_option2:hover {
-  border: 2px solid white;
-  box-shadow: 0px 0px 20px blue;
-  transition: 0.5s  !important;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .time {
@@ -317,9 +619,7 @@ div{
   transition:  0.5s;
   box-shadow: 0px 0px 2px 2px aqua;
 }
-h1 {
-  color:  white;
-}
+
 
 
 .car, .newButton {
@@ -342,76 +642,7 @@ h1 {
   background-color:coral;
 }
 
- 
- /* ! Футбол */
-.ball {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 60px;
-  border: 1px solid red;
-  border-radius: 50%;
-  transition: 0.5s;
-}
-.ball:hover {
-  transition: 1s;
-  border: 1px solid yellow;
-}
 
-.trickField {
-  border: 1px solid red;
-  width: 365px;
-  height: 200px;
-  margin: 45px 45px;
-  position: absolute;
-  /* background-color: aqua; */
-
-}
-.changeWidth {
-  border: 1px solid red;
-  width: 500px;
-}
-
-.gate {
-  /* border: 1px solid red; */
-  position: absolute;
-  height: 100px;
-  margin-top: 100px;
-  margin-left: 45px;
-}
-
-
-.title2, .title3 {
-  position: fixed;
-  color: transparent  ;
-  width: 200px;
-  text-align: center;
-  font-size: 1.2em;
-  border-radius: 5px;
-  /* text-decoration:underline; */
-  z-index: 1;
-  margin-top: 50px;
-  display:none;
-  animation: anim 3s alternate forwards;
-  cursor: pointer;
-}
-
-@keyframes anim {
-  from  {
-    margin-left: 0px;
-  }
-  to {
-    margin-left: 130px;
-    background-color: red;
-    color: white;
-  }
-}
-
-.cherry, .cherry2 {
-  color: brown;
-}
-
-/*! Конец кода */
 
 
 
@@ -478,20 +709,121 @@ h1 {
 }
 
 
-@media screen and (max-width: 900px) {
-  #container_animation {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    /* border: 3px solid red; */
-    height: 100%;
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .container_forest {
+    left: 0%;
+    min-width: 100%;
+    padding-right: 0px;
+    margin: 0%;
+    }
+  
+    }
+  
+  
+
+@media screen and (max-width: 1000px) {
+      .text {
+        font-size: 85px;
+      }
+
+      #showText  {
+      font-size: 0.9em;
+      }
+
+      #container_animation {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* border: 3px solid red; */
+        height: 100%;
+      }
   }
-  #cat_container{
-    margin-left: 0px;
-  }
-  #cat_animation>div{
-    margin-left: 0px;
-  }
-  }
-  /*!ВАЖНО */
-  /*! ПРИ ИЗМЕНЕНИИ СКРИН МЕДИА УБРАТЬ <html lang="en" style="min-width: 900px;"> */
+
+
+
+
+  
+  
+  
+  
+  @media screen and (max-width:768px) {
+      #showText{
+        font-size: 0.7em;
+          }
+      #markerContainer {
+        /* display: flex; */
+        flex-direction: column;
+      }
+      #markerContent>div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      #markerContent>div>button {
+        width: 130px;
+      }
+      #pencil {
+        margin-top: 200px;
+      }
+      #rightSide {
+        width: 310px;
+        margin-top: 15px;
+        margin-left: 0px;
+      }
+      #changePosition {
+        margin-bottom: 450px;
+      }
+      
+     #markerContainer {
+      margin-top: 0px;
+      margin-left: 0px;
+    }
+    #bts {
+      display: flex;
+      flex-direction: row !important;
+    }
+    #writeText {
+     font-size: 0.97em; 
+    }
+    #markerTitle {
+      margin-top: 105px;
+    }
+    }
+
+
+
+  @media screen and (max-width: 460px) {
+    #showText {
+    font-size: 0.6em;
+    }
+
+    #game_football {
+      margin-left: 250px;
+      
+    }
+    
+    #titles {
+      margin-left: 65px;
+      align-content: flex-end;
+    }
+    .container_forest {
+      padding-right: 450px;
+      margin: 0%;
+      }
+      #monkey {
+        left: 63.2% !important; 
+        top: 359% !important;
+      }
+      #giftPicture {
+        left: 63.2% !important; 
+        top: 357% !important;
+      }
+    }

@@ -1,11 +1,74 @@
 import './style.css'
 
 
+
+
+
+//! бегающий мальчик
+const img_port_left = document.querySelector('#img_port_left') as HTMLDivElement
+const img_port_right = document.querySelector('#img_port_right') as HTMLDivElement
+const sportsman = document.querySelector('#sportsman') as HTMLDivElement
+setInterval(() => {
+  img_port_left.style.opacity = '0'
+  img_port_left.style.transition = 1 + 's'
+}, 1500);
+setInterval(() => {
+  img_port_left.style.opacity = '1'
+  img_port_left.style.transition = 1 + 's'
+}, 6000);
+
+setTimeout(() => {
+  img_port_right.style.opacity = '1'
+  img_port_right.style.transition = 1 + 's'
+}, 4500);
+setTimeout(() => {
+  img_port_right.style.opacity = '0'
+  img_port_right.style.transition = 1 + 's'
+}, 6000);
+
+
+setInterval(()=> {
+  setTimeout(() => {
+    img_port_right.style.opacity = '1'
+    img_port_right.style.transition = 1 + 's'
+  }, 4500);
+  setTimeout(() => {
+    img_port_right.style.opacity = '0'
+    img_port_right.style.transition = 1 + 's'
+  }, 6000);
+},6000)
+
+
+
+setTimeout(() => {
+  sportsman.style.opacity = '1'
+  sportsman.style.transition = 1 + 's'
+}, 1000);
+setTimeout(() => {
+  sportsman.style.opacity = '0'
+  sportsman.style.transition = 1 + 's'
+}, 5000);
+
+
+setInterval(()=> {
+  setTimeout(() => {
+    sportsman.style.opacity = '1'
+    sportsman.style.transition = 1 + 's'
+  }, 1000);
+  setTimeout(() => {
+    sportsman.style.opacity = '0'
+    sportsman.style.transition = 1 + 's'
+  }, 5000);
+},6000)
+
+
+
 //! ящик с шириной экрана
 
 const box = document.querySelector('.box') as HTMLButtonElement
 let computedStyle = getComputedStyle(document.body)
 box.innerHTML = 'ширина экрана ' + computedStyle.width 
+
 window.addEventListener('resize',()=>{
   box.innerHTML = 'ширина экрана ' + computedStyle.width 
 })
@@ -25,7 +88,7 @@ document.onmousemove =(event)=> {
   box.classList.toggle('box2')
 
   //! вывод стилей JS
-  console.log(computedStyle.marginTop );
+  // console.log(computedStyle.marginTop );
 }
 
 
@@ -114,19 +177,354 @@ circle.addEventListener ('mousemove', (event)=> {
 
 
 
+const startChangeColor = document.querySelector('#startChangeColor') as HTMLButtonElement
+const randomColor = document.querySelector  ('#randomColor')  as HTMLDivElement
+const scoreNum = document.querySelector('#scoreNum') as HTMLDivElement
 
-//! перключение картинок
-// const switcher = document.querySelector('#switcher') as HTMLButtonElement
-// switcher.addEventListener('click', ()=> {
-//   if (ball_switcher.style.display == 'none') {
-//     ball_switcher.style.display = 'block'
-//     field_switcher.style.display = 'none'
-//   } else {
-//     ball_switcher.style.display = 'none'
-//     field_switcher.style.display = 'block'
 
-//   }
-// })
+const giftPicture = document.querySelector('#giftPicture') as HTMLPictureElement
+const monkey = document.querySelector('#monkey') as HTMLPictureElement
+
+
+
+
+
+
+
+startChangeColor.addEventListener('mouseup', ()=> {
+    giftPicture.style.transition = 3 +'s'
+
+    
+    let x = randomColor.children[(Math.round(Math.random()*9))] 
+    if(x.style.backgroundColor == 'yellow') {
+        x.style.backgroundColor = 'transparent'
+     } else {
+        x.style.backgroundColor = 'yellow'    
+    }
+    scoreNum.innerHTML += `${x.innerHTML} `
+    
+    if (x==randomColor.children[4]){
+        monkey.style.display = 'block'
+        giftPicture.style.display = 'block'
+    }  
+})
+
+
+giftPicture.addEventListener('click',()=> {
+    alert('Вы выиграли 0 рублей')
+    setTimeout(() => {
+        monkey.style.marginTop = -65 +'px'
+        monkey.style.transition = 3 +'s'
+    }, 500);
+    setTimeout(() => {
+        monkey.style.transition = 3 +'s'
+        monkey.style.marginTop = 0 +'px'
+    }, 2500);
+})
+    
+ 
+
+//! Работа с случайными числами
+const startChangeColor2 = document.querySelector('#startChangeColor2') as HTMLButtonElement
+const randomColor2 = document.querySelector('#randomColor2') as HTMLDivElement
+
+startChangeColor2.addEventListener('click', ()=> {
+    for (let a of randomColor2.children) {
+        a.classList.remove('yellow')
+    }
+
+    let x = randomColor2?.children[(Math.round(Math.random()*9))] 
+    x?.classList.add('yellow')        
+})
+
+const startChangeColor3 = document.querySelector('#startChangeColor3') as HTMLButtonElement
+const randomColor3 = document.querySelector('#randomColor3')
+
+startChangeColor3.addEventListener('click', ()=>{
+    let color = randomColor3.children[(Math.round(Math.random()*10))]
+    color.style.backgroundColor = 'yellowgreen'
+
+    setTimeout(() => {
+        color.style.backgroundColor = 'transparent'
+    }, 500);
+    console.log(color)
+})
+
+
+
+
+
+
+//! Движение линий по обработчику 
+
+const moveLines = document.querySelectorAll <HTMLDivElement> ('.moveLines')  
+
+const massiveNum = [99, 78, 55, 91, 23, 77, 84, 45]
+
+let score = 0
+
+const buttonLines = document.querySelector('#buttonLines') as HTMLButtonElement
+buttonLines.addEventListener('click',  ()=> {
+    if (buttonLines.innerHTML == 'Start (◕‿◕)') {
+        buttonLines.innerHTML = 'Come back'
+        
+// счетчик цифр на увеличение
+    setInterval( ()=>{
+        score+=1
+        for (let i=0; i<=massiveNum.length; i++) {
+            moveLines[i].innerHTML = `${score}`
+            let num = massiveNum[i]
+        if (moveLines[i].innerHTML>=num) {
+             moveLines[i].innerHTML=num
+        }
+      }    
+    },60)
+
+    // 'Увеличение' строк
+    for (let i=0; i<massiveNum.length; i++) {
+        let digital = (massiveNum[i])
+        moveLines[i].style.marginLeft = digital*.9 +'%'  
+        moveLines[i].style.transition = digital/16 +'s'  
+        setTimeout(() => {
+            moveLines[i].style.color = 'black'
+        }, 6000);
+        setTimeout(() => {
+            moveLines[i].style.color = 'white'
+        }, 12000);
+    }
+    
+     
+//! кнопка 'come back'
+} else {
+    if (buttonLines.innerHTML = 'Start (◕‿◕)') {
+        // 'Уменьшение' строк
+        for (let i=0; i<massiveNum.length; i++) {
+            let digital = (massiveNum[i])
+            moveLines[i].style.marginLeft = 0 +'%'  
+            moveLines[i].style.transition = digital/16 +'s'  
+            }
+        }
+    }
+})
+
+
+
+
+const changeDigitals = document.querySelector('#changeDigitals') as HTMLButtonElement
+changeDigitals.addEventListener('click', ()=> {
+    
+    if (changeDigitals.style.backgroundColor=='yellow'){
+        changeDigitals.style.backgroundColor='aliceblue'       
+    }else {
+        changeDigitals.style.backgroundColor='yellow'
+        console.log(2);
+          let reload = window.location.reload()
+   }  
+})
+
+
+
+
+//! Смена языка
+const changeLanguage = document.querySelector('#changeLanguage') as HTMLHeadElement
+const language = document.querySelector('#language') as HTMLButtonElement
+const markerColor = document.querySelector('#markerColor') as HTMLDivElement
+const red = document.querySelector('#red') as HTMLDivElement
+const green = document.querySelector('#green') as HTMLDivElement
+const blue = document.querySelector('#blue') as HTMLDivElement
+
+changeLanguage.addEventListener ('click', ()=> {
+   if (language.innerHTML =='английский') {
+      language.innerHTML = 'русский'
+      language.style.backgroundColor = 'blue'
+      
+      markerColor.innerHTML = 'Выбрать цвет маркера'
+      red.innerHTML = 'красный'
+      green.innerHTML = 'зелёный'
+      blue.innerHTML = 'синий'
+    } else {
+      language.innerHTML = 'английский'
+      language.style.backgroundColor = 'red'
+      
+      markerColor.innerHTML = 'Change color of marker'
+      red.innerHTML = 'red'
+      green.innerHTML = 'green'
+      blue.innerHTML = 'blue'
+   }
+})
+
+
+
+//! Маркер
+
+const markerContainer = document.querySelector('#markerContainer') as HTMLDivElement
+const redMarker = document.querySelector('#red') as HTMLButtonElement
+const greenMarker = document.querySelector('#green') as HTMLButtonElement
+const blueMarker = document.querySelector('#blue') as HTMLButtonElement
+const deleteLetters = document.querySelector('#deleteLetters') as HTMLButtonElement
+const deleteLetters2 = document.querySelector('#deleteLetters2') as HTMLButtonElement
+const printLetters = document.querySelector('#printLetters') as HTMLButtonElement
+const writeText = document.querySelector('#writeText') as HTMLInputElement
+const printText = document.querySelector('#printText') as HTMLDivElement
+const pencil = document.querySelector('#pencil') as HTMLPictureElement
+const rightSide = document.querySelector('#rightSide') as HTMLDivElement
+const line1 = document.querySelector('#line1') as HTMLDivElement
+const line2 = document.querySelector('#line2') as HTMLDivElement
+const simbols = document.querySelector('#simbols') as HTMLDivElement
+
+
+// звуки
+const audio = new Audio()
+audio.src = 'ChangeMarker.mp3'
+
+const audio2 = new Audio()
+audio2.src = 'WriteMarker.mp3'
+
+let eraser = new Audio()
+eraser.src = 'eraserSound.mp3'
+
+let print = new Audio()
+print.src = 'printSound.mp3.mp3'
+
+
+printLetters.addEventListener('click', () => {
+   print.play()
+
+   // div c печатными символами
+   printText.innerHTML += writeText.value
+   let num = printText.innerHTML.length
+  
+   // div c печатными символами (второй способ)
+   for (let i = 1; i <= 5; i++) {
+      if (num / 43 > i) {
+         printText.style.height = 16 * (i + 1) + 'px'
+         // console.log(num);
+         // console.log(i);
+      }
+      if (num >= 200) {
+         console.log('Нижний блок заполнен')
+         printText.style.color = 'red'
+      }
+   }
+
+
+
+   //бегущая нижняя строчка
+   let number = rightSide.childNodes[15]
+   number.innerHTML = printText.innerHTML.length
+   let moveLine = line2.firstElementChild
+
+   moveLine.style.width = simbols.innerHTML * 1.19 + 'px'
+   moveLine.style.transition = .5 + 's'
+   moveLine.style.border = '1px solid aliceblue'
+
+   // div 'Заполненность нижнего блока'
+   line2.previousElementSibling.innerHTML = simbols.innerHTML / 2 + '%'
+
+})
+
+
+let moveLine = line1.firstElementChild as HTMLDivElement
+// печать текста в верхнем блоке
+writeText.addEventListener('keydown', (event) => {
+
+   pencil.style.marginLeft = writeText.value.length * 7.4 - 1000 + 'px'
+   let elem = rightSide.childNodes[3] as HTMLDivElement
+   let digital = writeText.value.length
+   elem.innerHTML = digital + 1
+
+   let elem2 = rightSide.childNodes[7]
+   elem2.innerHTML = (digital + 1) * 2.5 + '%'
+
+
+   moveLine.style.border = '1px solid aliceblue'
+   moveLine.style.width = (digital + 1) * 6 + 'px'
+   moveLine.style.transition = .5 + 's'
+
+   audio2.play()
+
+   if (elem.innerHTML >= 41) {
+      writeText.innerHTML = ''
+      alert('Блок переполнен')
+   }
+
+   if (event.code == 'Backspace' || event.code == 'Delete' || event.key == 'Backspace' || event.key == 'Delete') {
+      pencil.style.marginLeft = writeText.value.length * 7.4 - 1014.4 + 'px'
+      elem2.innerHTML = (digital - 1) * 2.5 + '%'
+      elem.innerHTML = digital - 1
+      if (elem.innerHTML == -1) {
+         elem.innerHTML = 0
+      }
+
+      if (elem2.innerHTML == -2.5 + '%') {
+         elem2.innerHTML = 0 + '%'
+      }
+
+      if (moveLine.style.width == (digital + 1) * 6 + 'px') {
+         moveLine.style.width = (digital - 1) * 6 + 'px'
+         // console.log(digital);
+      }
+      if (digital == 0) {
+         moveLine.style.width = 0 + 'px'
+         pencil.style.marginLeft = -1007 + 'px'
+      }
+   }
+
+
+
+})
+
+
+//! смена маркера
+redMarker.addEventListener('click', () => {
+   writeText.style.color = 'red'
+   pencil.classList.remove('pencilBlue')
+   pencil.classList.add('pencilRed')
+   pencil.classList.remove('pencilGreen')
+   audio.play()
+})
+
+greenMarker.addEventListener('click', () => {
+   writeText.style.color = 'green'
+   pencil.classList.add('pencilGreen')
+   pencil.classList.remove('pencilBlue')
+   audio.play()
+})
+
+blueMarker.addEventListener('click', () => {
+   writeText.style.color = 'blue'
+   pencil.classList.add('pencilBlue')
+   audio.play()
+})
+
+// удаление символов в верхнем блоке
+deleteLetters.addEventListener('click', (event) => {
+   eraser.play()
+   writeText.value = ''
+   pencil.style.marginLeft = -1007 + 'px'
+   if (event.code == 'Backspace') {
+      pencil.style.marginLeft = writeText.value.length * 7.4 - 1014.4 + 'px'
+   }
+})
+
+// удаление символов в нижнем блоке
+deleteLetters2.addEventListener('click', (event) => {
+   eraser.play()
+   printText.innerHTML = ''
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -199,262 +597,20 @@ showanswer3.value = 0.9*enteranswer3_2.value +'uan'
   
 
 
-let summ = 100
-let currency = 'euro'
-switch (currency) {
-  case 'euro': 
-  console.log (summ * 0.8 + ' euro')
-  break 
-  case 'uan': 
-  console.log (summ * 5 + ' uan')
-  break 
-  case 'azn': 
-  console.log (summ * 10 + ' azn')
-  break 
-  default:
-}
-
-
-
-const eye = document.querySelector('#eye') as HTMLPictureElement
-const button_eye = document.querySelector('#button_eye') as HTMLButtonElement
-button_eye.addEventListener('click', ()=> {
-  eye.style.display === 'none' ? eye.style.display = 'block' : eye.style.display = 'none';
-})
-
-const cat_leg = document.querySelector ('#cat_leg')
-const cat_leg2 = document.querySelector ('#cat_leg2')
-const button_cat_leg = document.querySelector ('#button_cat_leg')
-button_cat_leg?.addEventListener('click', ()=>{
- 
- if (cat_leg.style.display=='none'){
-    cat_leg.style.display='block'
-    cat_leg2.style.display='none'
-    button_cat_leg.innerHTML= 'Спасибо, кот '
-} else {
-    cat_leg.style.display='none'
-    cat_leg2.style.display='block'
-    button_cat_leg.innerHTML= 'Кот, помаши лапкой '
- }
- // cat_leg.classList.add('anim')
-})
-
-  
-
-const cat = document.querySelector('#cat') as HTMLImageElement
-const cat_phrase = document.querySelector('#cat_phrase') as HTMLDivElement
-const button_phantom = document.querySelector('#button_phantom') as HTMLButtonElement
-const button_remove_cat = document.querySelector('#button_remove') as HTMLButtonElement
-const cat_die = document.querySelector('#cat_die') as HTMLButtonElement
-const cat_phantom = document.querySelector('#cat_phantom') as HTMLButtonElement
-const cat_animation = document.querySelector('#cat_animation') as HTMLButtonElement
-const rope = document.querySelector('#rope') as HTMLDivElement
-const rope1 = document.querySelector('#rope1') as HTMLDivElement
-const rope2 = document.querySelector('#rope2') as HTMLDivElement
-
-
-button_remove_cat.addEventListener('click', ()=> {
-  
-    setTimeout(() => {
- 
-    cat_phrase.style.opacity = 1 
-    cat_phrase.style.transition = 2.5 +'s'
-    }, 1000);
-    
-    setTimeout(() => {
-      cat_option1.style.opacity = 1 
-      cat_option1.style.transition = 3 + 's' 
-    }, 2000);
-    
-    setTimeout(() => {
-      cat_option2.style.opacity = 1 
-      cat_option2.style.transition = 3 + 's' 
-    }, 3000);
-})
-
-
-const cat_phrase3 = document.querySelector('cat_phrase3') as HTMLDivElement
-
-button_phantom.addEventListener ('click', ()=> {
-  setTimeout(() => {
-    cat_phantom.style.display = 'block'
-  }, 500);
-  
-  setTimeout(() => {
-    cat_phantom.style.marginLeft = 300 +'px'
-    cat_phantom.style.marginTop = 300 +'px'
-    cat_phantom.style.transition = 5 +'s'
-    
-  }, 1000);
-
-  setTimeout(() => {
-    cat_phantom.style.filter = 'brightness(5.3)'
-    cat_phantom.style.animation = 2+ 's'
-  }, 6000);
-  setTimeout(() => {
-    cat_phantom.style.opacity = 0
-    cat_phantom.style.animation = 2 + 's'
-  }, 8000);
-
-  // setTimeout(() => {
-  //   cat_phrase3.style.display = 'block'
-  // }, 7000);
-
-})
-
-
-
-
-const tomb_cat = document.querySelector('#tomb_cat') as HTMLDivElement
-const tomb_cat2 = document.querySelector('#tomb_cat2') as HTMLDivElement
-const cat_ghost_to_tomb = document.querySelector('#cat_ghost_to_tomb') as HTMLImageElement
-
-const cat_phrase2 = document.querySelector('#cat_phrase2') as HTMLDivElement
-const cat_dialog = document.querySelector('#cat_dialog') as HTMLDivElement
-const cat_option1 = document.querySelector('#cat_option1') as HTMLDivElement
-const cat_option2 = document.querySelector('#cat_option2') as HTMLDivElement
-
-
-//! поднять наверх кота
-cat_option1.addEventListener ('click', ()=> { 
-  setTimeout(() => {
-    cat_dialog.style.display = 'none' 
-    rope1.style.display = 'block'
-    rope2.style.display = 'block'
-    rope.style.marginTop = 230 +'px'
-    rope.style.transition = 3 + 's'
-  }, 500);
-  
-  setTimeout(() => {
-    rope.style.marginTop = 80 +'px'
-    rope.style.transition = 1.5 + 's'
-    cat_animation.style.marginTop = 200+ 'px'
-    cat_animation.style.transition = 1.5 + 's'
-  }, 4000);
-  
-  setTimeout(() => {
-    cat_leg.style.marginTop = 400 +'px'
-    cat_leg2.style.marginTop = 400 +'px'
-    cat.style.display = 'none'
-    cat_phantom.style.display = 'block'
-    cat_ghost_to_tomb.style.display = 'block'
-    cat_ghost_to_tomb.style.position = 'relative'
-  }, 6000);
-  
-  setTimeout(() => {
-    cat_phantom.style.marginTop = -550 +'px'
-    cat_phantom.style.transition = 12 + 's'
-    eye.style.marginTop = -550 +'px'
-    eye.style.transition = 0.5 + 's'
-    
-    cat_ghost_to_tomb.style.opacity = 1
-    cat.style.opacity = 0
-  }, 7000);
-  
-  setTimeout(() => {
-    tomb_cat.style.display = 'block'
-  }, 11000);
-
-  setTimeout(() => {
-    button_cat_digger.style.opacity = 1
-    button_cat_digger.style.transition = 3 +'s'
-  }, 11000);
-})
- 
-
-// !закопать кота
-
-const button_cat_digger = document.querySelector('#button_cat_digger') as HTMLButtonElement
-button_cat_digger.addEventListener ('click', ()=> {
-  
-    setTimeout(() => {
-    rope1.style.display = 'none'
-    rope2.style.display = 'none'
-  }, 2000);
-  
-  
-  setTimeout(() => {
-   tomb_cat2.style.opacity = 1
-   tomb_cat2.style.animation = 3 +'s'
-    
-  }, 3000);
-  
-  setTimeout(() => {
-    cat_ghost_to_tomb.style.marginTop = 420 +'px'
-    cat_ghost_to_tomb.style.transition = 3 + 's'
-  }, 4500);
-  setTimeout(() => {
-    cat_ghost_to_tomb.style.display = 'none'
-  }, 7501);
-  
-  setTimeout(() => {
-   tomb_cat.style.display = 'relative'
-   tomb_cat.style.opacity = 1
-   tomb_cat.style.animation = 3 +'s'
-  }, 8000);
-
-  setTimeout(() => {
-    button_phantom.style.opacity = 1
-    button_phantom.style.transition = 3 + 's'
-  }, 9000);
-  
-})
-
-
-
-
-//! диалог с котом
-cat_option2.addEventListener ('click', ()=> {
-  setTimeout(() => {
-    cat_phrase.style.opacity = 0 
-    cat_phrase.style.transition = 2.5 +'s' 
-    cat_option1.style.opacity = 0 
-    cat_option2.style.opacity = 0 
-  }, 500);
-  setTimeout(() => {
-    cat_phrase2.style.opacity = 1
-    cat_phrase2.style.transition = 3 + 's' 
-  }, 3000);
-  setTimeout(() => {
-    cat_phrase2.style.opacity = 0
-    cat_phrase2.style.transition = 2 + 's' 
-  }, 5000);
-})
-
-
-
-
-
-
-//! Надпись "Добро пожаловать"
-const cat_phrase4 = document.querySelector('#cat_phrase4')as HTMLDivElement
-
-if (!localStorage.hello) {
-  setTimeout(() => {
-    cat_phrase4.style.opacity ='1'
-    cat_phrase4.style.transition = 3 +'s'
-    cat_leg.style.display = 'block'
-    cat_leg2.style.display = 'none'
-  }, 1000);
-  setTimeout(() => {
-    cat_phrase4.style.opacity = '0'
-    cat_phrase4.style.transition = 3 +'s'
-    cat_leg.style.display = 'none'
-    cat_leg2.style.display = 'block'
-  }, 3500);
-  localStorage.hello = true
-}
-
-setInterval(() => {
-  setTimeout(() => {
-    cat_leg.style.display = 'block'
-    cat_leg2.style.display = 'none'
-  }, 1000);
-  setTimeout(() => {
-    cat_leg.style.display = 'none'
-    cat_leg2.style.display = 'block'
-  }, 4000);
-}, 10000);
+// let summ = 100
+// let currency = 'euro'
+// switch (currency) {
+//   case 'euro': 
+//   console.log (summ * 0.8 + ' euro')
+//   break 
+//   case 'uan': 
+//   console.log (summ * 5 + ' uan')
+//   break 
+//   case 'azn': 
+//   console.log (summ * 10 + ' azn')
+//   break 
+//   default:
+// }
 
 
   
@@ -4016,78 +4172,7 @@ buttonClick.forEach(col =>
 
 
 
-
-//!Игра в мячик
-//поле
-let removeBall = document.querySelector('.trickField') as HTMLPictureElement
-
-//передвижение мяча
-removeBall.addEventListener('click', action)
-
-//мячик
-let game = document.querySelector('.ball') as HTMLPictureElement
-
-//координаты мячика при клике
-function action(event: any) {
-  // event.clientY = event.scrollHeight
-  game.style.left = (event.pageX - 83) + 'px'
-  game.style.top = (event.pageY - 308) + 'px'
-  game.style.rotate = rotate()
-}
-
-// Закрытие надписи  'Вы забили гол!!!'
-function goal() {
-  closeTitle.style.display = 'none'
-  // game.style.rotate.delete
-}
-let closeTitle = document.querySelector('.title2') as HTMLDivElement
-closeTitle.addEventListener('click', goal)
-
-let deg = 0
-const rotate = () => {
-  deg += 180
-  if (deg == 360) deg = 0
-  return deg + 'deg'
-}
-
-// Всплытие модального окна 
-let block = document.querySelector('.gate') as HTMLDivElement
-block.addEventListener('click', function (event) {
-  closeTitle.style.display = 'block'
-  action(event)
-})
-
-//установка мяча по центру поля
-let ballInCenter = document.querySelector('.cherry') as HTMLButtonElement
-ballInCenter.addEventListener('click', function () {
-  game.style.left = 174 + 'px'
-  game.style.top = 92 + 'px'
-  //!как сделать так, чтобы команда срабатывала многократно?
-  game.style.rotate = rotate()
-
-})
-
-//кнопка автогола
-let handsome = document.querySelector('.title3')
-handsome.addEventListener('click', function () {
-  handsome.style.display = 'none'
-})
-
-//надпись 'сделать автогол?'
-let ownGoal = document.querySelector('.cherry2') as HTMLButtonElement
-ownGoal.addEventListener('click', function (event) {
-  game.style.top = 90 + 'px'
-  game.style.left = -20 + 'px'
-  handsome.style.display = 'block'
-  game.style.rotate = rotate()
-
-
-})
-
-
-
-
-
+  
 
 
 //! Задание с животными
